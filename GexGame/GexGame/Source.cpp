@@ -1,0 +1,32 @@
+/**
+* author  Marc-Andre Michaud
+*
+* 
+* @section DESCRIPTION
+*  Gex Game
+*  Based SFML Game Development Textbook 
+*  
+* @section Academic Integrity
+*  I certify that this work is solely my own and complies with 
+*  NBCC Academic Integrity Policy (policy 1111)
+*/
+#include "Application.h"
+
+#include <stdexcept>
+#include <iostream>
+
+
+
+int main()
+{
+    Application application;
+
+    try
+    {
+		application.run();
+    }
+    catch (std::exception& e)
+    {
+        std::cout << "\n\nException: " << e.what() << std::endl;
+    }
+}
