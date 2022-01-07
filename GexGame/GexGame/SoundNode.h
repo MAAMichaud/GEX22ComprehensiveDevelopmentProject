@@ -13,6 +13,7 @@
 #pragma once
 
 #include "SceneNode.h"
+#include "ResourceIdentifiers.h"
 
 
 
