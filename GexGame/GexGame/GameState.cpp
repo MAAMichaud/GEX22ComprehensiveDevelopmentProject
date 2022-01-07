@@ -22,7 +22,6 @@ GameState::GameState(StateStack& stack, Context context)
 	, world(*context.window, *context.fonts, *context.sound)
 	, player(*context.player)
 {
-	context.music->play(MusicID::MissionTheme);
 }
 
 

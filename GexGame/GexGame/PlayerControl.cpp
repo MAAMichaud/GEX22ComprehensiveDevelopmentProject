@@ -12,7 +12,6 @@
 */
 #include "PlayerControl.h"
 #include <algorithm>
-#include "Actor.h"
 #include "CommandQueue.h"
 #include "Command.h"
 
@@ -113,6 +112,7 @@ void PlayerControl::initializeActions()
 {
 	const float speed{ 200.f };
 
+	/*
 	actionBindings[Action::MoveLeft].action = derivedAction<Actor>(
 		[=](Actor& n, sf::Time dt) { n.walk(-speed, 0.f); });
 	actionBindings[Action::MoveRight].action = derivedAction<Actor>(
@@ -125,6 +125,8 @@ void PlayerControl::initializeActions()
 
 	std::for_each(actionBindings.begin(), actionBindings.end(),
 		[](auto& p) { p.second.category = Category::Hero; });
+	*/
+
 	/*
 	for (auto& [action, cmd] : actionBindings)
 	{

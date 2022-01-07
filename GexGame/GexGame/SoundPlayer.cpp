@@ -33,6 +33,7 @@ SoundPlayer::SoundPlayer()
 	: soundBuffers()
 	, sounds()
 {
+	/*
 	loadBuffer(SoundEffectID::AlliedGunfire, "../Media/Sound/AlliedGunfire.wav");
 	loadBuffer(SoundEffectID::EnemyGunfire, "../Media/Sound/EnemyGunfire.wav");
 	loadBuffer(SoundEffectID::Explosion1, "../Media/Sound/Explosion1.wav");
@@ -40,6 +41,7 @@ SoundPlayer::SoundPlayer()
 	loadBuffer(SoundEffectID::LaunchMissile, "../Media/Sound/LaunchMissile.wav");
 	loadBuffer(SoundEffectID::CollectPickup, "../Media/Sound/CollectPickup.wav");
 	loadBuffer(SoundEffectID::Button, "../Media/Sound/Button.wav");
+	*/
 
 	// Listener points towards the screen (default in SFML)
 	sf::Listener::setDirection(0.f, 0.f, -1.f);

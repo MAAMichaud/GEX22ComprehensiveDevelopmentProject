@@ -23,21 +23,8 @@ namespace sf {
 
 enum class TextureID
 {
-	Entities,
-    Jungle,
-    Desert,
     TitleScreen,
-    Explosion,
     Particle,
-    FinishLine,
-
-    Hero2,
-    Zombie1,
-    Zombie2,
-    Zombie3,
-    Zombie4,
-    Zombie5,
-    Road,
 };
 
 
@@ -51,21 +38,12 @@ enum class FontID
 
 enum class SoundEffectID
 {
-    AlliedGunfire,
-    EnemyGunfire,
-    Explosion1,
-    Explosion2,
-    LaunchMissile,
-    CollectPickup,
-    Button,
 };
 
 
 
 enum class MusicID
 {
-    MenuTheme,
-    MissionTheme,
 };
 
 

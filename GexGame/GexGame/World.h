@@ -16,8 +16,6 @@
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
 #include "State.h"
-#include "Aircraft.h"
-#include "Actor.h"
 #include "CommandQueue.h"
 #include "BloomEffect.h"
 
@@ -58,15 +56,6 @@ private:
 	sf::FloatRect						getViewBounds() const;
 	sf::FloatRect						getBattlefieldBounds() const;
 
-	void								spawnEnemies();
-	void								addEnemy(Aircraft::Type type, float x, float y);
-	void								addEnemies();
-
-
-	void								adaptPlayerPosition();
-	void								adaptPlayerVelocity();
-
-	void								guideMissiles();
 	void								handleCollisions();
 	void								destroyEntitiesOutOfView();
 
@@ -77,15 +66,6 @@ private:
 		LowerAir,
 		UpperAir,
 		LayerCount
-	};
-
-	struct SpawnPoint
-	{
-		SpawnPoint(Aircraft::Type type, float x, float y);
-
-		Aircraft::Type	type;
-		float			x;
-		float			y;
 	};
 
 private:
@@ -103,10 +83,6 @@ private:
 	sf::FloatRect						worldBounds;
 
 	sf::Vector2f						spawnPosition;
-	float								scrollSpeed;
-	Actor*								hero;
-	std::vector<SpawnPoint>				enemySpawnPoints;
-	std::vector<Aircraft*>				activeEnemies;
 
 	BloomEffect							bloomEffect;
 };
