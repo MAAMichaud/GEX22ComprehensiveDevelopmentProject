@@ -11,14 +11,20 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
+
 #include "Category.h"
-#include <SFML/System/Time.hpp>
+
 #include <cassert>
 #include <functional>
+
+#include <SFML/System/Time.hpp>
+
 
 
 // forward declaration
 class SceneNode;
+
+
 
 struct Command
 {

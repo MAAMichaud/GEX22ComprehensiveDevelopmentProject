@@ -12,6 +12,8 @@
 */
 #pragma once
 
+
+
 namespace sf
 {
 	class RenderTarget;

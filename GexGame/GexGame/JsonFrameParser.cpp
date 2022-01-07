@@ -7,10 +7,14 @@
 //
 
 #include "JsonFrameParser.h"
+
 #include <fstream>
 #include <iostream>
 
+
+
 using json = nlohmann::json;
+
 
 
 JsonFrameParser::JsonFrameParser(std::string path)
@@ -19,6 +23,8 @@ JsonFrameParser::JsonFrameParser(std::string path)
 	json_ = json::parse(ifs);
 	// std::cout << json_.dump(6);
 }
+
+
 
 std::vector<sf::IntRect>  JsonFrameParser::getFramesFor(std::string animationName) const
 {

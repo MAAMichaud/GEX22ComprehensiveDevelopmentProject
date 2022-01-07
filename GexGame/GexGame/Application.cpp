@@ -11,14 +11,14 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "Application.h"
-#include "State.h"
-#include "StateStack.h"
-#include "StateIdentifiers.h"
-#include "TitleState.h"
-#include "MenuState.h"
-#include "GameState.h"
-#include "PauseState.h"
 #include "GameOverState.h"
+#include "GameState.h"
+#include "MenuState.h"
+#include "PauseState.h"
+#include "State.h"
+#include "StateIdentifiers.h"
+#include "StateStack.h"
+#include "TitleState.h"
 
 #include <SFML/Window/Event.hpp>
 

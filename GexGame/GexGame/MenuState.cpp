@@ -1,21 +1,21 @@
 /**
 * author  Marc-Andre Michaud
 *
-* 
+*
 * @section DESCRIPTION
 *  Gex Game
-*  Based SFML Game Development Textbook 
-*  
+*  Based SFML Game Development Textbook
+*
 * @section Academic Integrity
-*  I certify that this work is solely my own and complies with 
+*  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "MenuState.h"
-#include "State.h"
-#include "Utility.h"
+#include "MusicPlayer.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
-#include "MusicPlayer.h"
+#include "State.h"
+#include "Utility.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
@@ -62,7 +62,9 @@ void MenuState::draw()
 	window.draw(backgroundSprite);
 
 	for (const sf::Text& text : options)
+	{
 		window.draw(text);
+	}
 }
 
 
@@ -77,7 +79,9 @@ bool MenuState::update(sf::Time dt)
 bool MenuState::handleEvent(const sf::Event& event)
 {
 	if (event.type != sf::Event::KeyPressed)
+	{
 		return true;
+	}
 
 	if (event.key.code == sf::Keyboard::Return)
 	{
@@ -94,18 +98,26 @@ bool MenuState::handleEvent(const sf::Event& event)
 	else if ((event.key.code == sf::Keyboard::Up))
 	{
 		if (optionsIndex > 0)
+		{
 			optionsIndex -= 1;
+		}
 		else
+		{
 			optionsIndex = options.size() - 1;
+		}
 
 		updateOptionText();
 	}
 	else if ((event.key.code == sf::Keyboard::Down))
 	{
 		if (optionsIndex < options.size() - 1)
+		{
 			optionsIndex += 1;
+		}
 		else
+		{
 			optionsIndex = 0;
+		}
 
 		updateOptionText();
 	}
@@ -118,7 +130,9 @@ bool MenuState::handleEvent(const sf::Event& event)
 void MenuState::updateOptionText()
 {
 	if (options.empty())
+	{
 		return;
+	}
 
 	for (sf::Text& text : options)
 	{

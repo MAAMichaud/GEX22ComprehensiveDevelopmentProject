@@ -12,12 +12,13 @@
 */
 #pragma once
 
-#include "ResourceIdentifiers.h"
 #include "Particle.h"
+#include "ResourceIdentifiers.h"
+
 #include <map>
 
-#include <SFML/System/Time.hpp>
 #include <SFML/Graphics/Rect.hpp>
+#include <SFML/System/Time.hpp>
 
 
 

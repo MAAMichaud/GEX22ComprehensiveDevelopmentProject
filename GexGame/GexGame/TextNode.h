@@ -11,9 +11,13 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
+
 #include "SceneNode.h"
 #include "ResourceIdentifiers.h"
+
 #include <SFML/Graphics/Text.hpp>
+
+
 
 class string;
 
@@ -32,4 +36,3 @@ private:
 	sf::Text				text;
 
 };
-

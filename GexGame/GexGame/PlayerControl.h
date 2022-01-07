@@ -11,12 +11,16 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
-#include <SFML/Window/Event.hpp>
-#include <map>
 #include "Command.h"
+
+#include <map>
+
+#include <SFML/Window/Event.hpp>
+
 
 
 class CommandQueue;
+
 
 
 class PlayerControl
@@ -65,4 +69,3 @@ private:
 	MissionStatus								currentMissionStatus;
 
 };
-

@@ -11,6 +11,7 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
+
 #include "SceneNode.h"
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -29,4 +30,3 @@ private:
 	sf::Sprite			sprite;
 
 };
-

@@ -18,6 +18,8 @@
 
 #include <SFML/System/Time.hpp>
 
+
+
 class PlayerControl;
 
 
@@ -40,4 +42,3 @@ private:
 	static const sf::Time	TIME_PER_FRAME;
 
 };
-

@@ -12,13 +12,15 @@
 */
 #pragma once
 
-#include <SFML/Graphics/VertexArray.hpp>
+#include "Particle.h"
+#include "ResourceHolder.h"
+#include "ResourceIdentifiers.h"
+#include "SceneNode.h"
 
 #include <deque>	
-#include "SceneNode.h"
-#include "Particle.h"
-#include "ResourceIdentifiers.h"
-#include "ResourceHolder.h"
+
+#include <SFML/Graphics/VertexArray.hpp>
+
 
 
 class ParticleNode : public SceneNode

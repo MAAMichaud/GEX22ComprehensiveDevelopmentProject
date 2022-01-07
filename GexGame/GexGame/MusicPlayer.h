@@ -12,11 +12,13 @@
 */
 #pragma once
 
+#include "ResourceIdentifiers.h"
+
+#include <map>
+#include <string>
 
 #include <SFML/Audio/Music.hpp>
-#include "ResourceIdentifiers.h"
-#include <string>
-#include <map>
+
 
 
 class MusicPlayer
@@ -38,4 +40,3 @@ private:
 	std::map<MusicID, std::string>	filenames;
 	float							volume;
 };
-

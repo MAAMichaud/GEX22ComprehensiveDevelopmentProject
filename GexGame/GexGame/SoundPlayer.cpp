@@ -1,22 +1,25 @@
 /**
 * author  Marc-Andre Michaud
 *
-* 
+*
 * @section DESCRIPTION
 *  Gex Game
-*  Based SFML Game Development Textbook 
-*  
+*  Based SFML Game Development Textbook
+*
 * @section Academic Integrity
-*  I certify that this work is solely my own and complies with 
+*  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "SoundPlayer.h"
 
-#include <SFML/System/Vector2.hpp>d
-#include <SFML/Audio/Listener.hpp>
 #include <cassert>
 #include <cmath>
 #include <stdexcept>
+
+#include <SFML/Audio/Listener.hpp>
+#include <SFML/System/Vector2.hpp>
+
+
 
 namespace
 {
@@ -27,6 +30,7 @@ namespace
 	const float MinDistance2D = 200.f;
 	const float MinDistance3D = std::sqrt(MinDistance2D * MinDistance2D + ListenerZ * ListenerZ);
 }
+
 
 
 SoundPlayer::SoundPlayer()
@@ -47,10 +51,14 @@ SoundPlayer::SoundPlayer()
 	sf::Listener::setDirection(0.f, 0.f, -1.f);
 }
 
+
+
 void SoundPlayer::play(SoundEffectID effect)
 {
-//	play(effect, getListenerPosition());
+	//	play(effect, getListenerPosition());
 }
+
+
 
 void SoundPlayer::play(SoundEffectID effect, sf::Vector2f position)
 {
@@ -67,18 +75,24 @@ void SoundPlayer::play(SoundEffectID effect, sf::Vector2f position)
 	*/
 }
 
+
+
 void SoundPlayer::removeStoppedSounds()
 {
 	sounds.remove_if([](const sf::Sound& s)
-		{
-			return s.getStatus() == sf::Sound::Stopped;
-		});
+	{
+		return s.getStatus() == sf::Sound::Stopped;
+	});
 }
+
+
 
 void SoundPlayer::setListenerPosition(sf::Vector2f position)
 {
 	sf::Listener::setPosition(position.x, -position.y, ListenerZ);
 }
+
+
 
 sf::Vector2f SoundPlayer::getListenerPosition() const
 {
@@ -86,11 +100,15 @@ sf::Vector2f SoundPlayer::getListenerPosition() const
 	return sf::Vector2f(pos.x, -pos.y);
 }
 
+
+
 void SoundPlayer::loadBuffer(SoundEffectID id, const std::string path)
 {
 	std::unique_ptr<sf::SoundBuffer> buffer(new sf::SoundBuffer);
 	if (!buffer->loadFromFile(path))
+	{
 		throw std::runtime_error("Sound Effect Load Failed");
+	}
 
 	auto inserted = soundBuffers.insert(std::make_pair(id, std::move(buffer)));
 	assert(inserted.second);

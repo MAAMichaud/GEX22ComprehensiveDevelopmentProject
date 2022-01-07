@@ -17,6 +17,8 @@
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/System/Time.hpp>
 
+
+
 class GameOverState : public State
 {
 public:
@@ -34,4 +36,3 @@ private:
 	sf::Time				elapsedTime;
 
 };
-

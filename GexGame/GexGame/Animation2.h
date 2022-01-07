@@ -1,9 +1,23 @@
+/**
+* author  Marc-Andre Michaud
+*
+* 
+* @section DESCRIPTION
+*  Gex Game
+*  Based SFML Game Development Textbook 
+*  
+* @section Academic Integrity
+*  I certify that this work is solely my own and complies with 
+*  NBCC Academic Integrity Policy (policy 1111)
+*/
 #pragma once
+
+#include <vector>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/System/Time.hpp>
 
-#include <vector>
+
 
 //
 // An animaiton is a collection of frames. 

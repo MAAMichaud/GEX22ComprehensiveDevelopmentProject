@@ -12,20 +12,20 @@
 */
 #pragma once
 
+#include "BloomEffect.h"
+#include "CommandQueue.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
 #include "State.h"
-#include "CommandQueue.h"
-#include "BloomEffect.h"
-
-#include <SFML/Graphics/View.hpp>
-#include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/Font.hpp>
-#include <SFML/Graphics/RenderTexture.hpp>
 
 #include <array>
 #include <vector>
+
+#include <SFML/Graphics/Font.hpp>
+#include <SFML/Graphics/RenderTexture.hpp>
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/View.hpp>
 
 
 

@@ -16,7 +16,10 @@
 #include "SoundPlayer.h"
 
 
+
 class SoundPlayer;
+
+
 
 class SoundNode : public SceneNode
 {
@@ -30,4 +33,3 @@ public:
 private:
 	SoundPlayer&	sounds;
 };
-

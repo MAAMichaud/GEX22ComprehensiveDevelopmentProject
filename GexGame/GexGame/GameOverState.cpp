@@ -1,24 +1,25 @@
 /**
 * author  Marc-Andre Michaud
 *
-* 
+*
 * @section DESCRIPTION
 *  Gex Game
-*  Based SFML Game Development Textbook 
-*  
+*  Based SFML Game Development Textbook
+*
 * @section Academic Integrity
-*  I certify that this work is solely my own and complies with 
+*  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "GameOverState.h"
-#include "ResourceHolder.h"
-#include "Utility.h"
 #include "GameState.h"
 #include "PlayerControl.h"
+#include "ResourceHolder.h"
+#include "Utility.h"
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
+
 
 
 GameOverState::GameOverState(StateStack& stack, Context context)
@@ -32,15 +33,21 @@ GameOverState::GameOverState(StateStack& stack, Context context)
 	gameOverText.setFont(font);
 
 	if (context.player->getMissionStatus() == PlayerControl::MissionStatus::MissionFailure)
+	{
 		gameOverText.setString("Mission Failure");
+	}
 	else
+	{
 		gameOverText.setString("Mission Success");
+	}
 
 	gameOverText.setCharacterSize(70);
 	centerOrigin(gameOverText);
 	gameOverText.setPosition(0.5f * windowSize.x, 0.4f * windowSize.y);
 
 }
+
+
 
 void GameOverState::draw()
 {
@@ -55,6 +62,8 @@ void GameOverState::draw()
 	window.draw(gameOverText);
 }
 
+
+
 bool GameOverState::update(sf::Time dt)
 {
 	elapsedTime += dt;
@@ -65,6 +74,8 @@ bool GameOverState::update(sf::Time dt)
 	}
 	return false;
 }
+
+
 
 bool GameOverState::handleEvent(const sf::Event& event)
 {

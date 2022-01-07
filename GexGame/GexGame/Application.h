@@ -11,12 +11,12 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
+#include "MusicPlayer.h"
 #include "PlayerControl.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
-#include "StateStack.h"
-#include "MusicPlayer.h"
 #include "SoundPlayer.h"
+#include "StateStack.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>

@@ -10,11 +10,11 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
-#include "TitleState.h"
-#include "State.h"
-#include "Utility.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
+#include "State.h"
+#include "TitleState.h"
+#include "Utility.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
@@ -36,14 +36,20 @@ TitleState::TitleState(StateStack& stack, Context context)
 	text.setPosition(context.window->getView().getSize() / 2.f);
 }
 
+
+
 void TitleState::draw()
 {
 	sf::RenderWindow& window = *getContext().window;
 	window.draw(backgroundSprite);
 
 	if (showText)
+	{
 		window.draw(text);
+	}
 }
+
+
 
 bool TitleState::update(sf::Time dt)
 {
@@ -57,6 +63,8 @@ bool TitleState::update(sf::Time dt)
 
 	return true;
 }
+
+
 
 bool TitleState::handleEvent(const sf::Event& event)
 {

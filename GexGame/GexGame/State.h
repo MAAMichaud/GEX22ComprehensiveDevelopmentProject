@@ -11,9 +11,11 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
-#include <memory>
+
 #include "StateIdentifiers.h"
 #include "ResourceIdentifiers.h"
+
+#include <memory>
 
 
 

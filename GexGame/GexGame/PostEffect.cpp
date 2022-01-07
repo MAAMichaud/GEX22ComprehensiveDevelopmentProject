@@ -12,24 +12,31 @@
 */
 #include "PostEffect.h"
 
-#include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/VertexArray.hpp>
-#include <SFML/Graphics/Shader.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/Shader.hpp>
+#include <SFML/Graphics/VertexArray.hpp>
+#include <SFML/System/Vector2.hpp>
+
 
 
 PostEffect::PostEffect()
 {
 }
 
+
+
 void PostEffect::apply(const sf::RenderTexture& input, sf::RenderTarget& output)
 {
 }
+
+
 
 bool PostEffect::isSupported()
 {
     return true; // sf::Shader is available
 }
+
+
 
 void PostEffect::applyShader(const sf::Shader& shader, sf::RenderTarget& output)
 {

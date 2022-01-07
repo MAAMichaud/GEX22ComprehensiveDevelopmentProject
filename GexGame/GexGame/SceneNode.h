@@ -13,12 +13,15 @@
 #pragma once
 #include "Category.h"
 
-#include <SFML/Graphics/Transformable.hpp>
-#include <SFML/Graphics/Drawable.hpp>
-#include <SFML/System/Time.hpp>
-#include <vector>
 #include <memory>
 #include <set>
+#include <vector>
+
+#include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/Transformable.hpp>
+#include <SFML/System/Time.hpp>
+
+
 
 struct Command;
 class CommandQueue;

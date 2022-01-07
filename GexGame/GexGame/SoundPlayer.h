@@ -12,16 +12,17 @@
 */
 #pragma once
 
-#include <SFML/Audio/SoundBuffer.hpp>
+#include "ResourceIdentifiers.h"
+
+#include <list>
+#include <map>
+#include <memory>
+#include <string>
+
 #include <SFML/Audio/Sound.hpp>
+#include <SFML/Audio/SoundBuffer.hpp>
 #include <SFML/System/Vector2.hpp>
 
-#include <map>
-#include <list>
-#include <string>
-#include <memory>
-
-#include "ResourceIdentifiers.h"
 
 
 class SoundPlayer

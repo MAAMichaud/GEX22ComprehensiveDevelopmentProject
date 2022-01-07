@@ -10,11 +10,11 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "MusicPlayer.h"
 #include "PauseState.h"
-#include "Utility.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
-#include "MusicPlayer.h"
+#include "Utility.h"
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -77,10 +77,14 @@ bool PauseState::update(sf::Time dt)
 bool PauseState::handleEvent(const sf::Event& event)
 {
 	if (event.type != sf::Event::KeyPressed)
+	{
 		return false;
+	}
 
 	if (event.key.code == sf::Keyboard::Escape)
+	{
 		requestStackPop();
+	}
 
 	if (event.key.code == sf::Keyboard::BackSpace)
 	{

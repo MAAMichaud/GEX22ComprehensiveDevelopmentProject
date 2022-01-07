@@ -12,9 +12,11 @@
 */
 #include "BloomEffect.h"
 
-#include <string>
 #include <cassert>
 #include <stdexcept>
+#include <string>
+
+
 
 BloomEffect::BloomEffect()
 	: shaders()
@@ -22,13 +24,13 @@ BloomEffect::BloomEffect()
 	, firstPassTexture()
 	, secondPassTexture()
 {
-
-
 	std::unique_ptr<sf::Shader> s(new sf::Shader());
 	std::string f1name = "../Media/Shaders/Fullpass.vert";
 	std::string f2name = "../Media/Shaders/Brightness.frag";
 	if (!(s->loadFromFile("../Media/Shaders/Fullpass.vert", "../Media/Shaders/Brightness.frag")))
+	{
 		throw std::runtime_error("Shader::load - Failed to load ");
+	}
 
 	auto inserted = shaders.insert(std::make_pair(Shaders::BrightnessPass, std::move(s)));
 	assert(inserted.second);
@@ -37,7 +39,9 @@ BloomEffect::BloomEffect()
 	f1name = "../Media/Shaders/Fullpass.vert";
 	f2name = "../Media/Shaders/DownSample.frag";
 	if (!s->loadFromFile(f1name, f2name))
+	{
 		throw std::runtime_error("Shader::load - Failed to load " + f1name);
+	}
 	inserted = shaders.insert(std::make_pair(Shaders::DownSamplePass, std::move(s)));
 	assert(inserted.second);
 
@@ -45,7 +49,9 @@ BloomEffect::BloomEffect()
 	f1name = "../Media/Shaders/Fullpass.vert";
 	f2name = "../Media/Shaders/GuassianBlur.frag";
 	if (!s->loadFromFile(f1name, f2name))
+	{
 		throw std::runtime_error("Shader::load - Failed to load " + f1name);
+	}
 	inserted = shaders.insert(std::make_pair(Shaders::GaussianBlurPass, std::move(s)));
 	assert(inserted.second);
 
@@ -53,11 +59,14 @@ BloomEffect::BloomEffect()
 	f1name = "../Media/Shaders/Fullpass.vert";
 	f2name = "../Media/Shaders/Add.frag";
 	if (!s->loadFromFile(f1name, f2name))
+	{
 		throw std::runtime_error("Shader::load - Failed to load " + f1name);
+	}
 	inserted = shaders.insert(std::make_pair(Shaders::AddPass, std::move(s)));
 	assert(inserted.second);
-
 }
+
+
 
 void BloomEffect::apply(const sf::RenderTexture& input, sf::RenderTarget& output)
 {
@@ -76,6 +85,8 @@ void BloomEffect::apply(const sf::RenderTexture& input, sf::RenderTarget& output
 
 	add(input, firstPassTexture[1], output);
 }
+
+
 
 void BloomEffect::prepareTextures(sf::Vector2u size)
 {
@@ -96,6 +107,8 @@ void BloomEffect::prepareTextures(sf::Vector2u size)
 	}
 }
 
+
+
 void BloomEffect::filterBright(const sf::RenderTexture& input, sf::RenderTexture& output)
 {
 	sf::Shader& brightness = *shaders.at(Shaders::BrightnessPass);
@@ -104,6 +117,8 @@ void BloomEffect::filterBright(const sf::RenderTexture& input, sf::RenderTexture
 	applyShader(brightness, output);
 	output.display();
 }
+
+
 
 void BloomEffect::blurMultipass(RenderTextureArray& renderTextures)
 {
@@ -116,6 +131,8 @@ void BloomEffect::blurMultipass(RenderTextureArray& renderTextures)
 	}
 }
 
+
+
 void BloomEffect::blur(const sf::RenderTexture& input, sf::RenderTexture& output, sf::Vector2f offsetFactor)
 {
 	sf::Shader& gaussianBlur = *shaders.at(Shaders::GaussianBlurPass);
@@ -126,6 +143,8 @@ void BloomEffect::blur(const sf::RenderTexture& input, sf::RenderTexture& output
 	output.display();
 }
 
+
+
 void BloomEffect::downsample(const sf::RenderTexture& input, sf::RenderTexture& output)
 {
 	sf::Shader& downSampler = *shaders.at(Shaders::DownSamplePass);
@@ -135,6 +154,8 @@ void BloomEffect::downsample(const sf::RenderTexture& input, sf::RenderTexture& 
 	applyShader(downSampler, output);
 	output.display();
 }
+
+
 
 void BloomEffect::add(const sf::RenderTexture& source, const sf::RenderTexture& bloom, sf::RenderTarget& output)
 {

@@ -15,12 +15,13 @@
 #include "StateIdentifiers.h"
 #include "ResourceIdentifiers.h"
 
-#include <SFML/System/Time.hpp>
-
-#include <vector>
-#include <utility>
 #include <functional>
 #include <map>
+#include <utility>
+#include <vector>
+
+#include <SFML/System/Time.hpp>
+
 
 
 namespace sf

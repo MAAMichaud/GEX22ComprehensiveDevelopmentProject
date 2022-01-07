@@ -10,16 +10,16 @@
 *  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
-#include "World.h"
-#include <SFML/Graphics/RenderWindow.hpp>
-
-#include "utility.h"
-#include "Entity.h"
 #include "Command.h"
-#include "SpriteNode.h"
+#include "Entity.h"
 #include "particleNode.h"
-#include "SoundPlayer.h"
 #include "SoundNode.h"
+#include "SoundPlayer.h"
+#include "SpriteNode.h"
+#include "utility.h"
+#include "World.h"
+
+#include <SFML/Graphics/RenderWindow.hpp>
 
 
 

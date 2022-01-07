@@ -11,8 +11,9 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "GameState.h"
-#include "PlayerControl.h"
 #include "MusicPlayer.h"
+#include "PlayerControl.h"
+
 #include <SFML/Graphics/RenderWindow.hpp>
 
 

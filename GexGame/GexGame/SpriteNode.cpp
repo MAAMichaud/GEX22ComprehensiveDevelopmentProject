@@ -11,6 +11,7 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "SpriteNode.h"
+
 #include <SFML/Graphics/RenderTarget.hpp>
 
 

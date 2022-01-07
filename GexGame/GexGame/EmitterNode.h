@@ -12,10 +12,14 @@
 */
 #pragma once
 
-#include "SceneNode.h"
 #include "Particle.h"
+#include "SceneNode.h"
+
+
 
 class ParticleNode;
+
+
 
 class EmitterNode : public SceneNode
 {
@@ -34,5 +38,3 @@ private:
 	Particle::Type			type;
 	ParticleNode*			particleSystem;
 };
-
-

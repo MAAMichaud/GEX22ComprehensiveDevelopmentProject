@@ -11,7 +11,9 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "utility.h"
+
 #include <random>
+
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 

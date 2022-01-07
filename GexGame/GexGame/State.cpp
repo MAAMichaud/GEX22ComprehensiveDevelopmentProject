@@ -10,12 +10,13 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
-#include "State.h"
-#include <SFML/Graphics/Font.hpp>
-#include <SFML/Window/Event.hpp>
-#include <SFML/System/Time.hpp>
-#include "StateStack.h"
 #include "ResourceIdentifiers.h"
+#include "State.h"
+#include "StateStack.h"
+
+#include <SFML/Graphics/Font.hpp>
+#include <SFML/System/Time.hpp>
+#include <SFML/Window/Event.hpp>
 
 
 

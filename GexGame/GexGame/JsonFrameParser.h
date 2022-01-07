@@ -18,10 +18,16 @@ The getFramesFor(animation) returns the textureRects for the frames in that anim
 #pragma once
 
 #include "json.hpp"
+
 #include <vector>
+
 #include <SFML/Graphics/Rect.hpp>
 
+
+
 using nlohmann::json;
+
+
 
 struct IntRect {
 
@@ -31,6 +37,8 @@ struct IntRect {
 	int width;
 	int height;
 };
+
+
 
 class JsonFrameParser
 {
@@ -57,6 +65,3 @@ public:
 private:
 	json              json_;
 };
-
-
-

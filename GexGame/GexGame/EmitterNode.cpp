@@ -10,17 +10,22 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
-#include "EmitterNode.h"
 #include "Command.h"
 #include "CommandQueue.h"
+#include "EmitterNode.h"
 #include "ParticleNode.h"
+
+
 
 EmitterNode::EmitterNode(Particle::Type type)
 	: SceneNode()
 	, accumulatedTime(sf::Time::Zero)
 	, type(type)
 	, particleSystem(nullptr)
-{}
+{
+}
+
+
 
 void EmitterNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
@@ -44,6 +49,8 @@ void EmitterNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 		commands.push(command);
 	}
 }
+
+
 
 void EmitterNode::emitParticles(sf::Time dt)
 {

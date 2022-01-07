@@ -1,18 +1,20 @@
 /**
 * author  Marc-Andre Michaud
 *
-* 
+*
 * @section DESCRIPTION
 *  Gex Game
-*  Based SFML Game Development Textbook 
-*  
+*  Based SFML Game Development Textbook
+*
 * @section Academic Integrity
-*  I certify that this work is solely my own and complies with 
+*  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "Animation.h"
+
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Texture.hpp>
+
 
 
 Animation::Animation()
@@ -26,6 +28,8 @@ Animation::Animation()
 {
 }
 
+
+
 Animation::Animation(const sf::Texture& texture)
 	: sprite(texture)
 	, frameSize()
@@ -37,75 +41,105 @@ Animation::Animation(const sf::Texture& texture)
 {
 }
 
+
+
 void Animation::setTexture(const sf::Texture& texture)
 {
 	sprite.setTexture(texture);
 }
+
+
 
 const sf::Texture* Animation::getTexture() const
 {
 	return sprite.getTexture();
 }
 
+
+
 void Animation::setFrameSize(sf::Vector2i fsize)
 {
 	frameSize = fsize;
 }
+
+
 
 sf::Vector2i Animation::getFrameSize() const
 {
 	return frameSize;
 }
 
+
+
 void Animation::setNumFrames(std::size_t numFrames)
 {
 	numberOfFrames = numFrames;
 }
+
+
 
 std::size_t Animation::getNumFrames() const
 {
 	return numberOfFrames;
 }
 
+
+
 void Animation::setDuration(sf::Time d)
 {
 	duration = d;
 }
+
+
 
 sf::Time Animation::getDuration() const
 {
 	return duration;
 }
 
+
+
 void Animation::setRepeating(bool flag)
 {
 	repeat = flag;
 }
+
+
 
 bool Animation::isRepeating() const
 {
 	return repeat;
 }
 
+
+
 void Animation::restart()
 {
 	currentFrame = 0;
 }
+
+
 
 bool Animation::isFinished() const
 {
 	return currentFrame >= numberOfFrames;
 }
 
+
+
 sf::FloatRect Animation::getLocalBounds() const
 {
 	return sf::FloatRect(getOrigin(), static_cast<sf::Vector2f>(getFrameSize()));
 }
 
+
+
 sf::FloatRect Animation::getGlobalBounds() const
 {
 	return getTransform().transformRect(getLocalBounds());
 }
+
+
 
 void Animation::update(sf::Time dt)
 {
@@ -116,7 +150,9 @@ void Animation::update(sf::Time dt)
 	sf::IntRect textureRect = sprite.getTextureRect();
 
 	if (currentFrame == 0)
+	{
 		textureRect = sf::IntRect(0, 0, frameSize.x, frameSize.y);
+	}
 
 	// While we have a frame to process
 	while (elapsedTime >= timePerFrame && (currentFrame <= numberOfFrames || repeat))
@@ -139,7 +175,9 @@ void Animation::update(sf::Time dt)
 			currentFrame = (currentFrame + 1) % numberOfFrames;
 
 			if (currentFrame == 0)
+			{
 				textureRect = sf::IntRect(0, 0, frameSize.x, frameSize.y);
+			}
 		}
 		else
 		{
@@ -149,6 +187,7 @@ void Animation::update(sf::Time dt)
 
 	sprite.setTextureRect(textureRect);
 }
+
 
 
 void Animation::draw(sf::RenderTarget& target, sf::RenderStates states) const

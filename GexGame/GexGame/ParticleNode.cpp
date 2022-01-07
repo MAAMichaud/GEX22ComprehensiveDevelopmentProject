@@ -1,27 +1,30 @@
 /**
 * author  Marc-Andre Michaud
 *
-* 
+*
 * @section DESCRIPTION
 *  Gex Game
-*  Based SFML Game Development Textbook 
-*  
+*  Based SFML Game Development Textbook
+*
 * @section Academic Integrity
-*  I certify that this work is solely my own and complies with 
+*  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "DataTables.h"
 #include "ParticleNode.h"
 
 #include <algorithm>
-#include "DataTables.h"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Texture.hpp>
+
+
 
 namespace
 {
 	const std::map<Particle::Type, ParticleData> TABLE = initializeParticleData();
 }
+
 
 
 ParticleNode::ParticleNode(Particle::Type type, const TextureHolder_t& textures)
@@ -34,6 +37,8 @@ ParticleNode::ParticleNode(Particle::Type type, const TextureHolder_t& textures)
 {
 }
 
+
+
 void ParticleNode::addParticle(sf::Vector2f position)
 {
 	Particle particle;
@@ -44,28 +49,36 @@ void ParticleNode::addParticle(sf::Vector2f position)
 	particles.push_back(particle);
 }
 
+
+
 Particle::Type ParticleNode::getParticleType() const
 {
-    return type;
+	return type;
 }
 
 unsigned int ParticleNode::getCategory() const
 {
-    return Category::ParticleSystem;
+	return Category::ParticleSystem;
 }
 
 void ParticleNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
 	// Remove expired particles at beginning
 	while (!particles.empty() && particles.front().lifetime <= sf::Time::Zero)
+	{
 		particles.pop_front();
+	}
 
 	// Decrease lifetime of existing particles
 	for (Particle& p : particles)
+	{
 		p.lifetime -= dt;
+	}
 
 	needsVertexUpdate = true;
 }
+
+
 
 void ParticleNode::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
@@ -82,6 +95,8 @@ void ParticleNode::drawCurrent(sf::RenderTarget& target, sf::RenderStates states
 	target.draw(vertexArray, states);
 }
 
+
+
 void ParticleNode::addVertex(float worldX, float worldY, float texCoordX, float texCoordY, const sf::Color& color) const
 {
 	sf::Vertex vertex;
@@ -91,6 +106,8 @@ void ParticleNode::addVertex(float worldX, float worldY, float texCoordX, float 
 
 	vertexArray.append(vertex);
 }
+
+
 
 void ParticleNode::computeVertices() const
 {

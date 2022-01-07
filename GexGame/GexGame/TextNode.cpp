@@ -10,11 +10,13 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "ResourceHolder.h"
 #include "TextNode.h"
 #include "utility.h"
-#include "ResourceHolder.h"
-#include <SFML/Graphics/RenderTarget.hpp>
+
 #include <string>
+
+#include <SFML/Graphics/RenderTarget.hpp>
 
 
 

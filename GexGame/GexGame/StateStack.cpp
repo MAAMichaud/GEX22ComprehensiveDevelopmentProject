@@ -11,10 +11,11 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "StateStack.h"
+
 #include <cassert>
 
-#include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Event.hpp>
 
 
 
@@ -145,4 +146,3 @@ StateStack::PendingChange::PendingChange(Action _action, StateID _stateID)
 	, stateID(_stateID)
 {
 }
-

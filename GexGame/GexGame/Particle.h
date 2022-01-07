@@ -11,8 +11,9 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
-#include <SFML/System/Time.hpp>
+
 #include <SFML/Graphics/Color.hpp>
+#include <SFML/System/Time.hpp>
 #include <SFML/System/Vector2.hpp>
 
 

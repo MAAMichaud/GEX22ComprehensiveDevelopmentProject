@@ -13,13 +13,16 @@
 #pragma once
 
 #include "PostEffect.h"
-#include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/Shader.hpp>
-#include <SFML/Graphics/RenderTexture.hpp>
 
-#include <memory>
-#include <map>
 #include <array>
+#include <map>
+#include <memory>
+
+#include <SFML/Graphics/RenderTexture.hpp>
+#include <SFML/Graphics/Shader.hpp>
+#include <SFML/System/Vector2.hpp>
+
+
 
 class BloomEffect : public PostEffect
 {
