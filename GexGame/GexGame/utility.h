@@ -12,8 +12,6 @@
 */
 #pragma once
 
-#include "Animation.h"
-
 #include <cmath>
 
 #include <SFML/System/Vector2.hpp>
@@ -24,6 +22,7 @@ namespace sf {
 	class Sprite;
 	class Text;
 }
+class Animation;
 
 
 

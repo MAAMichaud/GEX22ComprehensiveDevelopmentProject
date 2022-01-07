@@ -167,7 +167,6 @@
     <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="PlayerControl.cpp" />
     <ClCompile Include="PostEffect.cpp" />
-    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="SoundNode.cpp" />
     <ClCompile Include="SoundPlayer.cpp" />
@@ -202,7 +201,6 @@
     <ClInclude Include="PauseState.h" />
     <ClInclude Include="PlayerControl.h" />
     <ClInclude Include="PostEffect.h" />
-    <ClInclude Include="Projectile.h" />
     <ClInclude Include="ResourceHolder.h" />
     <ClInclude Include="ResourceIdentifiers.h" />
     <ClInclude Include="SceneNode.h" />

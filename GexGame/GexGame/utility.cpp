@@ -10,6 +10,7 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "Animation.h"
 #include "utility.h"
 
 #include <random>

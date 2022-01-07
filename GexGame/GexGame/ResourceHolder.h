@@ -11,6 +11,7 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #pragma once
+
 #include <cassert>
 #include <map>
 #include <memory>
