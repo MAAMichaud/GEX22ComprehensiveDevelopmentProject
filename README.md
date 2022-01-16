@@ -32,9 +32,8 @@
 <br />
 
 <h1 align="center"><b>Executive Summary</b></h1>
-<br />
 
-Defenders of Ragnar is a stategic Tower Defence game, roughly based on UO:Defender, which is itself based on Ultima Online.
+Defenders of Ragnar is a strategic Tower Defence game, roughly based on UO:Defender, which is itself based on Ultima Online.
 
 The game uses a top-down isometric tile-based view with 2D animated sprites for towers and enemies.
 The mouse will be the main input method, with a few keyboard shortcuts.
@@ -46,9 +45,8 @@ Success is achieved by proper strategic placement of towers, and the game is los
 <br />
 
 <h1 align="center"><b>Overview</b></h1>
-<br />
 
-King Ragnar II has tasked you with defending the his kingdom of Elion. You will travel the realm defending it from would-be invaders. 
+King Ragnar II has tasked you with defending his kingdom of Elion. You will travel the realm defending it from would-be invaders. 
 The King's warriors and wizards will be at your disposal.
 
 Each location will offer finite waves of invaders which you must stop from crossing into the inner kingdom.
@@ -58,7 +56,6 @@ Each enemy slain will earn you gold to hire and upgrade your towers (warriors an
 <br />
 
 <h1 align="center"><b>The Quest</b></h1>
-<br />
 
 The player starts a level with 30 lives. Each time an enemy reaches the end of the game board the player loses a life. At 0 lives the game is lost.
 
@@ -70,7 +67,6 @@ Throughout the level, the player earns gold for purchasing and upgrading towers 
 <br />
 
 <h1 align="center"><b>Protagonists</b></h1>
-<br />
 
 <div align="center">
 
@@ -102,7 +98,6 @@ After progressing through a level, the player can unlock prestige class towers w
 <br />
 
 <h1 align="center"><b>Antagonists</b></h1>
-<br />
 
 <div align="center">
 
@@ -132,10 +127,9 @@ Each level will have boss waves which feature a single enemy that is extra hard 
 <br />
 
 <h1 align="center"><b>Environment</b></h1>
-<br />
 
 The game environment consists of an isometric tiled game board. Each level has at least one path for enemies to travel. 
-Enemies enter the level at the upper right edge, and make their way to their exit on the lower left edge.
+Enemies enter the level at the upper right edge and make their way to their exit on the lower left edge.
 
 <div align="center">
 
@@ -164,7 +158,6 @@ Warrior towers perform better on stones with many adjacent path tiles whereas wi
 </div>
 
 <h1 align="center"><b>Menus</b></h1>
-<br />
 
 The game will have a start menu, a pause menu, and some basic UI buttons in the main game view.
 
@@ -178,7 +171,6 @@ The in-game UI will have buttons for tower selection, round start, and music/sou
 <br />
 
 <h1 align="center"><b>Controls</b></h1>
-<br />
 
 The mouse will be the main source of input for this game. Mousing over the board will highlight the tiles being moused over.
 When placing or interacting with a tower, the tiles within the tower's attack range will be highlighted.
@@ -189,19 +181,17 @@ Keyboard hotkeys will also be available. Esc will cancel tower placement, P will
 <br />
 
 <h1 align="center"><b>Sounds</b></h1>
-<br />
 
 The game will have menu music and in-game music.
 
-In adition to music, There will be sound effects for the various tower attacks.
+In addition to music, there will be sound effects for the various tower attacks.
 
 <br />
 <br />
 
 <h1 align="center"><b>Summary</b></h1>
-<br />
 
-This game should appeal to strategic minded players whlie maintaining a simplicity that makes it accessible to casual gamers.
+This game should appeal to strategic minded players while maintaining a simplicity that makes it accessible to casual gamers.
 
 Randomness in enemy spawn patterns and multiple branching tower upgrade paths will offer replay value.
 
