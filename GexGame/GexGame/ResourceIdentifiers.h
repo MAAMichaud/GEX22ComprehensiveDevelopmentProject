@@ -24,6 +24,14 @@ namespace sf {
 enum class TextureID
 {
     TitleScreen,
+    ForestBoard,
+    CemeteryBoard,
+    BeachBoard,
+    MountainBoard,
+    OnebyOne,
+    ThreebyThree,
+    FivebyFive,
+    SevenbySeven,
     Particle,
 };
 

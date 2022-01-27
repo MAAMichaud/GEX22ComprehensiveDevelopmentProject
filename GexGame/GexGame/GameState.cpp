@@ -38,6 +38,7 @@ bool GameState::update(sf::Time dt)
 {
     world.update(dt);
 
+	/*
 	if (!world.hasAlivePlayer())
 	{
 		player.setMissionStatus(PlayerControl::MissionStatus::MissionFailure);
@@ -48,6 +49,7 @@ bool GameState::update(sf::Time dt)
 		player.setMissionStatus(PlayerControl::MissionStatus::MissionSuccess);
 		requestStackPush(StateID::GameOver);
 	}
+	*/
 
 	processInput();
 

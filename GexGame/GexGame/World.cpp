@@ -33,7 +33,7 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, sceneGraph()
 	, sceneLayers()
 	, commands()
-	, worldBounds(0.f, 0.f, worldView.getSize().x, 4000.f)
+	, worldBounds(0.f, 0.f, worldView.getSize().x, worldView.getSize().y)
 	, spawnPosition(worldView.getSize().x / 2.f, worldBounds.height - (worldView.getSize().y / 2.f))
 	, bloomEffect()
 {
@@ -116,12 +116,31 @@ bool World::hasPlayerReachedTheEnd() const
 
 void World::loadTextures()
 {
+	textures.load(TextureID::ForestBoard, "../Media/Textures/ForestBoard.png");
 }
 
 
 
 void World::buildScene()
 {
+	for (size_t i{ 0 }; i < LayerCount; ++i)
+	{
+		auto category{ (i == LowerAir) ? Category::SceneAirLayer : Category::None };
+
+		SceneNode::Ptr layer(new SceneNode(category));
+		sceneLayers[i] = layer.get();
+		sceneGraph.attachChild(std::move(layer));
+	}
+
+	sf::Texture& backgroundTexture{ textures.get(TextureID::ForestBoard) };
+
+	sf::IntRect textureRect(worldBounds);
+
+	auto backgroundSprite{ std::make_unique<SpriteNode>(
+		backgroundTexture, textureRect) };
+
+	backgroundSprite->setPosition(worldBounds.left, worldBounds.top);
+	sceneLayers[Background]->attachChild(std::move(backgroundSprite));
 }
 
 
