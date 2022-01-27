@@ -24,6 +24,7 @@ namespace sf {
 enum class TextureID
 {
     TitleScreen,
+    MainMenu,
     ForestBoard,
     CemeteryBoard,
     BeachBoard,

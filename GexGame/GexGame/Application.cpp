@@ -44,6 +44,7 @@ Application::Application()
 
 	fonts.load(FontID::Main, "../Media/Sansation.ttf");
 	textures.load(TextureID::TitleScreen, "../Media/Textures/GEX.png");
+	textures.load(TextureID::MainMenu, "../Media/Textures/MainMenu.png");
 
 	statisticsText.setFont(fonts.get(FontID::Main));
 	statisticsText.setPosition(15.0f, 15.0f);

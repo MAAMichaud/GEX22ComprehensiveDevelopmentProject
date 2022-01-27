@@ -26,32 +26,10 @@
 
 MenuState::MenuState(StateStack& stack, Context context)
 	: State(stack, context)
-	, optionsIndex(0)
 {
-	sf::Texture& texture = context.textures->get(TextureID::TitleScreen);
+	sf::Texture& texture = context.textures->get(TextureID::MainMenu);
 
 	backgroundSprite.setTexture(texture);
-
-	// set up menu
-
-	// play option 
-	sf::Text playOption;
-	playOption.setFont(context.fonts->get(FontID::Main));
-	playOption.setString("Play");
-	centerOrigin(playOption);
-	playOption.setPosition(context.window->getView().getSize() / 2.f);
-
-	options.push_back(playOption);
-
-	// exit option 
-	sf::Text exitOption;
-	exitOption.setFont(context.fonts->get(FontID::Main));
-	exitOption.setString("Exit");
-	centerOrigin(exitOption);
-	exitOption.setPosition(playOption.getPosition() + sf::Vector2f(0.f, 30.f));
-	options.push_back(exitOption);
-
-	updateOptionText();
 }
 
 
@@ -62,11 +40,6 @@ void MenuState::draw()
 
 	window.setView(window.getDefaultView());
 	window.draw(backgroundSprite);
-
-	for (const sf::Text& text : options)
-	{
-		window.draw(text);
-	}
 }
 
 
@@ -80,11 +53,74 @@ bool MenuState::update(sf::Time dt)
 
 bool MenuState::handleEvent(const sf::Event& event)
 {
+	static const float THUMBNAIL_WIDTH{ 317 };
+	static const float THUMBNAIL_HEIGHT{ 211 };
+
+	static const float FOREST_LEVEL_WIDTH{ 217 };
+	static const float FOREST_LEVEL_HEIGHT{ 211 };
+
+	static const float CEMETERY_LEVEL_WIDTH{ 851 };
+	static const float CEMETERY_LEVEL_HEIGHT{ 211 };
+
+	static const float BEACH_LEVEL_WIDTH{ 217 };
+	static const float BEACH_LEVEL_HEIGHT{ 633 };
+
+	static const float MOUNTAIN_LEVEL_WIDTH{ 851 };
+	static const float MOUNTAIN_LEVEL_HEIGHT{ 633 };
+
+	static const float QUIT_BUTTON_LEFT{ 615 };
+	static const float QUIT_BUTTON_TOP{ 900 };
+	static const float QUIT_BUTTON_RIGHT{ 740 };
+	static const float QUIT_BUTTON_BOTTOM{ 970 };
+
 	if (event.type == sf::Event::MouseButtonPressed)
 	{
 		if (event.mouseButton.button == sf::Mouse::Left)
 		{
 			std::cout << "clicked at " << event.mouseButton.x << ", " << event.mouseButton.y << std::endl;
+
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + FOREST_LEVEL_WIDTH 
+				&& event.mouseButton.x > FOREST_LEVEL_WIDTH
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + FOREST_LEVEL_HEIGHT
+				&& event.mouseButton.y > FOREST_LEVEL_HEIGHT)
+			{
+				std::cout << "clicked on forest level" << std::endl;
+				requestStackPop();
+				requestStackPush(StateID::Game);
+			}
+
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + CEMETERY_LEVEL_WIDTH 
+				&& event.mouseButton.x > CEMETERY_LEVEL_WIDTH
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + CEMETERY_LEVEL_HEIGHT
+				&& event.mouseButton.y > CEMETERY_LEVEL_HEIGHT)
+			{
+				std::cout << "clicked on cemetery level" << std::endl;
+			}
+
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + BEACH_LEVEL_WIDTH 
+				&& event.mouseButton.x > BEACH_LEVEL_WIDTH
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + BEACH_LEVEL_HEIGHT
+				&& event.mouseButton.y > BEACH_LEVEL_HEIGHT)
+			{
+				std::cout << "clicked on beach level" << std::endl;
+			}
+
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + MOUNTAIN_LEVEL_WIDTH 
+				&& event.mouseButton.x > MOUNTAIN_LEVEL_WIDTH
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + MOUNTAIN_LEVEL_HEIGHT
+				&& event.mouseButton.y > MOUNTAIN_LEVEL_HEIGHT)
+			{
+				std::cout << "clicked on mountain level" << std::endl;
+			}
+
+			if (event.mouseButton.x < QUIT_BUTTON_RIGHT 
+				&& event.mouseButton.x > QUIT_BUTTON_LEFT
+				&& event.mouseButton.y < QUIT_BUTTON_BOTTOM
+				&& event.mouseButton.y > QUIT_BUTTON_TOP)
+			{
+				std::cout << "clicked on quit button" << std::endl;
+				requestStackPop();
+			}
 		}
 	}
 
@@ -93,62 +129,10 @@ bool MenuState::handleEvent(const sf::Event& event)
 		return true;
 	}
 
-	if (event.key.code == sf::Keyboard::Return)
+	if (event.key.code == sf::Keyboard::Escape)
 	{
-		if (optionsIndex == Play)
-		{
-			requestStackPop();
-			requestStackPush(StateID::Game);
-		}
-		else if (optionsIndex == Exit)
-		{
-			requestStackPop();
-		}
-	}
-	else if ((event.key.code == sf::Keyboard::Up))
-	{
-		if (optionsIndex > 0)
-		{
-			optionsIndex -= 1;
-		}
-		else
-		{
-			optionsIndex = options.size() - 1;
-		}
-
-		updateOptionText();
-	}
-	else if ((event.key.code == sf::Keyboard::Down))
-	{
-		if (optionsIndex < options.size() - 1)
-		{
-			optionsIndex += 1;
-		}
-		else
-		{
-			optionsIndex = 0;
-		}
-
-		updateOptionText();
+		requestStackPop();
 	}
 
 	return true;
-}
-
-
-
-void MenuState::updateOptionText()
-{
-	if (options.empty())
-	{
-		return;
-	}
-
-	for (sf::Text& text : options)
-	{
-		text.setFillColor(sf::Color::White);
-		text.setOutlineColor(sf::Color::Black);
-	}
-
-	options[optionsIndex].setFillColor(sf::Color::Magenta);
 }

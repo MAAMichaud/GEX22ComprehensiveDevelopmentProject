@@ -23,4 +23,8 @@ enum class StateID
 	Loading,
 	Pause,
 	GameOver,
+	ForestLevel,
+	CemeteryLevel,
+	BeachLevel,
+	MountainLevel,
 };
