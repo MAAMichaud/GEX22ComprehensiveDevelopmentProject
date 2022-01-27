@@ -14,11 +14,21 @@
 
 #include "Particle.h"
 #include "ResourceIdentifiers.h"
+#include "World.h"
 
 #include <map>
+#include <string>
 
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/System/Time.hpp>
+
+
+
+struct LevelData
+{
+	TextureID			backgroundTexture;
+	std::string			backgroundTexturePath;
+};
 
 
 
@@ -29,4 +39,7 @@ struct ParticleData
 
 };
 
+
+
+std::map<World::Type, LevelData> initializeLevelData();
 std::map<Particle::Type, ParticleData> initializeParticleData();

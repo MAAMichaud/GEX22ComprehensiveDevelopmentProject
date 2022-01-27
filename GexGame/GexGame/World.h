@@ -39,8 +39,17 @@ class SoundPlayer;
 class World
 {
 public:
+	enum class Type
+	{
+		Forest,
+		Cemetery,
+		Beach,
+		Mountain,
+	};
+
+public:
 										World(const World&) = delete;
-	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds);
+	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds, World::Type levelType);
 
 	void								update(sf::Time dt);
 	void								updateSounds();
@@ -85,4 +94,6 @@ private:
 	sf::Vector2f						spawnPosition;
 
 	BloomEffect							bloomEffect;
+
+	World::Type							levelType;
 };

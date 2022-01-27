@@ -13,6 +13,7 @@
 #include "Command.h"
 #include "Entity.h"
 #include "particleNode.h"
+#include "DataTables.h"
 #include "SoundNode.h"
 #include "SoundPlayer.h"
 #include "SpriteNode.h"
@@ -23,7 +24,12 @@
 
 
 
-World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds)
+namespace
+{
+	const std::map<World::Type, LevelData> LEVEL_DATA{ initializeLevelData() };
+}
+
+World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, World::Type _levelType)
 	: target(_target)
 	, sceneTexture()
 	, worldView(_target.getDefaultView())
@@ -36,6 +42,7 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, worldBounds(0.f, 0.f, worldView.getSize().x, worldView.getSize().y)
 	, spawnPosition(worldView.getSize().x / 2.f, worldBounds.height - (worldView.getSize().y / 2.f))
 	, bloomEffect()
+	, levelType(_levelType)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -116,7 +123,7 @@ bool World::hasPlayerReachedTheEnd() const
 
 void World::loadTextures()
 {
-	textures.load(TextureID::ForestBoard, "../Media/Textures/ForestBoard.png");
+	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
 }
 
 
@@ -132,7 +139,7 @@ void World::buildScene()
 		sceneGraph.attachChild(std::move(layer));
 	}
 
-	sf::Texture& backgroundTexture{ textures.get(TextureID::ForestBoard) };
+	sf::Texture& backgroundTexture{ textures.get(LEVEL_DATA.at(levelType).backgroundTexture) };
 
 	sf::IntRect textureRect(worldBounds);
 

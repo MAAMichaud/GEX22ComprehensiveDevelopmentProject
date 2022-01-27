@@ -20,7 +20,7 @@
 
 GameState::GameState(StateStack& stack, Context context)
     : State(stack, context)
-	, world(*context.window, *context.fonts, *context.sound)
+	, world(*context.window, *context.fonts, *context.sound, World::Type::Forest)
 	, player(*context.player)
 {
 }

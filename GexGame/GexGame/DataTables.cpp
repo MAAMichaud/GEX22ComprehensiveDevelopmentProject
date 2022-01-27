@@ -15,6 +15,27 @@
 
 
 
+std::map<World::Type, LevelData> initializeLevelData()
+{
+	std::map<World::Type, LevelData> data;
+
+	data[World::Type::Forest].backgroundTexture = TextureID::ForestBoard;
+	data[World::Type::Forest].backgroundTexturePath = "../Media/Textures/ForestBoard.png";
+
+	data[World::Type::Cemetery].backgroundTexture = TextureID::CemeteryBoard;
+	data[World::Type::Cemetery].backgroundTexturePath = "../Media/Textures/CemeteryBoard.png";
+
+	data[World::Type::Beach].backgroundTexture = TextureID::BeachBoard;
+	data[World::Type::Beach].backgroundTexturePath = "../Media/Textures/BeachBoard.png";
+
+	data[World::Type::Mountain].backgroundTexture = TextureID::MountainBoard;
+	data[World::Type::Mountain].backgroundTexturePath = "../Media/Textures/MountainBoard.png";
+
+	return data;
+}
+
+
+
 std::map<Particle::Type, ParticleData> initializeParticleData()
 {
 	std::map<Particle::Type, ParticleData> data;
