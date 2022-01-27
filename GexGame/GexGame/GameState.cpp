@@ -69,7 +69,7 @@ bool GameState::handleEvent(const sf::Event& event)
 		return false;
 	}
 
-	if (event.key.code == sf::Keyboard::Escape)
+	if (event.key.code == sf::Keyboard::P)
 	{
 		requestStackPush(StateID::Pause);
 	}

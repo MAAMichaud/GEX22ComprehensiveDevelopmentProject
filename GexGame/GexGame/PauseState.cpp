@@ -37,7 +37,7 @@ PauseState::PauseState(StateStack& stack, Context context)
 	centerOrigin(pausedText);
 
 	instructionText.setFont(context.fonts->get(FontID::Main));
-	instructionText.setString("(Press Backspace to return to the main menu)");
+	instructionText.setString("RESUME\n\nQUIT");
 	centerOrigin(instructionText);
 
 	sf::Vector2f viewSize = context.window->getView().getSize();
@@ -76,6 +76,39 @@ bool PauseState::update(sf::Time dt)
 
 bool PauseState::handleEvent(const sf::Event& event)
 {
+	static const float RESUME_BUTTON_LEFT{ 640 };
+	static const float RESUME_BUTTON_TOP{ 560 };
+	static const float RESUME_BUTTON_RIGHT{ 765 };
+	static const float RESUME_BUTTON_BOTTOM{ 600 };
+
+	static const float QUIT_BUTTON_LEFT{ 640 };
+	static const float QUIT_BUTTON_TOP{ 635 };
+	static const float QUIT_BUTTON_RIGHT{ 720 };
+	static const float QUIT_BUTTON_BOTTOM{ 665 };
+
+	if (event.type == sf::Event::MouseButtonPressed)
+	{
+		if (event.mouseButton.button == sf::Mouse::Left)
+		{
+			if (event.mouseButton.x < RESUME_BUTTON_RIGHT 
+				&& event.mouseButton.x > RESUME_BUTTON_LEFT
+				&& event.mouseButton.y < RESUME_BUTTON_BOTTOM
+				&& event.mouseButton.y > RESUME_BUTTON_TOP)
+			{
+				requestStackPop();
+			}
+
+			if (event.mouseButton.x < QUIT_BUTTON_RIGHT 
+				&& event.mouseButton.x > QUIT_BUTTON_LEFT
+				&& event.mouseButton.y < QUIT_BUTTON_BOTTOM
+				&& event.mouseButton.y > QUIT_BUTTON_TOP)
+			{
+				requestStackClear();
+				requestStackPush(StateID::Menu);
+			}
+		}
+	}
+
 	if (event.type != sf::Event::KeyPressed)
 	{
 		return false;
