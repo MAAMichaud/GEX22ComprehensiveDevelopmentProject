@@ -60,9 +60,12 @@ void Application::registerStates()
 {
 	stateStack.registerState<TitleState>(StateID::Title);
 	stateStack.registerState<MenuState>(StateID::Menu);
-	stateStack.registerState<GameState>(StateID::Game);
 	stateStack.registerState<PauseState>(StateID::Pause);
 	stateStack.registerState<GameOverState>(StateID::GameOver);
+	stateStack.registerLevelState<GameState>(StateID::ForestLevel);
+	stateStack.registerLevelState<GameState>(StateID::CemeteryLevel);
+	stateStack.registerLevelState<GameState>(StateID::BeachLevel);
+	stateStack.registerLevelState<GameState>(StateID::MountainLevel);
 }
 
 

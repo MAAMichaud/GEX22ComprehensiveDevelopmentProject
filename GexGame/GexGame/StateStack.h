@@ -48,6 +48,8 @@ public:
 
 	template <typename T>
 	void						registerState(StateID stateID);
+	template <typename T>
+	void						registerLevelState(StateID stateID);
 	void						update(sf::Time dt);
 	void						draw();
 	void						handleEvent(const sf::Event& event);
@@ -87,5 +89,16 @@ inline void StateStack::registerState(StateID stateID)
 	factories[stateID] = [this]()
 	{
 		return State::Ptr(new T(*this, context));
+	};
+}
+
+
+
+template<typename T>
+inline void StateStack::registerLevelState(StateID stateID)
+{
+	factories[stateID] = [=]()
+	{
+		return State::Ptr(new T(*this, context, stateID));
 	};
 }

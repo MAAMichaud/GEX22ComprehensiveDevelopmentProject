@@ -18,9 +18,9 @@
 
 
 
-GameState::GameState(StateStack& stack, Context context)
+GameState::GameState(StateStack& stack, Context context, StateID stateId)
     : State(stack, context)
-	, world(*context.window, *context.fonts, *context.sound, World::Type::Forest)
+	, world(*context.window, *context.fonts, *context.sound, getWorldType(stateId))
 	, player(*context.player)
 {
 }
@@ -85,4 +85,35 @@ void GameState::processInput()
     auto& commands{ world.getCommandQueue() };
 
     player.handleRealTimeInput(commands);
+}
+
+
+
+World::Type GameState::getWorldType(StateID stateId)
+{
+	switch (stateId)
+	{
+	case StateID::ForestLevel:
+		return World::Type::Forest;
+		break;
+
+	case StateID::CemeteryLevel:
+		return World::Type::Cemetery;
+		break;
+
+	case StateID::BeachLevel:
+		return World::Type::Beach;
+		break;
+
+	case StateID::MountainLevel:
+		return World::Type::Mountain;
+		break;
+
+	default:
+		return World::Type::Forest;
+		break;
+
+	}
+
+	return World::Type::Forest;
 }

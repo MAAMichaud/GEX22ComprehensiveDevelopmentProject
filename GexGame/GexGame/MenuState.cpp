@@ -15,9 +15,8 @@
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
 #include "State.h"
+#include "StateIdentifiers.h"
 #include "Utility.h"
-
-#include <iostream>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
@@ -77,16 +76,13 @@ bool MenuState::handleEvent(const sf::Event& event)
 	{
 		if (event.mouseButton.button == sf::Mouse::Left)
 		{
-			std::cout << "clicked at " << event.mouseButton.x << ", " << event.mouseButton.y << std::endl;
-
 			if (event.mouseButton.x < THUMBNAIL_WIDTH + FOREST_LEVEL_WIDTH 
 				&& event.mouseButton.x > FOREST_LEVEL_WIDTH
 				&& event.mouseButton.y < THUMBNAIL_HEIGHT + FOREST_LEVEL_HEIGHT
 				&& event.mouseButton.y > FOREST_LEVEL_HEIGHT)
 			{
-				std::cout << "clicked on forest level" << std::endl;
 				requestStackPop();
-				requestStackPush(StateID::Game);
+				requestStackPush(StateID::ForestLevel);
 			}
 
 			if (event.mouseButton.x < THUMBNAIL_WIDTH + CEMETERY_LEVEL_WIDTH 
@@ -94,7 +90,8 @@ bool MenuState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y < THUMBNAIL_HEIGHT + CEMETERY_LEVEL_HEIGHT
 				&& event.mouseButton.y > CEMETERY_LEVEL_HEIGHT)
 			{
-				std::cout << "clicked on cemetery level" << std::endl;
+				requestStackPop();
+				requestStackPush(StateID::CemeteryLevel);
 			}
 
 			if (event.mouseButton.x < THUMBNAIL_WIDTH + BEACH_LEVEL_WIDTH 
@@ -102,7 +99,8 @@ bool MenuState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y < THUMBNAIL_HEIGHT + BEACH_LEVEL_HEIGHT
 				&& event.mouseButton.y > BEACH_LEVEL_HEIGHT)
 			{
-				std::cout << "clicked on beach level" << std::endl;
+				requestStackPop();
+				requestStackPush(StateID::BeachLevel);
 			}
 
 			if (event.mouseButton.x < THUMBNAIL_WIDTH + MOUNTAIN_LEVEL_WIDTH 
@@ -110,7 +108,8 @@ bool MenuState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y < THUMBNAIL_HEIGHT + MOUNTAIN_LEVEL_HEIGHT
 				&& event.mouseButton.y > MOUNTAIN_LEVEL_HEIGHT)
 			{
-				std::cout << "clicked on mountain level" << std::endl;
+				requestStackPop();
+				requestStackPush(StateID::MountainLevel);
 			}
 
 			if (event.mouseButton.x < QUIT_BUTTON_RIGHT 
@@ -118,7 +117,6 @@ bool MenuState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y < QUIT_BUTTON_BOTTOM
 				&& event.mouseButton.y > QUIT_BUTTON_TOP)
 			{
-				std::cout << "clicked on quit button" << std::endl;
 				requestStackPop();
 			}
 		}

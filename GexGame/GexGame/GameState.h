@@ -27,7 +27,7 @@ class PlayerControl;
 class GameState : public State
 {
 public:
-						GameState(StateStack& stack, Context context);
+						GameState(StateStack& stack, Context context, StateID stateId);
 
 	virtual void		draw() override;
 	virtual bool		update(sf::Time dt) override;
@@ -35,6 +35,7 @@ public:
 
 private:
 	void				processInput();
+	World::Type			getWorldType(StateID stateId);
 
 private:
 	World				world;
