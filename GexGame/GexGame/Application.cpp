@@ -29,7 +29,7 @@ const sf::Time Application::TIME_PER_FRAME{ sf::seconds(1.f / 60.f) };
 
 
 Application::Application()
-    : window(sf::VideoMode(1404, 1032), "Defenders of Ragnar", sf::Style::Close)
+    : window(sf::VideoMode(1524, 912), "Defenders of Ragnar", sf::Style::Close)
 	, textures()
 	, fonts()
 	, player()

@@ -55,58 +55,58 @@ bool MenuState::handleEvent(const sf::Event& event)
 	static const float THUMBNAIL_WIDTH{ 317 };
 	static const float THUMBNAIL_HEIGHT{ 211 };
 
-	static const float FOREST_LEVEL_WIDTH{ 217 };
-	static const float FOREST_LEVEL_HEIGHT{ 211 };
+	static const float FOREST_LEVEL_LEFT{ 217 };
+	static const float FOREST_LEVEL_TOP{ 211 };
 
-	static const float CEMETERY_LEVEL_WIDTH{ 851 };
-	static const float CEMETERY_LEVEL_HEIGHT{ 211 };
+	static const float CEMETERY_LEVEL_LEFT{ 971 };
+	static const float CEMETERY_LEVEL_TOP{ 211 };
 
-	static const float BEACH_LEVEL_WIDTH{ 217 };
-	static const float BEACH_LEVEL_HEIGHT{ 633 };
+	static const float BEACH_LEVEL_LEFT{ 217 };
+	static const float BEACH_LEVEL_TOP{ 633 };
 
-	static const float MOUNTAIN_LEVEL_WIDTH{ 851 };
-	static const float MOUNTAIN_LEVEL_HEIGHT{ 633 };
+	static const float MOUNTAIN_LEVEL_LEFT{ 971 };
+	static const float MOUNTAIN_LEVEL_TOP{ 633 };
 
-	static const float QUIT_BUTTON_LEFT{ 615 };
-	static const float QUIT_BUTTON_TOP{ 900 };
-	static const float QUIT_BUTTON_RIGHT{ 740 };
-	static const float QUIT_BUTTON_BOTTOM{ 970 };
+	static const float QUIT_BUTTON_LEFT{ 700 };
+	static const float QUIT_BUTTON_TOP{ 780 };
+	static const float QUIT_BUTTON_RIGHT{ 820 };
+	static const float QUIT_BUTTON_BOTTOM{ 850 };
 
 	if (event.type == sf::Event::MouseButtonPressed)
 	{
 		if (event.mouseButton.button == sf::Mouse::Left)
 		{
-			if (event.mouseButton.x < THUMBNAIL_WIDTH + FOREST_LEVEL_WIDTH 
-				&& event.mouseButton.x > FOREST_LEVEL_WIDTH
-				&& event.mouseButton.y < THUMBNAIL_HEIGHT + FOREST_LEVEL_HEIGHT
-				&& event.mouseButton.y > FOREST_LEVEL_HEIGHT)
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + FOREST_LEVEL_LEFT 
+				&& event.mouseButton.x > FOREST_LEVEL_LEFT
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + FOREST_LEVEL_TOP
+				&& event.mouseButton.y > FOREST_LEVEL_TOP)
 			{
 				requestStackPop();
 				requestStackPush(StateID::ForestLevel);
 			}
 
-			if (event.mouseButton.x < THUMBNAIL_WIDTH + CEMETERY_LEVEL_WIDTH 
-				&& event.mouseButton.x > CEMETERY_LEVEL_WIDTH
-				&& event.mouseButton.y < THUMBNAIL_HEIGHT + CEMETERY_LEVEL_HEIGHT
-				&& event.mouseButton.y > CEMETERY_LEVEL_HEIGHT)
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + CEMETERY_LEVEL_LEFT 
+				&& event.mouseButton.x > CEMETERY_LEVEL_LEFT
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + CEMETERY_LEVEL_TOP
+				&& event.mouseButton.y > CEMETERY_LEVEL_TOP)
 			{
 				requestStackPop();
 				requestStackPush(StateID::CemeteryLevel);
 			}
 
-			if (event.mouseButton.x < THUMBNAIL_WIDTH + BEACH_LEVEL_WIDTH 
-				&& event.mouseButton.x > BEACH_LEVEL_WIDTH
-				&& event.mouseButton.y < THUMBNAIL_HEIGHT + BEACH_LEVEL_HEIGHT
-				&& event.mouseButton.y > BEACH_LEVEL_HEIGHT)
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + BEACH_LEVEL_LEFT 
+				&& event.mouseButton.x > BEACH_LEVEL_LEFT
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + BEACH_LEVEL_TOP
+				&& event.mouseButton.y > BEACH_LEVEL_TOP)
 			{
 				requestStackPop();
 				requestStackPush(StateID::BeachLevel);
 			}
 
-			if (event.mouseButton.x < THUMBNAIL_WIDTH + MOUNTAIN_LEVEL_WIDTH 
-				&& event.mouseButton.x > MOUNTAIN_LEVEL_WIDTH
-				&& event.mouseButton.y < THUMBNAIL_HEIGHT + MOUNTAIN_LEVEL_HEIGHT
-				&& event.mouseButton.y > MOUNTAIN_LEVEL_HEIGHT)
+			if (event.mouseButton.x < THUMBNAIL_WIDTH + MOUNTAIN_LEVEL_LEFT 
+				&& event.mouseButton.x > MOUNTAIN_LEVEL_LEFT
+				&& event.mouseButton.y < THUMBNAIL_HEIGHT + MOUNTAIN_LEVEL_TOP
+				&& event.mouseButton.y > MOUNTAIN_LEVEL_TOP)
 			{
 				requestStackPop();
 				requestStackPush(StateID::MountainLevel);
