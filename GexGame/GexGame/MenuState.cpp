@@ -17,6 +17,8 @@
 #include "State.h"
 #include "Utility.h"
 
+#include <iostream>
+
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
 
@@ -78,6 +80,14 @@ bool MenuState::update(sf::Time dt)
 
 bool MenuState::handleEvent(const sf::Event& event)
 {
+	if (event.type == sf::Event::MouseButtonPressed)
+	{
+		if (event.mouseButton.button == sf::Mouse::Left)
+		{
+			std::cout << "clicked at " << event.mouseButton.x << ", " << event.mouseButton.y << std::endl;
+		}
+	}
+
 	if (event.type != sf::Event::KeyPressed)
 	{
 		return true;
