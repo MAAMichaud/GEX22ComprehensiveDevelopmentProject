@@ -45,6 +45,10 @@ Application::Application()
 	fonts.load(FontID::Main, "../Media/Sansation.ttf");
 	textures.load(TextureID::TitleScreen, "../Media/Textures/GEX.png");
 	textures.load(TextureID::MainMenu, "../Media/Textures/MainMenu.png");
+	textures.load(TextureID::OnebyOne, "../Media/Textures/1by1.png");
+	textures.load(TextureID::ThreebyThree, "../Media/Textures/3by3.png");
+	textures.load(TextureID::FivebyFive, "../Media/Textures/5by5.png");
+	textures.load(TextureID::SevenbySeven, "../Media/Textures/7by7.png");
 
 	statisticsText.setFont(fonts.get(FontID::Main));
 	statisticsText.setPosition(15.0f, 15.0f);

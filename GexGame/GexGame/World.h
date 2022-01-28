@@ -17,6 +17,7 @@
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
+#include "SpriteNode.h"
 #include "State.h"
 
 #include <array>
@@ -24,6 +25,7 @@
 
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/RenderTexture.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/View.hpp>
 
@@ -49,7 +51,7 @@ public:
 
 public:
 										World(const World&) = delete;
-	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds, World::Type levelType);
+	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds, World::Type levelType, sf::RenderWindow& _window);
 
 	void								update(sf::Time dt);
 	void								updateSounds();
@@ -67,6 +69,12 @@ private:
 
 	void								handleCollisions();
 	void								destroyEntitiesOutOfView();
+
+	void								handleMouse();
+	void								placeSpriteAtTile(SpriteNode& sprite, float x, float y);
+	sf::Vector2i						pixelXYToTileXY(int x, int y);
+	int									calculateXTile(int x, int y);
+	int									calculateYTile(int x, int y);
 
 private:
 	enum Layer
@@ -96,4 +104,6 @@ private:
 	BloomEffect							bloomEffect;
 
 	World::Type							levelType;
+	sf::RenderWindow&					window;
+	SpriteNode*							tileOverlay;
 };

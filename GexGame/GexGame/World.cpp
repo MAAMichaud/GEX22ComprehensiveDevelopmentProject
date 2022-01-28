@@ -21,6 +21,7 @@
 #include "World.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics.hpp>
 
 
 
@@ -29,7 +30,7 @@ namespace
 	const std::map<World::Type, LevelData> LEVEL_DATA{ initializeLevelData() };
 }
 
-World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, World::Type _levelType)
+World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, World::Type _levelType, sf::RenderWindow& _window)
 	: target(_target)
 	, sceneTexture()
 	, worldView(_target.getDefaultView())
@@ -43,6 +44,8 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, spawnPosition(worldView.getSize().x / 2.f, worldBounds.height - (worldView.getSize().y / 2.f))
 	, bloomEffect()
 	, levelType(_levelType)
+	, window(_window)
+	, tileOverlay()
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -66,8 +69,10 @@ void World::update(sf::Time dt)
 	handleCollisions();
 	sceneGraph.removeWrecks();
 
+
 	sceneGraph.update(dt, commands);
 
+	handleMouse();
 	updateSounds();
 }
 
@@ -124,6 +129,7 @@ bool World::hasPlayerReachedTheEnd() const
 void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
+	textures.load(TextureID::OnebyOne, "../Media/Textures/1by1.png");
 }
 
 
@@ -139,15 +145,23 @@ void World::buildScene()
 		sceneGraph.attachChild(std::move(layer));
 	}
 
+
 	sf::Texture& backgroundTexture{ textures.get(LEVEL_DATA.at(levelType).backgroundTexture) };
 
-	sf::IntRect textureRect(worldBounds);
-
-	auto backgroundSprite{ std::make_unique<SpriteNode>(
-		backgroundTexture, textureRect) };
+	auto backgroundSprite{ std::make_unique<SpriteNode>(backgroundTexture) };
 
 	backgroundSprite->setPosition(worldBounds.left, worldBounds.top);
 	sceneLayers[Background]->attachChild(std::move(backgroundSprite));
+
+
+	sf::Texture& overlayTexture{ textures.get(TextureID::OnebyOne) };
+
+	auto overlaySprite{ std::make_unique<SpriteNode>(overlayTexture) };
+	tileOverlay = overlaySprite.get();
+	overlaySprite->setOrigin(sf::Vector2f(0.f, 48.f));
+
+	overlaySprite->setPosition(worldBounds.left, worldBounds.top);
+	sceneLayers[LowerAir]->attachChild(std::move(overlaySprite));
 }
 
 
@@ -216,4 +230,76 @@ void World::destroyEntitiesOutOfView()
 	});
 
 	commands.push(command);
+}
+
+
+
+void World::handleMouse()
+{	
+	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
+
+	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
+
+	if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
+	{
+		tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
+
+
+		placeSpriteAtTile(*tileOverlay, tileX, tileY);
+	}
+	else
+	{
+		tileOverlay->setRGBA(sf::Color(255, 255, 255, 0));
+	}
+}
+
+
+
+void World::placeSpriteAtTile(SpriteNode& sprite, float x, float y)
+{
+    static const float BASE_X{ 880.f };
+    static const float BASE_Y{ 96.f };
+    static const float INCREMENT_X{ 36.f };
+    static const float INCREMENT_Y{ 24.f };
+
+    float newX{ BASE_X + (INCREMENT_X * x) - (INCREMENT_X * y) };
+    float newY{ BASE_Y + INCREMENT_Y * x + INCREMENT_Y * y };
+
+    sprite.setPosition(sf::Vector2f(newX, newY));
+}
+
+
+
+sf::Vector2i World::pixelXYToTileXY(int x, int y)
+{
+    return sf::Vector2i(calculateXTile(x, y), calculateYTile(x, y));
+}
+
+
+
+int World::calculateXTile(int x, int y)
+{
+	static const double xTriangleTangent{ 2.0 / 3 };
+
+	static const int tileHeight{ 48 };
+	static const int xTriangleTotalHeight{ 888 };
+	//static const int xTriangleExcess{ 504 };
+	static const int xTriangleExcess{ 504 - 158 };
+	const double xTriangleHeight{ xTriangleTangent * (x + xTriangleExcess) };
+
+	return (y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight;
+}
+
+
+
+int World::calculateYTile(int x, int y)
+{
+	static const double yTriangleTangent{ 1.5 };
+
+	static const int tileWidth{ 72 };
+	static const int yTriangleOffset{ 72 };
+	static const int yTriangleExcess{ 408 + 106 };
+	const double yTriangleWidth{ yTriangleTangent * (y + yTriangleExcess) };
+
+	return (yTriangleWidth + yTriangleOffset - x) / tileWidth;
 }
