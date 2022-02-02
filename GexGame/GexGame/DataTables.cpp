@@ -36,6 +36,30 @@ std::map<World::Type, LevelData> initializeLevelData()
 
 
 
+std::map<AnimatedNode::Type, EnemyData> initializeEnemyData()
+{
+	std::map<AnimatedNode::Type, EnemyData> data;
+
+	JsonFrameParser frames{ JsonFrameParser("../Media/Textures/LichAtlasFlipped.json") };
+	data[AnimatedNode::Type::Lich].texture = TextureID::Lich;
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::UpRight].addFrameSet(frames.getFramesFor("LichWalkUpRight"));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::UpRight].setRepeating(true);
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::DownRight].addFrameSet(frames.getFramesFor("LichWalkDownRight"));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::DownRight].setRepeating(true);
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::DownLeft].addFrameSet(frames.getFramesFor("LichWalkDownLeft"));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::DownLeft].setRepeating(true);
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::UpLeft].addFrameSet(frames.getFramesFor("LichWalkUpLeft"));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[AnimatedNode::Type::Lich].animations[AnimatedNode::Direction::UpLeft].setRepeating(true);
+
+	return data;
+}
+
+
+
 std::map<Particle::Type, ParticleData> initializeParticleData()
 {
 	std::map<Particle::Type, ParticleData> data;

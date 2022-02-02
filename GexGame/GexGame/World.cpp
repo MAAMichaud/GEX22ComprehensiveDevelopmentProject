@@ -315,25 +315,25 @@ int World::calculateYTile(int x, int y)
 
 void World::makeLich()
 {
-	auto lichNode{ std::make_unique<AnimatedNode>(textures, "LichWalkDownRight")};
+	auto lichNode{ std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich)};
 
 	lichNode->setPosition(worldBounds.left + 400, worldBounds.top + 400);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 
-	lichNode = std::make_unique<AnimatedNode>(textures, "LichWalkDownLeft");
+	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
 
 	lichNode->setPosition(worldBounds.left + 500, worldBounds.top + 400);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 
-	lichNode = std::make_unique<AnimatedNode>(textures, "LichWalkUpRight");
+	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
 
 	lichNode->setPosition(worldBounds.left + 400, worldBounds.top + 500);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 
-	lichNode = std::make_unique<AnimatedNode>(textures, "LichWalkUpLeft");
+	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
 
 	lichNode->setPosition(worldBounds.left + 500, worldBounds.top + 500);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));

@@ -19,13 +19,30 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 
+#include <map>
 #include <string>
+
 
 
 class AnimatedNode: public SceneNode
 {
 public:
-	explicit			AnimatedNode(const TextureHolder_t& textures, std::string name);
+	enum class Type 
+	{
+		Lich,
+	};
+
+	enum class Direction 
+	{
+		UpRight,
+		DownRight,
+		DownLeft,
+		UpLeft
+	};
+
+
+public:
+	explicit			AnimatedNode(const TextureHolder_t& textures, Type type);
 
 
 private:
@@ -33,7 +50,10 @@ private:
 	virtual void		updateCurrent(sf::Time dt, CommandQueue& commands) override;
 
 private:
-	sf::Sprite			sprite;
-	Animation2			animation;
+	sf::Sprite						sprite;
+	Type							type;
+	Animation2						animation;
+	std::map<Direction, Animation2>	animations;
+	Direction						direction;
 
 };

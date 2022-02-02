@@ -12,6 +12,8 @@
 */
 #pragma once
 
+#include "AnimatedNode.h"
+#include "Animation2.h"
 #include "Particle.h"
 #include "ResourceIdentifiers.h"
 #include "World.h"
@@ -32,6 +34,15 @@ struct LevelData
 
 
 
+struct EnemyData
+{
+	TextureID										texture;
+	std::map<AnimatedNode::Direction, Animation2>	animations;
+
+};
+
+
+
 struct ParticleData
 {
 	sf::Color			color;
@@ -42,4 +53,5 @@ struct ParticleData
 
 
 std::map<World::Type, LevelData> initializeLevelData();
+std::map<AnimatedNode::Type, EnemyData> initializeEnemyData();
 std::map<Particle::Type, ParticleData> initializeParticleData();

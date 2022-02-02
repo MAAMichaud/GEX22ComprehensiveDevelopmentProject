@@ -11,28 +11,36 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "AnimatedNode.h"
+#include "Animation2.h"
+#include "DataTables.h"
+#include "JsonFrameParser.h"
+#include "utility.h"
 
+#include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Time.hpp>
-#include "JsonFrameParser.h"
-#include "Animation2.h"
-#include "utility.h"
-#include <SFML/Graphics/RectangleShape.hpp>
 
 #include <iostream>
 
 
-AnimatedNode::AnimatedNode(const TextureHolder_t& textures, std::string name)
-	: sprite(textures.get(TextureID::Lich))
-	, animation()
-{
-	static JsonFrameParser frames{ JsonFrameParser("../Media/Textures/LichAtlasFlipped.json") };
 
-	animation.addFrameSet(frames.getFramesFor(name));
-	animation.setDuration(sf::seconds(1.0f));
-	animation.setRepeating(true);
-	animation.restart();
-	sprite.setTextureRect(animation.getCurrentFrame().intRect);
+namespace
+{
+	const std::map<AnimatedNode::Type, EnemyData> ENEMY_DATA{ initializeEnemyData() };
+}
+
+AnimatedNode::AnimatedNode(const TextureHolder_t& textures, Type _type)
+	: sprite(textures.get(ENEMY_DATA.at(_type).texture))
+	, animation()
+	, type(_type)
+	, animations()
+	, direction(Direction::DownLeft)
+{
+	for (auto a : ENEMY_DATA.at(type).animations)
+	{
+		animations[a.first] = a.second;
+	}
+
 }
 
 
@@ -46,7 +54,7 @@ void AnimatedNode::drawCurrent(sf::RenderTarget& target, sf::RenderStates states
 
 void AnimatedNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
-	auto frame = animation.update(dt);
+	auto frame = animations.at(direction).update(dt);
 
 	sprite.setTextureRect(frame.intRect);
 	sprite.setPosition(frame.offset.first, frame.offset.second);
