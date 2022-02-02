@@ -31,6 +31,7 @@ namespace
 
 AnimatedNode::AnimatedNode(const TextureHolder_t& textures, Type _type)
 	: sprite(textures.get(ENEMY_DATA.at(_type).texture))
+	, velocity(-30.0f, 20.0f)
 	, animation()
 	, type(_type)
 	, animations()
@@ -59,4 +60,5 @@ void AnimatedNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 	sprite.setTextureRect(frame.intRect);
 	sprite.setPosition(frame.offset.first, frame.offset.second);
 
+	move(velocity * dt.asSeconds());
 }

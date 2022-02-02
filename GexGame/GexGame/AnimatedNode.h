@@ -51,6 +51,7 @@ private:
 
 private:
 	sf::Sprite						sprite;
+	sf::Vector2f					velocity;
 	Type							type;
 	Animation2						animation;
 	std::map<Direction, Animation2>	animations;

@@ -317,25 +317,25 @@ void World::makeLich()
 {
 	auto lichNode{ std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich)};
 
-	lichNode->setPosition(worldBounds.left + 400, worldBounds.top + 400);
+	lichNode->setPosition(worldBounds.left + 1000, worldBounds.top + 50);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 
 	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
 
-	lichNode->setPosition(worldBounds.left + 500, worldBounds.top + 400);
+	lichNode->setPosition(worldBounds.left + 1100, worldBounds.top + 50);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 
 	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
 
-	lichNode->setPosition(worldBounds.left + 400, worldBounds.top + 500);
+	lichNode->setPosition(worldBounds.left + 1000, worldBounds.top + 150);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 
 	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
 
-	lichNode->setPosition(worldBounds.left + 500, worldBounds.top + 500);
+	lichNode->setPosition(worldBounds.left + 1100, worldBounds.top + 150);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
 
 }
