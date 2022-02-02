@@ -76,6 +76,8 @@ private:
 	int									calculateXTile(int x, int y);
 	int									calculateYTile(int x, int y);
 
+	void                                makeLich();
+
 private:
 	enum Layer
 	{

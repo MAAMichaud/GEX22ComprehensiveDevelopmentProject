@@ -12,6 +12,8 @@
 */
 #pragma once
 
+#include "JsonFrameParser.h"
+
 #include <vector>
 
 #include <SFML/Graphics/Sprite.hpp>
@@ -23,7 +25,6 @@
 // An animaiton is a collection of frames. 
 // 
 
-using Frame = sf::IntRect;
 
 class Animation2
 {
@@ -42,6 +43,7 @@ public:
 	bool 						isFinished() const;
 
 	Frame						getCurrentFrame() const;
+	std::pair<int, int>			getCurrentOffset() const;
 
 	Frame 						update(sf::Time dt);
 

@@ -33,6 +33,7 @@ enum class TextureID
     ThreebyThree,
     FivebyFive,
     SevenbySeven,
+    Lich,
     Particle,
 };
 

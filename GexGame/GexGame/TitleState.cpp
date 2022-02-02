@@ -74,6 +74,8 @@ bool TitleState::handleEvent(const sf::Event& event)
 		requestStackPop();
 		requestStackPush(StateID::Menu);
 	}
+		requestStackPop();
+		requestStackPush(StateID::Menu);
 
 	return true;
 }

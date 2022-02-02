@@ -26,9 +26,9 @@ JsonFrameParser::JsonFrameParser(std::string path)
 
 
 
-std::vector<sf::IntRect>  JsonFrameParser::getFramesFor(std::string animationName) const
+std::vector<Frame>  JsonFrameParser::getFramesFor(std::string animationName) const
 {
-	std::vector<sf::IntRect> data; // frame textRecs for animaionName in atlas
+	std::vector<Frame> data; // frame textRecs for animaionName in atlas
 
 	json k = json_["frames"];
 
@@ -41,10 +41,13 @@ std::vector<sf::IntRect>  JsonFrameParser::getFramesFor(std::string animationNam
 		if (tmpStr.compare(0, animationName.size(), animationName) == 0)
 		{
 			
-			data.push_back(sf::IntRect(i["frame"]["x"],
+			data.push_back(Frame(i["frame"]["x"],
 				i["frame"]["y"],
 				i["frame"]["w"],
-				i["frame"]["h"]));
+				i["frame"]["h"],
+				i["spriteSourceSize"]["x"],
+				i["spriteSourceSize"]["y"]
+			));
 		}
 	}
 

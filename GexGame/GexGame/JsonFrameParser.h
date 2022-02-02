@@ -1,7 +1,7 @@
 ﻿/**
 @file
 @author  D Burchill <david.burchill@nbcc.ca>
-@version 1.0
+@version 1.0 *Modified by Marc-Andre Michaud <marcandre.a.michaud@gmail.com>
 
 @section LICENSE
 
@@ -29,13 +29,15 @@ using nlohmann::json;
 
 
 
-struct IntRect {
+struct Frame {
 
-	IntRect(int l, int t, int w, int h) : left(l), top(t), width(w), height(h) {}
-	int left;
-	int top;
-	int width;
-	int height;
+	Frame(int l, int t, int w, int h, int ox, int oy) 
+		: intRect(l, t, w, h)
+		, offset(ox, oy)
+	{}
+	sf::IntRect intRect;
+	std::pair<int, int> offset;
+
 };
 
 
@@ -60,7 +62,7 @@ public:
 									*
 									* @return vector of Frames that make up the animation 
 									*/
-	std::vector<sf::IntRect>        getFramesFor(std::string animationName) const;
+	std::vector<Frame>				getFramesFor(std::string animationName) const;
 
 private:
 	json              json_;

@@ -24,6 +24,10 @@
 #include <SFML/Graphics.hpp>
 
 
+#include "JsonFrameParser.h"
+#include "Animation2.h"
+#include "AnimatedNode.h"
+
 
 namespace
 {
@@ -88,7 +92,7 @@ void World::updateSounds()
 
 void World::draw()
 {
-	if (PostEffect::isSupported())
+	if (true && PostEffect::isSupported())
 	{
 		sceneTexture.clear();
 		sceneTexture.setView(worldView);
@@ -130,6 +134,7 @@ void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
 	textures.load(TextureID::OnebyOne, "../Media/Textures/1by1.png");
+	textures.load(TextureID::Lich, "../Media/Textures/LichAtlas.png");
 }
 
 
@@ -162,6 +167,8 @@ void World::buildScene()
 
 	overlaySprite->setPosition(worldBounds.left, worldBounds.top);
 	sceneLayers[LowerAir]->attachChild(std::move(overlaySprite));
+
+	makeLich();
 }
 
 
@@ -302,4 +309,33 @@ int World::calculateYTile(int x, int y)
 	const double yTriangleWidth{ yTriangleTangent * (y + yTriangleExcess) };
 
 	return (yTriangleWidth + yTriangleOffset - x) / tileWidth;
+}
+
+
+
+void World::makeLich()
+{
+	auto lichNode{ std::make_unique<AnimatedNode>(textures, "LichWalkDownRight")};
+
+	lichNode->setPosition(worldBounds.left + 400, worldBounds.top + 400);
+	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
+
+
+	lichNode = std::make_unique<AnimatedNode>(textures, "LichWalkDownLeft");
+
+	lichNode->setPosition(worldBounds.left + 500, worldBounds.top + 400);
+	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
+
+
+	lichNode = std::make_unique<AnimatedNode>(textures, "LichWalkUpRight");
+
+	lichNode->setPosition(worldBounds.left + 400, worldBounds.top + 500);
+	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
+
+
+	lichNode = std::make_unique<AnimatedNode>(textures, "LichWalkUpLeft");
+
+	lichNode->setPosition(worldBounds.left + 500, worldBounds.top + 500);
+	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
+
 }

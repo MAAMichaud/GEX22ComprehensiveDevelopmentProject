@@ -189,7 +189,7 @@ void SceneNode::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	drawCurrent(target, states);
 	drawChildren(target, states);
 
-	//drawBoundingBox(target, states);
+	drawBoundingBox(target, states);
 }
 
 
