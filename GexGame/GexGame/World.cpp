@@ -13,7 +13,6 @@
 #include "Command.h"
 #include "Entity.h"
 #include "particleNode.h"
-#include "DataTables.h"
 #include "SoundNode.h"
 #include "SoundPlayer.h"
 #include "SpriteNode.h"
@@ -31,10 +30,10 @@
 
 namespace
 {
-	const std::map<World::Type, LevelData> LEVEL_DATA{ initializeLevelData() };
+	const std::map<LevelType, LevelData> LEVEL_DATA{ initializeLevelData() };
 }
 
-World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, World::Type _levelType, sf::RenderWindow& _window)
+World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, LevelType _levelType, sf::RenderWindow& _window)
 	: target(_target)
 	, sceneTexture()
 	, worldView(_target.getDefaultView())
@@ -315,6 +314,9 @@ int World::calculateYTile(int x, int y)
 
 void World::makeLich()
 {
+	auto laneNode{ std::make_unique<Lane>(textures, LEVEL_DATA.at(levelType).lanes.at(0)) };
+	sceneLayers[LowerAir]->attachChild(std::move(laneNode));
+	/*
 	auto lichNode{ std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich)};
 
 	lichNode->setPosition(worldBounds.left + 970, worldBounds.top + 84);
@@ -337,5 +339,6 @@ void World::makeLich()
 
 	lichNode->setPosition(worldBounds.left + 1042, worldBounds.top + 184);
 	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
+	*/
 
 }

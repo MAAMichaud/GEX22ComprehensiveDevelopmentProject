@@ -12,13 +12,16 @@
 */
 #pragma once
 
+#include "AnimatedNode.h"
 #include "BloomEffect.h"
 #include "CommandQueue.h"
+#include "DataTables.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
 #include "SpriteNode.h"
 #include "State.h"
+#include "Lane.h"
 
 #include <array>
 #include <vector>
@@ -41,17 +44,8 @@ class SoundPlayer;
 class World
 {
 public:
-	enum class Type
-	{
-		Forest,
-		Cemetery,
-		Beach,
-		Mountain,
-	};
-
-public:
 										World(const World&) = delete;
-	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds, World::Type levelType, sf::RenderWindow& _window);
+	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds, LevelType levelType, sf::RenderWindow& _window);
 
 	void								update(sf::Time dt);
 	void								updateSounds();
@@ -105,7 +99,8 @@ private:
 
 	BloomEffect							bloomEffect;
 
-	World::Type							levelType;
+	LevelType							levelType;
 	sf::RenderWindow&					window;
 	SpriteNode*							tileOverlay;
+
 };

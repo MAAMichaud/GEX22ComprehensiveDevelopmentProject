@@ -16,7 +16,6 @@
 #include "Animation2.h"
 #include "Particle.h"
 #include "ResourceIdentifiers.h"
-#include "World.h"
 
 #include <map>
 #include <string>
@@ -26,10 +25,31 @@
 
 
 
+enum class LevelType
+{
+	Forest,
+	Cemetery,
+	Beach,
+	Mountain,
+};
+
+
+
+struct LaneData
+{
+	sf::Vector2f									position;
+	std::vector<AnimatedNode::Direction>			route;
+
+};
+
+
+
 struct LevelData
 {
-	TextureID			backgroundTexture;
-	std::string			backgroundTexturePath;
+	TextureID						backgroundTexture;
+	std::string						backgroundTexturePath;
+	std::vector<LaneData>			lanes;
+
 };
 
 
@@ -52,6 +72,6 @@ struct ParticleData
 
 
 
-std::map<World::Type, LevelData> initializeLevelData();
+std::map<LevelType, LevelData> initializeLevelData();
 std::map<AnimatedNode::Type, EnemyData> initializeEnemyData();
 std::map<Particle::Type, ParticleData> initializeParticleData();

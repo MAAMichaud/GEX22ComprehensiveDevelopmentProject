@@ -38,12 +38,75 @@ AnimatedNode::AnimatedNode(const TextureHolder_t& textures, Type _type)
 	, type(_type)
 	, animations()
 	, direction(Direction::DownLeft)
-	, movementSpeed(sf::seconds(2.0f))
+	, movementSpeed(sf::seconds(0.1f))
 	, timeRemaining(movementSpeed)
+	, route()
+	, routeIndex(0)
 {
 	for (auto a : ENEMY_DATA.at(type).animations)
 	{
 		animations[a.first] = a.second;
+	}
+
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 16; ++i)
+	{
+		route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 18; ++i)
+	{
+		route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 12; ++i)
+	{
+		route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 5; ++i)
+	{
+		route.push_back(Direction::DownLeft);
 	}
 
 }
@@ -102,27 +165,18 @@ void AnimatedNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 		move(velocity * timeRemaining.asSeconds());
 		timeRemaining = movementSpeed;
 
-		switch (direction)
-		{
-		case Direction::UpRight:
-			turn(Direction::UpLeft);
-			break;
+		turn(route.at(routeIndex % route.size()));
+		routeIndex += 1;
 
-		case Direction::DownRight:
-			turn(Direction::UpRight);
-			break;
-
-		case Direction::DownLeft:
-			turn(Direction::DownRight);
-			break;
-
-		case Direction::UpLeft:
-			turn(Direction::DownLeft);
-			break;
-
-		}
 	}
 
 	timeRemaining -= dt;
 	move(velocity.x * bearing.x * dt.asSeconds(), velocity.y * bearing.y * dt.asSeconds());
+}
+
+
+
+bool AnimatedNode::isDestroyed() const
+{
+	return routeIndex >= route.size();
 }

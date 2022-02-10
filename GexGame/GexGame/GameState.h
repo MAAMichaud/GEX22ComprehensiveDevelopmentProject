@@ -14,6 +14,7 @@
 #pragma once
 
 #include "State.h"
+#include "DataTables.h"
 #include "World.h"
 
 #include <SFML/System/Time.hpp>
@@ -35,7 +36,7 @@ public:
 
 private:
 	void				processInput();
-	World::Type			getWorldType(StateID stateId);
+	LevelType			getWorldType(StateID stateId);
 
 private:
 	World				world;

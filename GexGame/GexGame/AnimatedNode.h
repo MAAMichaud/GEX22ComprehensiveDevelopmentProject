@@ -24,9 +24,13 @@
 
 
 
-const sf::Time HOP_DURATION = sf::seconds(1.0f);
+const sf::Time HOP_DURATION = sf::seconds(0.1f);
+/*
 const float HORIZONTAL_HOP_LENGTH = 36.f;
 const float VERTICAL_HOP_LENGTH = 24.f;
+*/
+const float HORIZONTAL_HOP_LENGTH = 18.f;
+const float VERTICAL_HOP_LENGTH = 12.f;
 const float HORIZONTAL_HOP_PER_FRAME = (HORIZONTAL_HOP_LENGTH / HOP_DURATION.asSeconds());
 const float VERTICAL_HOP_PER_FRAME = (VERTICAL_HOP_LENGTH / HOP_DURATION.asSeconds());
 
@@ -55,6 +59,7 @@ private:
 	void				turn(Direction direction);
 	virtual void		drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 	virtual void		updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	virtual bool		isDestroyed() const override;
 
 private:
 	sf::Sprite						sprite;
@@ -66,5 +71,7 @@ private:
 	Direction						direction;
 	const sf::Time					movementSpeed;
 	sf::Time						timeRemaining;
+	std::vector<Direction>			route;
+	std::size_t						routeIndex;
 
 };

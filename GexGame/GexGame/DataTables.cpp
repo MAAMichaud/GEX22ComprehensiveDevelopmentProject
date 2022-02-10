@@ -15,21 +15,85 @@
 
 
 
-std::map<World::Type, LevelData> initializeLevelData()
+std::map<LevelType, LevelData> initializeLevelData()
 {
-	std::map<World::Type, LevelData> data;
+	std::map<LevelType, LevelData> data;
 
-	data[World::Type::Forest].backgroundTexture = TextureID::ForestBoard;
-	data[World::Type::Forest].backgroundTexturePath = "../Media/Textures/ForestBoard.png";
+	data[LevelType::Forest].backgroundTexture = TextureID::ForestBoard;
+	data[LevelType::Forest].backgroundTexturePath = "../Media/Textures/ForestBoard.png";
+	data[LevelType::Forest].lanes.push_back(LaneData());
+	data[LevelType::Forest].lanes.at(0).position = sf::Vector2f(1042.f, 84.f);
 
-	data[World::Type::Cemetery].backgroundTexture = TextureID::CemeteryBoard;
-	data[World::Type::Cemetery].backgroundTexturePath = "../Media/Textures/CemeteryBoard.png";
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 16; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 18; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 12; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 5; ++i)
+	{
+		data[LevelType::Forest].lanes.at(0).route.push_back(AnimatedNode::Direction::DownLeft);
+	}
 
-	data[World::Type::Beach].backgroundTexture = TextureID::BeachBoard;
-	data[World::Type::Beach].backgroundTexturePath = "../Media/Textures/BeachBoard.png";
 
-	data[World::Type::Mountain].backgroundTexture = TextureID::MountainBoard;
-	data[World::Type::Mountain].backgroundTexturePath = "../Media/Textures/MountainBoard.png";
+	data[LevelType::Cemetery].backgroundTexture = TextureID::CemeteryBoard;
+	data[LevelType::Cemetery].backgroundTexturePath = "../Media/Textures/CemeteryBoard.png";
+
+	data[LevelType::Beach].backgroundTexture = TextureID::BeachBoard;
+	data[LevelType::Beach].backgroundTexturePath = "../Media/Textures/BeachBoard.png";
+
+	data[LevelType::Mountain].backgroundTexture = TextureID::MountainBoard;
+	data[LevelType::Mountain].backgroundTexturePath = "../Media/Textures/MountainBoard.png";
 
 	return data;
 }

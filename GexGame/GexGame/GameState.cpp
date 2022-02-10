@@ -241,31 +241,31 @@ void GameState::processInput()
 
 
 
-World::Type GameState::getWorldType(StateID stateId)
+LevelType GameState::getWorldType(StateID stateId)
 {
 	switch (stateId)
 	{
 	case StateID::ForestLevel:
-		return World::Type::Forest;
+		return LevelType::Forest;
 		break;
 
 	case StateID::CemeteryLevel:
-		return World::Type::Cemetery;
+		return LevelType::Cemetery;
 		break;
 
 	case StateID::BeachLevel:
-		return World::Type::Beach;
+		return LevelType::Beach;
 		break;
 
 	case StateID::MountainLevel:
-		return World::Type::Mountain;
+		return LevelType::Mountain;
 		break;
 
 	default:
-		return World::Type::Forest;
+		return LevelType::Forest;
 		break;
 
 	}
 
-	return World::Type::Forest;
+	return LevelType::Forest;
 }
