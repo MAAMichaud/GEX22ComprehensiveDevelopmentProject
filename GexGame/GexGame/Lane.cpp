@@ -11,14 +11,13 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "Lane.h"
+#include "Utility.h"
 
 
 
 Lane::Lane(const TextureHolder_t& _textures, LaneData data)
 	: textures(_textures)
-	, enemyType()
-	, spawnRate(1.0f)
-	, timeRemaining(sf::Time::Zero)
+	, enemyData()
 	, route(data.route)
 {
 	setPosition(data.position);
@@ -26,24 +25,15 @@ Lane::Lane(const TextureHolder_t& _textures, LaneData data)
 
 
 
-void Lane::loadEnemy(AnimatedNode::Type _enemyType)
+void Lane::spawnEnemy()
 {
-	enemyType = _enemyType;
+	auto enemyNode{ std::make_unique<AnimatedNode>(textures, enemyData, route)};
+	this->attachChild(std::move(enemyNode));
 }
 
 
 
-void Lane::updateCurrent(sf::Time dt, CommandQueue& commands)
+void Lane::loadEnemy(EnemyData _enemyData)
 {
-	while (dt > timeRemaining)
-	{
-		dt -= timeRemaining;
-		timeRemaining += sf::seconds(1.f);
-
-		auto lichNode{ std::make_unique<AnimatedNode>(textures, enemyType)};
-		this->attachChild(std::move(lichNode));
-
-	}
-
-	timeRemaining -= dt;
+	enemyData = _enemyData;
 }

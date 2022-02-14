@@ -16,12 +16,12 @@
 #include "BloomEffect.h"
 #include "CommandQueue.h"
 #include "DataTables.h"
+#include "LaneController.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
 #include "SpriteNode.h"
 #include "State.h"
-#include "Lane.h"
 
 #include <array>
 #include <vector>
@@ -54,6 +54,7 @@ public:
 
 	bool								hasAlivePlayer() const;
 	bool								hasPlayerReachedTheEnd() const;
+	void								startWave();
 
 private:
 	void								loadTextures();
@@ -102,5 +103,7 @@ private:
 	LevelType							levelType;
 	sf::RenderWindow&					window;
 	SpriteNode*							tileOverlay;
+	LaneController*						laneController;
+	std::size_t							waveIndex;
 
 };

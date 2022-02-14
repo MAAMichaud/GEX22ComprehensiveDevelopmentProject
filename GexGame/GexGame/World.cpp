@@ -12,6 +12,7 @@
 */
 #include "Command.h"
 #include "Entity.h"
+#include "LaneController.h"
 #include "particleNode.h"
 #include "SoundNode.h"
 #include "SoundPlayer.h"
@@ -49,6 +50,8 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, levelType(_levelType)
 	, window(_window)
 	, tileOverlay()
+	, laneController()
+	, waveIndex(0)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -125,6 +128,18 @@ bool World::hasAlivePlayer() const
 bool World::hasPlayerReachedTheEnd() const
 {
 	return false;
+}
+
+
+
+void World::startWave()
+{
+	if (laneController->wavePending() && waveIndex < LEVEL_DATA.at(levelType).waves.size())
+	{
+		laneController->loadWave(LEVEL_DATA.at(levelType).waves.at(waveIndex));
+
+		waveIndex += 1;
+	}
 }
 
 
@@ -314,31 +329,7 @@ int World::calculateYTile(int x, int y)
 
 void World::makeLich()
 {
-	auto laneNode{ std::make_unique<Lane>(textures, LEVEL_DATA.at(levelType).lanes.at(0)) };
+	auto laneNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes) };
+	laneController = laneNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(laneNode));
-	/*
-	auto lichNode{ std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich)};
-
-	lichNode->setPosition(worldBounds.left + 970, worldBounds.top + 84);
-	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
-
-
-	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
-
-	lichNode->setPosition(worldBounds.left + 1042, worldBounds.top + 84);
-	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
-
-
-	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
-
-	lichNode->setPosition(worldBounds.left + 970, worldBounds.top + 184);
-	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
-
-
-	lichNode = std::make_unique<AnimatedNode>(textures, AnimatedNode::Type::Lich);
-
-	lichNode->setPosition(worldBounds.left + 1042, worldBounds.top + 184);
-	sceneLayers[LowerAir]->attachChild(std::move(lichNode));
-	*/
-
 }

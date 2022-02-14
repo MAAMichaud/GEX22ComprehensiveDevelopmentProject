@@ -13,6 +13,7 @@
 #pragma once
 
 #include "Animation2.h"
+#include "DataTables.h"
 #include "SceneNode.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
@@ -24,7 +25,7 @@
 
 
 
-const sf::Time HOP_DURATION = sf::seconds(0.1f);
+const sf::Time HOP_DURATION = sf::seconds(1.0f);
 /*
 const float HORIZONTAL_HOP_LENGTH = 36.f;
 const float VERTICAL_HOP_LENGTH = 24.f;
@@ -37,41 +38,23 @@ const float VERTICAL_HOP_PER_FRAME = (VERTICAL_HOP_LENGTH / HOP_DURATION.asSecon
 class AnimatedNode: public SceneNode
 {
 public:
-	enum class Type 
-	{
-		Lich,
-	};
-
-	enum class Direction 
-	{
-		UpRight,
-		DownRight,
-		DownLeft,
-		UpLeft
-	};
-
-
-public:
-	explicit			AnimatedNode(const TextureHolder_t& textures, Type type);
-
+									AnimatedNode(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route);
 
 private:
-	void				turn(Direction direction);
-	virtual void		drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
-	virtual void		updateCurrent(sf::Time dt, CommandQueue& commands) override;
-	virtual bool		isDestroyed() const override;
+	void							turn(Direction direction);
+	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
+	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	virtual bool					isDestroyed() const override;
 
 private:
 	sf::Sprite						sprite;
 	sf::Vector2f					velocity;
 	sf::Vector2f					bearing;
-	const Type						type;
-	Animation2						animation;
 	std::map<Direction, Animation2>	animations;
 	Direction						direction;
 	const sf::Time					movementSpeed;
 	sf::Time						timeRemaining;
-	std::vector<Direction>			route;
+	std::vector<Direction>&			route;
 	std::size_t						routeIndex;
 
 };

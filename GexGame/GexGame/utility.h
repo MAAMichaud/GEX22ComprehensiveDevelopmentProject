@@ -13,6 +13,7 @@
 #pragma once
 
 #include <cmath>
+#include <random>
 
 #include <SFML/System/Vector2.hpp>
 

@@ -12,7 +12,6 @@
 */
 #pragma once
 
-#include "AnimatedNode.h"
 #include "Animation2.h"
 #include "Particle.h"
 #include "ResourceIdentifiers.h"
@@ -35,21 +34,19 @@ enum class LevelType
 
 
 
-struct LaneData
+enum class EnemyType
 {
-	sf::Vector2f									position;
-	std::vector<AnimatedNode::Direction>			route;
-
+	Lich,
 };
 
 
 
-struct LevelData
+enum class Direction
 {
-	TextureID						backgroundTexture;
-	std::string						backgroundTexturePath;
-	std::vector<LaneData>			lanes;
-
+	UpRight,
+	DownRight,
+	DownLeft,
+	UpLeft
 };
 
 
@@ -57,7 +54,38 @@ struct LevelData
 struct EnemyData
 {
 	TextureID										texture;
-	std::map<AnimatedNode::Direction, Animation2>	animations;
+	std::map<Direction, Animation2>					animations;
+	sf::Time										speed;
+
+};
+
+
+
+struct WaveData
+{
+	EnemyData										enemyData;
+	std::size_t										enemyCount;
+	float											spawnRate;
+
+};
+
+
+
+struct LaneData
+{
+	sf::Vector2f									position;
+	std::vector<Direction>							route;
+
+};
+
+
+
+struct LevelData
+{
+	TextureID										backgroundTexture;
+	std::string										backgroundTexturePath;
+	std::vector<LaneData>							lanes;
+	std::vector<WaveData>							waves;
 
 };
 
@@ -73,5 +101,5 @@ struct ParticleData
 
 
 std::map<LevelType, LevelData> initializeLevelData();
-std::map<AnimatedNode::Type, EnemyData> initializeEnemyData();
+std::map<EnemyType, EnemyData> initializeEnemyData();
 std::map<Particle::Type, ParticleData> initializeParticleData();

@@ -108,6 +108,9 @@
     <ClCompile Include="Lane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LaneController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility.h">
@@ -216,6 +219,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Lane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LaneController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -117,6 +117,7 @@ bool GameState::handleEvent(const sf::Event& event)
 	static const float PAUSE_BUTTON_RIGHT{ 26 + 118 };
 	static const float PAUSE_BUTTON_BOTTOM{ 851 + 48 };
 
+
 	if (event.type == sf::Event::MouseButtonPressed)
 	{
 		if (event.mouseButton.button == sf::Mouse::Left)
@@ -129,7 +130,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "SOUND_DOWN Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < SOUND_UP_BUTTON_RIGHT 
+			else if (event.mouseButton.x < SOUND_UP_BUTTON_RIGHT 
 				&& event.mouseButton.x > SOUND_UP_BUTTON_LEFT
 				&& event.mouseButton.y < SOUND_UP_BUTTON_BOTTOM
 				&& event.mouseButton.y > SOUND_UP_BUTTON_TOP)
@@ -137,7 +138,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "SOUND_UP Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < MUSIC_DOWN_BUTTON_RIGHT 
+			else if (event.mouseButton.x < MUSIC_DOWN_BUTTON_RIGHT 
 				&& event.mouseButton.x > MUSIC_DOWN_BUTTON_LEFT
 				&& event.mouseButton.y < MUSIC_DOWN_BUTTON_BOTTOM
 				&& event.mouseButton.y > MUSIC_DOWN_BUTTON_TOP)
@@ -145,7 +146,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "MUSIC_DOWN Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < MUSIC_UP_BUTTON_RIGHT 
+			else if (event.mouseButton.x < MUSIC_UP_BUTTON_RIGHT 
 				&& event.mouseButton.x > MUSIC_UP_BUTTON_LEFT
 				&& event.mouseButton.y < MUSIC_UP_BUTTON_BOTTOM
 				&& event.mouseButton.y > MUSIC_UP_BUTTON_TOP)
@@ -153,7 +154,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "MUSIC_UP Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < NOVICE_WIZARD_BUTTON_RIGHT 
+			else if (event.mouseButton.x < NOVICE_WIZARD_BUTTON_RIGHT 
 				&& event.mouseButton.x > NOVICE_WIZARD_BUTTON_LEFT
 				&& event.mouseButton.y < NOVICE_WIZARD_BUTTON_BOTTOM
 				&& event.mouseButton.y > NOVICE_WIZARD_BUTTON_TOP)
@@ -161,7 +162,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "NOVICE_WIZARD Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < NOVICE_WARRIOR_BUTTON_RIGHT 
+			else if (event.mouseButton.x < NOVICE_WARRIOR_BUTTON_RIGHT 
 				&& event.mouseButton.x > NOVICE_WARRIOR_BUTTON_LEFT
 				&& event.mouseButton.y < NOVICE_WARRIOR_BUTTON_BOTTOM
 				&& event.mouseButton.y > NOVICE_WARRIOR_BUTTON_TOP)
@@ -169,7 +170,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "NOVICE_WARRIOR Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < PRESTIGE_ICE_BUTTON_RIGHT 
+			else if (event.mouseButton.x < PRESTIGE_ICE_BUTTON_RIGHT 
 				&& event.mouseButton.x > PRESTIGE_ICE_BUTTON_LEFT
 				&& event.mouseButton.y < PRESTIGE_ICE_BUTTON_BOTTOM
 				&& event.mouseButton.y > PRESTIGE_ICE_BUTTON_TOP)
@@ -177,7 +178,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "PRESTIGE_ICE Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < PRESTIGE_FIRE_BUTTON_RIGHT 
+			else if (event.mouseButton.x < PRESTIGE_FIRE_BUTTON_RIGHT 
 				&& event.mouseButton.x > PRESTIGE_FIRE_BUTTON_LEFT
 				&& event.mouseButton.y < PRESTIGE_FIRE_BUTTON_BOTTOM
 				&& event.mouseButton.y > PRESTIGE_FIRE_BUTTON_TOP)
@@ -185,7 +186,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "PRESTIGE_FIRE Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < PRESTIGE_ENERGY_BUTTON_RIGHT 
+			else if (event.mouseButton.x < PRESTIGE_ENERGY_BUTTON_RIGHT 
 				&& event.mouseButton.x > PRESTIGE_ENERGY_BUTTON_LEFT
 				&& event.mouseButton.y < PRESTIGE_ENERGY_BUTTON_BOTTOM
 				&& event.mouseButton.y > PRESTIGE_ENERGY_BUTTON_TOP)
@@ -193,15 +194,16 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "PRESTIGE_ENERGY Button Pressed." << std::endl;
 			}
 
-			if (event.mouseButton.x < START_WAVE_BUTTON_RIGHT 
+			else if (event.mouseButton.x < START_WAVE_BUTTON_RIGHT 
 				&& event.mouseButton.x > START_WAVE_BUTTON_LEFT
 				&& event.mouseButton.y < START_WAVE_BUTTON_BOTTOM
 				&& event.mouseButton.y > START_WAVE_BUTTON_TOP)
 			{
 				std::cout << "START_WAVE Button Pressed." << std::endl;
+				world.startWave();
 			}
 
-			if (event.mouseButton.x < PAUSE_BUTTON_RIGHT 
+			else if (event.mouseButton.x < PAUSE_BUTTON_RIGHT 
 				&& event.mouseButton.x > PAUSE_BUTTON_LEFT
 				&& event.mouseButton.y < PAUSE_BUTTON_BOTTOM
 				&& event.mouseButton.y > PAUSE_BUTTON_TOP)

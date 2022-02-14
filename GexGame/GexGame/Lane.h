@@ -24,17 +24,12 @@ class Lane: public SceneNode
 {
 public:
 	explicit			Lane(const TextureHolder_t& textures, LaneData data);
-
-private:
-	void				loadEnemy(AnimatedNode::Type enemyType);
-	virtual void		updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	void				spawnEnemy();
+	void				loadEnemy(EnemyData enemyData);
 
 private:
 	const TextureHolder_t&						textures;
-	AnimatedNode::Type							enemyType;
-	float										spawnRate;
-	sf::Time									timeRemaining;
-	std::vector<AnimatedNode::Direction>		route;
+	EnemyData									enemyData;
+	std::vector<Direction>						route;
 
 };
-

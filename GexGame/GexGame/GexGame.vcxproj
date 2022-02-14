@@ -163,6 +163,7 @@
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="JsonFrameParser.cpp" />
     <ClCompile Include="Lane.cpp" />
+    <ClCompile Include="LaneController.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="MusicPlayer.cpp" />
     <ClCompile Include="ParticleNode.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="JsonFrameParser.h" />
     <ClInclude Include="Lane.h" />
+    <ClInclude Include="LaneController.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="MusicPlayer.h" />
     <ClInclude Include="Particle.h" />
