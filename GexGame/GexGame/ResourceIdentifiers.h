@@ -34,6 +34,10 @@ enum class TextureID
     FivebyFive,
     SevenbySeven,
     Lich,
+    ForestLevel,
+    CemeteryLevel,
+    BeachLevel,
+    MountainLevel,
     Particle,
 };
 

@@ -40,14 +40,28 @@ std::vector<Frame>  JsonFrameParser::getFramesFor(std::string animationName) con
 		std::string tmpStr = i["filename"]; // animation name is the first part of "filename" string
 		if (tmpStr.compare(0, animationName.size(), animationName) == 0)
 		{
-			
-			data.push_back(Frame(i["frame"]["x"],
-				i["frame"]["y"],
-				i["frame"]["w"],
-				i["frame"]["h"],
-				i["spriteSourceSize"]["x"],
-				i["spriteSourceSize"]["y"]
-			));
+			if (i["rotated"])
+			{
+				data.push_back(Frame(i["frame"]["x"],
+					i["frame"]["y"],
+					i["frame"]["w"],
+					i["frame"]["h"],
+					i["spriteSourceSize"]["x"],
+					i["spriteSourceSize"]["y"],
+					i["rotated"]
+				));
+			}
+			else
+			{
+				data.push_back(Frame(i["frame"]["x"],
+					i["frame"]["y"],
+					i["frame"]["w"],
+					i["frame"]["h"],
+					i["spriteSourceSize"]["x"],
+					i["spriteSourceSize"]["y"],
+					i["rotated"]
+				));
+			}
 		}
 	}
 

@@ -1,0 +1,2060 @@
+{"frames": [
+
+{
+	"filename": "AncientMedusaWalkDown 0.png",
+	"frame": {"x":203,"y":639,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":46,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 1.png",
+	"frame": {"x":295,"y":619,"w":31,"h":30},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":41,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 2.png",
+	"frame": {"x":423,"y":617,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":33,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 3.png",
+	"frame": {"x":456,"y":617,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":27,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 4.png",
+	"frame": {"x":489,"y":613,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":24,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 5.png",
+	"frame": {"x":522,"y":613,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":28,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 6.png",
+	"frame": {"x":555,"y":610,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":36,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkDown 7.png",
+	"frame": {"x":327,"y":635,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":41,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 0.png",
+	"frame": {"x":360,"y":635,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":46,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 1.png",
+	"frame": {"x":390,"y":642,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":41,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 2.png",
+	"frame": {"x":61,"y":643,"w":31,"h":29},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":32,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 3.png",
+	"frame": {"x":654,"y":645,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":27,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 4.png",
+	"frame": {"x":687,"y":646,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":24,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 5.png",
+	"frame": {"x":588,"y":643,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":27,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 6.png",
+	"frame": {"x":799,"y":585,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":36,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AncientMedusaWalkUp 7.png",
+	"frame": {"x":804,"y":618,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":41,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 0.png",
+	"frame": {"x":877,"y":144,"w":32,"h":63},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":19,"w":32,"h":63},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 1.png",
+	"frame": {"x":90,"y":542,"w":27,"h":59},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":19,"w":27,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 2.png",
+	"frame": {"x":647,"y":274,"w":34,"h":59},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":19,"w":34,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 3.png",
+	"frame": {"x":190,"y":403,"w":32,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":19,"w":32,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 4.png",
+	"frame": {"x":174,"y":236,"w":29,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":19,"w":29,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 5.png",
+	"frame": {"x":765,"y":390,"w":32,"h":60},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":19,"w":32,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 6.png",
+	"frame": {"x":461,"y":334,"w":35,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":19,"w":35,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkDown 7.png",
+	"frame": {"x":115,"y":267,"w":29,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":19,"w":29,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 0.png",
+	"frame": {"x":204,"y":524,"w":30,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":19,"w":30,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 1.png",
+	"frame": {"x":326,"y":472,"w":32,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":19,"w":32,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 2.png",
+	"frame": {"x":92,"y":630,"w":34,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":19,"w":34,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 3.png",
+	"frame": {"x":706,"y":334,"w":30,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":19,"w":30,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 4.png",
+	"frame": {"x":235,"y":232,"w":26,"h":55},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":19,"w":26,"h":55},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 5.png",
+	"frame": {"x":238,"y":137,"w":25,"h":52},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":19,"w":25,"h":52},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 6.png",
+	"frame": {"x":390,"y":553,"w":29,"h":52},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":19,"w":29,"h":52},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredBonesWalkUp 7.png",
+	"frame": {"x":204,"y":584,"w":30,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":19,"w":30,"h":53},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 0.png",
+	"frame": {"x":444,"y":553,"w":30,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":30,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 1.png",
+	"frame": {"x":447,"y":478,"w":27,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":27,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 2.png",
+	"frame": {"x":489,"y":521,"w":30,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":30,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 3.png",
+	"frame": {"x":502,"y":553,"w":30,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":21,"w":30,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 4.png",
+	"frame": {"x":746,"y":554,"w":29,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":29,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 5.png",
+	"frame": {"x":677,"y":488,"w":31,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":31,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 6.png",
+	"frame": {"x":619,"y":486,"w":33,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":33,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkDown 7.png",
+	"frame": {"x":746,"y":629,"w":29,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":21,"w":29,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 0.png",
+	"frame": {"x":1,"y":654,"w":25,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 1.png",
+	"frame": {"x":330,"y":553,"w":25,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 2.png",
+	"frame": {"x":719,"y":581,"w":25,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 3.png",
+	"frame": {"x":719,"y":521,"w":25,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 4.png",
+	"frame": {"x":236,"y":625,"w":25,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 5.png",
+	"frame": {"x":236,"y":652,"w":25,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 6.png",
+	"frame": {"x":330,"y":608,"w":25,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":20,"w":25,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "CharredWalkUp 7.png",
+	"frame": {"x":330,"y":580,"w":26,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":20,"w":26,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 0.png",
+	"frame": {"x":292,"y":118,"w":42,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":12,"w":42,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 1.png",
+	"frame": {"x":131,"y":331,"w":41,"h":72},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":12,"w":41,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 2.png",
+	"frame": {"x":292,"y":162,"w":42,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":42,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 3.png",
+	"frame": {"x":584,"y":217,"w":40,"h":69},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":40,"h":69},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 4.png",
+	"frame": {"x":439,"y":212,"w":40,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":40,"h":70},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 5.png",
+	"frame": {"x":366,"y":164,"w":43,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":12,"w":43,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 6.png",
+	"frame": {"x":439,"y":165,"w":45,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":12,"w":45,"h":70},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkDown 7.png",
+	"frame": {"x":670,"y":65,"w":43,"h":73},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":12,"w":43,"h":73},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 0.png",
+	"frame": {"x":179,"y":267,"w":52,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":52,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 1.png",
+	"frame": {"x":698,"y":154,"w":53,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":53,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 2.png",
+	"frame": {"x":75,"y":74,"w":55,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":55,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 3.png",
+	"frame": {"x":238,"y":164,"w":52,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":52,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 4.png",
+	"frame": {"x":765,"y":154,"w":50,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":50,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 5.png",
+	"frame": {"x":655,"y":212,"w":48,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":48,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 6.png",
+	"frame": {"x":765,"y":220,"w":51,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":51,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireGiantWalkUp 7.png",
+	"frame": {"x":765,"y":338,"w":50,"h":60},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":50,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 0.png",
+	"frame": {"x":498,"y":389,"w":33,"h":63},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":19,"w":33,"h":63},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 1.png",
+	"frame": {"x":196,"y":463,"w":31,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":19,"w":31,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 2.png",
+	"frame": {"x":461,"y":396,"w":35,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":19,"w":35,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 3.png",
+	"frame": {"x":559,"y":486,"w":32,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":19,"w":32,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 4.png",
+	"frame": {"x":295,"y":561,"w":33,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":19,"w":33,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 5.png",
+	"frame": {"x":958,"y":466,"w":33,"h":60},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":19,"w":33,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 6.png",
+	"frame": {"x":894,"y":474,"w":35,"h":60},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":19,"w":35,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkDown 7.png",
+	"frame": {"x":174,"y":138,"w":32,"h":62},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":19,"w":32,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 0.png",
+	"frame": {"x":146,"y":267,"w":31,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":31,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 1.png",
+	"frame": {"x":701,"y":366,"w":32,"h":62},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":32,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 2.png",
+	"frame": {"x":887,"y":511,"w":33,"h":60},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":33,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 3.png",
+	"frame": {"x":761,"y":476,"w":30,"h":61},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":30,"h":61},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 4.png",
+	"frame": {"x":386,"y":478,"w":27,"h":59},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":27,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 5.png",
+	"frame": {"x":482,"y":585,"w":26,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":26,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 6.png",
+	"frame": {"x":390,"y":584,"w":31,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":31,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireLichWalkUp 7.png",
+	"frame": {"x":423,"y":585,"w":30,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":15,"w":30,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 0.png",
+	"frame": {"x":423,"y":649,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":46,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 1.png",
+	"frame": {"x":456,"y":649,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":41,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 2.png",
+	"frame": {"x":489,"y":645,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":33,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 3.png",
+	"frame": {"x":522,"y":645,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":27,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 4.png",
+	"frame": {"x":555,"y":642,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":24,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 5.png",
+	"frame": {"x":588,"y":611,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":28,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 6.png",
+	"frame": {"x":621,"y":611,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":36,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkDown 7.png",
+	"frame": {"x":621,"y":643,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":41,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 0.png",
+	"frame": {"x":804,"y":651,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":46,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 1.png",
+	"frame": {"x":829,"y":585,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":41,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 2.png",
+	"frame": {"x":804,"y":554,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":32,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 3.png",
+	"frame": {"x":834,"y":618,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":27,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 4.png",
+	"frame": {"x":837,"y":651,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":24,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 5.png",
+	"frame": {"x":837,"y":554,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":27,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 6.png",
+	"frame": {"x":859,"y":585,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":36,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireMedusaWalkUp 7.png",
+	"frame": {"x":864,"y":618,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":41,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 0.png",
+	"frame": {"x":771,"y":1,"w":61,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":30,"w":61,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 1.png",
+	"frame": {"x":1,"y":139,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 2.png",
+	"frame": {"x":131,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 3.png",
+	"frame": {"x":1,"y":203,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 4.png",
+	"frame": {"x":195,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 5.png",
+	"frame": {"x":65,"y":206,"w":59,"h":62},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":30,"w":59,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 6.png",
+	"frame": {"x":572,"y":153,"w":58,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":30,"w":58,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkDown 7.png",
+	"frame": {"x":960,"y":1,"w":60,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":30,"w":60,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 0.png",
+	"frame": {"x":224,"y":404,"w":51,"h":42},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":42},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 1.png",
+	"frame": {"x":151,"y":525,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 2.png",
+	"frame": {"x":283,"y":508,"w":51,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":45},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 3.png",
+	"frame": {"x":127,"y":142,"w":53,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":41,"w":53,"h":45},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 4.png",
+	"frame": {"x":974,"y":65,"w":51,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":46},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 5.png",
+	"frame": {"x":383,"y":507,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 6.png",
+	"frame": {"x":236,"y":572,"w":51,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "FireScorpionWalkUp 7.png",
+	"frame": {"x":282,"y":455,"w":51,"h":42},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":42},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 0.png",
+	"frame": {"x":911,"y":218,"w":60,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":23,"w":60,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 1.png",
+	"frame": {"x":765,"y":280,"w":60,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":23,"w":60,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 2.png",
+	"frame": {"x":498,"y":336,"w":63,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":24,"w":63,"h":51},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 3.png",
+	"frame": {"x":827,"y":334,"w":65,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":23,"w":65,"h":51},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 4.png",
+	"frame": {"x":911,"y":164,"w":61,"h":52},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":24,"w":61,"h":52},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 5.png",
+	"frame": {"x":962,"y":412,"w":58,"h":52},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":23,"w":58,"h":52},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 6.png",
+	"frame": {"x":138,"y":405,"w":58,"h":50},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":23,"w":58,"h":50},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkDown 7.png",
+	"frame": {"x":142,"y":465,"w":58,"h":52},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":23,"w":58,"h":52},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 0.png",
+	"frame": {"x":268,"y":396,"w":56,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":21,"w":56,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 1.png",
+	"frame": {"x":708,"y":273,"w":55,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":21,"w":55,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 2.png",
+	"frame": {"x":911,"y":106,"w":56,"h":61},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":21,"w":56,"h":61},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 3.png",
+	"frame": {"x":632,"y":154,"w":56,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":21,"w":56,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 4.png",
+	"frame": {"x":268,"y":334,"w":56,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":21,"w":56,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 5.png",
+	"frame": {"x":962,"y":354,"w":56,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":21,"w":56,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 6.png",
+	"frame": {"x":92,"y":571,"w":55,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":21,"w":55,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HellHoundWalkUp 7.png",
+	"frame": {"x":962,"y":295,"w":58,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":21,"w":58,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 0.png",
+	"frame": {"x":366,"y":209,"w":37,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":13,"w":37,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 1.png",
+	"frame": {"x":428,"y":297,"w":35,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":35,"h":68},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 2.png",
+	"frame": {"x":894,"y":333,"w":41,"h":66},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":41,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 3.png",
+	"frame": {"x":827,"y":387,"w":35,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":14,"w":35,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 4.png",
+	"frame": {"x":326,"y":433,"w":37,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":37,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 5.png",
+	"frame": {"x":869,"y":209,"w":40,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":14,"w":40,"h":68},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 6.png",
+	"frame": {"x":358,"y":290,"w":42,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":14,"w":42,"h":68},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkDown 7.png",
+	"frame": {"x":820,"y":65,"w":41,"h":74},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":13,"w":41,"h":74},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 0.png",
+	"frame": {"x":1,"y":267,"w":50,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":7,"w":50,"h":74},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 1.png",
+	"frame": {"x":365,"y":65,"w":47,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":8,"w":47,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 2.png",
+	"frame": {"x":366,"y":114,"w":48,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":8,"w":48,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 3.png",
+	"frame": {"x":1,"y":343,"w":49,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":8,"w":49,"h":73},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 4.png",
+	"frame": {"x":132,"y":65,"w":51,"h":71},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":8,"w":51,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 5.png",
+	"frame": {"x":439,"y":112,"w":51,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":8,"w":51,"h":68},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 6.png",
+	"frame": {"x":1,"y":1,"w":72,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":8,"w":72,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinHeavyInfantryWalkUp 7.png",
+	"frame": {"x":1,"y":70,"w":72,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":8,"w":72,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 0.png",
+	"frame": {"x":52,"y":343,"w":35,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":11,"w":35,"h":73},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 1.png",
+	"frame": {"x":820,"y":108,"w":34,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":11,"w":34,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 2.png",
+	"frame": {"x":436,"y":254,"w":41,"h":69},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":11,"w":41,"h":69},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 3.png",
+	"frame": {"x":498,"y":299,"w":35,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":11,"w":35,"h":68},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 4.png",
+	"frame": {"x":568,"y":305,"w":35,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":11,"w":35,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 5.png",
+	"frame": {"x":511,"y":217,"w":38,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":11,"w":38,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 6.png",
+	"frame": {"x":737,"y":110,"w":42,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":11,"w":42,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkDown 7.png",
+	"frame": {"x":896,"y":65,"w":39,"h":76},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":11,"w":39,"h":76},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 0.png",
+	"frame": {"x":287,"y":284,"w":48,"h":69},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":12,"w":48,"h":69},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 1.png",
+	"frame": {"x":129,"y":197,"w":43,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":43,"h":68},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 2.png",
+	"frame": {"x":578,"y":259,"w":44,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":12,"w":44,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 3.png",
+	"frame": {"x":973,"y":224,"w":47,"h":69},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":47,"h":69},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 4.png",
+	"frame": {"x":637,"y":310,"w":48,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":12,"w":48,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 5.png",
+	"frame": {"x":326,"y":334,"w":51,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":12,"w":51,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 6.png",
+	"frame": {"x":498,"y":424,"w":51,"h":63},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":51,"h":63},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinScoutWalkUp 7.png",
+	"frame": {"x":764,"y":424,"w":50,"h":63},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":50,"h":63},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 0.png",
+	"frame": {"x":292,"y":247,"w":35,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":14,"w":35,"h":70},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 1.png",
+	"frame": {"x":231,"y":335,"w":35,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":15,"w":35,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 2.png",
+	"frame": {"x":563,"y":391,"w":41,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":15,"w":41,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 3.png",
+	"frame": {"x":629,"y":449,"w":35,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":15,"w":35,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 4.png",
+	"frame": {"x":695,"y":451,"w":35,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":35,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 5.png",
+	"frame": {"x":632,"y":360,"w":38,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":15,"w":38,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 6.png",
+	"frame": {"x":392,"y":384,"w":42,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":15,"w":42,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkDown 7.png",
+	"frame": {"x":292,"y":206,"w":39,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":15,"w":39,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 0.png",
+	"frame": {"x":392,"y":334,"w":48,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":14,"w":48,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 1.png",
+	"frame": {"x":894,"y":376,"w":43,"h":66},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":43,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 2.png",
+	"frame": {"x":326,"y":387,"w":44,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":15,"w":44,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 3.png",
+	"frame": {"x":563,"y":342,"w":47,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":47,"h":67},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 4.png",
+	"frame": {"x":392,"y":428,"w":48,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":14,"w":48,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 5.png",
+	"frame": {"x":894,"y":421,"w":51,"h":62},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":14,"w":51,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 6.png",
+	"frame": {"x":956,"y":501,"w":51,"h":60},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":15,"w":51,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "HobgoblinWarriorWalkUp 7.png",
+	"frame": {"x":824,"y":476,"w":50,"h":61},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":14,"w":50,"h":61},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 0.png",
+	"frame": {"x":1,"y":498,"w":42,"h":76},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":8,"w":42,"h":76},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 1.png",
+	"frame": {"x":1,"y":576,"w":42,"h":76},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":8,"w":42,"h":76},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 2.png",
+	"frame": {"x":515,"y":65,"w":42,"h":76},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":8,"w":42,"h":76},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 3.png",
+	"frame": {"x":89,"y":331,"w":40,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":8,"w":40,"h":73},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 4.png",
+	"frame": {"x":46,"y":418,"w":40,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":8,"w":40,"h":74},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 5.png",
+	"frame": {"x":593,"y":65,"w":43,"h":75},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":8,"w":43,"h":75},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 6.png",
+	"frame": {"x":439,"y":65,"w":45,"h":74},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":8,"w":45,"h":74},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkDown 7.png",
+	"frame": {"x":1,"y":418,"w":43,"h":78},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":8,"w":43,"h":78},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 0.png",
+	"frame": {"x":185,"y":65,"w":51,"h":71},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":51,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 1.png",
+	"frame": {"x":238,"y":65,"w":52,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":52,"h":70},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 2.png",
+	"frame": {"x":75,"y":1,"w":54,"h":71},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":54,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 3.png",
+	"frame": {"x":292,"y":65,"w":51,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":51,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 4.png",
+	"frame": {"x":818,"y":208,"w":49,"h":69},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":49,"h":69},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 5.png",
+	"frame": {"x":630,"y":400,"w":47,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":47,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 6.png",
+	"frame": {"x":829,"y":424,"w":50,"h":63},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":50,"h":63},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaKingWalkUp 7.png",
+	"frame": {"x":697,"y":400,"w":49,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":10,"w":49,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 0.png",
+	"frame": {"x":834,"y":1,"w":61,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":30,"w":61,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 1.png",
+	"frame": {"x":259,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 2.png",
+	"frame": {"x":323,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 3.png",
+	"frame": {"x":387,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 4.png",
+	"frame": {"x":451,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 5.png",
+	"frame": {"x":174,"y":172,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":30,"w":59,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 6.png",
+	"frame": {"x":705,"y":209,"w":58,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":30,"w":58,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkDown 7.png",
+	"frame": {"x":65,"y":142,"w":60,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":30,"w":60,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 0.png",
+	"frame": {"x":506,"y":477,"w":51,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":42},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 1.png",
+	"frame": {"x":436,"y":507,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 2.png",
+	"frame": {"x":330,"y":506,"w":51,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":45},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 3.png",
+	"frame": {"x":149,"y":571,"w":53,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":41,"w":53,"h":45},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 4.png",
+	"frame": {"x":974,"y":118,"w":51,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":46},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 5.png",
+	"frame": {"x":560,"y":520,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 6.png",
+	"frame": {"x":613,"y":521,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MagmaScorpionWalkUp 7.png",
+	"frame": {"x":560,"y":566,"w":51,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":42},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 0.png",
+	"frame": {"x":654,"y":613,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":46,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 1.png",
+	"frame": {"x":687,"y":613,"w":31,"h":30},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":41,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 2.png",
+	"frame": {"x":870,"y":554,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":33,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 3.png",
+	"frame": {"x":903,"y":546,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":27,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 4.png",
+	"frame": {"x":889,"y":585,"w":31,"h":30},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":24,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 5.png",
+	"frame": {"x":894,"y":618,"w":31,"h":29},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":28,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 6.png",
+	"frame": {"x":921,"y":578,"w":31,"h":30},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":36,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkDown 7.png",
+	"frame": {"x":925,"y":611,"w":31,"h":30},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":41,"w":31,"h":30},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 0.png",
+	"frame": {"x":870,"y":651,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":46,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 1.png",
+	"frame": {"x":903,"y":651,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":41,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 2.png",
+	"frame": {"x":936,"y":644,"w":31,"h":29},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":32,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 3.png",
+	"frame": {"x":986,"y":554,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":27,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 4.png",
+	"frame": {"x":957,"y":585,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":24,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 5.png",
+	"frame": {"x":953,"y":554,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":27,"w":31,"h":29},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 6.png",
+	"frame": {"x":987,"y":584,"w":31,"h":28},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":36,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MedusaWalkUp 7.png",
+	"frame": {"x":987,"y":617,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":41,"w":31,"h":28},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 0.png",
+	"frame": {"x":515,"y":109,"w":42,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":12,"w":42,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 1.png",
+	"frame": {"x":589,"y":110,"w":41,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":12,"w":41,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 2.png",
+	"frame": {"x":663,"y":110,"w":42,"h":72},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":42,"h":72},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 3.png",
+	"frame": {"x":507,"y":257,"w":40,"h":69},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":40,"h":69},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 4.png",
+	"frame": {"x":364,"y":248,"w":40,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":12,"w":40,"h":70},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 5.png",
+	"frame": {"x":45,"y":498,"w":43,"h":71},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":12,"w":43,"h":71},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 6.png",
+	"frame": {"x":45,"y":571,"w":45,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":12,"w":45,"h":70},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkDown 7.png",
+	"frame": {"x":745,"y":65,"w":43,"h":73},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":12,"w":43,"h":73},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 0.png",
+	"frame": {"x":233,"y":260,"w":52,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":52,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 1.png",
+	"frame": {"x":827,"y":279,"w":53,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":53,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 2.png",
+	"frame": {"x":174,"y":335,"w":55,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":55,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 3.png",
+	"frame": {"x":894,"y":279,"w":52,"h":66},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":52,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 4.png",
+	"frame": {"x":563,"y":434,"w":50,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":50,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 5.png",
+	"frame": {"x":88,"y":418,"w":48,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":48,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 6.png",
+	"frame": {"x":229,"y":457,"w":51,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":51,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "MountainGiantWalkUp 7.png",
+	"frame": {"x":90,"y":480,"w":50,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":15,"w":50,"h":60},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 0.png",
+	"frame": {"x":897,"y":1,"w":61,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":30,"w":61,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 1.png",
+	"frame": {"x":515,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 2.png",
+	"frame": {"x":579,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 3.png",
+	"frame": {"x":643,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 4.png",
+	"frame": {"x":707,"y":1,"w":62,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":30,"w":62,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 5.png",
+	"frame": {"x":511,"y":153,"w":59,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":30,"w":59,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 6.png",
+	"frame": {"x":817,"y":144,"w":58,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":30,"w":58,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkDown 7.png",
+	"frame": {"x":53,"y":267,"w":60,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":30,"w":60,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 0.png",
+	"frame": {"x":613,"y":567,"w":51,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":42},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 1.png",
+	"frame": {"x":666,"y":521,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 2.png",
+	"frame": {"x":150,"y":618,"w":51,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":45},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 3.png",
+	"frame": {"x":236,"y":517,"w":53,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":41,"w":53,"h":45},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 4.png",
+	"frame": {"x":974,"y":171,"w":51,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":46},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 5.png",
+	"frame": {"x":666,"y":567,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 6.png",
+	"frame": {"x":746,"y":508,"w":51,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":44},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "RockScorpionWalkUp 7.png",
+	"frame": {"x":746,"y":585,"w":51,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":41,"w":51,"h":42},
+	"sourceSize": {"w":72,"h":96}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "MountainLevel.png",
+	"format": "RGBA8888",
+	"size": {"w":1021,"h":680},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:99786b5a7404439404b8f8766986239b:362dc6e4d74c99f40b12589785d90b82:cbfde12c291db6d1c5f7bf44b8cbb266$"
+}
+}

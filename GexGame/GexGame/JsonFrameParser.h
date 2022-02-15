@@ -31,12 +31,14 @@ using nlohmann::json;
 
 struct Frame {
 
-	Frame(int l, int t, int w, int h, int ox, int oy) 
+	Frame(int l, int t, int w, int h, int ox, int oy, bool _isRotated) 
 		: intRect(l, t, w, h)
 		, offset(ox, oy)
+		, isRotated(_isRotated)
 	{}
-	sf::IntRect intRect;
-	std::pair<int, int> offset;
+	sf::IntRect				intRect;
+	std::pair<int, int>		offset;
+	bool					isRotated;
 
 };
 

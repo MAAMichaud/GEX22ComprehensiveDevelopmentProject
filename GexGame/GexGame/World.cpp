@@ -149,6 +149,10 @@ void World::loadTextures()
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
 	textures.load(TextureID::OnebyOne, "../Media/Textures/1by1.png");
 	textures.load(TextureID::Lich, "../Media/Textures/LichAtlas.png");
+	textures.load(TextureID::ForestLevel, "../Media/Textures/ForestLevel.png");
+	textures.load(TextureID::CemeteryLevel, "../Media/Textures/CemeteryLevel.png");
+	textures.load(TextureID::BeachLevel, "../Media/Textures/BeachLevel.png");
+	textures.load(TextureID::MountainLevel, "../Media/Textures/MountainLevel.png");
 }
 
 

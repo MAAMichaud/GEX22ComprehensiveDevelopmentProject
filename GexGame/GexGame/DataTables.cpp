@@ -189,7 +189,7 @@ std::map<LevelType, LevelData> initializeLevelData()
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
 	data[LevelType::Cemetery].waves.at(0).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Cemetery].waves.at(0).enemyCount = 5;
+	data[LevelType::Cemetery].waves.at(0).enemyCount = 4;
 	data[LevelType::Cemetery].waves.at(0).spawnRate = 0.5f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
@@ -227,8 +227,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 {
 	std::map<EnemyType, EnemyData> data;
 
-	JsonFrameParser frames{ JsonFrameParser("../Media/Textures/LichAtlasFlipped.json") };
-	data[EnemyType::Lich].texture = TextureID::Lich;
+	JsonFrameParser frames{ JsonFrameParser("../Media/Textures/CemeteryLeveLFlipped.json") };
+	data[EnemyType::Lich].texture = TextureID::CemeteryLevel;
 	data[EnemyType::Lich].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("LichWalkUpRight"));
 	data[EnemyType::Lich].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
 	data[EnemyType::Lich].animations[Direction::UpRight].setRepeating(true);
@@ -241,7 +241,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 	data[EnemyType::Lich].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("LichWalkUpLeft"));
 	data[EnemyType::Lich].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 	data[EnemyType::Lich].animations[Direction::UpLeft].setRepeating(true);
-	data[EnemyType::Lich].speed = sf::seconds(0.2f);
+	data[EnemyType::Lich].speed = sf::seconds(0.8f);
 
 	return data;
 }
