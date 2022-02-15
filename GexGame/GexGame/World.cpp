@@ -153,6 +153,7 @@ void World::loadTextures()
 	textures.load(TextureID::CemeteryLevel, "../Media/Textures/CemeteryLevel.png");
 	textures.load(TextureID::BeachLevel, "../Media/Textures/BeachLevel.png");
 	textures.load(TextureID::MountainLevel, "../Media/Textures/MountainLevel.png");
+	textures.load(TextureID::Towers, "../Media/Textures/TowerAtlas.png");
 }
 
 

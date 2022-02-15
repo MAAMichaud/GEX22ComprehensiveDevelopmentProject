@@ -227,8 +227,58 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 {
 	std::map<EnemyType, EnemyData> data;
 
-	JsonFrameParser frames{ JsonFrameParser("../Media/Textures/CemeteryLeveLFlipped.json") };
+	JsonFrameParser frames{ JsonFrameParser("../Media/Textures/TowerAtlasFlipped.json") };
 
+	data[EnemyType::Skeleton].texture = TextureID::Towers;
+	data[EnemyType::Skeleton].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackUpRight"));
+	data[EnemyType::Skeleton].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::UpRight].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackDownRight"));
+	data[EnemyType::Skeleton].animations[Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::DownRight].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackDownLeft"));
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackUpLeft"));
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].setRepeating(true);
+	data[EnemyType::Skeleton].speed = sf::seconds(0.4f);
+
+	std::string test = "ClubWarriorAttackLeft";
+	std::string test2 = "ClubWarriorAttackRight";
+	data[EnemyType::Skeleton].texture = TextureID::Towers;
+	data[EnemyType::Skeleton].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("ClubWarriorAttackUpUp"));
+	data[EnemyType::Skeleton].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::UpRight].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("ClubWarriorAttackDownRight"));
+	data[EnemyType::Skeleton].animations[Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::DownRight].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor(test));
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("ClubWarriorAttackUpLeft"));
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].setRepeating(true);
+	data[EnemyType::Skeleton].speed = sf::seconds(0.4f);
+
+	data[EnemyType::Zombie].texture = TextureID::Towers;
+	data[EnemyType::Zombie].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackUpUp"));
+	data[EnemyType::Zombie].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::UpRight].setRepeating(true);
+	data[EnemyType::Zombie].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackRight"));
+	data[EnemyType::Zombie].animations[Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::DownRight].setRepeating(true);
+	data[EnemyType::Zombie].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackDownDown"));
+	data[EnemyType::Zombie].animations[Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::DownLeft].setRepeating(true);
+	data[EnemyType::Zombie].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackLeft"));
+	data[EnemyType::Zombie].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::UpLeft].setRepeating(true);
+	data[EnemyType::Zombie].speed = sf::seconds(0.4f);
+
+	frames = JsonFrameParser("../Media/Textures/CemeteryLeveLFlipped.json");
+
+	/*
 	data[EnemyType::Skeleton].texture = TextureID::CemeteryLevel;
 	data[EnemyType::Skeleton].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("SkeletonWalkUpRight"));
 	data[EnemyType::Skeleton].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
@@ -258,6 +308,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 	data[EnemyType::Zombie].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 	data[EnemyType::Zombie].animations[Direction::UpLeft].setRepeating(true);
 	data[EnemyType::Zombie].speed = sf::seconds(0.5f);
+	*/
 
 	data[EnemyType::AncientZombie].texture = TextureID::CemeteryLevel;
 	data[EnemyType::AncientZombie].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("AncientZombieWalkUpRight"));

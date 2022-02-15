@@ -85,6 +85,7 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 	auto frame = animations.at(direction).update(dt);
 
 	sprite.setTextureRect(frame.intRect);
+	//sprite.setColor(frame.isRotated ? sf::Color(0, 255, 255, 255) : sf::Color(255, 0, 255, 255));
 	if (direction == Direction::UpRight || direction == Direction::DownRight)
 	{
 		sprite.setRotation(frame.isRotated ? -90.f : 0.f);

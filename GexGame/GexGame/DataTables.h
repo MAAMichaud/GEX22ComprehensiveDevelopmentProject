@@ -36,6 +36,7 @@ enum class LevelType
 
 enum class EnemyType
 {
+	AxeGrandmaster,
 	Lich,
 	Zombie,
 	Skeleton,
@@ -46,6 +47,10 @@ enum class EnemyType
 
 enum class Direction
 {
+	Up,
+	Down,
+	Right,
+	Left,
 	UpRight,
 	DownRight,
 	DownLeft,
