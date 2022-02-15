@@ -10,6 +10,7 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "Enemy.h"
 #include "Lane.h"
 #include "Utility.h"
 
@@ -27,7 +28,7 @@ Lane::Lane(const TextureHolder_t& _textures, LaneData data)
 
 void Lane::spawnEnemy()
 {
-	auto enemyNode{ std::make_unique<AnimatedNode>(textures, enemyData, route)};
+	auto enemyNode{ std::make_unique<Enemy>(textures, enemyData, route)};
 	this->attachChild(std::move(enemyNode));
 }
 

@@ -12,7 +12,6 @@
 */
 #pragma once
 
-#include "AnimatedNode.h"
 #include "DataTables.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
@@ -23,9 +22,9 @@
 class Lane: public SceneNode
 {
 public:
-	explicit			Lane(const TextureHolder_t& textures, LaneData data);
-	void				spawnEnemy();
-	void				loadEnemy(EnemyData enemyData);
+	explicit									Lane(const TextureHolder_t& textures, LaneData data);
+	void										spawnEnemy();
+	void										loadEnemy(EnemyData enemyData);
 
 private:
 	const TextureHolder_t&						textures;
