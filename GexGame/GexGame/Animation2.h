@@ -43,7 +43,6 @@ public:
 	bool 						isFinished() const;
 
 	Frame						getCurrentFrame() const;
-	std::pair<int, int>			getCurrentOffset() const;
 
 	Frame 						update(sf::Time dt);
 
