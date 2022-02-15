@@ -3,7 +3,7 @@ import json
 import copy
 
 
-filename = "MountainLevel.json"
+filename = "SingleTowerAtlas.json"
 
 with open(filename) as json_file:
     data = json.load(json_file)
@@ -42,7 +42,7 @@ with open(filename) as json_file:
     for i in data["frames"]:
         print(i)
 
-    with open(filename[:-5] + "flipped" + filename[-5:], "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    #with open(filename[:-5] + "flipped" + filename[-5:], "w", encoding="utf-8") as f:
+        #json.dump(data, f, ensure_ascii=False, indent=2)
 
 test = input("est")

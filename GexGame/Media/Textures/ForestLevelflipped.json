@@ -1,0 +1,7408 @@
+{
+  "frames": [
+    {
+      "filename": "DireWolfWalkDownRight 0.png",
+      "frame": {
+        "x": 323,
+        "y": 210,
+        "w": 60,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 23,
+        "w": 60,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 1.png",
+      "frame": {
+        "x": 251,
+        "y": 446,
+        "w": 60,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 23,
+        "w": 60,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 2.png",
+      "frame": {
+        "x": 132,
+        "y": 314,
+        "w": 63,
+        "h": 51
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 24,
+        "w": 63,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 3.png",
+      "frame": {
+        "x": 120,
+        "y": 740,
+        "w": 65,
+        "h": 51
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 23,
+        "w": 65,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 4.png",
+      "frame": {
+        "x": 322,
+        "y": 271,
+        "w": 61,
+        "h": 52
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 24,
+        "w": 61,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 5.png",
+      "frame": {
+        "x": 197,
+        "y": 409,
+        "w": 52,
+        "h": 58
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 75,
+        "w": 58,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 6.png",
+      "frame": {
+        "x": 375,
+        "y": 630,
+        "w": 50,
+        "h": 58
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 73,
+        "w": 58,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownRight 7.png",
+      "frame": {
+        "x": 187,
+        "y": 740,
+        "w": 58,
+        "h": 52
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 23,
+        "w": 58,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 0.png",
+      "frame": {
+        "x": 61,
+        "y": 1150,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 21,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 1.png",
+      "frame": {
+        "x": 194,
+        "y": 469,
+        "w": 55,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 21,
+        "w": 55,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 2.png",
+      "frame": {
+        "x": 322,
+        "y": 325,
+        "w": 61,
+        "h": 56
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 82,
+        "w": 56,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 3.png",
+      "frame": {
+        "x": 125,
+        "y": 614,
+        "w": 56,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 21,
+        "w": 56,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 4.png",
+      "frame": {
+        "x": 251,
+        "y": 504,
+        "w": 60,
+        "h": 56
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 81,
+        "w": 56,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 5.png",
+      "frame": {
+        "x": 125,
+        "y": 680,
+        "w": 56,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 21,
+        "w": 56,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 6.png",
+      "frame": {
+        "x": 119,
+        "y": 1150,
+        "w": 55,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 21,
+        "w": 55,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpRight 7.png",
+      "frame": {
+        "x": 1,
+        "y": 1150,
+        "w": 58,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 21,
+        "w": 58,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 0.png",
+      "frame": {
+        "x": 249,
+        "y": 146,
+        "w": 61,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 30,
+        "w": 61,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 1.png",
+      "frame": {
+        "x": 1,
+        "y": 894,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 2.png",
+      "frame": {
+        "x": 1,
+        "y": 958,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 3.png",
+      "frame": {
+        "x": 1,
+        "y": 1022,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 4.png",
+      "frame": {
+        "x": 1,
+        "y": 1086,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 5.png",
+      "frame": {
+        "x": 312,
+        "y": 146,
+        "w": 59,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 30,
+        "w": 59,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 6.png",
+      "frame": {
+        "x": 251,
+        "y": 615,
+        "w": 58,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 30,
+        "w": 58,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownRight 7.png",
+      "frame": {
+        "x": 373,
+        "y": 143,
+        "w": 60,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 30,
+        "w": 60,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 0.png",
+      "frame": {
+        "x": 322,
+        "y": 679,
+        "w": 51,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 1.png",
+      "frame": {
+        "x": 386,
+        "y": 471,
+        "w": 44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 85,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 2.png",
+      "frame": {
+        "x": 432,
+        "y": 549,
+        "w": 45,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 86,
+        "w": 51,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 3.png",
+      "frame": {
+        "x": 432,
+        "y": 439,
+        "w": 45,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 86,
+        "w": 53,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 4.png",
+      "frame": {
+        "x": 384,
+        "y": 577,
+        "w": 46,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 87,
+        "w": 51,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 5.png",
+      "frame": {
+        "x": 386,
+        "y": 524,
+        "w": 44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 85,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 6.png",
+      "frame": {
+        "x": 427,
+        "y": 708,
+        "w": 44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 85,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpRight 7.png",
+      "frame": {
+        "x": 171,
+        "y": 854,
+        "w": 51,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 0.png",
+      "frame": {
+        "x": 251,
+        "y": 330,
+        "w": 61,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 30,
+        "w": 61,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 1.png",
+      "frame": {
+        "x": 132,
+        "y": 250,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 2.png",
+      "frame": {
+        "x": 243,
+        "y": 82,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 3.png",
+      "frame": {
+        "x": 307,
+        "y": 82,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 4.png",
+      "frame": {
+        "x": 371,
+        "y": 79,
+        "w": 62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 5.png",
+      "frame": {
+        "x": 190,
+        "y": 530,
+        "w": 59,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 30,
+        "w": 59,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 6.png",
+      "frame": {
+        "x": 311,
+        "y": 619,
+        "w": 62,
+        "h": 58
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 92,
+        "w": 58,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownRight 7.png",
+      "frame": {
+        "x": 128,
+        "y": 498,
+        "w": 60,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 30,
+        "w": 60,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 0.png",
+      "frame": {
+        "x": 118,
+        "y": 857,
+        "w": 51,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 1.png",
+      "frame": {
+        "x": 208,
+        "y": 1095,
+        "w": 51,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 2.png",
+      "frame": {
+        "x": 432,
+        "y": 602,
+        "w": 45,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 86,
+        "w": 51,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 3.png",
+      "frame": {
+        "x": 432,
+        "y": 494,
+        "w": 45,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 86,
+        "w": 53,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 4.png",
+      "frame": {
+        "x": 427,
+        "y": 655,
+        "w": 46,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 87,
+        "w": 51,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 5.png",
+      "frame": {
+        "x": 265,
+        "y": 964,
+        "w": 44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 85,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 6.png",
+      "frame": {
+        "x": 270,
+        "y": 1017,
+        "w": 44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 85,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpRight 7.png",
+      "frame": {
+        "x": 311,
+        "y": 964,
+        "w": 42,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 83,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 0.png",
+      "frame": {
+        "x": 206,
+        "y": 233,
+        "w": 41,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 47,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 1.png",
+      "frame": {
+        "x": 270,
+        "y": 1070,
+        "w": 42,
+        "h": 38
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 47,
+        "w": 42,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 2.png",
+      "frame": {
+        "x": 355,
+        "y": 964,
+        "w": 36,
+        "h": 44
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 83,
+        "w": 44,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 3.png",
+      "frame": {
+        "x": 136,
+        "y": 1103,
+        "w": 34,
+        "h": 45
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 81,
+        "w": 45,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 4.png",
+      "frame": {
+        "x": 261,
+        "y": 1110,
+        "w": 42,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 47,
+        "w": 42,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 5.png",
+      "frame": {
+        "x": 374,
+        "y": 872,
+        "w": 35,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 82,
+        "w": 40,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 6.png",
+      "frame": {
+        "x": 436,
+        "y": 1130,
+        "w": 40,
+        "h": 34
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 47,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownRight 7.png",
+      "frame": {
+        "x": 423,
+        "y": 926,
+        "w": 40,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 47,
+        "w": 40,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 0.png",
+      "frame": {
+        "x": 338,
+        "y": 923,
+        "w": 39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 1.png",
+      "frame": {
+        "x": 436,
+        "y": 1050,
+        "w": 41,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 78,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 2.png",
+      "frame": {
+        "x": 260,
+        "y": 1148,
+        "w": 39,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 3.png",
+      "frame": {
+        "x": 292,
+        "y": 923,
+        "w": 44,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 81,
+        "w": 39,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 4.png",
+      "frame": {
+        "x": 411,
+        "y": 885,
+        "w": 42,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 79,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 5.png",
+      "frame": {
+        "x": 395,
+        "y": 1052,
+        "w": 39,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 6.png",
+      "frame": {
+        "x": 316,
+        "y": 1063,
+        "w": 39,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 76,
+        "w": 38,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpRight 7.png",
+      "frame": {
+        "x": 395,
+        "y": 1094,
+        "w": 39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 0.png",
+      "frame": {
+        "x": 435,
+        "y": 79,
+        "w": 42,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 12,
+        "w": 42,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 1.png",
+      "frame": {
+        "x": 206,
+        "y": 159,
+        "w": 41,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 12,
+        "w": 41,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 2.png",
+      "frame": {
+        "x": 435,
+        "y": 153,
+        "w": 42,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 12,
+        "w": 42,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 3.png",
+      "frame": {
+        "x": 65,
+        "y": 1108,
+        "w": 69,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 81,
+        "w": 40,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 4.png",
+      "frame": {
+        "x": 314,
+        "y": 420,
+        "w": 70,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 82,
+        "w": 40,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 5.png",
+      "frame": {
+        "x": 65,
+        "y": 894,
+        "w": 43,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 12,
+        "w": 43,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 6.png",
+      "frame": {
+        "x": 65,
+        "y": 967,
+        "w": 45,
+        "h": 70
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 12,
+        "w": 45,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownRight 7.png",
+      "frame": {
+        "x": 75,
+        "y": 718,
+        "w": 43,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 12,
+        "w": 43,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 0.png",
+      "frame": {
+        "x": 197,
+        "y": 341,
+        "w": 52,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 15,
+        "w": 52,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 1.png",
+      "frame": {
+        "x": 183,
+        "y": 685,
+        "w": 65,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 80,
+        "w": 53,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 2.png",
+      "frame": {
+        "x": 149,
+        "y": 182,
+        "w": 55,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 15,
+        "w": 55,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 3.png",
+      "frame": {
+        "x": 183,
+        "y": 631,
+        "w": 66,
+        "h": 52
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 81,
+        "w": 52,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 4.png",
+      "frame": {
+        "x": 197,
+        "y": 275,
+        "w": 50,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 15,
+        "w": 50,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 5.png",
+      "frame": {
+        "x": 385,
+        "y": 276,
+        "w": 48,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 15,
+        "w": 48,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 6.png",
+      "frame": {
+        "x": 171,
+        "y": 794,
+        "w": 51,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 15,
+        "w": 51,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpRight 7.png",
+      "frame": {
+        "x": 128,
+        "y": 562,
+        "w": 60,
+        "h": 50
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 75,
+        "w": 50,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 0.png",
+      "frame": {
+        "x": 249,
+        "y": 251,
+        "w": 71,
+        "h": 37
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 84,
+        "w": 37,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 1.png",
+      "frame": {
+        "x": 224,
+        "y": 794,
+        "w": 35,
+        "h": 68
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 14,
+        "w": 35,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 2.png",
+      "frame": {
+        "x": 320,
+        "y": 723,
+        "w": 66,
+        "h": 41
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 80,
+        "w": 41,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 3.png",
+      "frame": {
+        "x": 153,
+        "y": 901,
+        "w": 35,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 14,
+        "w": 35,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 4.png",
+      "frame": {
+        "x": 152,
+        "y": 968,
+        "w": 37,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 14,
+        "w": 37,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 5.png",
+      "frame": {
+        "x": 127,
+        "y": 420,
+        "w": 68,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 82,
+        "w": 40,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 6.png",
+      "frame": {
+        "x": 435,
+        "y": 300,
+        "w": 42,
+        "h": 68
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 14,
+        "w": 42,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownRight 7.png",
+      "frame": {
+        "x": 75,
+        "y": 793,
+        "w": 41,
+        "h": 74
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 13,
+        "w": 41,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 0.png",
+      "frame": {
+        "x": 75,
+        "y": 347,
+        "w": 50,
+        "h": 74
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 7,
+        "w": 50,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 1.png",
+      "frame": {
+        "x": 75,
+        "y": 571,
+        "w": 47,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 8,
+        "w": 47,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 2.png",
+      "frame": {
+        "x": 75,
+        "y": 645,
+        "w": 48,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 8,
+        "w": 48,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 3.png",
+      "frame": {
+        "x": 75,
+        "y": 423,
+        "w": 49,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 8,
+        "w": 49,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 4.png",
+      "frame": {
+        "x": 75,
+        "y": 498,
+        "w": 51,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 8,
+        "w": 51,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 5.png",
+      "frame": {
+        "x": 127,
+        "y": 367,
+        "w": 68,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 76,
+        "w": 51,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 6.png",
+      "frame": {
+        "x": 1,
+        "y": 756,
+        "w": 72,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 72,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpRight 7.png",
+      "frame": {
+        "x": 1,
+        "y": 825,
+        "w": 72,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 72,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 0.png",
+      "frame": {
+        "x": 314,
+        "y": 383,
+        "w": 69,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 84,
+        "w": 35,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 1.png",
+      "frame": {
+        "x": 306,
+        "y": 847,
+        "w": 66,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 82,
+        "w": 35,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 2.png",
+      "frame": {
+        "x": 110,
+        "y": 901,
+        "w": 41,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 16,
+        "w": 41,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 3.png",
+      "frame": {
+        "x": 197,
+        "y": 1030,
+        "w": 35,
+        "h": 63
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 16,
+        "w": 35,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 4.png",
+      "frame": {
+        "x": 227,
+        "y": 864,
+        "w": 35,
+        "h": 63
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 15,
+        "w": 35,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 5.png",
+      "frame": {
+        "x": 411,
+        "y": 805,
+        "w": 66,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 82,
+        "w": 38,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 6.png",
+      "frame": {
+        "x": 306,
+        "y": 803,
+        "w": 66,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 82,
+        "w": 42,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownRight 7.png",
+      "frame": {
+        "x": 149,
+        "y": 84,
+        "w": 55,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 0,
+        "w": 55,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 0.png",
+      "frame": {
+        "x": 75,
+        "y": 1,
+        "w": 72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 1.png",
+      "frame": {
+        "x": 1,
+        "y": 280,
+        "w": 72,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 2.png",
+      "frame": {
+        "x": 223,
+        "y": 1,
+        "w": 72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 3.png",
+      "frame": {
+        "x": 1,
+        "y": 197,
+        "w": 72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 4.png",
+      "frame": {
+        "x": 1,
+        "y": 362,
+        "w": 72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 5.png",
+      "frame": {
+        "x": 371,
+        "y": 1,
+        "w": 72,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 6.png",
+      "frame": {
+        "x": 1,
+        "y": 602,
+        "w": 72,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpRight 7.png",
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 72,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 0.png",
+      "frame": {
+        "x": 251,
+        "y": 679,
+        "w": 69,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 84,
+        "w": 35,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 1.png",
+      "frame": {
+        "x": 126,
+        "y": 462,
+        "w": 66,
+        "h": 34
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 82,
+        "w": 34,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 2.png",
+      "frame": {
+        "x": 247,
+        "y": 753,
+        "w": 64,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 80,
+        "w": 39,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 3.png",
+      "frame": {
+        "x": 228,
+        "y": 964,
+        "w": 35,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 16,
+        "w": 35,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 4.png",
+      "frame": {
+        "x": 227,
+        "y": 929,
+        "w": 63,
+        "h": 33
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 78,
+        "w": 33,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 5.png",
+      "frame": {
+        "x": 411,
+        "y": 845,
+        "w": 66,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 82,
+        "w": 38,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 6.png",
+      "frame": {
+        "x": 411,
+        "y": 761,
+        "w": 66,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 82,
+        "w": 42,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownRight 7.png",
+      "frame": {
+        "x": 249,
+        "y": 290,
+        "w": 71,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 87,
+        "w": 38,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 0.png",
+      "frame": {
+        "x": 388,
+        "y": 690,
+        "w": 37,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 16,
+        "w": 37,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 1.png",
+      "frame": {
+        "x": 306,
+        "y": 884,
+        "w": 63,
+        "h": 37
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 80,
+        "w": 37,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 2.png",
+      "frame": {
+        "x": 217,
+        "y": 1141,
+        "w": 41,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 17,
+        "w": 41,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 3.png",
+      "frame": {
+        "x": 157,
+        "y": 1034,
+        "w": 38,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 17,
+        "w": 38,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 4.png",
+      "frame": {
+        "x": 234,
+        "y": 1028,
+        "w": 34,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 16,
+        "w": 34,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 5.png",
+      "frame": {
+        "x": 190,
+        "y": 594,
+        "w": 59,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 76,
+        "w": 35,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 6.png",
+      "frame": {
+        "x": 176,
+        "y": 1147,
+        "w": 39,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 17,
+        "w": 39,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpRight 7.png",
+      "frame": {
+        "x": 264,
+        "y": 862,
+        "w": 40,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 17,
+        "w": 40,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 0.png",
+      "frame": {
+        "x": 206,
+        "y": 84,
+        "w": 35,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 11,
+        "w": 35,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 1.png",
+      "frame": {
+        "x": 313,
+        "y": 502,
+        "w": 71,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 82,
+        "w": 35,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 2.png",
+      "frame": {
+        "x": 313,
+        "y": 576,
+        "w": 69,
+        "h": 41
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 80,
+        "w": 41,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 3.png",
+      "frame": {
+        "x": 250,
+        "y": 716,
+        "w": 68,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 79,
+        "w": 35,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 4.png",
+      "frame": {
+        "x": 313,
+        "y": 766,
+        "w": 67,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 78,
+        "w": 35,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 5.png",
+      "frame": {
+        "x": 313,
+        "y": 462,
+        "w": 71,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 82,
+        "w": 38,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 6.png",
+      "frame": {
+        "x": 435,
+        "y": 227,
+        "w": 42,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 11,
+        "w": 42,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownRight 7.png",
+      "frame": {
+        "x": 75,
+        "y": 249,
+        "w": 55,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 0,
+        "w": 55,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 0.png",
+      "frame": {
+        "x": 75,
+        "y": 84,
+        "w": 72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 1.png",
+      "frame": {
+        "x": 75,
+        "y": 167,
+        "w": 72,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 2.png",
+      "frame": {
+        "x": 297,
+        "y": 1,
+        "w": 72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 3.png",
+      "frame": {
+        "x": 149,
+        "y": 1,
+        "w": 72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 4.png",
+      "frame": {
+        "x": 1,
+        "y": 443,
+        "w": 72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 5.png",
+      "frame": {
+        "x": 1,
+        "y": 524,
+        "w": 72,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 6.png",
+      "frame": {
+        "x": 1,
+        "y": 679,
+        "w": 72,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpRight 7.png",
+      "frame": {
+        "x": 1,
+        "y": 99,
+        "w": 72,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 0.png",
+      "frame": {
+        "x": 313,
+        "y": 539,
+        "w": 70,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 84,
+        "w": 35,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 1.png",
+      "frame": {
+        "x": 374,
+        "y": 803,
+        "w": 35,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 15,
+        "w": 35,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 2.png",
+      "frame": {
+        "x": 114,
+        "y": 1036,
+        "w": 41,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 15,
+        "w": 41,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 3.png",
+      "frame": {
+        "x": 190,
+        "y": 898,
+        "w": 35,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 15,
+        "w": 35,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 4.png",
+      "frame": {
+        "x": 191,
+        "y": 964,
+        "w": 35,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 14,
+        "w": 35,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 5.png",
+      "frame": {
+        "x": 112,
+        "y": 967,
+        "w": 38,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 15,
+        "w": 38,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 6.png",
+      "frame": {
+        "x": 435,
+        "y": 370,
+        "w": 42,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 42,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownRight 7.png",
+      "frame": {
+        "x": 249,
+        "y": 210,
+        "w": 72,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 87,
+        "w": 39,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 0.png",
+      "frame": {
+        "x": 385,
+        "y": 207,
+        "w": 48,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 14,
+        "w": 48,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 1.png",
+      "frame": {
+        "x": 261,
+        "y": 794,
+        "w": 43,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 14,
+        "w": 43,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 2.png",
+      "frame": {
+        "x": 386,
+        "y": 405,
+        "w": 44,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 15,
+        "w": 44,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 3.png",
+      "frame": {
+        "x": 65,
+        "y": 1039,
+        "w": 47,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 14,
+        "w": 47,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 4.png",
+      "frame": {
+        "x": 385,
+        "y": 338,
+        "w": 48,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 14,
+        "w": 48,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 5.png",
+      "frame": {
+        "x": 118,
+        "y": 793,
+        "w": 51,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 14,
+        "w": 51,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 6.png",
+      "frame": {
+        "x": 251,
+        "y": 562,
+        "w": 60,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 75,
+        "w": 51,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpRight 7.png",
+      "frame": {
+        "x": 251,
+        "y": 394,
+        "w": 61,
+        "h": 50
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 75,
+        "w": 50,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 0.png",
+      "frame": {
+        "x": 436,
+        "y": 1008,
+        "w": 41,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 47,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 1.png",
+      "frame": {
+        "x": 393,
+        "y": 964,
+        "w": 38,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 85,
+        "w": 42,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 2.png",
+      "frame": {
+        "x": 357,
+        "y": 1010,
+        "w": 36,
+        "h": 44
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 83,
+        "w": 44,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 3.png",
+      "frame": {
+        "x": 172,
+        "y": 1100,
+        "w": 34,
+        "h": 45
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 81,
+        "w": 45,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 4.png",
+      "frame": {
+        "x": 379,
+        "y": 926,
+        "w": 42,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 47,
+        "w": 42,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 5.png",
+      "frame": {
+        "x": 305,
+        "y": 1110,
+        "w": 35,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 82,
+        "w": 40,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 6.png",
+      "frame": {
+        "x": 342,
+        "y": 1103,
+        "w": 34,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 81,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownRight 7.png",
+      "frame": {
+        "x": 357,
+        "y": 1056,
+        "w": 36,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 83,
+        "w": 40,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 0.png",
+      "frame": {
+        "x": 301,
+        "y": 1152,
+        "w": 39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 1.png",
+      "frame": {
+        "x": 436,
+        "y": 1090,
+        "w": 41,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 78,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 2.png",
+      "frame": {
+        "x": 395,
+        "y": 1008,
+        "w": 39,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 3.png",
+      "frame": {
+        "x": 316,
+        "y": 1017,
+        "w": 39,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 4.png",
+      "frame": {
+        "x": 433,
+        "y": 964,
+        "w": 39,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 5.png",
+      "frame": {
+        "x": 342,
+        "y": 1145,
+        "w": 39,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37,
+        "w": 39,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 6.png",
+      "frame": {
+        "x": 424,
+        "y": 1166,
+        "w": 39,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 76,
+        "w": 38,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpRight 7.png",
+      "frame": {
+        "x": 383,
+        "y": 1135,
+        "w": 39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 0.png",
+      "frame": {
+        "x": 383,
+        "y": 210,
+        "w": -60,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 23,
+        "w": 60,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 1.png",
+      "frame": {
+        "x": 311,
+        "y": 446,
+        "w": -60,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 23,
+        "w": 60,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 2.png",
+      "frame": {
+        "x": 195,
+        "y": 314,
+        "w": -63,
+        "h": 51
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 24,
+        "w": 63,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 3.png",
+      "frame": {
+        "x": 185,
+        "y": 740,
+        "w": -65,
+        "h": 51
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 23,
+        "w": 65,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 4.png",
+      "frame": {
+        "x": 383,
+        "y": 271,
+        "w": -61,
+        "h": 52
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 24,
+        "w": 61,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 5.png",
+      "frame": {
+        "x": 249,
+        "y": 409,
+        "w": -52,
+        "h": 58
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 62,
+        "y": 23,
+        "w": 58,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 6.png",
+      "frame": {
+        "x": 425,
+        "y": 630,
+        "w": -50,
+        "h": 58
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 62,
+        "y": 23,
+        "w": 58,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkDownLeft 7.png",
+      "frame": {
+        "x": 245,
+        "y": 740,
+        "w": -58,
+        "h": 52
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 23,
+        "w": 58,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 0.png",
+      "frame": {
+        "x": 117,
+        "y": 1150,
+        "w": -56,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 21,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 1.png",
+      "frame": {
+        "x": 249,
+        "y": 469,
+        "w": -55,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 21,
+        "w": 55,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 2.png",
+      "frame": {
+        "x": 383,
+        "y": 325,
+        "w": -61,
+        "h": 56
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 21,
+        "w": 56,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 3.png",
+      "frame": {
+        "x": 181,
+        "y": 614,
+        "w": -56,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 21,
+        "w": 56,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 4.png",
+      "frame": {
+        "x": 311,
+        "y": 504,
+        "w": -60,
+        "h": 56
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 21,
+        "w": 56,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 5.png",
+      "frame": {
+        "x": 181,
+        "y": 680,
+        "w": -56,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 21,
+        "w": 56,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 6.png",
+      "frame": {
+        "x": 174,
+        "y": 1150,
+        "w": -55,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 21,
+        "w": 55,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "DireWolfWalkUpLeft 7.png",
+      "frame": {
+        "x": 59,
+        "y": 1150,
+        "w": -58,
+        "h": 57
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 21,
+        "w": 58,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 0.png",
+      "frame": {
+        "x": 310,
+        "y": 146,
+        "w": -61,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 61,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 1.png",
+      "frame": {
+        "x": 63,
+        "y": 894,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 2.png",
+      "frame": {
+        "x": 63,
+        "y": 958,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 3.png",
+      "frame": {
+        "x": 63,
+        "y": 1022,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 4.png",
+      "frame": {
+        "x": 63,
+        "y": 1086,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 5.png",
+      "frame": {
+        "x": 371,
+        "y": 146,
+        "w": -59,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 59,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 6.png",
+      "frame": {
+        "x": 309,
+        "y": 615,
+        "w": -58,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 58,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkDownLeft 7.png",
+      "frame": {
+        "x": 433,
+        "y": 143,
+        "w": -60,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 60,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 0.png",
+      "frame": {
+        "x": 373,
+        "y": 679,
+        "w": -51,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 1.png",
+      "frame": {
+        "x": 430,
+        "y": 471,
+        "w": -44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 2.png",
+      "frame": {
+        "x": 477,
+        "y": 549,
+        "w": -45,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 3.png",
+      "frame": {
+        "x": 477,
+        "y": 439,
+        "w": -45,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 60,
+        "y": 41,
+        "w": 53,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 4.png",
+      "frame": {
+        "x": 430,
+        "y": 577,
+        "w": -46,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 5.png",
+      "frame": {
+        "x": 430,
+        "y": 524,
+        "w": -44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 6.png",
+      "frame": {
+        "x": 471,
+        "y": 708,
+        "w": -44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "ForestScorpionWalkUpLeft 7.png",
+      "frame": {
+        "x": 222,
+        "y": 854,
+        "w": -51,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 0.png",
+      "frame": {
+        "x": 312,
+        "y": 330,
+        "w": -61,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 61,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 1.png",
+      "frame": {
+        "x": 194,
+        "y": 250,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 2.png",
+      "frame": {
+        "x": 305,
+        "y": 82,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 3.png",
+      "frame": {
+        "x": 369,
+        "y": 82,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 4.png",
+      "frame": {
+        "x": 433,
+        "y": 79,
+        "w": -62,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 62,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 5.png",
+      "frame": {
+        "x": 249,
+        "y": 530,
+        "w": -59,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 59,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 6.png",
+      "frame": {
+        "x": 373,
+        "y": 619,
+        "w": -62,
+        "h": 58
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 62,
+        "y": 30,
+        "w": 58,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkDownLeft 7.png",
+      "frame": {
+        "x": 188,
+        "y": 498,
+        "w": -60,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 30,
+        "w": 60,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 0.png",
+      "frame": {
+        "x": 169,
+        "y": 857,
+        "w": -51,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 1.png",
+      "frame": {
+        "x": 259,
+        "y": 1095,
+        "w": -51,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 2.png",
+      "frame": {
+        "x": 477,
+        "y": 602,
+        "w": -45,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 3.png",
+      "frame": {
+        "x": 477,
+        "y": 494,
+        "w": -45,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 60,
+        "y": 41,
+        "w": 53,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 4.png",
+      "frame": {
+        "x": 473,
+        "y": 655,
+        "w": -46,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 5.png",
+      "frame": {
+        "x": 309,
+        "y": 964,
+        "w": -44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 6.png",
+      "frame": {
+        "x": 314,
+        "y": 1017,
+        "w": -44,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GiantScorpionWalkUpLeft 7.png",
+      "frame": {
+        "x": 353,
+        "y": 964,
+        "w": -42,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 41,
+        "w": 51,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 0.png",
+      "frame": {
+        "x": 247,
+        "y": 233,
+        "w": -41,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 1.png",
+      "frame": {
+        "x": 312,
+        "y": 1070,
+        "w": -42,
+        "h": 38
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 42,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 2.png",
+      "frame": {
+        "x": 391,
+        "y": 964,
+        "w": -36,
+        "h": 44
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 47,
+        "w": 44,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 3.png",
+      "frame": {
+        "x": 170,
+        "y": 1103,
+        "w": -34,
+        "h": 45
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 47,
+        "w": 45,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 4.png",
+      "frame": {
+        "x": 303,
+        "y": 1110,
+        "w": -42,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 42,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 5.png",
+      "frame": {
+        "x": 409,
+        "y": 872,
+        "w": -35,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 47,
+        "w": 40,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 6.png",
+      "frame": {
+        "x": 476,
+        "y": 1130,
+        "w": -40,
+        "h": 34
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkDownLeft 7.png",
+      "frame": {
+        "x": 463,
+        "y": 926,
+        "w": -40,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 40,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 0.png",
+      "frame": {
+        "x": 377,
+        "y": 923,
+        "w": -39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 1.png",
+      "frame": {
+        "x": 477,
+        "y": 1050,
+        "w": -41,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 37,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 2.png",
+      "frame": {
+        "x": 299,
+        "y": 1148,
+        "w": -39,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 3.png",
+      "frame": {
+        "x": 336,
+        "y": 923,
+        "w": -44,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 37,
+        "w": 39,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 4.png",
+      "frame": {
+        "x": 453,
+        "y": 885,
+        "w": -42,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 5.png",
+      "frame": {
+        "x": 434,
+        "y": 1052,
+        "w": -39,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 6.png",
+      "frame": {
+        "x": 355,
+        "y": 1063,
+        "w": -39,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 37,
+        "w": 38,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "GreyWolfWalkUpLeft 7.png",
+      "frame": {
+        "x": 434,
+        "y": 1094,
+        "w": -39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 0.png",
+      "frame": {
+        "x": 477,
+        "y": 79,
+        "w": -42,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 12,
+        "w": 42,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 1.png",
+      "frame": {
+        "x": 247,
+        "y": 159,
+        "w": -41,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 12,
+        "w": 41,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 2.png",
+      "frame": {
+        "x": 477,
+        "y": 153,
+        "w": -42,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 12,
+        "w": 42,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 3.png",
+      "frame": {
+        "x": 134,
+        "y": 1108,
+        "w": -69,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 12,
+        "w": 40,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 4.png",
+      "frame": {
+        "x": 384,
+        "y": 420,
+        "w": -70,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 12,
+        "w": 40,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 5.png",
+      "frame": {
+        "x": 108,
+        "y": 894,
+        "w": -43,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 12,
+        "w": 43,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 6.png",
+      "frame": {
+        "x": 110,
+        "y": 967,
+        "w": -45,
+        "h": 70
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 12,
+        "w": 45,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkDownLeft 7.png",
+      "frame": {
+        "x": 118,
+        "y": 718,
+        "w": -43,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 12,
+        "w": 43,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 0.png",
+      "frame": {
+        "x": 249,
+        "y": 341,
+        "w": -52,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 15,
+        "w": 52,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 1.png",
+      "frame": {
+        "x": 248,
+        "y": 685,
+        "w": -65,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 65,
+        "y": 15,
+        "w": 53,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 2.png",
+      "frame": {
+        "x": 204,
+        "y": 182,
+        "w": -55,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 15,
+        "w": 55,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 3.png",
+      "frame": {
+        "x": 249,
+        "y": 631,
+        "w": -66,
+        "h": 52
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 65,
+        "y": 15,
+        "w": 52,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 4.png",
+      "frame": {
+        "x": 247,
+        "y": 275,
+        "w": -50,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 50,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 5.png",
+      "frame": {
+        "x": 433,
+        "y": 276,
+        "w": -48,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 15,
+        "w": 48,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 6.png",
+      "frame": {
+        "x": 222,
+        "y": 794,
+        "w": -51,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 15,
+        "w": 51,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OgreWalkUpLeft 7.png",
+      "frame": {
+        "x": 188,
+        "y": 562,
+        "w": -60,
+        "h": 50
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 65,
+        "y": 15,
+        "w": 50,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 0.png",
+      "frame": {
+        "x": 320,
+        "y": 251,
+        "w": -71,
+        "h": 37
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 13,
+        "w": 37,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 1.png",
+      "frame": {
+        "x": 259,
+        "y": 794,
+        "w": -35,
+        "h": 68
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 14,
+        "w": 35,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 2.png",
+      "frame": {
+        "x": 386,
+        "y": 723,
+        "w": -66,
+        "h": 41
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 14,
+        "w": 41,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 3.png",
+      "frame": {
+        "x": 188,
+        "y": 901,
+        "w": -35,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 14,
+        "w": 35,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 4.png",
+      "frame": {
+        "x": 189,
+        "y": 968,
+        "w": -37,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 14,
+        "w": 37,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 5.png",
+      "frame": {
+        "x": 195,
+        "y": 420,
+        "w": -68,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 14,
+        "w": 40,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 6.png",
+      "frame": {
+        "x": 477,
+        "y": 300,
+        "w": -42,
+        "h": 68
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 14,
+        "w": 42,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkDownLeft 7.png",
+      "frame": {
+        "x": 116,
+        "y": 793,
+        "w": -41,
+        "h": 74
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 13,
+        "w": 41,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 0.png",
+      "frame": {
+        "x": 125,
+        "y": 347,
+        "w": -50,
+        "h": 74
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 7,
+        "w": 50,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 1.png",
+      "frame": {
+        "x": 122,
+        "y": 571,
+        "w": -47,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 8,
+        "w": 47,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 2.png",
+      "frame": {
+        "x": 123,
+        "y": 645,
+        "w": -48,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 8,
+        "w": 48,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 3.png",
+      "frame": {
+        "x": 124,
+        "y": 423,
+        "w": -49,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 8,
+        "w": 49,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 4.png",
+      "frame": {
+        "x": 126,
+        "y": 498,
+        "w": -51,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 51,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 5.png",
+      "frame": {
+        "x": 195,
+        "y": 367,
+        "w": -68,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 8,
+        "w": 51,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 6.png",
+      "frame": {
+        "x": 73,
+        "y": 756,
+        "w": -72,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 72,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcBossWalkUpLeft 7.png",
+      "frame": {
+        "x": 73,
+        "y": 825,
+        "w": -72,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 8,
+        "w": 72,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 0.png",
+      "frame": {
+        "x": 383,
+        "y": 383,
+        "w": -69,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 15,
+        "w": 35,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 1.png",
+      "frame": {
+        "x": 372,
+        "y": 847,
+        "w": -66,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 16,
+        "w": 35,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 2.png",
+      "frame": {
+        "x": 151,
+        "y": 901,
+        "w": -41,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 16,
+        "w": 41,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 3.png",
+      "frame": {
+        "x": 232,
+        "y": 1030,
+        "w": -35,
+        "h": 63
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 16,
+        "w": 35,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 4.png",
+      "frame": {
+        "x": 262,
+        "y": 864,
+        "w": -35,
+        "h": 63
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 15,
+        "w": 35,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 5.png",
+      "frame": {
+        "x": 477,
+        "y": 805,
+        "w": -66,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 16,
+        "w": 38,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 6.png",
+      "frame": {
+        "x": 372,
+        "y": 803,
+        "w": -66,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 16,
+        "w": 42,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkDownLeft 7.png",
+      "frame": {
+        "x": 204,
+        "y": 84,
+        "w": -55,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 55,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 0.png",
+      "frame": {
+        "x": 147,
+        "y": 1,
+        "w": -72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 1.png",
+      "frame": {
+        "x": 73,
+        "y": 280,
+        "w": -72,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 2.png",
+      "frame": {
+        "x": 295,
+        "y": 1,
+        "w": -72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 3.png",
+      "frame": {
+        "x": 73,
+        "y": 197,
+        "w": -72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 4.png",
+      "frame": {
+        "x": 73,
+        "y": 362,
+        "w": -72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 5.png",
+      "frame": {
+        "x": 443,
+        "y": 1,
+        "w": -72,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 6.png",
+      "frame": {
+        "x": 73,
+        "y": 602,
+        "w": -72,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcLumberjackWalkUpLeft 7.png",
+      "frame": {
+        "x": 73,
+        "y": 1,
+        "w": -72,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 0.png",
+      "frame": {
+        "x": 320,
+        "y": 679,
+        "w": -69,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 15,
+        "w": 35,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 1.png",
+      "frame": {
+        "x": 192,
+        "y": 462,
+        "w": -66,
+        "h": 34
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 16,
+        "w": 34,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 2.png",
+      "frame": {
+        "x": 311,
+        "y": 753,
+        "w": -64,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 16,
+        "w": 39,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 3.png",
+      "frame": {
+        "x": 263,
+        "y": 964,
+        "w": -35,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 16,
+        "w": 35,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 4.png",
+      "frame": {
+        "x": 290,
+        "y": 929,
+        "w": -63,
+        "h": 33
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 15,
+        "w": 33,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 5.png",
+      "frame": {
+        "x": 477,
+        "y": 845,
+        "w": -66,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 16,
+        "w": 38,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 6.png",
+      "frame": {
+        "x": 477,
+        "y": 761,
+        "w": -66,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 16,
+        "w": 42,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkDownLeft 7.png",
+      "frame": {
+        "x": 320,
+        "y": 290,
+        "w": -71,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 16,
+        "w": 38,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 0.png",
+      "frame": {
+        "x": 425,
+        "y": 690,
+        "w": -37,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 16,
+        "w": 37,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 1.png",
+      "frame": {
+        "x": 369,
+        "y": 884,
+        "w": -63,
+        "h": 37
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 17,
+        "w": 37,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 2.png",
+      "frame": {
+        "x": 258,
+        "y": 1141,
+        "w": -41,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 17,
+        "w": 41,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 3.png",
+      "frame": {
+        "x": 195,
+        "y": 1034,
+        "w": -38,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 17,
+        "w": 38,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 4.png",
+      "frame": {
+        "x": 268,
+        "y": 1028,
+        "w": -34,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 16,
+        "w": 34,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 5.png",
+      "frame": {
+        "x": 249,
+        "y": 594,
+        "w": -59,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 17,
+        "w": 35,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 6.png",
+      "frame": {
+        "x": 215,
+        "y": 1147,
+        "w": -39,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 17,
+        "w": 39,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcScoutWalkUpLeft 7.png",
+      "frame": {
+        "x": 304,
+        "y": 862,
+        "w": -40,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 17,
+        "w": 40,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 0.png",
+      "frame": {
+        "x": 241,
+        "y": 84,
+        "w": -35,
+        "h": 73
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 11,
+        "w": 35,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 1.png",
+      "frame": {
+        "x": 384,
+        "y": 502,
+        "w": -71,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 11,
+        "w": 35,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 2.png",
+      "frame": {
+        "x": 382,
+        "y": 576,
+        "w": -69,
+        "h": 41
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 11,
+        "w": 41,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 3.png",
+      "frame": {
+        "x": 318,
+        "y": 716,
+        "w": -68,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 11,
+        "w": 35,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 4.png",
+      "frame": {
+        "x": 380,
+        "y": 766,
+        "w": -67,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 11,
+        "w": 35,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 5.png",
+      "frame": {
+        "x": 384,
+        "y": 462,
+        "w": -71,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 11,
+        "w": 38,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 6.png",
+      "frame": {
+        "x": 477,
+        "y": 227,
+        "w": -42,
+        "h": 71
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 11,
+        "w": 42,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkDownLeft 7.png",
+      "frame": {
+        "x": 130,
+        "y": 249,
+        "w": -55,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 55,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 0.png",
+      "frame": {
+        "x": 147,
+        "y": 84,
+        "w": -72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 1.png",
+      "frame": {
+        "x": 147,
+        "y": 167,
+        "w": -72,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 2.png",
+      "frame": {
+        "x": 369,
+        "y": 1,
+        "w": -72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 3.png",
+      "frame": {
+        "x": 221,
+        "y": 1,
+        "w": -72,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 4.png",
+      "frame": {
+        "x": 73,
+        "y": 443,
+        "w": -72,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 5.png",
+      "frame": {
+        "x": 73,
+        "y": 524,
+        "w": -72,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 6.png",
+      "frame": {
+        "x": 73,
+        "y": 679,
+        "w": -72,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcSoldierWalkUpLeft 7.png",
+      "frame": {
+        "x": 73,
+        "y": 99,
+        "w": -72,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 0.png",
+      "frame": {
+        "x": 383,
+        "y": 539,
+        "w": -70,
+        "h": 35
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 14,
+        "w": 35,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 1.png",
+      "frame": {
+        "x": 409,
+        "y": 803,
+        "w": -35,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 15,
+        "w": 35,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 2.png",
+      "frame": {
+        "x": 155,
+        "y": 1036,
+        "w": -41,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 15,
+        "w": 41,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 3.png",
+      "frame": {
+        "x": 225,
+        "y": 898,
+        "w": -35,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 15,
+        "w": 35,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 4.png",
+      "frame": {
+        "x": 226,
+        "y": 964,
+        "w": -35,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 14,
+        "w": 35,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 5.png",
+      "frame": {
+        "x": 150,
+        "y": 967,
+        "w": -38,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 15,
+        "w": 38,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 6.png",
+      "frame": {
+        "x": 477,
+        "y": 370,
+        "w": -42,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 15,
+        "w": 42,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkDownLeft 7.png",
+      "frame": {
+        "x": 321,
+        "y": 210,
+        "w": -72,
+        "h": 39
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 15,
+        "w": 39,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 0.png",
+      "frame": {
+        "x": 433,
+        "y": 207,
+        "w": -48,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 14,
+        "w": 48,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 1.png",
+      "frame": {
+        "x": 304,
+        "y": 794,
+        "w": -43,
+        "h": 66
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 14,
+        "w": 43,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 2.png",
+      "frame": {
+        "x": 430,
+        "y": 405,
+        "w": -44,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 15,
+        "w": 44,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 3.png",
+      "frame": {
+        "x": 112,
+        "y": 1039,
+        "w": -47,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 14,
+        "w": 47,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 4.png",
+      "frame": {
+        "x": 433,
+        "y": 338,
+        "w": -48,
+        "h": 65
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 14,
+        "w": 48,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 5.png",
+      "frame": {
+        "x": 169,
+        "y": 793,
+        "w": -51,
+        "h": 62
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 51,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 6.png",
+      "frame": {
+        "x": 311,
+        "y": 562,
+        "w": -60,
+        "h": 51
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 15,
+        "w": 51,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "OrcWarriorWalkUpLeft 7.png",
+      "frame": {
+        "x": 312,
+        "y": 394,
+        "w": -61,
+        "h": 50
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 14,
+        "w": 50,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 0.png",
+      "frame": {
+        "x": 477,
+        "y": 1008,
+        "w": -41,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 1.png",
+      "frame": {
+        "x": 431,
+        "y": 964,
+        "w": -38,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 47,
+        "w": 42,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 2.png",
+      "frame": {
+        "x": 393,
+        "y": 1010,
+        "w": -36,
+        "h": 44
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 47,
+        "w": 44,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 3.png",
+      "frame": {
+        "x": 206,
+        "y": 1100,
+        "w": -34,
+        "h": 45
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 47,
+        "w": 45,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 4.png",
+      "frame": {
+        "x": 421,
+        "y": 926,
+        "w": -42,
+        "h": 36
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 47,
+        "w": 42,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 5.png",
+      "frame": {
+        "x": 340,
+        "y": 1110,
+        "w": -35,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 47,
+        "w": 40,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 6.png",
+      "frame": {
+        "x": 376,
+        "y": 1103,
+        "w": -34,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 47,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkDownLeft 7.png",
+      "frame": {
+        "x": 393,
+        "y": 1056,
+        "w": -36,
+        "h": 40
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 47,
+        "w": 40,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 0.png",
+      "frame": {
+        "x": 340,
+        "y": 1152,
+        "w": -39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 1.png",
+      "frame": {
+        "x": 477,
+        "y": 1090,
+        "w": -41,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 37,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 2.png",
+      "frame": {
+        "x": 434,
+        "y": 1008,
+        "w": -39,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 3.png",
+      "frame": {
+        "x": 355,
+        "y": 1017,
+        "w": -39,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 4.png",
+      "frame": {
+        "x": 472,
+        "y": 964,
+        "w": -39,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 5.png",
+      "frame": {
+        "x": 381,
+        "y": 1145,
+        "w": -39,
+        "h": 40
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 39,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 6.png",
+      "frame": {
+        "x": 463,
+        "y": 1166,
+        "w": -39,
+        "h": 38
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 37,
+        "w": 38,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    },
+    {
+      "filename": "TimberWolfWalkUpLeft 7.png",
+      "frame": {
+        "x": 422,
+        "y": 1135,
+        "w": -39,
+        "h": 39
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 37,
+        "w": 39,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 72,
+        "h": 96
+      }
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "ForestLevel.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 478,
+      "h": 1208
+    },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:9c92560203a2cb0e2c3167b5d2ffcf24:4c085d3f9c6041fb5b46895d10466bd9:7e94dd4d3ce244e51f5383daa0f12e19$"
+  }
+}

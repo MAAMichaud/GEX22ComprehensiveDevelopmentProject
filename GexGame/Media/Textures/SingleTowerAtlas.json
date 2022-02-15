@@ -1,0 +1,332 @@
+{"frames": [
+
+{
+	"filename": "AxeGrandmasterAttackDown 0.png",
+	"frame": {"x":1787,"y":916,"w":43,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":22,"w":43,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 1.png",
+	"frame": {"x":1656,"y":314,"w":41,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":22,"w":41,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 2.png",
+	"frame": {"x":1696,"y":858,"w":43,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":22,"w":43,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 3.png",
+	"frame": {"x":1011,"y":552,"w":35,"h":64},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":14,"w":35,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 4.png",
+	"frame": {"x":1298,"y":1221,"w":43,"h":59},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":20,"w":43,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 5.png",
+	"frame": {"x":1654,"y":1218,"w":46,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":22,"w":46,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 6.png",
+	"frame": {"x":519,"y":495,"w":52,"h":57},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":22,"w":52,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDown 7.png",
+	"frame": {"x":1495,"y":1,"w":43,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":22,"w":43,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 0.png",
+	"frame": {"x":1585,"y":978,"w":44,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":22,"w":44,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 1.png",
+	"frame": {"x":1777,"y":1153,"w":41,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":22,"w":41,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 2.png",
+	"frame": {"x":1498,"y":926,"w":31,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":20,"w":31,"h":59},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 3.png",
+	"frame": {"x":1359,"y":1219,"w":45,"h":62},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":18,"w":45,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 4.png",
+	"frame": {"x":1172,"y":683,"w":24,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":12,"w":24,"h":66},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 5.png",
+	"frame": {"x":1221,"y":1159,"w":32,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":13,"w":32,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 6.png",
+	"frame": {"x":1523,"y":712,"w":43,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":23,"w":43,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackDownRight 7.png",
+	"frame": {"x":1555,"y":645,"w":43,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":23,"w":43,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 0.png",
+	"frame": {"x":1668,"y":117,"w":22,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":22,"w":22,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 1.png",
+	"frame": {"x":1692,"y":117,"w":20,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":22,"w":20,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 2.png",
+	"frame": {"x":1364,"y":1010,"w":40,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":16,"w":40,"h":62},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 3.png",
+	"frame": {"x":1473,"y":720,"w":48,"h":58},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":20,"w":48,"h":58},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 4.png",
+	"frame": {"x":1479,"y":329,"w":40,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":17,"w":40,"h":61},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 5.png",
+	"frame": {"x":1300,"y":746,"w":24,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":13,"w":24,"h":65},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 6.png",
+	"frame": {"x":1958,"y":422,"w":32,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":23,"w":32,"h":54},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackRight 7.png",
+	"frame": {"x":1939,"y":196,"w":27,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":23,"w":27,"h":55},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 0.png",
+	"frame": {"x":2006,"y":1,"w":41,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":22,"w":41,"h":54},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 1.png",
+	"frame": {"x":1885,"y":922,"w":38,"h":54},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":21,"y":22,"w":38,"h":54},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 2.png",
+	"frame": {"x":1858,"y":115,"w":37,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":22,"w":37,"h":55},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 3.png",
+	"frame": {"x":1710,"y":513,"w":37,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":21,"w":37,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 4.png",
+	"frame": {"x":1931,"y":58,"w":35,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":22,"w":35,"h":55},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 5.png",
+	"frame": {"x":1947,"y":645,"w":40,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":22,"w":40,"h":54},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 6.png",
+	"frame": {"x":1996,"y":284,"w":44,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":22,"w":44,"h":54},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUp 7.png",
+	"frame": {"x":2006,"y":57,"w":41,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":22,"w":41,"h":54},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 0.png",
+	"frame": {"x":1518,"y":258,"w":31,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":21,"w":31,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 1.png",
+	"frame": {"x":1713,"y":1218,"w":46,"h":56},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":22,"w":46,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 2.png",
+	"frame": {"x":1616,"y":513,"w":49,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":22,"w":49,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 3.png",
+	"frame": {"x":578,"y":491,"w":56,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":22,"w":56,"h":56},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 4.png",
+	"frame": {"x":1588,"y":1160,"w":52,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":21,"w":52,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 5.png",
+	"frame": {"x":1109,"y":1230,"w":34,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":16,"y":14,"w":34,"h":64},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 6.png",
+	"frame": {"x":1551,"y":257,"w":26,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":21,"w":26,"h":57},
+	"sourceSize": {"w":72,"h":96}
+},
+{
+	"filename": "AxeGrandmasterAttackUpRight 7.png",
+	"frame": {"x":1668,"y":256,"w":27,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":22,"w":27,"h":56},
+	"sourceSize": {"w":72,"h":96}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "TowerAtlas.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":1265},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:216a5e6dcafaa3ec2d4732e4849ba121:6dd2bc07a822a6d2a9d4eb80c7d8e52f:eb4855b0cdb2a06a2c94fa3e4183e20f$"
+}
+}
