@@ -188,27 +188,27 @@ std::map<LevelType, LevelData> initializeLevelData()
 	}
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(0).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Cemetery].waves.at(0).enemyCount = 4;
+	data[LevelType::Cemetery].waves.at(0).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Cemetery].waves.at(0).enemyCount = 6;
 	data[LevelType::Cemetery].waves.at(0).spawnRate = 0.5f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(1).enemyData = enemyData.at(EnemyType::Lich);
+	data[LevelType::Cemetery].waves.at(1).enemyData = enemyData.at(EnemyType::Zombie);
 	data[LevelType::Cemetery].waves.at(1).enemyCount = 10;
-	data[LevelType::Cemetery].waves.at(1).spawnRate = 1.0f;
+	data[LevelType::Cemetery].waves.at(1).spawnRate = 0.3f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
 	data[LevelType::Cemetery].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Cemetery].waves.at(2).enemyCount = 3;
+	data[LevelType::Cemetery].waves.at(2).enemyCount = 9;
 	data[LevelType::Cemetery].waves.at(2).spawnRate = 0.2f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(3).enemyData = enemyData.at(EnemyType::Lich);
+	data[LevelType::Cemetery].waves.at(3).enemyData = enemyData.at(EnemyType::AncientZombie);
 	data[LevelType::Cemetery].waves.at(3).enemyCount = 7;
 	data[LevelType::Cemetery].waves.at(3).spawnRate = 0.6f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(4).enemyData = enemyData.at(EnemyType::Lich);
+	data[LevelType::Cemetery].waves.at(4).enemyData = enemyData.at(EnemyType::Skeleton);
 	data[LevelType::Cemetery].waves.at(4).enemyCount = 8;
 	data[LevelType::Cemetery].waves.at(4).spawnRate = 0.4f;
 
@@ -228,6 +228,52 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 	std::map<EnemyType, EnemyData> data;
 
 	JsonFrameParser frames{ JsonFrameParser("../Media/Textures/CemeteryLeveLFlipped.json") };
+
+	data[EnemyType::Skeleton].texture = TextureID::CemeteryLevel;
+	data[EnemyType::Skeleton].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("SkeletonWalkUpRight"));
+	data[EnemyType::Skeleton].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::UpRight].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("SkeletonWalkDownRight"));
+	data[EnemyType::Skeleton].animations[Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::DownRight].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("SkeletonWalkDownLeft"));
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::DownLeft].setRepeating(true);
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("SkeletonWalkUpLeft"));
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Skeleton].animations[Direction::UpLeft].setRepeating(true);
+	data[EnemyType::Skeleton].speed = sf::seconds(0.4f);
+
+	data[EnemyType::Zombie].texture = TextureID::CemeteryLevel;
+	data[EnemyType::Zombie].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("ZombieWalkUpRight"));
+	data[EnemyType::Zombie].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::UpRight].setRepeating(true);
+	data[EnemyType::Zombie].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("ZombieWalkDownRight"));
+	data[EnemyType::Zombie].animations[Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::DownRight].setRepeating(true);
+	data[EnemyType::Zombie].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("ZombieWalkDownLeft"));
+	data[EnemyType::Zombie].animations[Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::DownLeft].setRepeating(true);
+	data[EnemyType::Zombie].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("ZombieWalkUpLeft"));
+	data[EnemyType::Zombie].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::Zombie].animations[Direction::UpLeft].setRepeating(true);
+	data[EnemyType::Zombie].speed = sf::seconds(0.5f);
+
+	data[EnemyType::AncientZombie].texture = TextureID::CemeteryLevel;
+	data[EnemyType::AncientZombie].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("AncientZombieWalkUpRight"));
+	data[EnemyType::AncientZombie].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::AncientZombie].animations[Direction::UpRight].setRepeating(true);
+	data[EnemyType::AncientZombie].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("AncientZombieWalkDownRight"));
+	data[EnemyType::AncientZombie].animations[Direction::DownRight].setDuration(sf::seconds(1.0f));
+	data[EnemyType::AncientZombie].animations[Direction::DownRight].setRepeating(true);
+	data[EnemyType::AncientZombie].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("AncientZombieWalkDownLeft"));
+	data[EnemyType::AncientZombie].animations[Direction::DownLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::AncientZombie].animations[Direction::DownLeft].setRepeating(true);
+	data[EnemyType::AncientZombie].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AncientZombieWalkUpLeft"));
+	data[EnemyType::AncientZombie].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
+	data[EnemyType::AncientZombie].animations[Direction::UpLeft].setRepeating(true);
+	data[EnemyType::AncientZombie].speed = sf::seconds(0.6f);
+
 	data[EnemyType::Lich].texture = TextureID::CemeteryLevel;
 	data[EnemyType::Lich].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("LichWalkUpRight"));
 	data[EnemyType::Lich].animations[Direction::UpRight].setDuration(sf::seconds(1.0f));
@@ -241,7 +287,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 	data[EnemyType::Lich].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("LichWalkUpLeft"));
 	data[EnemyType::Lich].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 	data[EnemyType::Lich].animations[Direction::UpLeft].setRepeating(true);
-	data[EnemyType::Lich].speed = sf::seconds(0.8f);
+	data[EnemyType::Lich].speed = sf::seconds(0.4f);
 
 	return data;
 }

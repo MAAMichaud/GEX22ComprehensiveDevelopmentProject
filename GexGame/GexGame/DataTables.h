@@ -37,6 +37,9 @@ enum class LevelType
 enum class EnemyType
 {
 	Lich,
+	Zombie,
+	Skeleton,
+	AncientZombie,
 };
 
 
