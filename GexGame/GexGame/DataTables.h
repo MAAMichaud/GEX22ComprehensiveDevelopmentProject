@@ -22,6 +22,8 @@
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/System/Time.hpp>
 
+#include <fstream>
+
 
 
 enum class LevelType
@@ -41,6 +43,41 @@ enum class EnemyType
 	Zombie,
 	Skeleton,
 	AncientZombie,
+};
+
+
+
+enum class TowerType
+{
+	ClubWarrior,
+	SwordWarrior,
+	SwordMaster,
+	SwordGrandmaster,
+	AxeWarrior,
+	AxeMaster,
+	AxeGrandmaster,
+	MaceWarrior,
+	MaceMaster,
+	MaceGrandmaster,
+	Novice,
+	IceApprentice,
+	IceMaster,
+	IceGrandmaster,
+	FireApprentice,
+	FireMaster,
+	FireGrandmaster,
+	EnergyApprentice,
+	EnergyMaster,
+	EnergyGrandmaster,
+	PoisonApprentice,
+	PoisonMaster,
+	PoisonGrandmaster,
+	IceSword,
+	IceSword2,
+	FireAxe,
+	FireAxe2,
+	EnergyMace,
+	EnergyMace2,
 };
 
 
@@ -67,6 +104,13 @@ struct EnemyData
 
 };
 
+
+
+struct TowerData
+{
+	std::map<Direction, Animation2>					animations;
+
+};
 
 
 struct WaveData
@@ -109,5 +153,6 @@ struct ParticleData
 
 
 std::map<LevelType, LevelData> initializeLevelData();
+std::map<TowerType, TowerData> initializeTowerData();
 std::map<EnemyType, EnemyData> initializeEnemyData();
 std::map<Particle::Type, ParticleData> initializeParticleData();

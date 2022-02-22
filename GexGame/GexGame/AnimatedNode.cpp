@@ -11,8 +11,8 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "AnimatedNode.h"
+/*
 #include "Animation2.h"
-#include "JsonFrameParser.h"
 #include "utility.h"
 
 #include <SFML/Graphics/RectangleShape.hpp>
@@ -84,7 +84,7 @@ void AnimatedNode::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
 	auto frame = animations.at(direction).update(dt);
 
-	sprite.setTextureRect(frame.intRect);
+	sprite.setTextureRect(frame.getRect());
 	if (direction == Direction::UpRight || direction == Direction::DownRight)
 	{
 		sprite.setRotation(frame.isRotated ? -90.f : 0.f);
@@ -117,3 +117,4 @@ bool AnimatedNode::isDestroyed() const
 {
 	return routeIndex >= route.size();
 }
+*/

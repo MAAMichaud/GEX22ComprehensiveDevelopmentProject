@@ -32,6 +32,8 @@ class Enemy: public SceneNode
 {
 public:
 									Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route);
+	bool							isAtTile(const int tileX, const int tileY);
+	void							destroy();
 
 private:
 	void							turn(Direction direction);
@@ -49,5 +51,6 @@ private:
 	sf::Time						timeRemaining;
 	std::vector<Direction>&			route;
 	std::size_t						routeIndex;
+	int								healthPoints;
 
 };

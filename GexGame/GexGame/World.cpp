@@ -11,7 +11,7 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "Command.h"
-#include "Entity.h"
+#include "Enemy.h"
 #include "LaneController.h"
 #include "particleNode.h"
 #include "SoundNode.h"
@@ -24,14 +24,15 @@
 #include <SFML/Graphics.hpp>
 
 
-#include "JsonFrameParser.h"
-#include "Animation2.h"
-#include "AnimatedNode.h"
+
+#include <iostream>
+
 
 
 namespace
 {
 	const std::map<LevelType, LevelData> LEVEL_DATA{ initializeLevelData() };
+	const std::map<TowerType, TowerData> TOWER_DATA{ initializeTowerData() };
 }
 
 World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, LevelType _levelType, sf::RenderWindow& _window)
@@ -52,6 +53,9 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, tileOverlay()
 	, laneController()
 	, waveIndex(0)
+	, state(State::Idle)
+	, iconFrames()
+	, towerIcon()
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -59,6 +63,20 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	buildScene();
 
 	worldView.setCenter(spawnPosition);
+
+
+	towerIcon.setTexture(textures.get(TextureID::Towers));
+	towerIcon.setTextureRect(sf::IntRect());
+
+	iconFrames.emplace(World::State::BuildWizard, TOWER_DATA.at(TowerType::Novice).animations.at(Direction::Down).frames.at(0));
+	iconFrames.emplace(World::State::BuildWarrior, TOWER_DATA.at(TowerType::ClubWarrior).animations.at(Direction::Down).frames.at(0));
+	iconFrames.emplace(World::State::BuildIce, TOWER_DATA.at(TowerType::IceSword).animations.at(Direction::Down).frames.at(0));
+	iconFrames.emplace(World::State::BuildFire, TOWER_DATA.at(TowerType::FireAxe).animations.at(Direction::Down).frames.at(0));
+	iconFrames.emplace(World::State::BuildEnergy, TOWER_DATA.at(TowerType::EnergyMace).animations.at(Direction::Down).frames.at(0));
+
+
+	//std::pair<World::State, Frame>(World::State::BuildWizard, lol);
+	//iconFrames.insert(std::pair(World::State::BuildWizard, frames.getFrame("NoviceWizardAttackDownDown")));
 }
 
 
@@ -78,7 +96,7 @@ void World::update(sf::Time dt)
 
 	sceneGraph.update(dt, commands);
 
-	handleMouse();
+	handleMouseOverlay();
 	updateSounds();
 }
 
@@ -99,6 +117,7 @@ void World::draw()
 		sceneTexture.clear();
 		sceneTexture.setView(worldView);
 		sceneTexture.draw(sceneGraph);
+		sceneTexture.draw(towerIcon);
 		sceneTexture.display();
 		bloomEffect.apply(sceneTexture, target);
 	}
@@ -106,6 +125,7 @@ void World::draw()
 	{
 		target.setView(worldView);
 		target.draw(sceneGraph);
+		target.draw(towerIcon);
 	}
 }
 
@@ -140,6 +160,66 @@ void World::startWave()
 
 		waveIndex += 1;
 	}
+}
+
+
+
+void World::boardClicked()
+{
+	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
+
+	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
+
+	auto enemies{ laneController->getEnemiesAt(tileX, tileY) };
+
+	/*
+	std::cout << "clicked on tile " << tileX << ", " << tileY << std::endl;
+	std::cout << "clicked on pixel " << pixelX << ", " << pixelY << std::endl;
+	std::cout << "clicked on " << enemies.size() << " enemies." << std::endl;
+	*/
+
+	if (state == State::Idle)
+	{
+		for (auto enemy : enemies)
+		{
+			auto [eX, eY] {enemy->getWorldPosition() };
+			std::cout << "enemy on pixel " << eX << ", " << eY << std::endl;
+
+			enemy->destroy();
+		}
+	}
+	else
+	{
+		if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
+		{
+			placeTower();
+		}
+	}
+
+	std::cout << std::endl;
+}
+
+
+
+void World::selectTower(State newState)
+{
+	state = newState;
+
+	/*
+	*/
+	const auto& frame{ iconFrames.at(newState) };
+
+	towerIcon.setTextureRect(sf::IntRect(std::get<0>(frame.intRect), std::get<1>(frame.intRect), std::get<2>(frame.intRect), std::get<3>(frame.intRect)));
+	towerIcon.setRotation(frame.isRotated ? -90.f : 0.f);
+	towerIcon.setPosition(frame.offset.first, frame.offset.second);
+}
+
+
+
+void World::cancel()
+{
+	towerIcon.setTextureRect(sf::IntRect());
+	state = State::Idle;
 }
 
 
@@ -241,6 +321,7 @@ void World::handleCollisions()
 
 void World::destroyEntitiesOutOfView()
 {
+	/*
 	auto battlefieldBounds{ getBattlefieldBounds() };
 
 	Command command;
@@ -256,26 +337,35 @@ void World::destroyEntitiesOutOfView()
 	});
 
 	commands.push(command);
+	*/
 }
 
 
 
-void World::handleMouse()
+void World::handleMouseOverlay()
 {	
 	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
 
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
+	tileOverlay->setRGBA(sf::Color(255, 255, 255, 0));
+	towerIcon.setColor(sf::Color(255, 255, 255, 0));
+
 	if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
 	{
-		tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
+		if (state == World::State::Idle)
+		{
+			tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
 
+			placeSpriteAtTile(*tileOverlay, tileX, tileY);
+		}
+		else
+		{
+			towerIcon.setColor(sf::Color(255, 255, 255, 200));
 
-		placeSpriteAtTile(*tileOverlay, tileX, tileY);
-	}
-	else
-	{
-		tileOverlay->setRGBA(sf::Color(255, 255, 255, 0));
+			//towerIcon.setPosition(pixelX, pixelY);
+			placeSpriteAtTile(towerIcon, tileX, tileY);
+		}
 	}
 }
 
@@ -296,38 +386,39 @@ void World::placeSpriteAtTile(SpriteNode& sprite, float x, float y)
 
 
 
-sf::Vector2i World::pixelXYToTileXY(int x, int y)
+void World::placeSpriteAtTile(sf::Sprite& sprite, float x, float y)
 {
-    return sf::Vector2i(calculateXTile(x, y), calculateYTile(x, y));
+    static const float BASE_X{ 880.f };
+    static const float BASE_Y{ 96.f };
+    static const float INCREMENT_X{ 36.f };
+    static const float INCREMENT_Y{ 24.f };
+
+    float newX{ BASE_X + (INCREMENT_X * x) - (INCREMENT_X * y) };
+    float newY{ BASE_Y + INCREMENT_Y * x + INCREMENT_Y * y };
+
+
+	const auto& frame{ iconFrames.at(state) };
+
+	/*
+	towerIcon.setTextureRect(frame.intRect);
+	towerIcon.setRotation(frame.isRotated ? -90.f : 0.f);
+	towerIcon.setPosition(frame.offset.first, frame.offset.second);
+	*/
+			//const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
+    sprite.setPosition(sf::Vector2f(newX + frame.offset.first, newY - 96 + frame.offset.second));
 }
 
 
 
-int World::calculateXTile(int x, int y)
+void World::placeTower()
 {
-	static const double xTriangleTangent{ 2.0 / 3 };
+	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
 
-	static const int tileHeight{ 48 };
-	static const int xTriangleTotalHeight{ 888 };
-	//static const int xTriangleExcess{ 504 };
-	static const int xTriangleExcess{ 504 - 158 };
-	const double xTriangleHeight{ xTriangleTangent * (x + xTriangleExcess) };
+	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
-	return (y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight;
-}
+	std::cout << "Placed tower at " << tileX << ", " << tileY << std::endl;
 
-
-
-int World::calculateYTile(int x, int y)
-{
-	static const double yTriangleTangent{ 1.5 };
-
-	static const int tileWidth{ 72 };
-	static const int yTriangleOffset{ 72 };
-	static const int yTriangleExcess{ 408 + 106 };
-	const double yTriangleWidth{ yTriangleTangent * (y + yTriangleExcess) };
-
-	return (yTriangleWidth + yTriangleOffset - x) / tileWidth;
+	state = World::State::Idle;
 }
 
 

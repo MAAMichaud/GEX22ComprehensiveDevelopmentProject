@@ -33,6 +33,51 @@ namespace
 
 
 
+sf::Vector2i pixelXYToTileXY(int x, int y)
+{
+    return sf::Vector2i(calculateXTile(x, y), calculateYTile(x, y));
+}
+
+
+
+int calculateXTile(int x, int y)
+{
+	static const double xTriangleTangent{ 2.0 / 3 };
+
+	static const int tileHeight{ 48 };
+	static const int xTriangleTotalHeight{ 888 };
+	static const int xTriangleExcess{ 504 - 158 };
+	const double xTriangleHeight{ xTriangleTangent * (x + xTriangleExcess) };
+
+	return (y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight;
+}
+
+
+
+int calculateYTile(int x, int y)
+{
+	static const double yTriangleTangent{ 1.5 };
+
+	static const int tileWidth{ 72 };
+	static const int yTriangleOffset{ 72 };
+	static const int yTriangleExcess{ 408 + 106 };
+	const double yTriangleWidth{ yTriangleTangent * (y + yTriangleExcess) };
+
+	return (yTriangleWidth + yTriangleOffset - x) / tileWidth;
+}
+
+
+
+sf::IntRect flip(const sf::IntRect& rec)
+{
+	auto temp = rec;
+	temp.left += temp.width;
+	temp.width *= 1;
+	return temp;
+}
+
+
+
 int randomInt(int exclusiveMax)
 {
 	std::uniform_int_distribution<int> dist{ 0, exclusiveMax - 1 };
@@ -94,14 +139,4 @@ sf::Vector2f normalizeVector(sf::Vector2f v)
     }
 
 	return v;
-}
-
-
-
-sf::IntRect flip(const sf::IntRect& rec)
-{
-	auto temp = rec;
-	temp.left += temp.width;
-	temp.width *= 1;
-	return temp;
 }

@@ -69,8 +69,10 @@ private:
 	virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 	void					drawChildren(sf::RenderTarget& target, sf::RenderStates states) const;
 
-private:
+protected:
 	std::vector<Ptr>		children;
+
+private:
 	SceneNode*				parent;
 	unsigned int			category;
 

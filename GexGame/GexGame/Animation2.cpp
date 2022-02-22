@@ -18,7 +18,7 @@
 
 Animation2::Animation2(bool repeat)
 	: currentFrame(0)
-	, duration(sf::Time::Zero)
+	, duration(sf::seconds(1.0f))
 	, elapsedTime(sf::Time::Zero)
 	, repeat(repeat)
 {

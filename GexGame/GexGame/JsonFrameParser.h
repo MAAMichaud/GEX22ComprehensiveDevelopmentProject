@@ -31,14 +31,14 @@ using nlohmann::json;
 
 struct Frame {
 
-	Frame(int l, int t, int w, int h, int ox, int oy, bool _isRotated) 
-		: intRect(l, t, w, h)
-		, offset(ox, oy)
-		, isRotated(_isRotated)
-	{}
-	sf::IntRect				intRect;
-	std::pair<int, int>		offset;
-	bool					isRotated;
+	std::tuple<int, int, int, int>	intRect;
+	std::pair<int, int>				offset;
+	bool							isRotated;
+
+	sf::IntRect						getRect()
+	{
+		return sf::IntRect(std::get<0>(intRect), std::get<1>(intRect), std::get<2>(intRect), std::get<3>(intRect));
+	}
 
 };
 
@@ -54,6 +54,7 @@ public:
 									*/
 									JsonFrameParser(std::string path);
 
+	Frame							getFrame(std::string animationName) const;
 									/**
 									* Return set of texture Rectangles for the named
 									* animation. 

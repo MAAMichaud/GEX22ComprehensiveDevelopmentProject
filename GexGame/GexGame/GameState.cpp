@@ -160,6 +160,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y > NOVICE_WIZARD_BUTTON_TOP)
 			{
 				std::cout << "NOVICE_WIZARD Button Pressed." << std::endl;
+				world.selectTower(World::State::BuildWizard);
 			}
 
 			else if (event.mouseButton.x < NOVICE_WARRIOR_BUTTON_RIGHT 
@@ -168,6 +169,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y > NOVICE_WARRIOR_BUTTON_TOP)
 			{
 				std::cout << "NOVICE_WARRIOR Button Pressed." << std::endl;
+				world.selectTower(World::State::BuildWarrior);
 			}
 
 			else if (event.mouseButton.x < PRESTIGE_ICE_BUTTON_RIGHT 
@@ -176,6 +178,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y > PRESTIGE_ICE_BUTTON_TOP)
 			{
 				std::cout << "PRESTIGE_ICE Button Pressed." << std::endl;
+				world.selectTower(World::State::BuildIce);
 			}
 
 			else if (event.mouseButton.x < PRESTIGE_FIRE_BUTTON_RIGHT 
@@ -184,6 +187,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y > PRESTIGE_FIRE_BUTTON_TOP)
 			{
 				std::cout << "PRESTIGE_FIRE Button Pressed." << std::endl;
+				world.selectTower(World::State::BuildFire);
 			}
 
 			else if (event.mouseButton.x < PRESTIGE_ENERGY_BUTTON_RIGHT 
@@ -192,6 +196,7 @@ bool GameState::handleEvent(const sf::Event& event)
 				&& event.mouseButton.y > PRESTIGE_ENERGY_BUTTON_TOP)
 			{
 				std::cout << "PRESTIGE_ENERGY Button Pressed." << std::endl;
+				world.selectTower(World::State::BuildEnergy);
 			}
 
 			else if (event.mouseButton.x < START_WAVE_BUTTON_RIGHT 
@@ -211,6 +216,10 @@ bool GameState::handleEvent(const sf::Event& event)
 				std::cout << "PAUSE Button Pressed." << std::endl;
 				requestStackPush(StateID::Pause);
 			}
+			else
+			{
+				world.boardClicked();
+			}
 		}
 	}
 
@@ -221,11 +230,14 @@ bool GameState::handleEvent(const sf::Event& event)
 	if (event.type != sf::Event::KeyPressed)
 	{
 		return false;
-	}
-
-	if (event.key.code == sf::Keyboard::P)
+	} 
+	else if (event.key.code == sf::Keyboard::P)
 	{
 		requestStackPush(StateID::Pause);
+	}
+	else if (event.key.code == sf::Keyboard::Escape)
+	{
+		world.cancel();
 	}
 
 

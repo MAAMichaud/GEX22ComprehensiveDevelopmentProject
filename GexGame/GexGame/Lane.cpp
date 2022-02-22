@@ -14,6 +14,9 @@
 #include "Lane.h"
 #include "Utility.h"
 
+#include <cassert>
+#include <functional>
+
 
 
 Lane::Lane(const TextureHolder_t& _textures, LaneData data)
@@ -37,4 +40,24 @@ void Lane::spawnEnemy()
 void Lane::loadEnemy(EnemyData _enemyData)
 {
 	enemyData = _enemyData;
+}
+
+
+
+std::vector<Enemy*> Lane::getEnemiesAt(const int tileX, const int tileY)
+{
+	auto enemies{ std::vector<Enemy*>() };
+
+	for (auto& child : this->children)
+	{
+		Enemy* enemy{ dynamic_cast<Enemy*>(child.get()) };
+		assert(enemy != nullptr);
+
+		if (enemy->isAtTile(tileX, tileY))
+		{
+			enemies.push_back(enemy);
+		}
+	}
+
+	return enemies;
 }

@@ -17,6 +17,8 @@
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
 
+class Enemy;
+
 
 
 class Lane: public SceneNode
@@ -25,6 +27,7 @@ public:
 	explicit									Lane(const TextureHolder_t& textures, LaneData data);
 	void										spawnEnemy();
 	void										loadEnemy(EnemyData enemyData);
+	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY);
 
 private:
 	const TextureHolder_t&						textures;

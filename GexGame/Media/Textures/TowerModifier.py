@@ -23,9 +23,12 @@ with open(filename) as json_file:
             i["frame"]["h"] = width
             i["spriteSourceSize"]["y"] += i["spriteSourceSize"]["h"]
 
+    data2["frames"] = [i for i in data2["frames"] if "AttackUp " not in i["filename"] and "AttackDown " not in i["filename"]]
+
     for i in data2["frames"]:
         if "AttackUp " in i["filename"] or "AttackDown " in i["filename"]:
-            del i
+            #del i
+            data2["frames"].remove(i)
         else:
             if i["rotated"]:
                 i["filename"] = i["filename"][:-11] + "Left" + i["filename"][-6:]
@@ -44,10 +47,15 @@ with open(filename) as json_file:
 
     data["frames"] = data["frames"] + data2["frames"]
 
+    def takeName(elem):
+        return elem["filename"]
+
+    data["frames"].sort(key = takeName)
+
     for i in data["frames"]:
         print(i)
 
-    with open(filename[:-5] + "flipped" + filename[-5:], "w", encoding="utf-8") as f:
+    with open(filename[:-5] + "flipped" + filename[-5:], "w", encoding="ascii") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 test = input("est")

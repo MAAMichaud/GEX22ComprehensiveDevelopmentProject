@@ -26,6 +26,46 @@ JsonFrameParser::JsonFrameParser(std::string path)
 
 
 
+Frame  JsonFrameParser::getFrame(std::string animationName) const
+{
+	json k = json_["frames"];
+
+	// std::cout << k.dump(6);
+
+	for (auto i : k)
+	{
+
+		std::string tmpStr = i["filename"]; // animation name is the first part of "filename" string
+		if (tmpStr.compare(0, animationName.size(), animationName) == 0)
+		{
+			if (i["rotated"])
+			{
+				return Frame({ i["frame"]["x"],
+					i["frame"]["y"],
+					i["frame"]["w"],
+					i["frame"]["h"] },
+					{ i["spriteSourceSize"]["x"],
+					i["spriteSourceSize"]["y"] },
+					i["rotated"]
+				);
+			}
+			else
+			{
+				return Frame({ i["frame"]["x"],
+					i["frame"]["y"],
+					i["frame"]["w"],
+					i["frame"]["h"] },
+					{ i["spriteSourceSize"]["x"],
+					i["spriteSourceSize"]["y"] },
+					i["rotated"]
+				);
+			}
+		}
+	}
+}
+
+
+
 std::vector<Frame>  JsonFrameParser::getFramesFor(std::string animationName) const
 {
 	std::vector<Frame> data; // frame textRecs for animaionName in atlas
@@ -40,28 +80,14 @@ std::vector<Frame>  JsonFrameParser::getFramesFor(std::string animationName) con
 		std::string tmpStr = i["filename"]; // animation name is the first part of "filename" string
 		if (tmpStr.compare(0, animationName.size(), animationName) == 0)
 		{
-			if (i["rotated"])
-			{
-				data.push_back(Frame(i["frame"]["x"],
-					i["frame"]["y"],
-					i["frame"]["w"],
-					i["frame"]["h"],
-					i["spriteSourceSize"]["x"],
-					i["spriteSourceSize"]["y"],
-					i["rotated"]
-				));
-			}
-			else
-			{
-				data.push_back(Frame(i["frame"]["x"],
-					i["frame"]["y"],
-					i["frame"]["w"],
-					i["frame"]["h"],
-					i["spriteSourceSize"]["x"],
-					i["spriteSourceSize"]["y"],
-					i["rotated"]
-				));
-			}
+			data.push_back(Frame({ i["frame"]["x"],
+				i["frame"]["y"],
+				i["frame"]["w"],
+				i["frame"]["h"] },
+				{ i["spriteSourceSize"]["x"],
+				i["spriteSourceSize"]["y"] },
+				i["rotated"]
+			));
 		}
 	}
 

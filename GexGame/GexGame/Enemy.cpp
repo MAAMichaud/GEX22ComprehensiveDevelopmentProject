@@ -33,11 +33,30 @@ Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<D
 	, timeRemaining(enemyData.speed)
 	, route(_route)
 	, routeIndex(0)
+	, healthPoints(1)
 {
 	for (auto a : enemyData.animations)
 	{
 		animations[a.first] = a.second;
 	}
+}
+
+
+
+bool Enemy::isAtTile(const int tileX, const int tileY)
+{
+	const auto [pixelX,  pixelY] { getWorldPosition() };
+
+	const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
+
+	return thisTileX == tileX && thisTileY == tileY;
+}
+
+
+
+void Enemy::destroy()
+{
+	healthPoints = 0;
 }
 
 
@@ -84,7 +103,7 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
 	auto frame = animations.at(direction).update(dt);
 
-	sprite.setTextureRect(frame.intRect);
+	sprite.setTextureRect(frame.getRect());
 	//sprite.setColor(frame.isRotated ? sf::Color(0, 255, 255, 255) : sf::Color(255, 0, 255, 255));
 	if (direction == Direction::UpRight || direction == Direction::DownRight)
 	{
@@ -116,5 +135,10 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 
 bool Enemy::isDestroyed() const
 {
+	if (healthPoints <= 0)
+	{
+		return true;
+	}
+
 	return routeIndex >= route.size();
 }

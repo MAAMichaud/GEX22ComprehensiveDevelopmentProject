@@ -63,6 +63,21 @@ void LaneController::loadWave(WaveData waveData)
 
 
 
+std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tileY)
+{
+	auto enemies{ std::vector<Enemy*>() };
+
+	for (auto& lane : lanes)
+	{
+		auto laneEnemies{ lane->getEnemiesAt(tileX, tileY) };
+		enemies.insert(enemies.cend(), laneEnemies.cbegin(), laneEnemies.cend());
+	}
+
+	return enemies;
+}
+
+
+
 void LaneController::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
 	if (enemyCount > 0)

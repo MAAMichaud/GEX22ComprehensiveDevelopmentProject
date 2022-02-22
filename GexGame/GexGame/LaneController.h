@@ -18,19 +18,24 @@
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
 
+#include <vector>
+
+class Enemy;
+
 
 
 class LaneController : public SceneNode
 {
 public:
-	explicit			LaneController(const TextureHolder_t& textures, std::vector<LaneData> data);
+	explicit				LaneController(const TextureHolder_t& textures, std::vector<LaneData> data);
 
-	bool				wavePending() const;
-	void				loadWave(WaveData waveData);
+	bool					wavePending() const;
+	void					loadWave(WaveData waveData);
+	std::vector<Enemy*>		getEnemiesAt(const int tileX, const int tileY);
 
 private:
-	void				spawnEnemy();
-	virtual void		updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	void					spawnEnemy();
+	virtual void			updateCurrent(sf::Time dt, CommandQueue& commands) override;
 
 private:
 	std::size_t									enemyCount;

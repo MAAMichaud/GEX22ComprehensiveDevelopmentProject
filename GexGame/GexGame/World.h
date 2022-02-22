@@ -12,11 +12,11 @@
 */
 #pragma once
 
-#include "AnimatedNode.h"
 #include "BloomEffect.h"
 #include "CommandQueue.h"
 #include "DataTables.h"
 #include "LaneController.h"
+#include "JsonFrameParser.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
 #include "SceneNode.h"
@@ -44,6 +44,17 @@ class SoundPlayer;
 class World
 {
 public:
+	enum class State
+	{
+		BuildWarrior,
+		BuildWizard,
+		BuildIce,
+		BuildFire,
+		BuildEnergy,
+		Idle,
+	};
+
+public:
 										World(const World&) = delete;
 	explicit							World(sf::RenderTarget& target, FontHolder_t& fonts, SoundPlayer& sounds, LevelType levelType, sf::RenderWindow& _window);
 
@@ -55,6 +66,9 @@ public:
 	bool								hasAlivePlayer() const;
 	bool								hasPlayerReachedTheEnd() const;
 	void								startWave();
+	void								boardClicked();
+	void								selectTower(State newState);
+	void								cancel();
 
 private:
 	void								loadTextures();
@@ -65,12 +79,11 @@ private:
 	void								handleCollisions();
 	void								destroyEntitiesOutOfView();
 
-	void								handleMouse();
+	void								handleMouseOverlay();
 	void								placeSpriteAtTile(SpriteNode& sprite, float x, float y);
-	sf::Vector2i						pixelXYToTileXY(int x, int y);
-	int									calculateXTile(int x, int y);
-	int									calculateYTile(int x, int y);
+	void								placeSpriteAtTile(sf::Sprite& sprite, float x, float y);
 
+	void                                placeTower();
 	void                                makeLich();
 
 private:
@@ -105,5 +118,8 @@ private:
 	SpriteNode*							tileOverlay;
 	LaneController*						laneController;
 	std::size_t							waveIndex;
+	State								state;
+	std::map<State, Frame>				iconFrames;
+	sf::Sprite							towerIcon;
 
 };

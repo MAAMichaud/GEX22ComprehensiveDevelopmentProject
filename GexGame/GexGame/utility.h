@@ -27,6 +27,12 @@ class Animation;
 
 
 
+sf::Vector2i pixelXYToTileXY(int x, int y);
+
+int calculateXTile(int x, int y);
+
+int calculateYTile(int x, int y);
+
 sf::IntRect flip(const sf::IntRect& rec);
 
 int	randomInt(int exclusiveMax);

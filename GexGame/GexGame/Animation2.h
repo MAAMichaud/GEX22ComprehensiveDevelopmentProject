@@ -46,7 +46,7 @@ public:
 
 	Frame 						update(sf::Time dt);
 
-private:
+public:
 	std::vector<Frame>			frames;
 	std::size_t					currentFrame;
 	sf::Time					elapsedTime;
