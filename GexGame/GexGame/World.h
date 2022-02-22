@@ -38,6 +38,7 @@ namespace sf {
 	class RenderWindow;
 }
 class SoundPlayer;
+class Tower;
 
 
 
@@ -81,6 +82,7 @@ private:
 
 	void								handleMouseOverlay();
 	void								placeSpriteAtTile(SpriteNode& sprite, float x, float y);
+	void								placeSpriteAtTile(Tower* sprite, float x, float y);
 	void								placeSpriteAtTile(sf::Sprite& sprite, float x, float y);
 
 	void                                placeTower();

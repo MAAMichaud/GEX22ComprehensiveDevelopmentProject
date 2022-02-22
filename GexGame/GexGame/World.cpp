@@ -17,6 +17,7 @@
 #include "SoundNode.h"
 #include "SoundPlayer.h"
 #include "SpriteNode.h"
+#include "Tower.h"
 #include "utility.h"
 #include "World.h"
 
@@ -205,8 +206,6 @@ void World::selectTower(State newState)
 {
 	state = newState;
 
-	/*
-	*/
 	const auto& frame{ iconFrames.at(newState) };
 
 	towerIcon.setTextureRect(sf::IntRect(std::get<0>(frame.intRect), std::get<1>(frame.intRect), std::get<2>(frame.intRect), std::get<3>(frame.intRect)));
@@ -386,6 +385,21 @@ void World::placeSpriteAtTile(SpriteNode& sprite, float x, float y)
 
 
 
+void World::placeSpriteAtTile(Tower* sprite, float x, float y)
+{
+    static const float BASE_X{ 880.f };
+    static const float BASE_Y{ 96.f };
+    static const float INCREMENT_X{ 36.f };
+    static const float INCREMENT_Y{ 24.f };
+
+    float newX{ BASE_X + (INCREMENT_X * x) - (INCREMENT_X * y) };
+    float newY{ BASE_Y + INCREMENT_Y * x + INCREMENT_Y * y };
+
+    sprite->setPosition(sf::Vector2f(newX, newY - 96));
+}
+
+
+
 void World::placeSpriteAtTile(sf::Sprite& sprite, float x, float y)
 {
     static const float BASE_X{ 880.f };
@@ -417,6 +431,41 @@ void World::placeTower()
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
 	std::cout << "Placed tower at " << tileX << ", " << tileY << std::endl;
+
+	TowerType towerType;
+
+	switch (state)
+	{
+	case World::State::BuildWizard:
+		towerType = TowerType::Novice;
+		break;
+
+	case World::State::BuildWarrior:
+		towerType = TowerType::ClubWarrior;
+		break;
+
+	case World::State::BuildIce:
+		towerType = TowerType::IceSword;
+		break;
+
+	case World::State::BuildFire:
+		towerType = TowerType::FireAxe;
+		break;
+
+	case World::State::BuildEnergy:
+		towerType = TowerType::EnergyMace;
+		break;
+
+	default:
+		towerType = TowerType::Novice;
+		break;
+
+	}
+
+	auto towerNode{ std::make_unique<Tower>(textures, TOWER_DATA.at(towerType)) };
+	//towerNode->setPosition(pixelX - 18.f, pixelY - 72.f);
+	placeSpriteAtTile(towerNode.get(), tileX, tileY);
+	sceneLayers[LowerAir]->attachChild(std::move(towerNode));
 
 	state = World::State::Idle;
 }
