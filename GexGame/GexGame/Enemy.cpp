@@ -34,6 +34,7 @@ Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<D
 	, route(_route)
 	, routeIndex(0)
 	, healthPoints(1)
+	, progress(0.0)
 {
 	for (auto a : enemyData.animations)
 	{
@@ -64,6 +65,13 @@ bool Enemy::isAtTiles(const std::pair<int, int> tile, const std::size_t range) c
 		&& thisTileX >= tile.first - range
 		&& thisTileY <= tile.second + range
 		&& thisTileY >= tile.second - range;
+}
+
+
+
+double Enemy::getProgress() const
+{
+	return progress;
 }
 
 
@@ -142,6 +150,7 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 	}
 
 	timeRemaining -= dt;
+	progress += abs(velocity.x * bearing.x * dt.asSeconds());
 	move(velocity.x * bearing.x * dt.asSeconds(), velocity.y * bearing.y * dt.asSeconds());
 }
 

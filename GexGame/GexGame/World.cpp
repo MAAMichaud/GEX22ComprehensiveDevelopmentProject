@@ -24,6 +24,8 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics.hpp>
 
+#include <algorithm>
+
 
 
 #include <iostream>
@@ -157,13 +159,21 @@ void World::boardClicked()
 
 	if (state == State::Idle)
 	{
+		auto e{ std::max_element(enemies.begin(), enemies.end(), [](Enemy* rhs, Enemy* lhs) { return lhs->getProgress() > rhs->getProgress(); }) };
+		if (e != enemies.end())
+		{
+			(*e)->destroy();
+		}
+		
+		/*
 		for (auto enemy : enemies)
 		{
 			auto [eX, eY] {enemy->getWorldPosition() };
-			std::cout << "enemy on pixel " << eX << ", " << eY << std::endl;
+			std::cout << "enemy on pixel " << eX << ", " << eY << " with progress: " << enemy->getProgress() << std::endl;
 
 			enemy->destroy();
 		}
+		*/
 	}
 	else
 	{

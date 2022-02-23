@@ -34,6 +34,7 @@ public:
 									Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route);
 	bool							isAtTile(const int tileX, const int tileY) const;
 	bool							isAtTiles(const std::pair<int, int> tile, const std::size_t range) const; 
+	double							getProgress() const;
 	void							destroy();
 
 private:
@@ -53,5 +54,6 @@ private:
 	std::vector<Direction>&			route;
 	std::size_t						routeIndex;
 	int								healthPoints;
+	double							progress;
 
 };
