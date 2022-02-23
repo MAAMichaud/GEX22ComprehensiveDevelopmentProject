@@ -40,6 +40,7 @@ private:
 	void							turn(Direction direction);
 	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	void							faceEnemy(Enemy* target);
 
 private:
 	sf::Sprite						sprite;
