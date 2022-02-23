@@ -23,6 +23,8 @@
 #include <map>
 #include <string>
 
+class Enemy;
+
 
 
 class Tower: public SceneNode
@@ -32,6 +34,7 @@ public:
 	bool							isAttackPending() const;
 	std::pair<int, int>				getTile() const;
 	std::size_t						getRange() const;
+	void							attack(Enemy* target);
 
 private:
 	void							turn(Direction direction);
@@ -49,5 +52,6 @@ private:
 	std::size_t						range;
 	sf::Sprite						rangeSprite;
 	std::pair<int, int>				tile;
+	Enemy*							target;
 
 };

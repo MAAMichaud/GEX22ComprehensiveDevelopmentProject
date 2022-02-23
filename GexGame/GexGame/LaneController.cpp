@@ -10,8 +10,11 @@
 *  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "Enemy.h"
 #include "LaneController.h"
 #include "Utility.h"
+
+#include <algorithm>
 
 
 
@@ -89,6 +92,23 @@ std::vector<Enemy*> LaneController::getEnemiesAt(const std::pair<int, int> tile,
 	}
 
 	return enemies;
+}
+
+
+
+Enemy* LaneController::getFurthestEnemy(const std::pair<int, int> tile, const std::size_t range) const
+{
+	auto enemies{ getEnemiesAt(tile, range) };
+
+	auto e{ std::max_element(enemies.begin(), enemies.end(), [](Enemy* rhs, Enemy* lhs) { return lhs->getProgress() > rhs->getProgress(); }) };
+	if (e != enemies.end())
+	{
+		return *e;
+	}
+	else
+	{
+		return nullptr;
+	}
 }
 
 

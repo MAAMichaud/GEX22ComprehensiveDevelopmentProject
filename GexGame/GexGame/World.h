@@ -76,6 +76,7 @@ private:
 	sf::FloatRect						getBattlefieldBounds() const;
 
 	void								handleMouseOverlay();
+	void								handleTowers();
 	void								placeSpriteAtTile(SpriteNode& sprite, float x, float y);
 	void								placeSpriteAtTile(Tower* sprite, float x, float y);
 	void								placeSpriteAtTile(sf::Sprite& sprite, float x, float y);

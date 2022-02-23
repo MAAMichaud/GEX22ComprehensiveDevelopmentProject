@@ -44,11 +44,20 @@ Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<D
 
 
 
-bool Enemy::isAtTile(const int tileX, const int tileY) const
+std::pair<int, int> Enemy::getTile() const
 {
 	const auto [pixelX,  pixelY] { getWorldPosition() };
 
 	const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
+
+	return std::pair<int, int>(thisTileX, thisTileY);
+}
+
+
+
+bool Enemy::isAtTile(const int tileX, const int tileY) const
+{
+	const auto [thisTileX, thisTileY] { getTile() };
 
 	return thisTileX == tileX && thisTileY == tileY;
 }
@@ -57,9 +66,7 @@ bool Enemy::isAtTile(const int tileX, const int tileY) const
 
 bool Enemy::isAtTiles(const std::pair<int, int> tile, const std::size_t range) const
 {
-	const auto [pixelX,  pixelY] { getWorldPosition() };
-
-	const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
+	const auto [thisTileX, thisTileY] { getTile() };
 
 	return thisTileX <= tile.first + range
 		&& thisTileX >= tile.first - range

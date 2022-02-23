@@ -90,8 +90,9 @@ void World::update(sf::Time dt)
 
 	sceneGraph.removeWrecks();
 
-
 	sceneGraph.update(dt, commands);
+
+	handleTowers();
 
 	handleMouseOverlay();
 	updateSounds();
@@ -154,15 +155,16 @@ void World::boardClicked()
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
 	//auto enemies{ laneController->getEnemiesAt(tileX, tileY) };
-	auto enemies{ laneController->getEnemiesAt(std::pair<int, int>{ tileX, tileY }, 1) };
+	//auto enemies{ laneController->getEnemiesAt(std::pair<int, int>{ tileX, tileY }, 1) };
 
 
 	if (state == State::Idle)
 	{
-		auto e{ std::max_element(enemies.begin(), enemies.end(), [](Enemy* rhs, Enemy* lhs) { return lhs->getProgress() > rhs->getProgress(); }) };
-		if (e != enemies.end())
+		auto enemy{ laneController->getFurthestEnemy(std::pair<int, int>{ tileX, tileY }, 1) };
+
+		if (enemy)
 		{
-			(*e)->destroy();
+			enemy->destroy();
 		}
 		
 		/*
@@ -323,6 +325,24 @@ void World::handleMouseOverlay()
 
 			//towerIcon.setPosition(pixelX, pixelY);
 			placeSpriteAtTile(towerIcon, tileX, tileY);
+		}
+	}
+}
+
+
+
+void World::handleTowers()
+{
+	for (auto& tower : towers)
+	{
+		if (tower->isAttackPending())
+		{
+			auto enemy{ laneController->getFurthestEnemy(tower->getTile(), tower->getRange()) };
+
+			if (enemy)
+			{
+				tower->attack(enemy);
+			}
 		}
 	}
 }

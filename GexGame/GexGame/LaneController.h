@@ -33,6 +33,7 @@ public:
 	void					loadWave(WaveData waveData);
 	std::vector<Enemy*>		getEnemiesAt(const int tileX, const int tileY) const;
 	std::vector<Enemy*>		getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const;
+	Enemy*					getFurthestEnemy(const std::pair<int, int> tile, const std::size_t range) const;
 
 private:
 	void					spawnEnemy();

@@ -10,9 +10,9 @@
 *  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
-#include "Tower.h"
 #include "Animation2.h"
-#include "JsonFrameParser.h"
+#include "Enemy.h"
+#include "Tower.h"
 #include "utility.h"
 
 #include <SFML/Graphics/RectangleShape.hpp>
@@ -26,19 +26,33 @@
 Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int, int> _tile)
 	: sprite(textures.get(TextureID::Towers))
 	, animations()
-	, direction(Direction::Up)
+	, direction(Direction::Down)
 	, timeRemaining(sf::seconds(1.0f))
-	, cooldownDuration(sf::seconds(10.f))
+	, cooldownDuration(sf::seconds(2.5f))
 	, cooldownRemaining(sf::Time::Zero)
 	, experiencePoints(0)
 	, range(1)
 	, rangeSprite()
 	, tile(_tile)
+	, target(nullptr)
 {
 	for (auto a : towerData.animations)
 	{
 		animations[a.first] = a.second;
 	}
+
+	auto frame{ animations.at(direction).getCurrentFrame() };
+
+	sprite.setTextureRect(frame.getRect());
+	if (direction == Direction::UpLeft || direction == Direction::Left || direction == Direction::DownLeft)
+	{
+		sprite.setRotation(frame.isRotated ? 90.f : 0.f);
+	}
+	else
+	{
+		sprite.setRotation(frame.isRotated ? -90.f : 0.f);
+	}
+	sprite.setPosition(frame.offset.first, frame.offset.second);
 }
 
 
@@ -64,6 +78,55 @@ std::size_t Tower::getRange() const
 
 
 
+void Tower::attack(Enemy* _target)
+{
+	if (_target)
+	{
+		target = _target;
+
+		cooldownRemaining = cooldownDuration;
+
+		auto [eX, eY] { target->getTile() };
+		auto [tX, tY] { this->getTile() };
+
+		if (tX > eX && tY > eY)
+		{
+			direction = Direction::Up;
+		}
+		else if (tX == eX && tY > eY)
+		{
+			direction = Direction::UpRight;
+		}
+		else if (tX > eX && tY == eY)
+		{
+			direction = Direction::UpLeft;
+		}
+		else if (tX < eX && tY > eY)
+		{
+			direction = Direction::Right;
+		}
+		else if (tX > eX && tY < eY)
+		{
+			direction = Direction::Left;
+		}
+		else if (tX < eX && tY == eY)
+		{
+			direction = Direction::DownRight;
+		}
+		else if (tX == eX && tY < eY)
+		{
+			direction = Direction::DownLeft;
+		}
+		else if (tX < eX && tY < eY)
+		{
+			direction = Direction::Down;
+		}
+
+	}
+}
+
+
+
 void Tower::turn(Direction _direction)
 {
 	direction = _direction;
@@ -80,20 +143,36 @@ void Tower::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
-	auto frame = animations.at(direction).update(dt);
-
-	sprite.setTextureRect(frame.getRect());
-	//sprite.setColor(frame.isRotated ? sf::Color(0, 255, 255, 255) : sf::Color(255, 0, 255, 255));
-	if (direction == Direction::UpLeft || direction == Direction::Left || direction == Direction::DownLeft)
+	if (cooldownRemaining > cooldownDuration - sf::seconds(1.0f))
 	{
-		sprite.setRotation(frame.isRotated ? 90.f : 0.f);
-	}
-	else
-	{
-		sprite.setRotation(frame.isRotated ? -90.f : 0.f);
-	}
-	sprite.setPosition(frame.offset.first, frame.offset.second);
+		auto frame{ animations.at(direction).update(dt) };
 
+		sprite.setTextureRect(frame.getRect());
+		//sprite.setColor(frame.isRotated ? sf::Color(0, 255, 255, 255) : sf::Color(255, 0, 255, 255));
+		if (direction == Direction::UpLeft || direction == Direction::Left || direction == Direction::DownLeft)
+		{
+			sprite.setRotation(frame.isRotated ? 90.f : 0.f);
+		}
+		else
+		{
+			sprite.setRotation(frame.isRotated ? -90.f : 0.f);
+		}
+		sprite.setPosition(frame.offset.first, frame.offset.second);
+
+		if (target)
+		{
+			if (cooldownRemaining < cooldownDuration - sf::seconds(0.8f))
+			{
+				target->destroy();
+				target = nullptr;
+			}
+		}
+	}
+
+
+	cooldownRemaining -= dt;
+
+	/*
 	while (dt > timeRemaining)
 	{
 		dt -= timeRemaining;
@@ -138,4 +217,5 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 	}
 
 	timeRemaining -= dt;
+	*/
 }
