@@ -44,7 +44,7 @@ void Lane::loadEnemy(EnemyData _enemyData)
 
 
 
-std::vector<Enemy*> Lane::getEnemiesAt(const int tileX, const int tileY)
+std::vector<Enemy*> Lane::getEnemiesAt(const int tileX, const int tileY) const
 {
 	auto enemies{ std::vector<Enemy*>() };
 
@@ -54,6 +54,26 @@ std::vector<Enemy*> Lane::getEnemiesAt(const int tileX, const int tileY)
 		assert(enemy != nullptr);
 
 		if (enemy->isAtTile(tileX, tileY))
+		{
+			enemies.push_back(enemy);
+		}
+	}
+
+	return enemies;
+}
+
+
+
+std::vector<Enemy*> Lane::getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const
+{
+	auto enemies{ std::vector<Enemy*>() };
+
+	for (auto& child : this->children)
+	{
+		Enemy* enemy{ dynamic_cast<Enemy*>(child.get()) };
+		assert(enemy != nullptr);
+
+		if (enemy->isAtTiles(tile, range))
 		{
 			enemies.push_back(enemy);
 		}

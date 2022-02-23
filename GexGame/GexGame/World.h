@@ -64,8 +64,6 @@ public:
 	void								draw();
 	CommandQueue&						getCommandQueue();
 
-	bool								hasAlivePlayer() const;
-	bool								hasPlayerReachedTheEnd() const;
 	void								startWave();
 	void								boardClicked();
 	void								selectTower(State newState);
@@ -77,16 +75,12 @@ private:
 	sf::FloatRect						getViewBounds() const;
 	sf::FloatRect						getBattlefieldBounds() const;
 
-	void								handleCollisions();
-	void								destroyEntitiesOutOfView();
-
 	void								handleMouseOverlay();
 	void								placeSpriteAtTile(SpriteNode& sprite, float x, float y);
 	void								placeSpriteAtTile(Tower* sprite, float x, float y);
 	void								placeSpriteAtTile(sf::Sprite& sprite, float x, float y);
 
 	void                                placeTower();
-	void                                makeLich();
 
 private:
 	enum Layer
@@ -123,5 +117,6 @@ private:
 	State								state;
 	std::map<State, Frame>				iconFrames;
 	sf::Sprite							towerIcon;
+	std::vector<Tower*>					towers;
 
 };

@@ -32,7 +32,8 @@ class Enemy: public SceneNode
 {
 public:
 									Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route);
-	bool							isAtTile(const int tileX, const int tileY);
+	bool							isAtTile(const int tileX, const int tileY) const;
+	bool							isAtTiles(const std::pair<int, int> tile, const std::size_t range) const; 
 	void							destroy();
 
 private:

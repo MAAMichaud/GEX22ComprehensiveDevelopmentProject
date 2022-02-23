@@ -23,16 +23,43 @@
 
 
 
-Tower::Tower(const TextureHolder_t& textures, TowerData towerData)
+Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int, int> _tile)
 	: sprite(textures.get(TextureID::Towers))
 	, animations()
 	, direction(Direction::Up)
 	, timeRemaining(sf::seconds(1.0f))
+	, cooldownDuration(sf::seconds(10.f))
+	, cooldownRemaining(sf::Time::Zero)
+	, experiencePoints(0)
+	, range(1)
+	, rangeSprite()
+	, tile(_tile)
 {
 	for (auto a : towerData.animations)
 	{
 		animations[a.first] = a.second;
 	}
+}
+
+
+
+bool Tower::isAttackPending() const
+{
+	return cooldownRemaining <= sf::Time::Zero;
+}
+
+
+
+std::pair<int, int> Tower::getTile() const
+{
+	return tile;
+}
+
+
+
+std::size_t Tower::getRange() const
+{
+	return range;
 }
 
 

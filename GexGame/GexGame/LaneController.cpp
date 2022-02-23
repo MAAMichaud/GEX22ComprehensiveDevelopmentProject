@@ -63,13 +63,28 @@ void LaneController::loadWave(WaveData waveData)
 
 
 
-std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tileY)
+std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tileY) const
 {
 	auto enemies{ std::vector<Enemy*>() };
 
 	for (auto& lane : lanes)
 	{
 		auto laneEnemies{ lane->getEnemiesAt(tileX, tileY) };
+		enemies.insert(enemies.cend(), laneEnemies.cbegin(), laneEnemies.cend());
+	}
+
+	return enemies;
+}
+
+
+
+std::vector<Enemy*> LaneController::getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const
+{
+	auto enemies{ std::vector<Enemy*>() };
+
+	for (auto& lane : lanes)
+	{
+		auto laneEnemies{ lane->getEnemiesAt(tile, range) };
 		enemies.insert(enemies.cend(), laneEnemies.cbegin(), laneEnemies.cend());
 	}
 

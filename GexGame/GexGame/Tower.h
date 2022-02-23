@@ -28,7 +28,10 @@
 class Tower: public SceneNode
 {
 public:
-									Tower(const TextureHolder_t& textures, TowerData towerData);
+									Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int, int> tile);
+	bool							isAttackPending() const;
+	std::pair<int, int>				getTile() const;
+	std::size_t						getRange() const;
 
 private:
 	void							turn(Direction direction);
@@ -40,5 +43,11 @@ private:
 	std::map<Direction, Animation2>	animations;
 	Direction						direction;
 	sf::Time						timeRemaining;
+	sf::Time						cooldownDuration;
+	sf::Time						cooldownRemaining;
+	std::size_t						experiencePoints;
+	std::size_t						range;
+	sf::Sprite						rangeSprite;
+	std::pair<int, int>				tile;
 
 };

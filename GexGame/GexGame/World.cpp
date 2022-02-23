@@ -57,6 +57,7 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, state(State::Idle)
 	, iconFrames()
 	, towerIcon()
+	, towers()
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -74,10 +75,6 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	iconFrames.emplace(World::State::BuildIce, TOWER_DATA.at(TowerType::IceSword).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildFire, TOWER_DATA.at(TowerType::FireAxe).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildEnergy, TOWER_DATA.at(TowerType::EnergyMace).animations.at(Direction::Down).frames.at(0));
-
-
-	//std::pair<World::State, Frame>(World::State::BuildWizard, lol);
-	//iconFrames.insert(std::pair(World::State::BuildWizard, frames.getFrame("NoviceWizardAttackDownDown")));
 }
 
 
@@ -89,9 +86,6 @@ void World::update(sf::Time dt)
 		sceneGraph.onCommand(commands.pop(), dt);
 	}
 
-	destroyEntitiesOutOfView();
-
-	handleCollisions();
 	sceneGraph.removeWrecks();
 
 
@@ -139,20 +133,6 @@ CommandQueue& World::getCommandQueue()
 
 
 
-bool World::hasAlivePlayer() const
-{
-	return false;
-}
-
-
-
-bool World::hasPlayerReachedTheEnd() const
-{
-	return false;
-}
-
-
-
 void World::startWave()
 {
 	if (laneController->wavePending() && waveIndex < LEVEL_DATA.at(levelType).waves.size())
@@ -171,13 +151,9 @@ void World::boardClicked()
 
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
-	auto enemies{ laneController->getEnemiesAt(tileX, tileY) };
+	//auto enemies{ laneController->getEnemiesAt(tileX, tileY) };
+	auto enemies{ laneController->getEnemiesAt(std::pair<int, int>{ tileX, tileY }, 1) };
 
-	/*
-	std::cout << "clicked on tile " << tileX << ", " << tileY << std::endl;
-	std::cout << "clicked on pixel " << pixelX << ", " << pixelY << std::endl;
-	std::cout << "clicked on " << enemies.size() << " enemies." << std::endl;
-	*/
 
 	if (state == State::Idle)
 	{
@@ -266,7 +242,9 @@ void World::buildScene()
 	overlaySprite->setPosition(worldBounds.left, worldBounds.top);
 	sceneLayers[LowerAir]->attachChild(std::move(overlaySprite));
 
-	makeLich();
+	auto laneControllerNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes) };
+	laneController = laneControllerNode.get();
+	sceneLayers[LowerAir]->attachChild(std::move(laneControllerNode));
 }
 
 
@@ -308,35 +286,6 @@ bool matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Categor
 	{
 		return false;
 	}
-}
-
-
-
-void World::handleCollisions()
-{
-}
-
-
-
-void World::destroyEntitiesOutOfView()
-{
-	/*
-	auto battlefieldBounds{ getBattlefieldBounds() };
-
-	Command command;
-	//command.category = Category::SpaceJunk;
-
-	command.action = derivedAction<Entity>(
-		[this, battlefieldBounds](Entity& e, sf::Time dt)
-	{
-		if (!battlefieldBounds.intersects(e.getBoundingRect()))
-		{
-			e.remove();
-		}
-	});
-
-	commands.push(command);
-	*/
 }
 
 
@@ -462,19 +411,11 @@ void World::placeTower()
 
 	}
 
-	auto towerNode{ std::make_unique<Tower>(textures, TOWER_DATA.at(towerType)) };
+	auto towerNode{ std::make_unique<Tower>(textures, TOWER_DATA.at(towerType), std::pair<int, int>{tileX, tileY}) };
 	//towerNode->setPosition(pixelX - 18.f, pixelY - 72.f);
 	placeSpriteAtTile(towerNode.get(), tileX, tileY);
+	towers.push_back(towerNode.get());
 	sceneLayers[LowerAir]->attachChild(std::move(towerNode));
 
 	state = World::State::Idle;
-}
-
-
-
-void World::makeLich()
-{
-	auto laneNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes) };
-	laneController = laneNode.get();
-	sceneLayers[LowerAir]->attachChild(std::move(laneNode));
 }

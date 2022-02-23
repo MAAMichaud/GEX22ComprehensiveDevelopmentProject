@@ -27,7 +27,8 @@ public:
 	explicit									Lane(const TextureHolder_t& textures, LaneData data);
 	void										spawnEnemy();
 	void										loadEnemy(EnemyData enemyData);
-	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY);
+	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY) const;
+	std::vector<Enemy*>							getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const;
 
 private:
 	const TextureHolder_t&						textures;
