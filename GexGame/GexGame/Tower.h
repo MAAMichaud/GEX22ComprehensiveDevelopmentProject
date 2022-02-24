@@ -35,6 +35,7 @@ public:
 	std::pair<int, int>				getTile() const;
 	std::size_t						getRange() const;
 	void							attack(Enemy* target);
+	void							applyDamage(Enemy* target);
 
 private:
 	void							turn(Direction direction);
@@ -53,6 +54,5 @@ private:
 	std::size_t						range;
 	sf::Sprite						rangeSprite;
 	std::pair<int, int>				tile;
-	Enemy*							target;
 
 };

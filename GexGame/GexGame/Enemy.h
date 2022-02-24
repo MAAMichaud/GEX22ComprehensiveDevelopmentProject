@@ -19,14 +19,25 @@
 #include "ResourceIdentifiers.h"
 
 #include <SFML/Graphics/Sprite.hpp>
+#include <SFML/System/Clock.hpp>
 
 #include <map>
+#include <queue>
 #include <string>
+
+class Tower;
 
 
 
 const float HORIZONTAL_HOP_LENGTH = 18.f;
 const float VERTICAL_HOP_LENGTH = 12.f;
+
+
+struct compareAttackTimings{
+    bool operator()(std::pair<sf::Time, Tower*> rhs, std::pair<sf::Time, Tower*> lhs) {
+		return rhs.first > lhs.first;
+    }
+};
 
 class Enemy: public SceneNode
 {
@@ -37,12 +48,15 @@ public:
 	bool							isAtTiles(const std::pair<int, int> tile, const std::size_t range) const; 
 	double							getProgress() const;
 	void							destroy();
+	void							damage(int damage);
+	void							registerAttack(sf::Time attackTime, Tower* tower);
 
 private:
 	void							turn(Direction direction);
 	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
 	virtual bool					isDestroyed() const override;
+	//bool							compareAttackTimings(std::pair<const sf::Time, const Tower*> rhs, std::pair<const sf::Time, const Tower*> lhs) const;
 
 private:
 	sf::Sprite						sprite;
@@ -56,5 +70,7 @@ private:
 	std::size_t						routeIndex;
 	int								healthPoints;
 	double							progress;
+	sf::Clock						clock;
+	std::priority_queue<std::pair<sf::Time, Tower*>, std::vector<std::pair<sf::Time, Tower*>>, compareAttackTimings> attackTimings;
 
 };

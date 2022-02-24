@@ -10,9 +10,9 @@
 *  I certify that this work is solely my own and complies with 
 *  NBCC Academic Integrity Policy (policy 1111)
 */
-#include "Enemy.h"
 #include "Animation2.h"
-#include "JsonFrameParser.h"
+#include "Enemy.h"
+#include "Tower.h"
 #include "utility.h"
 
 #include <SFML/Graphics/RectangleShape.hpp>
@@ -20,7 +20,6 @@
 #include <SFML/System/Time.hpp>
 
 #include <iostream>
-
 
 
 Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& _route)
@@ -35,11 +34,29 @@ Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<D
 	, routeIndex(0)
 	, healthPoints(1)
 	, progress(0.0)
+	, clock()
+	, attackTimings()
 {
 	for (auto a : enemyData.animations)
 	{
 		animations[a.first] = a.second;
 	}
+
+	/*
+	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(40.f), nullptr));
+	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(60.f), nullptr));
+	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(10.f), nullptr));
+	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(20.f), nullptr));
+	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(30.f), nullptr));
+	
+	std::cout << "top: " << std::endl;
+	attackTimings.pop();
+	attackTimings.pop();
+	attackTimings.pop();
+	attackTimings.pop();
+	attackTimings.pop();
+	attackTimings.pop();
+	*/
 }
 
 
@@ -101,6 +118,21 @@ double Enemy::getProgress() const
 void Enemy::destroy()
 {
 	healthPoints = 0;
+}
+
+
+
+void Enemy::damage(int damage)
+{
+	healthPoints -= damage;
+}
+
+
+
+void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
+{
+	attackTimings.push({ attackTime + clock.getElapsedTime() , tower });
+	std::cout << attackTimings.top().first.asSeconds() << std::endl;
 }
 
 
@@ -174,6 +206,12 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 	timeRemaining -= dt;
 	progress += abs(velocity.x * bearing.x * dt.asSeconds());
 	move(velocity.x * bearing.x * dt.asSeconds(), velocity.y * bearing.y * dt.asSeconds());
+
+	while (!attackTimings.empty() && attackTimings.top().first <= clock.getElapsedTime())
+	{
+		attackTimings.top().second->applyDamage(this);
+		attackTimings.pop();
+	}
 }
 
 
@@ -187,3 +225,10 @@ bool Enemy::isDestroyed() const
 
 	return routeIndex >= route.size();
 }
+
+/*
+bool Enemy::compareAttackTimings(std::pair<const sf::Time, const Tower*> rhs, std::pair<const sf::Time, const Tower*> lhs) const
+{
+	return rhs.first > lhs.first;
+}
+*/

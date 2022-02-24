@@ -77,6 +77,8 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	iconFrames.emplace(World::State::BuildIce, TOWER_DATA.at(TowerType::IceSword).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildFire, TOWER_DATA.at(TowerType::FireAxe).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildEnergy, TOWER_DATA.at(TowerType::EnergyMace).animations.at(Direction::Down).frames.at(0));
+
+
 }
 
 

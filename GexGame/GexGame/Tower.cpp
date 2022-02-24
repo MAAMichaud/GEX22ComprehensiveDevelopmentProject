@@ -34,7 +34,6 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 	, range(1)
 	, rangeSprite()
 	, tile(_tile)
-	, target(nullptr)
 {
 	for (auto a : towerData.animations)
 	{
@@ -78,15 +77,27 @@ std::size_t Tower::getRange() const
 
 
 
-void Tower::attack(Enemy* _target)
+void Tower::attack(Enemy* target)
 {
-	if (_target)
+	if (target)
 	{
-		target = _target;
-
 		cooldownRemaining = cooldownDuration;
 
 		faceEnemy(target);
+
+		target->registerAttack(sf::seconds(0.8f), this);
+	}
+}
+
+
+
+void Tower::applyDamage(Enemy* target)
+{
+	if (target)
+	{
+		faceEnemy(target);
+
+		target->damage(1);
 	}
 }
 
@@ -128,16 +139,6 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 			sprite.setRotation(frame.isRotated ? -90.f : 0.f);
 		}
 		sprite.setPosition(frame.offset.first, frame.offset.second);
-
-		if (target)
-		{
-			if (cooldownRemaining < cooldownDuration - sf::seconds(0.8f))
-			{
-				faceEnemy(target);
-				target->destroy();
-				target = nullptr;
-			}
-		}
 	}
 
 
@@ -191,11 +192,11 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 	*/
 }
 
-void Tower::faceEnemy(Enemy* _target)
+void Tower::faceEnemy(Enemy* target)
 {
-	if (false && _target)
+	if (target)
 	{
-		auto [eX, eY] { _target->getTile() };
+		auto [eX, eY] { target->getTile() };
 		auto [tX, tY] { this->getTile() };
 
 		if (tX > eX && tY > eY)
