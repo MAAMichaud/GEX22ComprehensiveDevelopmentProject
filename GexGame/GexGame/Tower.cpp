@@ -36,6 +36,7 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 	, tile(_tile)
 	, projectileType(towerData.projectileType)
 	, damage(4)
+	, attackEffect(towerData.attackEffect)
 {
 	for (auto a : towerData.animations)
 	{
@@ -108,6 +109,13 @@ void Tower::applyDamage(Enemy* target)
 ProjectileType Tower::getProjectileType() const
 {
 	return projectileType;
+}
+
+
+
+AttackEffect Tower::getAttackEffect() const
+{
+	return attackEffect;
 }
 
 

@@ -16,10 +16,11 @@
 
 
 
-TowerData::TowerData(std::size_t _range, ProjectileType _projectileType)
+TowerData::TowerData(std::size_t _range, ProjectileType _projectileType, AttackEffect _attackEffect)
 	: animations()
 	, range(_range)
 	, projectileType(_projectileType)
+	, attackEffect(_attackEffect)
 {
 }
 
@@ -47,13 +48,14 @@ void from_json(const json& j, Animation2& a) {
 
 
 void to_json(json& j, const TowerData& t) {
-	j = json{ {"animations", t.animations}, {"range", t.range}, {"projectileType", t.projectileType} };
+	j = json{ {"animations", t.animations}, {"range", t.range}, {"projectileType", t.projectileType}, {"attackEffect", t.attackEffect}};
 }
 
 void from_json(const json& j, TowerData& t) {
 	j.at("animations").get_to(t.animations);
 	j.at("range").get_to(t.range);
 	j.at("projectileType").get_to(t.projectileType);
+	j.at("attackEffect").get_to(t.attackEffect);
 }
 
 
@@ -472,6 +474,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::AxeWarrior].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AxeWarriorAttackUpLeft"));
 		data[TowerType::AxeWarrior].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::AxeWarrior].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::AxeWarrior].attackEffect = AttackEffect::Area;
 
 		data[TowerType::AxeMaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("AxeMasterAttackUpUp"));
 		data[TowerType::AxeMaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -497,6 +500,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::AxeMaster].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AxeMasterAttackUpLeft"));
 		data[TowerType::AxeMaster].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::AxeMaster].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::AxeMaster].attackEffect = AttackEffect::Area;
 
 		data[TowerType::AxeGrandmaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackUpUp"));
 		data[TowerType::AxeGrandmaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -522,6 +526,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::AxeGrandmaster].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AxeGrandmasterAttackUpLeft"));
 		data[TowerType::AxeGrandmaster].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::AxeGrandmaster].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::AxeGrandmaster].attackEffect = AttackEffect::Area;
 
 		data[TowerType::MaceWarrior].animations[Direction::Up].addFrameSet(frames.getFramesFor("MaceWarriorAttackUpUp"));
 		data[TowerType::MaceWarrior].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -547,6 +552,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::MaceWarrior].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MaceWarriorAttackUpLeft"));
 		data[TowerType::MaceWarrior].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::MaceWarrior].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::MaceWarrior].attackEffect = AttackEffect::Stun;
 
 		data[TowerType::MaceMaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("MaceMasterAttackUpUp"));
 		data[TowerType::MaceMaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -572,6 +578,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::MaceMaster].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MaceMasterAttackUpLeft"));
 		data[TowerType::MaceMaster].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::MaceMaster].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::MaceMaster].attackEffect = AttackEffect::Stun;
 
 		data[TowerType::MaceGrandmaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("MaceGrandmasterAttackUpUp"));
 		data[TowerType::MaceGrandmaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -597,6 +604,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::MaceGrandmaster].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MaceGrandmasterAttackUpLeft"));
 		data[TowerType::MaceGrandmaster].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::MaceGrandmaster].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::MaceGrandmaster].attackEffect = AttackEffect::Stun;
 
 		data[TowerType::Novice].animations[Direction::Up].addFrameSet(frames.getFramesFor("NoviceAttackUpUp"));
 		data[TowerType::Novice].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -624,6 +632,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::Novice].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::Novice].range = 2;
 		data[TowerType::Novice].projectileType = ProjectileType::MagicArrow;
+		data[TowerType::Novice].attackEffect = AttackEffect::Poison;
 
 		data[TowerType::IceApprentice].animations[Direction::Up].addFrameSet(frames.getFramesFor("IceApprenticeAttackUpUp"));
 		data[TowerType::IceApprentice].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -651,6 +660,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::IceApprentice].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::IceApprentice].range = 2;
 		data[TowerType::IceApprentice].projectileType = ProjectileType::IceBall;
+		data[TowerType::IceApprentice].attackEffect = AttackEffect::Freeze;
 
 		data[TowerType::IceMaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("IceMasterAttackUpUp"));
 		data[TowerType::IceMaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -678,6 +688,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::IceMaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::IceMaster].range = 2;
 		data[TowerType::IceMaster].projectileType = ProjectileType::IceBall;
+		data[TowerType::IceMaster].attackEffect = AttackEffect::Freeze;
 
 		data[TowerType::IceGrandmaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("IceGrandmasterAttackUpUp"));
 		data[TowerType::IceGrandmaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -705,6 +716,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::IceGrandmaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::IceGrandmaster].range = 2;
 		data[TowerType::IceGrandmaster].projectileType = ProjectileType::IceBall;
+		data[TowerType::IceGrandmaster].attackEffect = AttackEffect::DeepFreeze;
 
 		data[TowerType::FireApprentice].animations[Direction::Up].addFrameSet(frames.getFramesFor("FireApprenticeAttackUpUp"));
 		data[TowerType::FireApprentice].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -732,6 +744,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::FireApprentice].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::FireApprentice].range = 2;
 		data[TowerType::FireApprentice].projectileType = ProjectileType::Fireball;
+		data[TowerType::FireApprentice].attackEffect = AttackEffect::Area;
 
 		data[TowerType::FireMaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("FireMasterAttackUpUp"));
 		data[TowerType::FireMaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -759,6 +772,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::FireMaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::FireMaster].range = 2;
 		data[TowerType::FireMaster].projectileType = ProjectileType::Fireball;
+		data[TowerType::FireMaster].attackEffect = AttackEffect::Area;
 
 		data[TowerType::FireGrandmaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("FireGrandmasterAttackUpUp"));
 		data[TowerType::FireGrandmaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -786,6 +800,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::FireGrandmaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::FireGrandmaster].range = 2;
 		data[TowerType::FireGrandmaster].projectileType = ProjectileType::Fireball;
+		data[TowerType::FireGrandmaster].attackEffect = AttackEffect::BigArea;
 
 		data[TowerType::EnergyApprentice].animations[Direction::Up].addFrameSet(frames.getFramesFor("EnergyApprenticeAttackUpUp"));
 		data[TowerType::EnergyApprentice].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -867,6 +882,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::EnergyGrandmaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::EnergyGrandmaster].range = 3;
 		data[TowerType::EnergyGrandmaster].projectileType = ProjectileType::Lightning;
+		data[TowerType::EnergyGrandmaster].attackEffect = AttackEffect::Stun;
 
 		data[TowerType::PoisonApprentice].animations[Direction::Up].addFrameSet(frames.getFramesFor("PoisonApprenticeAttackUpUp"));
 		data[TowerType::PoisonApprentice].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -894,6 +910,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::PoisonApprentice].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::PoisonApprentice].range = 2;
 		data[TowerType::PoisonApprentice].projectileType = ProjectileType::Poison;
+		data[TowerType::PoisonApprentice].attackEffect = AttackEffect::Poison;
 
 		data[TowerType::PoisonMaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("PoisonMasterAttackUpUp"));
 		data[TowerType::PoisonMaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -921,6 +938,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::PoisonMaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::PoisonMaster].range = 2;
 		data[TowerType::PoisonMaster].projectileType = ProjectileType::Poison;
+		data[TowerType::PoisonMaster].attackEffect = AttackEffect::GreatPoison;
 
 		data[TowerType::PoisonGrandmaster].animations[Direction::Up].addFrameSet(frames.getFramesFor("PoisonGrandmasterAttackUpUp"));
 		data[TowerType::PoisonGrandmaster].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -948,6 +966,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::PoisonGrandmaster].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::PoisonGrandmaster].range = 2;
 		data[TowerType::PoisonGrandmaster].projectileType = ProjectileType::Poison;
+		data[TowerType::PoisonGrandmaster].attackEffect = AttackEffect::GreaterPoison;
 
 		data[TowerType::IceSword].animations[Direction::Up].addFrameSet(frames.getFramesFor("IceSwordAttackUpUp"));
 		data[TowerType::IceSword].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -975,6 +994,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::IceSword].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::IceSword].range = 2;
 		data[TowerType::IceSword].projectileType = ProjectileType::IceBall;
+		data[TowerType::IceSword].attackEffect = AttackEffect::Freeze;
 
 		data[TowerType::IceSword2].animations[Direction::Up].addFrameSet(frames.getFramesFor("IceSword2AttackUpUp"));
 		data[TowerType::IceSword2].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -1000,6 +1020,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::IceSword2].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("IceSword2AttackUpLeft"));
 		data[TowerType::IceSword2].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::IceSword2].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::IceSword2].attackEffect = AttackEffect::Freeze;
 
 		data[TowerType::FireAxe].animations[Direction::Up].addFrameSet(frames.getFramesFor("FireAxeAttackUpUp"));
 		data[TowerType::FireAxe].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -1027,6 +1048,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::FireAxe].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::FireAxe].range = 2;
 		data[TowerType::FireAxe].projectileType = ProjectileType::Fireball;
+		data[TowerType::FireAxe].attackEffect = AttackEffect::BigArea;
 
 		data[TowerType::FireAxe2].animations[Direction::Up].addFrameSet(frames.getFramesFor("FireAxe2AttackUpUp"));
 		data[TowerType::FireAxe2].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -1052,6 +1074,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::FireAxe2].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FireAxe2AttackUpLeft"));
 		data[TowerType::FireAxe2].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::FireAxe2].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::FireAxe2].attackEffect = AttackEffect::BigArea;
 
 		data[TowerType::EnergyMace].animations[Direction::Up].addFrameSet(frames.getFramesFor("EnergyMaceAttackUpUp"));
 		data[TowerType::EnergyMace].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -1079,6 +1102,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::EnergyMace].animations[Direction::UpLeft].setRepeating(true);
 		data[TowerType::EnergyMace].range = 3;
 		data[TowerType::EnergyMace].projectileType = ProjectileType::Lightning;
+		data[TowerType::EnergyMace].attackEffect = AttackEffect::Stun;
 
 		data[TowerType::EnergyMace2].animations[Direction::Up].addFrameSet(frames.getFramesFor("EnergyMace2AttackUpUp"));
 		data[TowerType::EnergyMace2].animations[Direction::Up].setDuration(sf::seconds(1.0f));
@@ -1104,6 +1128,9 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::EnergyMace2].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("EnergyMace2AttackUpLeft"));
 		data[TowerType::EnergyMace2].animations[Direction::UpLeft].setDuration(sf::seconds(1.0f));
 		data[TowerType::EnergyMace2].animations[Direction::UpLeft].setRepeating(true);
+		data[TowerType::EnergyMace2].range = 2;
+		data[TowerType::EnergyMace2].projectileType = ProjectileType::Lightning;
+		data[TowerType::EnergyMace2].attackEffect = AttackEffect::Stun;
 
 		json j(data);
 		std::ofstream o("../Media/Textures/TowerData.json");

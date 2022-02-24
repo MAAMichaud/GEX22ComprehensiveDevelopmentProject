@@ -48,6 +48,21 @@ enum class ProjectileType
 
 
 
+enum class AttackEffect
+{
+	None,
+	Freeze,
+	DeepFreeze,
+	Area,
+	BigArea,
+	Stun,
+	Poison,
+	GreatPoison,
+	GreaterPoison,
+};
+
+
+
 enum class EnemyType
 {
 	AxeGrandmaster,
@@ -120,11 +135,12 @@ struct EnemyData
 
 struct TowerData
 {
-	TowerData(std::size_t range = 1, ProjectileType projectileType = ProjectileType::None);
+	TowerData(std::size_t range = 1, ProjectileType projectileType = ProjectileType::None, AttackEffect attackEffect = AttackEffect::None);
 
 	std::map<Direction, Animation2>					animations;
 	std::size_t										range;
 	ProjectileType									projectileType;
+	AttackEffect									attackEffect;
 
 };
 

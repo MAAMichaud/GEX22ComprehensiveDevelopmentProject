@@ -24,7 +24,7 @@
 #include <iostream>
 
 
-Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<Direction>& _route)
+Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<Direction>& _route, LaneController& _controller)
 	: sprite(_textures.get(enemyData.texture))
 	, velocity(HORIZONTAL_HOP_LENGTH / enemyData.speed.asSeconds(), VERTICAL_HOP_LENGTH / enemyData.speed.asSeconds())
 	, bearing(-1, 1)
@@ -40,6 +40,13 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, attackTimings()
 	, textures(_textures)
 	, projectileHolder(nullptr)
+	, freezeTime(sf::Time::Zero)
+	, deepFreezeTime(sf::Time::Zero)
+	, stunTime(sf::Time::Zero)
+	, poisonTime(sf::Time::Zero)
+	, greatPoisonTime(sf::Time::Zero)
+	, greaterPoisonTime(sf::Time::Zero)
+	, controller(_controller)
 {
 	for (auto a : enemyData.animations)
 	{
@@ -115,7 +122,7 @@ void Enemy::destroy()
 
 
 
-void Enemy::damage(int damage)
+void Enemy::damage(double damage)
 {
 	healthPoints -= damage;
 	healthBar->setHealth(healthPoints);
@@ -189,6 +196,8 @@ void Enemy::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
+	dt = processAilments(dt);
+
 	auto frame{ animations.at(direction).update(dt) };
 
 	sprite.setTextureRect(frame.getRect());
@@ -224,11 +233,7 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 		projectile->move(-velocity.x * bearing.x * dt.asSeconds(), -velocity.y * bearing.y * dt.asSeconds());
 	}
 
-	while (!attackTimings.empty() && attackTimings.top().first <= clock.getElapsedTime())
-	{
-		attackTimings.top().second->applyDamage(this);
-		attackTimings.pop();
-	}
+	processAttacks();
 }
 
 
@@ -243,9 +248,106 @@ bool Enemy::isDestroyed() const
 	return routeIndex >= route.size();
 }
 
-/*
-bool Enemy::compareAttackTimings(std::pair<const sf::Time, const Tower*> rhs, std::pair<const sf::Time, const Tower*> lhs) const
+
+
+sf::Time Enemy::processAilments(sf::Time dt)
 {
-	return rhs.first > lhs.first;
+	freezeTime -= dt;
+	deepFreezeTime -= dt;
+	stunTime -= dt;
+	poisonTime -= dt;
+	greatPoisonTime -= dt;
+	greaterPoisonTime -= dt;
+
+	sprite.setColor(sf::Color(255, 255, 255, 255));
+	if (greaterPoisonTime > sf::Time::Zero)
+	{
+		auto color = sprite.getColor();
+		color.r -= 100;
+		color.b -= 100;
+		sprite.setColor(color);
+		damage(4.f * dt.asSeconds());
+	}
+	else if (greatPoisonTime > sf::Time::Zero)
+	{
+		auto color = sprite.getColor();
+		color.r -= 75;
+		color.b -= 75;
+		sprite.setColor(color);
+		damage(2.f * dt.asSeconds());
+	}
+	else if (poisonTime > sf::Time::Zero)
+	{
+		auto color = sprite.getColor();
+		color.r -= 50;
+		color.b -= 50;
+		sprite.setColor(color);
+		damage(dt.asSeconds());
+	}
+
+	if (stunTime > sf::Time::Zero)
+	{
+		dt = sf::seconds(dt.asSeconds() / 40);
+	}
+
+	if (deepFreezeTime > sf::Time::Zero)
+	{
+		dt = sf::seconds(dt.asSeconds() / 4);
+		auto color = sprite.getColor();
+		color.r -= 100;
+		color.g -= 100;
+		sprite.setColor(color);
+	}
+	else if (freezeTime > sf::Time::Zero)
+	{
+		dt = sf::seconds(dt.asSeconds() / 2);
+		auto color = sprite.getColor();
+		color.r -= 100;
+		color.g -= 50;
+		sprite.setColor(color);
+	}
+
+	return dt;
 }
-*/
+
+
+
+void Enemy::processAttacks()
+{
+	while (!attackTimings.empty() && attackTimings.top().first <= clock.getElapsedTime())
+	{
+		attackTimings.top().second->applyDamage(this);
+		switch (attackTimings.top().second->getAttackEffect())
+		{
+		case AttackEffect::Freeze:
+			freezeTime = sf::seconds(5.f);
+			break;
+
+		case AttackEffect::DeepFreeze:
+			deepFreezeTime = sf::seconds(5.f);
+			break;
+
+		case AttackEffect::Stun:
+			stunTime = sf::seconds(0.5f);
+			break;
+
+		case AttackEffect::Poison:
+			poisonTime = sf::seconds(8.f);
+			break;
+
+		case AttackEffect::GreatPoison:
+			greatPoisonTime = sf::seconds(8.f);
+			break;
+
+		case AttackEffect::GreaterPoison:
+			greaterPoisonTime = sf::seconds(8.f);
+			break;
+
+		default:
+			break;
+
+		}
+
+		attackTimings.pop();
+	}
+}

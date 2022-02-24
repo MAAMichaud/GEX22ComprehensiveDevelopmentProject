@@ -26,7 +26,7 @@ LaneController::LaneController(const TextureHolder_t& textures, std::vector<Lane
 {
 	for (auto& laneData : data)
 	{
-		auto laneNode{ std::make_unique<Lane>(textures, laneData)};
+		auto laneNode{ std::make_unique<Lane>(textures, laneData, *this)};
 		lanes.push_back(laneNode.get());
 		this->attachChild(std::move(laneNode));
 	}

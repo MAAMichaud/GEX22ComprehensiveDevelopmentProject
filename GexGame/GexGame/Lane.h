@@ -18,13 +18,14 @@
 #include "SceneNode.h"
 
 class Enemy;
+class LaneController;
 
 
 
 class Lane: public SceneNode
 {
 public:
-	explicit									Lane(const TextureHolder_t& textures, LaneData data);
+	explicit									Lane(const TextureHolder_t& textures, LaneData data, LaneController& controller);
 	void										spawnEnemy();
 	void										loadEnemy(EnemyData enemyData);
 	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY) const;
@@ -34,5 +35,6 @@ private:
 	const TextureHolder_t&						textures;
 	EnemyData									enemyData;
 	std::vector<Direction>						route;
+	LaneController&								controller;
 
 };

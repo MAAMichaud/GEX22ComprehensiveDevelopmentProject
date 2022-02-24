@@ -12,6 +12,7 @@
 */
 #include "Enemy.h"
 #include "Lane.h"
+#include "LaneController.h"
 #include "Utility.h"
 
 #include <cassert>
@@ -19,10 +20,11 @@
 
 
 
-Lane::Lane(const TextureHolder_t& _textures, LaneData data)
+Lane::Lane(const TextureHolder_t& _textures, LaneData data, LaneController& _controller)
 	: textures(_textures)
 	, enemyData()
 	, route(data.route)
+	, controller(_controller)
 {
 	setPosition(data.position);
 }
@@ -31,7 +33,7 @@ Lane::Lane(const TextureHolder_t& _textures, LaneData data)
 
 void Lane::spawnEnemy()
 {
-	auto enemyNode{ std::make_unique<Enemy>(textures, enemyData, route)};
+	auto enemyNode{ std::make_unique<Enemy>(textures, enemyData, route, controller)};
 	this->attachChild(std::move(enemyNode));
 }
 

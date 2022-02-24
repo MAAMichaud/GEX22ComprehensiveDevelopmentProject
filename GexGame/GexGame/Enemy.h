@@ -14,6 +14,7 @@
 
 #include "Animation2.h"
 #include "DataTables.h"
+#include "LaneController.h"
 #include "SceneNode.h"
 #include "ResourceHolder.h"
 #include "ResourceIdentifiers.h"
@@ -43,13 +44,13 @@ struct compareAttackTimings{
 class Enemy: public SceneNode
 {
 public:
-									Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route);
+									Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route, LaneController& _controller);
 	std::pair<int, int>				getTile() const;
 	bool							isAtTile(const int tileX, const int tileY) const;
 	bool							isAtTiles(const std::pair<int, int> tile, const std::size_t range) const; 
 	double							getProgress() const;
 	void							destroy();
-	void							damage(int damage);
+	void							damage(double damage);
 	void							registerAttack(sf::Time attackTime, Tower* tower);
 	void							attachProjectile(Tower* tower);
 
@@ -58,7 +59,8 @@ private:
 	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
 	virtual bool					isDestroyed() const override;
-	//bool							compareAttackTimings(std::pair<const sf::Time, const Tower*> rhs, std::pair<const sf::Time, const Tower*> lhs) const;
+	sf::Time						processAilments(sf::Time dt);
+	void							processAttacks();
 
 private:
 	sf::Sprite						sprite;
@@ -77,5 +79,12 @@ private:
 	const TextureHolder_t&			textures;
 	SceneNode*						projectileHolder;
 	HealthBar*						healthBar;
+	sf::Time						freezeTime;
+	sf::Time						deepFreezeTime;
+	sf::Time						stunTime;
+	sf::Time						poisonTime;
+	sf::Time						greatPoisonTime;
+	sf::Time						greaterPoisonTime;
+	LaneController&					controller;
 
 };

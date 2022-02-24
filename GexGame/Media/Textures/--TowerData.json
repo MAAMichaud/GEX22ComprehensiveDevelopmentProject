@@ -899,7 +899,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 0,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -1802,7 +1805,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 0,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -2705,7 +2711,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 0,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -3503,7 +3512,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 0,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -4406,7 +4418,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 2,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -5309,7 +5324,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 2,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -6212,7 +6230,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 2,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -7115,7 +7136,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 4,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -8018,7 +8042,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 4,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -8921,7 +8948,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 4,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -9824,7 +9854,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 5,
+      "projectileType": 1,
+      "range": 2
     }
   ],
   [
@@ -10727,7 +10760,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 1,
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -11630,7 +11666,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 1,
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -12533,7 +12572,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 1,
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -13436,7 +13478,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 2,
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -14339,7 +14384,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 2,
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -15242,7 +15290,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 3,
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -16145,7 +16196,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 0,
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -17048,7 +17102,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 0,
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -17951,7 +18008,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 4,
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -18854,7 +18914,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 5,
+      "projectileType": 5,
+      "range": 2
     }
   ],
   [
@@ -19757,7 +19820,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 5,
+      "projectileType": 5,
+      "range": 2
     }
   ],
   [
@@ -20660,7 +20726,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 5,
+      "projectileType": 5,
+      "range": 2
     }
   ],
   [
@@ -21563,7 +21632,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 1,
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -22466,7 +22538,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 1,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -23369,7 +23444,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 3,
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -24272,7 +24350,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 3,
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -25175,7 +25256,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 4,
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -26078,7 +26162,10 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "attackEffect": 4,
+      "projectileType": 4,
+      "range": 2
     }
   ]
 ]

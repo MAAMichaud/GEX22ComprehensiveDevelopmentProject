@@ -37,6 +37,7 @@ public:
 	void							attack(Enemy* target);
 	void							applyDamage(Enemy* target);
 	ProjectileType					getProjectileType() const;
+	AttackEffect					getAttackEffect() const;
 
 private:
 	void							turn(Direction direction);
@@ -58,5 +59,6 @@ private:
 	std::pair<int, int>				tile;
 	ProjectileType					projectileType;
 	double							damage;
+	AttackEffect					attackEffect;
 
 };
