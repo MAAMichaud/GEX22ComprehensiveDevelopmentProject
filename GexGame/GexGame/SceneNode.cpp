@@ -17,6 +17,7 @@
 
 #include <algorithm>
 #include <cassert>
+#include <queue>
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
@@ -189,7 +190,7 @@ void SceneNode::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	drawCurrent(target, states);
 	drawChildren(target, states);
 
-	drawBoundingBox(target, states);
+	//drawBoundingBox(target, states);
 }
 
 

@@ -14,6 +14,7 @@
 #include "Enemy.h"
 #include "LaneController.h"
 #include "particleNode.h"
+#include "Projectile.h"
 #include "SoundNode.h"
 #include "SoundPlayer.h"
 #include "SpriteNode.h"
@@ -77,8 +78,6 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	iconFrames.emplace(World::State::BuildIce, TOWER_DATA.at(TowerType::IceSword).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildFire, TOWER_DATA.at(TowerType::FireAxe).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildEnergy, TOWER_DATA.at(TowerType::EnergyMace).animations.at(Direction::Down).frames.at(0));
-
-
 }
 
 
@@ -156,10 +155,6 @@ void World::boardClicked()
 
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
-	//auto enemies{ laneController->getEnemiesAt(tileX, tileY) };
-	//auto enemies{ laneController->getEnemiesAt(std::pair<int, int>{ tileX, tileY }, 1) };
-
-
 	if (state == State::Idle)
 	{
 		auto enemy{ laneController->getFurthestEnemy(std::pair<int, int>{ tileX, tileY }, 1) };
@@ -168,16 +163,6 @@ void World::boardClicked()
 		{
 			enemy->destroy();
 		}
-		
-		/*
-		for (auto enemy : enemies)
-		{
-			auto [eX, eY] {enemy->getWorldPosition() };
-			std::cout << "enemy on pixel " << eX << ", " << eY << " with progress: " << enemy->getProgress() << std::endl;
-
-			enemy->destroy();
-		}
-		*/
 	}
 	else
 	{
@@ -188,6 +173,11 @@ void World::boardClicked()
 	}
 
 	std::cout << std::endl;
+
+	auto projectileNode{ std::make_unique<Projectile>(textures, ProjectileType::Poison) };
+	const auto [cX,  cY] { centerNode->getPosition() };
+	projectileNode->setPosition(pixelX - cX, pixelY - cY);
+	centerNode->attachChild(std::move(projectileNode));
 }
 
 
@@ -223,6 +213,7 @@ void World::loadTextures()
 	textures.load(TextureID::BeachLevel, "../Media/Textures/BeachLevel.png");
 	textures.load(TextureID::MountainLevel, "../Media/Textures/MountainLevel.png");
 	textures.load(TextureID::Towers, "../Media/Textures/TowerAtlas.png");
+	textures.load(TextureID::Spells, "../Media/Textures/Spells.png");
 }
 
 
@@ -259,6 +250,11 @@ void World::buildScene()
 	auto laneControllerNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes) };
 	laneController = laneControllerNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(laneControllerNode));
+
+	auto cNode{ std::make_unique<SceneNode>() };
+	cNode->setPosition(800, 450);
+	centerNode = cNode.get();
+	sceneLayers[LowerAir]->attachChild(std::move(cNode));
 }
 
 

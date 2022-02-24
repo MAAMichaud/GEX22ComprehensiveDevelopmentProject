@@ -12,6 +12,7 @@
 */
 #include "Animation2.h"
 #include "Enemy.h"
+#include "Projectile.h"
 #include "Tower.h"
 #include "utility.h"
 
@@ -22,8 +23,8 @@
 #include <iostream>
 
 
-Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& _route)
-	: sprite(textures.get(enemyData.texture))
+Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<Direction>& _route)
+	: sprite(_textures.get(enemyData.texture))
 	, velocity(HORIZONTAL_HOP_LENGTH / enemyData.speed.asSeconds(), VERTICAL_HOP_LENGTH / enemyData.speed.asSeconds())
 	, bearing(-1, 1)
 	, animations()
@@ -36,27 +37,18 @@ Enemy::Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<D
 	, progress(0.0)
 	, clock()
 	, attackTimings()
+	, textures(_textures)
+	, projectileHolder(nullptr)
 {
 	for (auto a : enemyData.animations)
 	{
 		animations[a.first] = a.second;
 	}
 
-	/*
-	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(40.f), nullptr));
-	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(60.f), nullptr));
-	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(10.f), nullptr));
-	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(20.f), nullptr));
-	attackTimings.push(std::pair<sf::Time, Tower*>(sf::seconds(30.f), nullptr));
-	
-	std::cout << "top: " << std::endl;
-	attackTimings.pop();
-	attackTimings.pop();
-	attackTimings.pop();
-	attackTimings.pop();
-	attackTimings.pop();
-	attackTimings.pop();
-	*/
+	auto holderNode{ std::make_unique<SceneNode>() };
+	holderNode->setPosition(18.f, 34.f);
+	projectileHolder = holderNode.get();
+	this->attachChild(std::move(holderNode));
 }
 
 
@@ -101,9 +93,9 @@ bool Enemy::isAtTiles(const std::pair<int, int> tile, const std::size_t range) c
 	const auto [thisTileX, thisTileY] { getTile() };
 
 	return thisTileX <= tile.first + range
-		&& thisTileX >= tile.first - range
+		&& thisTileX >= tile.first - (int) range
 		&& thisTileY <= tile.second + range
-		&& thisTileY >= tile.second - range;
+		&& thisTileY >= tile.second - (int) range;
 }
 
 
@@ -133,6 +125,17 @@ void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
 {
 	attackTimings.push({ attackTime + clock.getElapsedTime() , tower });
 	std::cout << attackTimings.top().first.asSeconds() << std::endl;
+}
+
+
+
+void Enemy::attachProjectile(Tower* tower)
+{
+	auto projectileNode{ std::make_unique<Projectile>(textures, tower->getProjectileType()) };
+	const auto [tX,  tY] { tower->getWorldPosition() };
+	const auto [eX,  eY] { this->getWorldPosition() };
+	projectileNode->setPosition(tX + 18.f - eX, tY + 24.f - eY);
+	projectileHolder->attachChild(std::move(projectileNode));
 }
 
 
@@ -177,7 +180,7 @@ void Enemy::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
-	auto frame = animations.at(direction).update(dt);
+	auto frame{ animations.at(direction).update(dt) };
 
 	sprite.setTextureRect(frame.getRect());
 	//sprite.setColor(frame.isRotated ? sf::Color(0, 255, 255, 255) : sf::Color(255, 0, 255, 255));
@@ -206,6 +209,11 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 	timeRemaining -= dt;
 	progress += abs(velocity.x * bearing.x * dt.asSeconds());
 	move(velocity.x * bearing.x * dt.asSeconds(), velocity.y * bearing.y * dt.asSeconds());
+
+	for (auto& projectile : projectileHolder->children)
+	{
+		projectile->move(-velocity.x * bearing.x * dt.asSeconds(), -velocity.y * bearing.y * dt.asSeconds());
+	}
 
 	while (!attackTimings.empty() && attackTimings.top().first <= clock.getElapsedTime())
 	{

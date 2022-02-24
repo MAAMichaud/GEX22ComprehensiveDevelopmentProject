@@ -40,6 +40,7 @@ enum class TextureID
     BeachLevel,
     MountainLevel,
     Particle,
+    Spells,
 };
 
 

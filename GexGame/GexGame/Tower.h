@@ -36,12 +36,14 @@ public:
 	std::size_t						getRange() const;
 	void							attack(Enemy* target);
 	void							applyDamage(Enemy* target);
+	ProjectileType					getProjectileType() const;
 
 private:
 	void							turn(Direction direction);
 	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
 	void							faceEnemy(Enemy* target);
+	void							fireProjectile(Enemy* target);
 
 private:
 	sf::Sprite						sprite;
@@ -54,5 +56,6 @@ private:
 	std::size_t						range;
 	sf::Sprite						rangeSprite;
 	std::pair<int, int>				tile;
+	ProjectileType					projectileType;
 
 };

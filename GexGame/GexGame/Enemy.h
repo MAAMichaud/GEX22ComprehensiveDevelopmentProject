@@ -50,6 +50,7 @@ public:
 	void							destroy();
 	void							damage(int damage);
 	void							registerAttack(sf::Time attackTime, Tower* tower);
+	void							attachProjectile(Tower* tower);
 
 private:
 	void							turn(Direction direction);
@@ -72,5 +73,7 @@ private:
 	double							progress;
 	sf::Clock						clock;
 	std::priority_queue<std::pair<sf::Time, Tower*>, std::vector<std::pair<sf::Time, Tower*>>, compareAttackTimings> attackTimings;
+	const TextureHolder_t&			textures;
+	SceneNode*						projectileHolder;
 
 };

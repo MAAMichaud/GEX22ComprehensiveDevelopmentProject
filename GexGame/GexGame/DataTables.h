@@ -36,6 +36,18 @@ enum class LevelType
 
 
 
+enum class ProjectileType
+{
+	None,
+	MagicArrow,
+	IceBall,
+	Fireball,
+	Lightning,
+	Poison,
+};
+
+
+
 enum class EnemyType
 {
 	AxeGrandmaster,
@@ -108,7 +120,11 @@ struct EnemyData
 
 struct TowerData
 {
+	TowerData(std::size_t range = 1, ProjectileType projectileType = ProjectileType::None);
+
 	std::map<Direction, Animation2>					animations;
+	std::size_t										range;
+	ProjectileType									projectileType;
 
 };
 

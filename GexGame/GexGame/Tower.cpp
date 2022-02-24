@@ -31,9 +31,10 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 	, cooldownDuration(sf::seconds(2.5f))
 	, cooldownRemaining(sf::Time::Zero)
 	, experiencePoints(0)
-	, range(1)
+	, range(towerData.range)
 	, rangeSprite()
 	, tile(_tile)
+	, projectileType(towerData.projectileType)
 {
 	for (auto a : towerData.animations)
 	{
@@ -86,6 +87,8 @@ void Tower::attack(Enemy* target)
 		faceEnemy(target);
 
 		target->registerAttack(sf::seconds(0.8f), this);
+
+		fireProjectile(target);
 	}
 }
 
@@ -99,6 +102,11 @@ void Tower::applyDamage(Enemy* target)
 
 		target->damage(1);
 	}
+}
+
+ProjectileType Tower::getProjectileType() const
+{
+	return projectileType;
 }
 
 
@@ -125,7 +133,12 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 
 		if (cooldownRemaining - dt <= cooldownDuration - sf::seconds(1.0f))
 		{
-			animations.at(direction).restart();
+			for (auto& animation : animations)
+			{
+				animation.second.restart();
+			}
+
+			frame = animations.at(direction).getCurrentFrame();
 		}
 
 		sprite.setTextureRect(frame.getRect());
@@ -143,54 +156,9 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 
 
 	cooldownRemaining -= dt;
-
-	/*
-	while (dt > timeRemaining)
-	{
-		dt -= timeRemaining;
-
-		switch (direction)
-		{
-		case Direction::Up:
-			direction = Direction::UpRight;
-			break;
-
-		case Direction::Down:
-			direction = Direction::DownLeft;
-			break;
-
-		case Direction::Left:
-			direction = Direction::UpLeft;
-			break;
-
-		case Direction::Right:
-			direction = Direction::DownRight;
-			break;
-
-		case Direction::UpRight:
-			direction = Direction::Right;
-			break;
-
-		case Direction::DownRight:
-			direction = Direction::Down;
-			break;
-
-		case Direction::DownLeft:
-			direction = Direction::Left;
-			break;
-
-		case Direction::UpLeft:
-			direction = Direction::Up;
-			break;
-
-		}
-
-		timeRemaining = sf::seconds(1.0f);
-	}
-
-	timeRemaining -= dt;
-	*/
 }
+
+
 
 void Tower::faceEnemy(Enemy* target)
 {
@@ -231,5 +199,15 @@ void Tower::faceEnemy(Enemy* target)
 		{
 			direction = Direction::Down;
 		}
+	}
+}
+
+
+
+void Tower::fireProjectile(Enemy* target)
+{
+	if (target)
+	{
+		target->attachProjectile(this);
 	}
 }

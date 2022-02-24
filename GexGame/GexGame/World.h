@@ -39,6 +39,7 @@ namespace sf {
 }
 class SoundPlayer;
 class Tower;
+class Projectile;
 
 
 
@@ -119,5 +120,7 @@ private:
 	std::map<State, Frame>				iconFrames;
 	sf::Sprite							towerIcon;
 	std::vector<Tower*>					towers;
+	SceneNode*							centerNode;
+	Projectile*							projectileTest;
 
 };
