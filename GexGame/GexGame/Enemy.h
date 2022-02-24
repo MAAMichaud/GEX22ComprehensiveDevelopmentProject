@@ -26,6 +26,7 @@
 #include <string>
 
 class Tower;
+class HealthBar;
 
 
 
@@ -69,11 +70,12 @@ private:
 	sf::Time						timeRemaining;
 	std::vector<Direction>&			route;
 	std::size_t						routeIndex;
-	int								healthPoints;
+	double							healthPoints;
 	double							progress;
 	sf::Clock						clock;
 	std::priority_queue<std::pair<sf::Time, Tower*>, std::vector<std::pair<sf::Time, Tower*>>, compareAttackTimings> attackTimings;
 	const TextureHolder_t&			textures;
 	SceneNode*						projectileHolder;
+	HealthBar*						healthBar;
 
 };

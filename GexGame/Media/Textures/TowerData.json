@@ -899,7 +899,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -1802,7 +1804,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -2705,7 +2709,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -3503,7 +3509,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -4406,7 +4414,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -5309,7 +5319,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -6212,7 +6224,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -7115,7 +7129,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -8018,7 +8034,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -8921,7 +8939,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -9824,7 +9844,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 1,
+      "range": 2
     }
   ],
   [
@@ -10727,7 +10749,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -11630,7 +11654,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -12533,7 +12559,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -13436,7 +13464,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -14339,7 +14369,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -15242,7 +15274,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -16145,7 +16179,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -17048,7 +17084,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -17951,7 +17989,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -18854,7 +18894,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 5,
+      "range": 2
     }
   ],
   [
@@ -19757,7 +19799,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 5,
+      "range": 2
     }
   ],
   [
@@ -20660,7 +20704,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 5,
+      "range": 2
     }
   ],
   [
@@ -21563,7 +21609,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 2,
+      "range": 2
     }
   ],
   [
@@ -22466,7 +22514,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -23369,7 +23419,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 3,
+      "range": 2
     }
   ],
   [
@@ -24272,7 +24324,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ],
   [
@@ -25175,7 +25229,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 4,
+      "range": 3
     }
   ],
   [
@@ -26078,7 +26134,9 @@
             "repeat": true
           }
         ]
-      ]
+      ],
+      "projectileType": 0,
+      "range": 1
     }
   ]
 ]

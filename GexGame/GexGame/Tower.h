@@ -57,5 +57,6 @@ private:
 	sf::Sprite						rangeSprite;
 	std::pair<int, int>				tile;
 	ProjectileType					projectileType;
+	double							damage;
 
 };

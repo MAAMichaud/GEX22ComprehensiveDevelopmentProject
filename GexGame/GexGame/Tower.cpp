@@ -35,6 +35,7 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 	, rangeSprite()
 	, tile(_tile)
 	, projectileType(towerData.projectileType)
+	, damage(4)
 {
 	for (auto a : towerData.animations)
 	{
@@ -100,7 +101,7 @@ void Tower::applyDamage(Enemy* target)
 	{
 		faceEnemy(target);
 
-		target->damage(1);
+		target->damage(damage);
 	}
 }
 

@@ -12,6 +12,7 @@
 */
 #include "Animation2.h"
 #include "Enemy.h"
+#include "HealthBar.h"
 #include "Projectile.h"
 #include "Tower.h"
 #include "utility.h"
@@ -33,7 +34,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, timeRemaining(enemyData.speed)
 	, route(_route)
 	, routeIndex(0)
-	, healthPoints(1)
+	, healthPoints(10.0)
 	, progress(0.0)
 	, clock()
 	, attackTimings()
@@ -117,6 +118,7 @@ void Enemy::destroy()
 void Enemy::damage(int damage)
 {
 	healthPoints -= damage;
+	healthBar->setHealth(healthPoints);
 }
 
 
@@ -125,6 +127,13 @@ void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
 {
 	attackTimings.push({ attackTime + clock.getElapsedTime() , tower });
 	std::cout << attackTimings.top().first.asSeconds() << std::endl;
+
+	if (!healthBar)
+	{
+		auto healthNode{ std::make_unique<HealthBar>(healthPoints) };
+		healthBar = healthNode.get();
+		this->attachChild(std::move(healthNode));
+	}
 }
 
 

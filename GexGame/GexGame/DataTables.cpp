@@ -35,6 +35,7 @@ void from_json(const json& j, Frame& f) {
 	j.at("rotated").get_to(f.isRotated);
 }
 
+
 void to_json(json& j, const Animation2& a) {
 	j = json{ {"frames", a.frames }, {"repeat", a.repeat} };
 }
@@ -44,12 +45,15 @@ void from_json(const json& j, Animation2& a) {
 	j.at("repeat").get_to(a.repeat);
 }
 
+
 void to_json(json& j, const TowerData& t) {
-	j = json{ {"animations", t.animations } };
+	j = json{ {"animations", t.animations}, {"range", t.range}, {"projectileType", t.projectileType} };
 }
 
 void from_json(const json& j, TowerData& t) {
 	j.at("animations").get_to(t.animations);
+	j.at("range").get_to(t.range);
+	j.at("projectileType").get_to(t.projectileType);
 }
 
 

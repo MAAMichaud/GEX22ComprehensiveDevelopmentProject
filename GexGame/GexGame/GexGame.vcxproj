@@ -161,6 +161,7 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="GameOverState.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="HealthBar.cpp" />
     <ClCompile Include="JsonFrameParser.cpp" />
     <ClCompile Include="Lane.cpp" />
     <ClCompile Include="LaneController.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="GameOverState.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="HealthBar.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="JsonFrameParser.h" />
     <ClInclude Include="Lane.h" />
