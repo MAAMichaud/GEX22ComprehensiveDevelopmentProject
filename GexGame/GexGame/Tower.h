@@ -39,6 +39,8 @@ public:
 	ProjectileType					getProjectileType() const;
 	AttackEffect					getAttackEffect() const;
 	double							getAttackDamage() const;
+	void							gainExperience(std::size_t amount);
+	bool							isLevelingUp() const;
 
 private:
 	void							turn(Direction direction);
@@ -57,9 +59,11 @@ private:
 	std::size_t						experiencePoints;
 	std::size_t						range;
 	sf::Sprite						rangeSprite;
+	sf::Sprite						levelupSprite;
 	std::pair<int, int>				tile;
 	ProjectileType					projectileType;
 	double							damage;
 	AttackEffect					attackEffect;
+	std::size_t						experienceToNextLevel;
 
 };

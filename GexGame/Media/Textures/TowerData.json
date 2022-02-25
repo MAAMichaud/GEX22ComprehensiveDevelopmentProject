@@ -901,6 +901,7 @@
         ]
       ],
       "attackEffect": 0,
+      "experienceToNextLevel": 10,
       "projectileType": 0,
       "range": 1
     }
@@ -1807,6 +1808,7 @@
         ]
       ],
       "attackEffect": 0,
+      "experienceToNextLevel": 20,
       "projectileType": 0,
       "range": 1
     }
@@ -2713,6 +2715,7 @@
         ]
       ],
       "attackEffect": 0,
+      "experienceToNextLevel": 40,
       "projectileType": 0,
       "range": 1
     }
@@ -3514,6 +3517,7 @@
         ]
       ],
       "attackEffect": 0,
+      "experienceToNextLevel": 80,
       "projectileType": 0,
       "range": 1
     }
@@ -4420,6 +4424,7 @@
         ]
       ],
       "attackEffect": 3,
+      "experienceToNextLevel": 20,
       "projectileType": 0,
       "range": 1
     }
@@ -5326,6 +5331,7 @@
         ]
       ],
       "attackEffect": 3,
+      "experienceToNextLevel": 40,
       "projectileType": 0,
       "range": 1
     }
@@ -6232,6 +6238,7 @@
         ]
       ],
       "attackEffect": 3,
+      "experienceToNextLevel": 80,
       "projectileType": 0,
       "range": 1
     }
@@ -7138,6 +7145,7 @@
         ]
       ],
       "attackEffect": 5,
+      "experienceToNextLevel": 20,
       "projectileType": 0,
       "range": 1
     }
@@ -8044,6 +8052,7 @@
         ]
       ],
       "attackEffect": 5,
+      "experienceToNextLevel": 40,
       "projectileType": 0,
       "range": 1
     }
@@ -8950,6 +8959,7 @@
         ]
       ],
       "attackEffect": 5,
+      "experienceToNextLevel": 80,
       "projectileType": 0,
       "range": 1
     }
@@ -9856,6 +9866,7 @@
         ]
       ],
       "attackEffect": 6,
+      "experienceToNextLevel": 10,
       "projectileType": 1,
       "range": 2
     }
@@ -10762,6 +10773,7 @@
         ]
       ],
       "attackEffect": 1,
+      "experienceToNextLevel": 20,
       "projectileType": 2,
       "range": 2
     }
@@ -11668,6 +11680,7 @@
         ]
       ],
       "attackEffect": 1,
+      "experienceToNextLevel": 40,
       "projectileType": 2,
       "range": 2
     }
@@ -12574,6 +12587,7 @@
         ]
       ],
       "attackEffect": 2,
+      "experienceToNextLevel": 80,
       "projectileType": 2,
       "range": 2
     }
@@ -13480,6 +13494,7 @@
         ]
       ],
       "attackEffect": 3,
+      "experienceToNextLevel": 20,
       "projectileType": 3,
       "range": 2
     }
@@ -14386,6 +14401,7 @@
         ]
       ],
       "attackEffect": 3,
+      "experienceToNextLevel": 40,
       "projectileType": 3,
       "range": 2
     }
@@ -15292,6 +15308,7 @@
         ]
       ],
       "attackEffect": 4,
+      "experienceToNextLevel": 80,
       "projectileType": 3,
       "range": 2
     }
@@ -16198,6 +16215,7 @@
         ]
       ],
       "attackEffect": 0,
+      "experienceToNextLevel": 20,
       "projectileType": 4,
       "range": 3
     }
@@ -17104,6 +17122,7 @@
         ]
       ],
       "attackEffect": 0,
+      "experienceToNextLevel": 40,
       "projectileType": 4,
       "range": 3
     }
@@ -18010,6 +18029,7 @@
         ]
       ],
       "attackEffect": 5,
+      "experienceToNextLevel": 80,
       "projectileType": 4,
       "range": 3
     }
@@ -18916,6 +18936,7 @@
         ]
       ],
       "attackEffect": 6,
+      "experienceToNextLevel": 20,
       "projectileType": 5,
       "range": 2
     }
@@ -19822,6 +19843,7 @@
         ]
       ],
       "attackEffect": 7,
+      "experienceToNextLevel": 40,
       "projectileType": 5,
       "range": 2
     }
@@ -20728,6 +20750,7 @@
         ]
       ],
       "attackEffect": 8,
+      "experienceToNextLevel": 80,
       "projectileType": 5,
       "range": 2
     }
@@ -21634,6 +21657,7 @@
         ]
       ],
       "attackEffect": 1,
+      "experienceToNextLevel": 60,
       "projectileType": 2,
       "range": 2
     }
@@ -22540,6 +22564,7 @@
         ]
       ],
       "attackEffect": 1,
+      "experienceToNextLevel": 100,
       "projectileType": 0,
       "range": 1
     }
@@ -23446,6 +23471,7 @@
         ]
       ],
       "attackEffect": 4,
+      "experienceToNextLevel": 60,
       "projectileType": 3,
       "range": 2
     }
@@ -24352,6 +24378,7 @@
         ]
       ],
       "attackEffect": 4,
+      "experienceToNextLevel": 100,
       "projectileType": 0,
       "range": 1
     }
@@ -25258,6 +25285,7 @@
         ]
       ],
       "attackEffect": 5,
+      "experienceToNextLevel": 60,
       "projectileType": 4,
       "range": 3
     }
@@ -26164,6 +26192,7 @@
         ]
       ],
       "attackEffect": 5,
+      "experienceToNextLevel": 100,
       "projectileType": 4,
       "range": 2
     }

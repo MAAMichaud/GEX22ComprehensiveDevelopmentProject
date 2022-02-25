@@ -135,12 +135,16 @@ struct EnemyData
 
 struct TowerData
 {
-	TowerData(std::size_t range = 1, ProjectileType projectileType = ProjectileType::None, AttackEffect attackEffect = AttackEffect::None);
+	TowerData(std::size_t range = 1, 
+		ProjectileType projectileType = ProjectileType::None, 
+		AttackEffect attackEffect = AttackEffect::None, 
+		std::size_t experienceToNextLevel = 10);
 
 	std::map<Direction, Animation2>					animations;
 	std::size_t										range;
 	ProjectileType									projectileType;
 	AttackEffect									attackEffect;
+	std::size_t										experienceToNextLevel;
 
 };
 

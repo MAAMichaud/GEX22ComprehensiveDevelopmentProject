@@ -49,6 +49,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, controller(_controller)
 	, lastAttacker(nullptr)
 	, gold(10)
+	, experiencePoints(2)
 {
 	for (auto a : enemyData.animations)
 	{
@@ -139,6 +140,10 @@ void Enemy::damage(double damage)
 		healthBar->setHealth(healthPoints);
 		if (isDestroyed())
 		{
+			if (lastAttacker)
+			{
+				lastAttacker->gainExperience(experiencePoints);
+			}
 			controller.addGold(gold);
 		}
 	}
@@ -164,7 +169,6 @@ void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
 	}
 
 	attackTimings.push({ attackTime + clock.getElapsedTime() , tower });
-	std::cout << attackTimings.top().first.asSeconds() << std::endl;
 }
 
 

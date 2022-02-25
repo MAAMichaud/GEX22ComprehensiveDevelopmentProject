@@ -89,5 +89,6 @@ private:
 	LaneController&					controller;
 	Tower*							lastAttacker;
 	std::size_t						gold;
+	std::size_t						experiencePoints;
 
 };

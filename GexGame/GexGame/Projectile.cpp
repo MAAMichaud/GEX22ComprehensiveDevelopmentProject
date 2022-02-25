@@ -15,8 +15,6 @@
 
 #include <SFML/Graphics/RenderTarget.hpp>
 
-#include <iostream>
-
 
 
 Projectile::Projectile(const TextureHolder_t& textures, ProjectileType projectileType)

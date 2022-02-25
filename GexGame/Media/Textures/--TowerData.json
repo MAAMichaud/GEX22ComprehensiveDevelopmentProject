@@ -4419,7 +4419,7 @@
           }
         ]
       ],
-      "attackEffect": 2,
+      "attackEffect": 3,
       "projectileType": 0,
       "range": 1
     }
@@ -5325,7 +5325,7 @@
           }
         ]
       ],
-      "attackEffect": 2,
+      "attackEffect": 3,
       "projectileType": 0,
       "range": 1
     }
@@ -6231,7 +6231,7 @@
           }
         ]
       ],
-      "attackEffect": 2,
+      "attackEffect": 3,
       "projectileType": 0,
       "range": 1
     }
@@ -7137,7 +7137,7 @@
           }
         ]
       ],
-      "attackEffect": 4,
+      "attackEffect": 5,
       "projectileType": 0,
       "range": 1
     }
@@ -8043,7 +8043,7 @@
           }
         ]
       ],
-      "attackEffect": 4,
+      "attackEffect": 5,
       "projectileType": 0,
       "range": 1
     }
@@ -8949,7 +8949,7 @@
           }
         ]
       ],
-      "attackEffect": 4,
+      "attackEffect": 5,
       "projectileType": 0,
       "range": 1
     }
@@ -9855,7 +9855,7 @@
           }
         ]
       ],
-      "attackEffect": 5,
+      "attackEffect": 6,
       "projectileType": 1,
       "range": 2
     }
@@ -12573,7 +12573,7 @@
           }
         ]
       ],
-      "attackEffect": 1,
+      "attackEffect": 2,
       "projectileType": 2,
       "range": 2
     }
@@ -13479,7 +13479,7 @@
           }
         ]
       ],
-      "attackEffect": 2,
+      "attackEffect": 3,
       "projectileType": 3,
       "range": 2
     }
@@ -14385,7 +14385,7 @@
           }
         ]
       ],
-      "attackEffect": 2,
+      "attackEffect": 3,
       "projectileType": 3,
       "range": 2
     }
@@ -15291,7 +15291,7 @@
           }
         ]
       ],
-      "attackEffect": 3,
+      "attackEffect": 4,
       "projectileType": 3,
       "range": 2
     }
@@ -18009,7 +18009,7 @@
           }
         ]
       ],
-      "attackEffect": 4,
+      "attackEffect": 5,
       "projectileType": 4,
       "range": 3
     }
@@ -18915,7 +18915,7 @@
           }
         ]
       ],
-      "attackEffect": 5,
+      "attackEffect": 6,
       "projectileType": 5,
       "range": 2
     }
@@ -19821,7 +19821,7 @@
           }
         ]
       ],
-      "attackEffect": 5,
+      "attackEffect": 7,
       "projectileType": 5,
       "range": 2
     }
@@ -20727,7 +20727,7 @@
           }
         ]
       ],
-      "attackEffect": 5,
+      "attackEffect": 8,
       "projectileType": 5,
       "range": 2
     }
@@ -23445,7 +23445,7 @@
           }
         ]
       ],
-      "attackEffect": 3,
+      "attackEffect": 4,
       "projectileType": 3,
       "range": 2
     }
@@ -24351,7 +24351,7 @@
           }
         ]
       ],
-      "attackEffect": 3,
+      "attackEffect": 4,
       "projectileType": 0,
       "range": 1
     }
@@ -25257,7 +25257,7 @@
           }
         ]
       ],
-      "attackEffect": 4,
+      "attackEffect": 5,
       "projectileType": 4,
       "range": 3
     }
@@ -26163,7 +26163,7 @@
           }
         ]
       ],
-      "attackEffect": 4,
+      "attackEffect": 5,
       "projectileType": 4,
       "range": 2
     }

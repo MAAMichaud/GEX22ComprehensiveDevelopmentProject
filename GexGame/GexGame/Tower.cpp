@@ -33,10 +33,12 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 	, experiencePoints(0)
 	, range(towerData.range)
 	, rangeSprite()
+	, levelupSprite(textures.get(TextureID::OnebyOne))
 	, tile(_tile)
 	, projectileType(towerData.projectileType)
 	, damage(4)
 	, attackEffect(towerData.attackEffect)
+	, experienceToNextLevel(towerData.experienceToNextLevel)
 {
 	for (auto a : towerData.animations)
 	{
@@ -44,6 +46,9 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 	}
 
 	auto frame{ animations.at(direction).getCurrentFrame() };
+
+	levelupSprite.setColor(sf::Color(255, 255, 155, 155));
+	levelupSprite.move(0.f, 48.f);
 
 	sprite.setTextureRect(frame.getRect());
 	if (direction == Direction::UpLeft || direction == Direction::Left || direction == Direction::DownLeft)
@@ -127,6 +132,21 @@ double Tower::getAttackDamage() const
 
 
 
+void Tower::gainExperience(std::size_t amount)
+{
+	experiencePoints += amount;
+	std::cout << "Experience points " << experiencePoints << std::endl;
+}
+
+
+
+bool Tower::isLevelingUp() const
+{
+	return experiencePoints >= experienceToNextLevel;
+}
+
+
+
 void Tower::turn(Direction _direction)
 {
 	direction = _direction;
@@ -136,6 +156,10 @@ void Tower::turn(Direction _direction)
 
 void Tower::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
+	if (isLevelingUp())
+	{
+		target.draw(levelupSprite, states);
+	}
 	target.draw(sprite, states);
 }
 

@@ -432,8 +432,6 @@ void World::placeTower()
 
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
-	std::cout << "Placed tower at " << tileX << ", " << tileY << std::endl;
-
 	TowerType towerType;
 
 	switch (state)
