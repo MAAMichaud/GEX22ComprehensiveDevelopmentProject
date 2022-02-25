@@ -49,7 +49,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, controller(_controller)
 	, lastAttacker(nullptr)
 	, gold(10)
-	, experiencePoints(2)
+	, experiencePoints(20)
 {
 	for (auto a : enemyData.animations)
 	{

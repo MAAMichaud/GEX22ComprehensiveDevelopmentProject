@@ -30,7 +30,7 @@ class Enemy;
 class Tower: public SceneNode
 {
 public:
-									Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int, int> tile);
+									Tower(const TextureHolder_t& textures, TowerType towerType, TowerData towerData, std::pair<int, int> tile);
 	bool							isAttackPending() const;
 	std::pair<int, int>				getTile() const;
 	std::size_t						getRange() const;
@@ -41,6 +41,8 @@ public:
 	double							getAttackDamage() const;
 	void							gainExperience(std::size_t amount);
 	bool							isLevelingUp() const;
+	void							levelUp(TowerType towerType, TowerData towerData);
+	TowerType						getType() const;
 
 private:
 	void							turn(Direction direction);
@@ -51,6 +53,7 @@ private:
 
 private:
 	sf::Sprite						sprite;
+	TowerType						towerType;
 	std::map<Direction, Animation2>	animations;
 	Direction						direction;
 	sf::Time						timeRemaining;

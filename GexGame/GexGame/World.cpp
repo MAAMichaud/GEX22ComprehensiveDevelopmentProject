@@ -38,6 +38,7 @@ namespace
 {
 	const std::map<LevelType, LevelData> LEVEL_DATA{ initializeLevelData() };
 	const std::map<TowerType, TowerData> TOWER_DATA{ initializeTowerData() };
+	const std::map<TowerType, TowerType> LEVEL_UP_DATA{ initializeLevelUpData() };
 }
 
 World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _sounds, LevelType _levelType, sf::RenderWindow& _window)
@@ -73,7 +74,6 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	buildScene();
 
 	worldView.setCenter(spawnPosition);
-
 
 	towerIcon.setTexture(textures.get(TextureID::Towers));
 	towerIcon.setTextureRect(sf::IntRect());
@@ -144,7 +144,13 @@ void World::draw()
 	else
 	{
 		target.setView(worldView);
-		target.draw(sceneGraph);
+		//target.draw(sceneGraph);
+		target.draw(*sceneLayers[Background]);
+		if (rangeSprite)
+		{
+			target.draw(*rangeSprite);
+		}
+		target.draw(*sceneLayers[LowerAir]);
 		target.draw(towerIcon);
 	}
 }
@@ -175,6 +181,13 @@ void World::boardClicked()
 	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
 
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
+
+	Tower* clickedTower{ getCursorTower(std::pair<int, int>(tileX, tileY)) };
+	if (clickedTower && clickedTower->isLevelingUp())
+	{
+		auto type{ LEVEL_UP_DATA.at(clickedTower->getType()) };
+		clickedTower->levelUp(type, TOWER_DATA.at(type));
+	}
 
 	if (state == State::Idle)
 	{
@@ -257,6 +270,7 @@ void World::loadTextures()
 	textures.load(TextureID::MountainLevel, "../Media/Textures/MountainLevel.png");
 	textures.load(TextureID::Towers, "../Media/Textures/TowerAtlas.png");
 	textures.load(TextureID::Spells, "../Media/Textures/Spells.png");
+	textures.load(TextureID::Upgrades, "../Media/Textures/UpgradeAtlas.png");
 }
 
 
@@ -358,15 +372,7 @@ void World::handleMouseOverlay()
 	towerIcon.setColor(sf::Color(255, 255, 255, 0));
 	rangeSprite = nullptr;
 
-	Tower* highlightedTower{ nullptr };
-	for (auto tower : towers)
-	{
-		auto [tX, tY] { tower->getTile() };
-		if (tileX == tX && tileY == tY)
-		{
-			highlightedTower = tower;
-		}
-	}
+	Tower* highlightedTower{ getCursorTower(std::pair<int, int>(tileX, tileY)) };
 
 	if (highlightedTower)
 	{
@@ -538,11 +544,29 @@ void World::placeTower()
 
 	}
 
-	auto towerNode{ std::make_unique<Tower>(textures, TOWER_DATA.at(towerType), std::pair<int, int>{tileX, tileY}) };
+	auto towerNode{ std::make_unique<Tower>(textures, towerType, TOWER_DATA.at(towerType), std::pair<int, int>{tileX, tileY}) };
 	//towerNode->setPosition(pixelX - 18.f, pixelY - 72.f);
 	placeSpriteAtTile(towerNode.get(), tileX, tileY);
 	towers.push_back(towerNode.get());
 	sceneLayers[LowerAir]->attachChild(std::move(towerNode));
 
 	state = World::State::Idle;
+}
+
+
+
+Tower* World::getCursorTower(std::pair<int, int> tile)
+{
+	Tower* cursorTower{ nullptr };
+
+	for (auto tower : towers)
+	{
+		auto [tX, tY] { tower->getTile() };
+		if (tile.first == tX && tile.second == tY)
+		{
+			cursorTower = tower;
+		}
+	}
+
+	return cursorTower;
 }

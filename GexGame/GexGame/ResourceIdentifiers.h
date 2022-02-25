@@ -41,6 +41,7 @@ enum class TextureID
     MountainLevel,
     Particle,
     Spells,
+    Upgrades,
 };
 
 

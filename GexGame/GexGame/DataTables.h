@@ -105,6 +105,7 @@ enum class TowerType
 	FireAxe2,
 	EnergyMace,
 	EnergyMace2,
+	None,
 };
 
 
@@ -191,4 +192,5 @@ struct ParticleData
 std::map<LevelType, LevelData> initializeLevelData();
 std::map<TowerType, TowerData> initializeTowerData();
 std::map<EnemyType, EnemyData> initializeEnemyData();
+std::map<TowerType, TowerType> initializeLevelUpData();
 std::map<Particle::Type, ParticleData> initializeParticleData();

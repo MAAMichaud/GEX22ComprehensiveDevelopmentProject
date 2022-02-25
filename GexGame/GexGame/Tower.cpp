@@ -23,8 +23,9 @@
 
 
 
-Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int, int> _tile)
+Tower::Tower(const TextureHolder_t& textures, TowerType _towerType, TowerData towerData, std::pair<int, int> _tile)
 	: sprite(textures.get(TextureID::Towers))
+	, towerType(_towerType)
 	, animations()
 	, direction(Direction::Down)
 	, timeRemaining(sf::seconds(1.0f))
@@ -45,10 +46,10 @@ Tower::Tower(const TextureHolder_t& textures, TowerData towerData, std::pair<int
 		animations[a.first] = a.second;
 	}
 
-	auto frame{ animations.at(direction).getCurrentFrame() };
-
 	levelupSprite.setColor(sf::Color(255, 255, 155, 155));
 	levelupSprite.move(0.f, 48.f);
+
+	auto frame{ animations.at(direction).getCurrentFrame() };
 
 	sprite.setTextureRect(frame.getRect());
 	if (direction == Direction::UpLeft || direction == Direction::Left || direction == Direction::DownLeft)
@@ -111,6 +112,8 @@ void Tower::applyDamage(Enemy* target)
 	}
 }
 
+
+
 ProjectileType Tower::getProjectileType() const
 {
 	return projectileType;
@@ -143,6 +146,44 @@ void Tower::gainExperience(std::size_t amount)
 bool Tower::isLevelingUp() const
 {
 	return experiencePoints >= experienceToNextLevel;
+}
+
+
+
+void Tower::levelUp(TowerType _towerType, TowerData towerData)
+{
+	std::cout << "level up!!" << std::endl;
+
+	towerType = _towerType;
+	experiencePoints -= experienceToNextLevel;
+	experienceToNextLevel = towerData.experienceToNextLevel;
+	projectileType = towerData.projectileType;
+	attackEffect = towerData.attackEffect;
+
+	for (auto a : towerData.animations)
+	{
+		animations[a.first] = a.second;
+	}
+
+	auto frame{ animations.at(direction).getCurrentFrame() };
+
+	sprite.setTextureRect(frame.getRect());
+	if (direction == Direction::UpLeft || direction == Direction::Left || direction == Direction::DownLeft)
+	{
+		sprite.setRotation(frame.isRotated ? 90.f : 0.f);
+	}
+	else
+	{
+		sprite.setRotation(frame.isRotated ? -90.f : 0.f);
+	}
+	sprite.setPosition(frame.offset.first, frame.offset.second);
+}
+
+
+
+TowerType Tower::getType() const
+{
+	return towerType;
 }
 
 

@@ -85,6 +85,7 @@ private:
 	void								placeSpriteAtTile(sf::Sprite& sprite, float x, float y);
 
 	void                                placeTower();
+	Tower*                              getCursorTower(std::pair<int, int> tile);
 
 private:
 	enum Layer

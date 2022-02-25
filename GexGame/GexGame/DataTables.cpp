@@ -1187,6 +1187,30 @@ std::map<TowerType, TowerData> initializeTowerData()
 
 
 
+std::map<TowerType, TowerType> initializeLevelUpData()
+{
+	std::map<TowerType, TowerType> data;
+
+	data[TowerType::ClubWarrior] = TowerType::AxeWarrior;
+	data[TowerType::AxeWarrior] = TowerType::AxeMaster;
+	data[TowerType::AxeMaster] = TowerType::AxeGrandmaster;
+	data[TowerType::AxeGrandmaster] = TowerType::None;
+	data[TowerType::Novice] = TowerType::PoisonApprentice;
+	data[TowerType::PoisonApprentice] = TowerType::PoisonMaster;
+	data[TowerType::PoisonMaster] = TowerType::PoisonGrandmaster;
+	data[TowerType::PoisonGrandmaster] = TowerType::None;
+	data[TowerType::IceSword] = TowerType::IceSword2;
+	data[TowerType::IceSword2] = TowerType::None;
+	data[TowerType::FireAxe] = TowerType::FireAxe2;
+	data[TowerType::FireAxe2] = TowerType::None;
+	data[TowerType::EnergyMace] = TowerType::EnergyMace2;
+	data[TowerType::EnergyMace2] = TowerType::None;
+
+	return data;
+}
+
+
+
 std::map<Particle::Type, ParticleData> initializeParticleData()
 {
 	std::map<Particle::Type, ParticleData> data;
