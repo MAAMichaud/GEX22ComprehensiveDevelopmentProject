@@ -62,6 +62,10 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, iconFrames()
 	, towerIcon()
 	, towers()
+	, threeBythree()
+	, fiveByfive()
+	, sevenByseven()
+	, rangeSprite(nullptr)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -73,6 +77,16 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 
 	towerIcon.setTexture(textures.get(TextureID::Towers));
 	towerIcon.setTextureRect(sf::IntRect());
+
+	threeBythree.setTexture(textures.get(TextureID::ThreebyThree));
+	threeBythree.setColor(sf::Color(155, 255, 155, 130));
+	centerOrigin(threeBythree);
+	fiveByfive.setTexture(textures.get(TextureID::FivebyFive));
+	fiveByfive.setColor(sf::Color(155, 255, 155, 130));
+	centerOrigin(fiveByfive);
+	sevenByseven.setTexture(textures.get(TextureID::SevenbySeven));
+	sevenByseven.setColor(sf::Color(155, 255, 155, 130));
+	centerOrigin(sevenByseven);
 
 	iconFrames.emplace(World::State::BuildWizard, TOWER_DATA.at(TowerType::Novice).animations.at(Direction::Down).frames.at(0));
 	iconFrames.emplace(World::State::BuildWarrior, TOWER_DATA.at(TowerType::ClubWarrior).animations.at(Direction::Down).frames.at(0));
@@ -116,7 +130,13 @@ void World::draw()
 	{
 		sceneTexture.clear();
 		sceneTexture.setView(worldView);
-		sceneTexture.draw(sceneGraph);
+		//sceneTexture.draw(sceneGraph);
+		sceneTexture.draw(*sceneLayers[Background]);
+		if (rangeSprite)
+		{
+			sceneTexture.draw(*rangeSprite);
+		}
+		sceneTexture.draw(*sceneLayers[LowerAir]);
 		sceneTexture.draw(towerIcon);
 		sceneTexture.display();
 		bloomEffect.apply(sceneTexture, target);
@@ -227,6 +247,9 @@ void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
 	textures.load(TextureID::OnebyOne, "../Media/Textures/1by1.png");
+	textures.load(TextureID::ThreebyThree, "../Media/Textures/3by3.png");
+	textures.load(TextureID::FivebyFive, "../Media/Textures/5by5.png");
+	textures.load(TextureID::SevenbySeven, "../Media/Textures/7by7.png");
 	textures.load(TextureID::Lich, "../Media/Textures/LichAtlas.png");
 	textures.load(TextureID::ForestLevel, "../Media/Textures/ForestLevel.png");
 	textures.load(TextureID::CemeteryLevel, "../Media/Textures/CemeteryLevel.png");
@@ -333,21 +356,68 @@ void World::handleMouseOverlay()
 
 	tileOverlay->setRGBA(sf::Color(255, 255, 255, 0));
 	towerIcon.setColor(sf::Color(255, 255, 255, 0));
+	rangeSprite = nullptr;
 
-	if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
+	Tower* highlightedTower{ nullptr };
+	for (auto tower : towers)
 	{
-		if (state == World::State::Idle)
+		auto [tX, tY] { tower->getTile() };
+		if (tileX == tX && tileY == tY)
 		{
-			tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
-
-			placeSpriteAtTile(*tileOverlay, tileX, tileY);
+			highlightedTower = tower;
 		}
-		else
-		{
-			towerIcon.setColor(sf::Color(255, 255, 255, 200));
+	}
 
-			//towerIcon.setPosition(pixelX, pixelY);
-			placeSpriteAtTile(towerIcon, tileX, tileY);
+	if (highlightedTower)
+	{
+		std::cout << " tower highlighted! ";
+
+		switch (highlightedTower->getRange())
+		{
+		case 1:
+			rangeSprite = &threeBythree;
+			break;
+
+		case 2:
+			rangeSprite = &fiveByfive;
+			break;
+
+		case 3:
+			rangeSprite = &sevenByseven;
+			break;
+
+		default:
+			rangeSprite = &threeBythree;
+			break;
+
+		}
+
+		static const float BASE_X{ 880.f };
+		static const float BASE_Y{ 96.f };
+		static const float INCREMENT_X{ 36.f };
+		static const float INCREMENT_Y{ 24.f };
+
+		float newX{ BASE_X + (INCREMENT_X * tileX) - (INCREMENT_X * tileY) };
+		float newY{ BASE_Y + INCREMENT_Y * tileX + INCREMENT_Y * tileY };
+
+		rangeSprite->setPosition(sf::Vector2f(newX + INCREMENT_X, newY - INCREMENT_Y));
+	}
+	else
+	{
+		if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
+		{
+			if (state == World::State::Idle)
+			{
+				tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
+
+				placeSpriteAtTile(*tileOverlay, tileX, tileY);
+			}
+			else
+			{
+				towerIcon.setColor(sf::Color(255, 255, 255, 200));
+
+				placeSpriteAtTile(towerIcon, tileX, tileY);
+			}
 		}
 	}
 }

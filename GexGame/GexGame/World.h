@@ -125,5 +125,9 @@ private:
 	SceneNode*							centerNode;
 	Projectile*							projectileTest;
 	Bank*								bank;
+	sf::Sprite							threeBythree;
+	sf::Sprite							fiveByfive;
+	sf::Sprite							sevenByseven;
+	sf::Sprite*							rangeSprite;
 
 };
