@@ -12,6 +12,7 @@
 */
 #include "Enemy.h"
 #include "LaneController.h"
+#include "Tower.h"
 #include "Utility.h"
 
 #include <algorithm>
@@ -108,6 +109,24 @@ Enemy* LaneController::getFurthestEnemy(const std::pair<int, int> tile, const st
 	else
 	{
 		return nullptr;
+	}
+}
+
+
+
+void LaneController::areaAttack(Enemy* enemy, Tower* tower, float range)
+{
+	auto enemies{ std::vector<Enemy*>() };
+
+	for (auto& lane : lanes)
+	{
+		auto laneEnemies{ lane->getArea(enemy->getWorldPosition(), range) };
+		enemies.insert(enemies.cend(), laneEnemies.cbegin(), laneEnemies.cend());
+	}
+
+	for (auto enemy : enemies)
+	{
+		enemy->damage(tower->getAttackDamage(), tower);
 	}
 }
 

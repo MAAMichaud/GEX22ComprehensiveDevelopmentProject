@@ -102,7 +102,7 @@ void Tower::applyDamage(Enemy* target)
 	{
 		faceEnemy(target);
 
-		target->damage(damage);
+		target->damage(damage, this);
 	}
 }
 
@@ -116,6 +116,13 @@ ProjectileType Tower::getProjectileType() const
 AttackEffect Tower::getAttackEffect() const
 {
 	return attackEffect;
+}
+
+
+
+double Tower::getAttackDamage() const
+{
+	return damage;
 }
 
 

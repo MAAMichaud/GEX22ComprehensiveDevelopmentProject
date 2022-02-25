@@ -83,3 +83,29 @@ std::vector<Enemy*> Lane::getEnemiesAt(const std::pair<int, int> tile, const std
 
 	return enemies;
 }
+
+
+
+std::vector<Enemy*> Lane::getArea(const sf::Vector2f epicenter, float range) const
+{
+	auto enemies{ std::vector<Enemy*>() };
+	const auto [cX, cY] { epicenter };
+
+	for (auto& child : this->children)
+	{
+		Enemy* enemy{ dynamic_cast<Enemy*>(child.get()) };
+		assert(enemy != nullptr);
+
+		const auto [eX, eY] { enemy->getWorldPosition() };
+
+		if (eX <= cX + range
+			&& eX >= cX - range
+			&& eY <= cY + range
+			&& eY >= cY - range)
+		{
+			enemies.push_back(enemy);
+		}
+	}
+
+	return enemies;
+}

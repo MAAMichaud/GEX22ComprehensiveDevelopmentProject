@@ -51,6 +51,7 @@ public:
 	double							getProgress() const;
 	void							destroy();
 	void							damage(double damage);
+	void							damage(double damage, Tower* tower);
 	void							registerAttack(sf::Time attackTime, Tower* tower);
 	void							attachProjectile(Tower* tower);
 
@@ -86,5 +87,6 @@ private:
 	sf::Time						greatPoisonTime;
 	sf::Time						greaterPoisonTime;
 	LaneController&					controller;
+	Tower*							lastAttacker;
 
 };

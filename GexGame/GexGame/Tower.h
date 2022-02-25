@@ -38,6 +38,7 @@ public:
 	void							applyDamage(Enemy* target);
 	ProjectileType					getProjectileType() const;
 	AttackEffect					getAttackEffect() const;
+	double							getAttackDamage() const;
 
 private:
 	void							turn(Direction direction);

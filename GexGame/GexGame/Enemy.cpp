@@ -47,6 +47,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, greatPoisonTime(sf::Time::Zero)
 	, greaterPoisonTime(sf::Time::Zero)
 	, controller(_controller)
+	, lastAttacker(nullptr)
 {
 	for (auto a : enemyData.animations)
 	{
@@ -124,23 +125,38 @@ void Enemy::destroy()
 
 void Enemy::damage(double damage)
 {
-	healthPoints -= damage;
-	healthBar->setHealth(healthPoints);
-}
-
-
-
-void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
-{
-	attackTimings.push({ attackTime + clock.getElapsedTime() , tower });
-	std::cout << attackTimings.top().first.asSeconds() << std::endl;
-
 	if (!healthBar)
 	{
 		auto healthNode{ std::make_unique<HealthBar>(healthPoints) };
 		healthBar = healthNode.get();
 		this->attachChild(std::move(healthNode));
 	}
+
+	healthPoints -= damage;
+	healthBar->setHealth(healthPoints);
+}
+
+
+
+void Enemy::damage(double damage, Tower* tower)
+{
+	lastAttacker = tower;
+	this->damage(damage);
+}
+
+
+
+void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
+{
+	if (!healthBar)
+	{
+		auto healthNode{ std::make_unique<HealthBar>(healthPoints) };
+		healthBar = healthNode.get();
+		this->attachChild(std::move(healthNode));
+	}
+
+	attackTimings.push({ attackTime + clock.getElapsedTime() , tower });
+	std::cout << attackTimings.top().first.asSeconds() << std::endl;
 }
 
 
@@ -316,7 +332,23 @@ void Enemy::processAttacks()
 {
 	while (!attackTimings.empty() && attackTimings.top().first <= clock.getElapsedTime())
 	{
-		attackTimings.top().second->applyDamage(this);
+		switch (attackTimings.top().second->getAttackEffect())
+		{
+		case AttackEffect::Area:
+			controller.areaAttack(this, attackTimings.top().second, 30.f);
+			break;
+
+		case AttackEffect::BigArea:
+			controller.areaAttack(this, attackTimings.top().second, 50.f);
+			break;
+
+		default:
+			attackTimings.top().second->applyDamage(this);
+			break;
+
+		}
+
+
 		switch (attackTimings.top().second->getAttackEffect())
 		{
 		case AttackEffect::Freeze:
