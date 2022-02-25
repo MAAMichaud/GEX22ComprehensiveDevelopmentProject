@@ -185,7 +185,19 @@ void World::boardClicked()
 
 void World::selectTower(State newState)
 {
-	state = newState;
+	const auto balance{ bank->getBalance() };
+	if ((newState == State::BuildWizard || newState == State::BuildWarrior) && balance >= 20)
+	{
+		state = newState;
+	}
+	else if (balance >= 180)
+	{
+		state = newState;
+	}
+	else
+	{
+		return;
+	}
 
 	const auto& frame{ iconFrames.at(newState) };
 
@@ -428,26 +440,32 @@ void World::placeTower()
 	{
 	case World::State::BuildWizard:
 		towerType = TowerType::Novice;
+		bank->withdraw(20);
 		break;
 
 	case World::State::BuildWarrior:
 		towerType = TowerType::ClubWarrior;
+		bank->withdraw(20);
 		break;
 
 	case World::State::BuildIce:
 		towerType = TowerType::IceSword;
+		bank->withdraw(180);
 		break;
 
 	case World::State::BuildFire:
 		towerType = TowerType::FireAxe;
+		bank->withdraw(180);
 		break;
 
 	case World::State::BuildEnergy:
 		towerType = TowerType::EnergyMace;
+		bank->withdraw(180);
 		break;
 
 	default:
 		towerType = TowerType::Novice;
+		bank->withdraw(20);
 		break;
 
 	}
