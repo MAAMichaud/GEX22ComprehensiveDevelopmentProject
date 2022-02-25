@@ -235,6 +235,10 @@ bool GameState::handleEvent(const sf::Event& event)
 	{
 		requestStackPush(StateID::Pause);
 	}
+	else if (event.key.code == sf::Keyboard::G)
+	{
+		world.addGold(100);
+	}
 	else if (event.key.code == sf::Keyboard::Escape)
 	{
 		world.cancel();

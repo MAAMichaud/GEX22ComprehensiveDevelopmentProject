@@ -40,6 +40,7 @@ namespace sf {
 class SoundPlayer;
 class Tower;
 class Projectile;
+class Bank;
 
 
 
@@ -69,6 +70,7 @@ public:
 	void								boardClicked();
 	void								selectTower(State newState);
 	void								cancel();
+	void								addGold(std::size_t amount);
 
 private:
 	void								loadTextures();
@@ -122,5 +124,6 @@ private:
 	std::vector<Tower*>					towers;
 	SceneNode*							centerNode;
 	Projectile*							projectileTest;
+	Bank*								bank;
 
 };

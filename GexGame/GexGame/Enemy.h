@@ -88,5 +88,6 @@ private:
 	sf::Time						greaterPoisonTime;
 	LaneController&					controller;
 	Tower*							lastAttacker;
+	std::size_t						gold;
 
 };

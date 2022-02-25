@@ -152,6 +152,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Animation2.cpp" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Bank.cpp" />
     <ClCompile Include="BloomEffect.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="CommandQueue.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Animation2.h" />
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Bank.h" />
     <ClInclude Include="BloomEffect.h" />
     <ClInclude Include="Category.h" />
     <ClInclude Include="Command.h" />

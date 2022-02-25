@@ -10,6 +10,7 @@
 *  I certify that this work is solely my own and complies with
 *  NBCC Academic Integrity Policy (policy 1111)
 */
+#include "Bank.h"
 #include "Command.h"
 #include "Enemy.h"
 #include "LaneController.h"
@@ -203,6 +204,13 @@ void World::cancel()
 
 
 
+void World::addGold(std::size_t amount)
+{
+	bank->deposit(amount);
+}
+
+
+
 void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
@@ -247,7 +255,7 @@ void World::buildScene()
 	overlaySprite->setPosition(worldBounds.left, worldBounds.top);
 	sceneLayers[LowerAir]->attachChild(std::move(overlaySprite));
 
-	auto laneControllerNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes) };
+	auto laneControllerNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes, *this) };
 	laneController = laneControllerNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(laneControllerNode));
 
@@ -255,6 +263,11 @@ void World::buildScene()
 	cNode->setPosition(800, 450);
 	centerNode = cNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(cNode));
+
+	auto bankNode{ std::make_unique<Bank>(fonts) };
+	bankNode->setPosition(100, 570);
+	bank = bankNode.get();
+	sceneLayers[LowerAir]->attachChild(std::move(bankNode));
 }
 
 

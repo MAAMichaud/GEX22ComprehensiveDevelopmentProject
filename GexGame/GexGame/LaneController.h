@@ -22,13 +22,14 @@
 
 class Enemy;
 class Tower;
+class World;
 
 
 
 class LaneController : public SceneNode
 {
 public:
-	explicit				LaneController(const TextureHolder_t& textures, std::vector<LaneData> data);
+	explicit				LaneController(const TextureHolder_t& textures, std::vector<LaneData> data, World& world);
 
 	bool					wavePending() const;
 	void					loadWave(WaveData waveData);
@@ -36,6 +37,7 @@ public:
 	std::vector<Enemy*>		getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const;
 	Enemy*					getFurthestEnemy(const std::pair<int, int> tile, const std::size_t range) const;
 	void					areaAttack(Enemy* enemy, Tower* tower, float range);
+	void					addGold(std::size_t amount);
 
 private:
 	void					spawnEnemy();
@@ -46,5 +48,6 @@ private:
 	float										spawnRate;
 	sf::Time									timeRemaining;
 	std::vector<Lane*>							lanes;
+	World&										world;
 
 };

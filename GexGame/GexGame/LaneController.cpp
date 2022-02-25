@@ -14,16 +14,18 @@
 #include "LaneController.h"
 #include "Tower.h"
 #include "Utility.h"
+#include "World.h"
 
 #include <algorithm>
 
 
 
-LaneController::LaneController(const TextureHolder_t& textures, std::vector<LaneData> data)
+LaneController::LaneController(const TextureHolder_t& textures, std::vector<LaneData> data, World& _world)
 	: enemyCount(0)
 	, spawnRate(1.0f)
 	, timeRemaining(sf::Time::Zero)
 	, lanes()
+	, world(_world)
 {
 	for (auto& laneData : data)
 	{
@@ -128,6 +130,13 @@ void LaneController::areaAttack(Enemy* enemy, Tower* tower, float range)
 	{
 		enemy->damage(tower->getAttackDamage(), tower);
 	}
+}
+
+
+
+void LaneController::addGold(std::size_t amount)
+{
+	world.addGold(amount);
 }
 
 

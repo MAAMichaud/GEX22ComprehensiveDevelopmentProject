@@ -48,6 +48,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, greaterPoisonTime(sf::Time::Zero)
 	, controller(_controller)
 	, lastAttacker(nullptr)
+	, gold(10)
 {
 	for (auto a : enemyData.animations)
 	{
@@ -55,7 +56,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	}
 
 	auto holderNode{ std::make_unique<SceneNode>() };
-	holderNode->setPosition(18.f, 34.f);
+	holderNode->setPosition(28.f, 34.f);
 	projectileHolder = holderNode.get();
 	this->attachChild(std::move(holderNode));
 }
@@ -132,8 +133,15 @@ void Enemy::damage(double damage)
 		this->attachChild(std::move(healthNode));
 	}
 
-	healthPoints -= damage;
-	healthBar->setHealth(healthPoints);
+	if (!isDestroyed())
+	{
+		healthPoints -= damage;
+		healthBar->setHealth(healthPoints);
+		if (isDestroyed())
+		{
+			controller.addGold(gold);
+		}
+	}
 }
 
 
