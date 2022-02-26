@@ -181,7 +181,7 @@ std::map<LevelType, LevelData> initializeLevelData()
 	{
 		data[LevelType::Forest].lanes.at(0).route.push_back(Direction::DownRight);
 	}
-	for (int i{ 0 }; i < 5; ++i)
+	for (int i{ 0 }; i < 6; ++i)
 	{
 		data[LevelType::Forest].lanes.at(0).route.push_back(Direction::DownLeft);
 	}
@@ -315,8 +315,323 @@ std::map<LevelType, LevelData> initializeLevelData()
 	data[LevelType::Beach].backgroundTexture = TextureID::BeachBoard;
 	data[LevelType::Beach].backgroundTexturePath = "../Media/Textures/BeachBoard.png";
 
+	data[LevelType::Beach].lanes.push_back(LaneData());
+	data[LevelType::Beach].lanes.at(0).position = sf::Vector2f(1042.f - 36.f, 84.f - 24.f);
+
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 14; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 16; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Beach].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+
+	data[LevelType::Beach].lanes.push_back(LaneData());
+	data[LevelType::Beach].lanes.at(1).position = sf::Vector2f(1042.f + 36.f * 8, 84.f + 24.f * 8);
+
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 16; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Beach].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(0).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Beach].waves.at(0).enemyCount = 60;
+	data[LevelType::Beach].waves.at(0).spawnRate = 0.5f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(1).enemyData = enemyData.at(EnemyType::Zombie);
+	data[LevelType::Beach].waves.at(1).enemyCount = 10;
+	data[LevelType::Beach].waves.at(1).spawnRate = 0.3f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
+	data[LevelType::Beach].waves.at(2).enemyCount = 9;
+	data[LevelType::Beach].waves.at(2).spawnRate = 0.2f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(3).enemyData = enemyData.at(EnemyType::AncientZombie);
+	data[LevelType::Beach].waves.at(3).enemyCount = 7;
+	data[LevelType::Beach].waves.at(3).spawnRate = 0.6f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(4).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Beach].waves.at(4).enemyCount = 8;
+	data[LevelType::Beach].waves.at(4).spawnRate = 0.4f;
+
+
 	data[LevelType::Mountain].backgroundTexture = TextureID::MountainBoard;
 	data[LevelType::Mountain].backgroundTexturePath = "../Media/Textures/MountainBoard.png";
+
+	data[LevelType::Mountain].lanes.push_back(LaneData());
+	data[LevelType::Mountain].lanes.at(0).position = sf::Vector2f(1042.f - 36.f * 2, 84.f - 24.f * 2);
+
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 20; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(0).route.push_back(Direction::DownLeft);
+	}
+
+	data[LevelType::Mountain].lanes.push_back(LaneData());
+	data[LevelType::Mountain].lanes.at(1).position = sf::Vector2f(1042.f + 36.f * 3, 84.f + 24.f * 3);
+
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(1).route.push_back(Direction::DownLeft);
+	}
+
+	data[LevelType::Mountain].lanes.push_back(LaneData());
+	data[LevelType::Mountain].lanes.at(2).position = sf::Vector2f(1042.f + 36.f * 9, 84.f + 24.f * 9);
+
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 20; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::UpLeft);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 6; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 2; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 4; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+	for (int i{ 0 }; i < 10; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownRight);
+	}
+	for (int i{ 0 }; i < 8; ++i)
+	{
+		data[LevelType::Mountain].lanes.at(2).route.push_back(Direction::DownLeft);
+	}
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(0).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Mountain].waves.at(0).enemyCount = 60;
+	data[LevelType::Mountain].waves.at(0).spawnRate = 0.5f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(1).enemyData = enemyData.at(EnemyType::Zombie);
+	data[LevelType::Mountain].waves.at(1).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(1).spawnRate = 0.3f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
+	data[LevelType::Mountain].waves.at(2).enemyCount = 9;
+	data[LevelType::Mountain].waves.at(2).spawnRate = 0.2f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(3).enemyData = enemyData.at(EnemyType::AncientZombie);
+	data[LevelType::Mountain].waves.at(3).enemyCount = 7;
+	data[LevelType::Mountain].waves.at(3).spawnRate = 0.6f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(4).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Mountain].waves.at(4).enemyCount = 8;
+	data[LevelType::Mountain].waves.at(4).spawnRate = 0.4f;
 
 	return data;
 }
