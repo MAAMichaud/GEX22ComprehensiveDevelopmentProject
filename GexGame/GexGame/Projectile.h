@@ -24,7 +24,7 @@
 class Projectile: public SceneNode
 {
 public:
-									Projectile(const TextureHolder_t& textures, ProjectileType projectileType);
+									Projectile(const TextureHolder_t& textures, ProjectileType projectileType, sf::Time lifeSpan);
 
 private:
 	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;

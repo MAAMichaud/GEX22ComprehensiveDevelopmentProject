@@ -17,9 +17,9 @@
 
 
 
-Projectile::Projectile(const TextureHolder_t& textures, ProjectileType projectileType)
+Projectile::Projectile(const TextureHolder_t& textures, ProjectileType projectileType, sf::Time lifeSpan)
 	: sprite(textures.get(TextureID::Spells))
-	, timeRemaining(sf::seconds(0.8f))
+	, timeRemaining(lifeSpan)
 	, timeRatio(sf::seconds(timeRemaining / timeRemaining) / timeRemaining)
 {
 	switch (projectileType)

@@ -135,6 +135,13 @@ double Tower::getAttackDamage() const
 
 
 
+sf::Time Tower::getProjectileSpeed() const
+{
+	return sf::seconds(0.8f);
+}
+
+
+
 void Tower::gainExperience(std::size_t amount)
 {
 	experiencePoints += amount;

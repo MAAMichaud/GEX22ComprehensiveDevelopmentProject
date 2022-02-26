@@ -243,10 +243,12 @@ void World::boardClicked()
 
 	std::cout << std::endl;
 
+	/*
 	auto projectileNode{ std::make_unique<Projectile>(textures, ProjectileType::Poison) };
 	const auto [cX,  cY] { centerNode->getPosition() };
 	projectileNode->setPosition(pixelX - cX, pixelY - cY);
 	centerNode->attachChild(std::move(projectileNode));
+	*/
 }
 
 

@@ -39,6 +39,7 @@ public:
 	ProjectileType					getProjectileType() const;
 	AttackEffect					getAttackEffect() const;
 	double							getAttackDamage() const;
+	sf::Time						getProjectileSpeed() const;
 	void							gainExperience(std::size_t amount);
 	bool							isLevelingUp() const;
 	void							levelUp(TowerType towerType, TowerData towerData);

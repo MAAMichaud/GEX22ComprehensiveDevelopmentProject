@@ -176,7 +176,7 @@ void Enemy::registerAttack(sf::Time attackTime, Tower* tower)
 
 void Enemy::attachProjectile(Tower* tower)
 {
-	auto projectileNode{ std::make_unique<Projectile>(textures, tower->getProjectileType()) };
+	auto projectileNode{ std::make_unique<Projectile>(textures, tower->getProjectileType(), tower->getProjectileSpeed()) };
 	const auto [tX,  tY] { tower->getWorldPosition() };
 	const auto [eX,  eY] { this->getWorldPosition() };
 	projectileNode->setPosition(tX + 18.f - eX, tY + 24.f - eY);
