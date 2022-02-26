@@ -452,9 +452,9 @@
           }
         ]
       ],
-      "experiencePoints": 10,
-      "gold": 14,
-      "healthPoints": 130.0,
+      "experiencePoints": 12,
+      "gold": 12,
+      "healthPoints": 120.0,
       "speed": 0.30000001192092896,
       "texture": 12
     }
@@ -912,9 +912,9 @@
           }
         ]
       ],
-      "experiencePoints": 6,
-      "gold": 12,
-      "healthPoints": 90.0,
+      "experiencePoints": 8,
+      "gold": 8,
+      "healthPoints": 80.0,
       "speed": 0.699999988079071,
       "texture": 12
     }
@@ -1372,9 +1372,9 @@
           }
         ]
       ],
-      "experiencePoints": 10,
-      "gold": 20,
-      "healthPoints": 150.0,
+      "experiencePoints": 14,
+      "gold": 14,
+      "healthPoints": 140.0,
       "speed": 0.699999988079071,
       "texture": 12
     }
@@ -1832,9 +1832,9 @@
           }
         ]
       ],
-      "experiencePoints": 4,
-      "gold": 9,
-      "healthPoints": 65.0,
+      "experiencePoints": 6,
+      "gold": 6,
+      "healthPoints": 60.0,
       "speed": 0.4000000059604645,
       "texture": 12
     }
@@ -2292,8 +2292,8 @@
           }
         ]
       ],
-      "experiencePoints": 40,
-      "gold": 70,
+      "experiencePoints": 50,
+      "gold": 50,
       "healthPoints": 500.0,
       "speed": 0.800000011920929,
       "texture": 12
@@ -2752,8 +2752,8 @@
           }
         ]
       ],
-      "experiencePoints": 150,
-      "gold": 300,
+      "experiencePoints": 200,
+      "gold": 200,
       "healthPoints": 2000.0,
       "speed": 0.800000011920929,
       "texture": 12
@@ -3212,9 +3212,9 @@
           }
         ]
       ],
-      "experiencePoints": 3,
-      "gold": 6,
-      "healthPoints": 45.0,
+      "experiencePoints": 4,
+      "gold": 4,
+      "healthPoints": 40.0,
       "speed": 0.5,
       "texture": 12
     }
@@ -3672,9 +3672,9 @@
           }
         ]
       ],
-      "experiencePoints": 6,
-      "gold": 12,
-      "healthPoints": 90.0,
+      "experiencePoints": 8,
+      "gold": 8,
+      "healthPoints": 80.0,
       "speed": 0.4000000059604645,
       "texture": 12
     }
@@ -4132,9 +4132,9 @@
           }
         ]
       ],
-      "experiencePoints": 16,
-      "gold": 24,
-      "healthPoints": 220.0,
+      "experiencePoints": 20,
+      "gold": 20,
+      "healthPoints": 200.0,
       "speed": 0.5,
       "texture": 12
     }
@@ -4592,9 +4592,9 @@
           }
         ]
       ],
-      "experiencePoints": 30,
-      "gold": 60,
-      "healthPoints": 430.0,
+      "experiencePoints": 40,
+      "gold": 40,
+      "healthPoints": 400.0,
       "speed": 0.6000000238418579,
       "texture": 12
     }
@@ -5053,8 +5053,8 @@
         ]
       ],
       "experiencePoints": 3,
-      "gold": 5,
-      "healthPoints": 35.0,
+      "gold": 3,
+      "healthPoints": 30.0,
       "speed": 0.4000000059604645,
       "texture": 12
     }
@@ -5512,8 +5512,8 @@
           }
         ]
       ],
-      "experiencePoints": 25,
-      "gold": 40,
+      "experiencePoints": 30,
+      "gold": 30,
       "healthPoints": 300.0,
       "speed": 0.8999999761581421,
       "texture": 13
@@ -5972,8 +5972,8 @@
           }
         ]
       ],
-      "experiencePoints": 25,
-      "gold": 40,
+      "experiencePoints": 30,
+      "gold": 30,
       "healthPoints": 300.0,
       "speed": 0.30000001192092896,
       "texture": 13
@@ -6432,8 +6432,8 @@
           }
         ]
       ],
-      "experiencePoints": 15,
-      "gold": 22,
+      "experiencePoints": 18,
+      "gold": 18,
       "healthPoints": 180.0,
       "speed": 0.4000000059604645,
       "texture": 13
@@ -6892,8 +6892,8 @@
           }
         ]
       ],
-      "experiencePoints": 4,
-      "gold": 10,
+      "experiencePoints": 6,
+      "gold": 6,
       "healthPoints": 60.0,
       "speed": 0.4000000059604645,
       "texture": 13
@@ -7352,8 +7352,8 @@
           }
         ]
       ],
-      "experiencePoints": 10,
-      "gold": 18,
+      "experiencePoints": 14,
+      "gold": 14,
       "healthPoints": 140.0,
       "speed": 0.30000001192092896,
       "texture": 13
@@ -7812,7 +7812,7 @@
           }
         ]
       ],
-      "experiencePoints": 200,
+      "experiencePoints": 300,
       "gold": 300,
       "healthPoints": 3000.0,
       "speed": 0.6000000238418579,
@@ -8272,8 +8272,8 @@
           }
         ]
       ],
-      "experiencePoints": 25,
-      "gold": 50,
+      "experiencePoints": 30,
+      "gold": 30,
       "healthPoints": 300.0,
       "speed": 0.699999988079071,
       "texture": 13
@@ -8732,8 +8732,8 @@
           }
         ]
       ],
-      "experiencePoints": 8,
-      "gold": 16,
+      "experiencePoints": 10,
+      "gold": 10,
       "healthPoints": 100.0,
       "speed": 0.699999988079071,
       "texture": 13
@@ -9192,8 +9192,8 @@
           }
         ]
       ],
-      "experiencePoints": 7,
-      "gold": 10,
+      "experiencePoints": 8,
+      "gold": 8,
       "healthPoints": 80.0,
       "speed": 0.5,
       "texture": 13
@@ -9653,7 +9653,7 @@
         ]
       ],
       "experiencePoints": 3,
-      "gold": 5,
+      "gold": 3,
       "healthPoints": 25.0,
       "speed": 0.6000000238418579,
       "texture": 13
@@ -10113,7 +10113,7 @@
         ]
       ],
       "experiencePoints": 4,
-      "gold": 7,
+      "gold": 4,
       "healthPoints": 40.0,
       "speed": 0.800000011920929,
       "texture": 13
@@ -10572,8 +10572,8 @@
           }
         ]
       ],
-      "experiencePoints": 35,
-      "gold": 50,
+      "experiencePoints": 40,
+      "gold": 40,
       "healthPoints": 400.0,
       "speed": 0.8999999761581421,
       "texture": 14
@@ -11032,8 +11032,8 @@
           }
         ]
       ],
-      "experiencePoints": 25,
-      "gold": 35,
+      "experiencePoints": 30,
+      "gold": 30,
       "healthPoints": 300.0,
       "speed": 0.699999988079071,
       "texture": 14
@@ -11492,8 +11492,8 @@
           }
         ]
       ],
-      "experiencePoints": 20,
-      "gold": 30,
+      "experiencePoints": 25,
+      "gold": 25,
       "healthPoints": 250.0,
       "speed": 0.6000000238418579,
       "texture": 14
@@ -11952,8 +11952,8 @@
           }
         ]
       ],
-      "experiencePoints": 80,
-      "gold": 120,
+      "experiencePoints": 100,
+      "gold": 100,
       "healthPoints": 1000.0,
       "speed": 0.800000011920929,
       "texture": 14
@@ -12412,8 +12412,8 @@
           }
         ]
       ],
-      "experiencePoints": 15,
-      "gold": 25,
+      "experiencePoints": 20,
+      "gold": 20,
       "healthPoints": 200.0,
       "speed": 0.8999999761581421,
       "texture": 14
@@ -12872,8 +12872,8 @@
           }
         ]
       ],
-      "experiencePoints": 10,
-      "gold": 18,
+      "experiencePoints": 14,
+      "gold": 14,
       "healthPoints": 140.0,
       "speed": 0.4000000059604645,
       "texture": 14
@@ -13333,7 +13333,7 @@
         ]
       ],
       "experiencePoints": 4,
-      "gold": 6,
+      "gold": 4,
       "healthPoints": 40.0,
       "speed": 0.5,
       "texture": 14
@@ -13792,8 +13792,8 @@
           }
         ]
       ],
-      "experiencePoints": 300,
-      "gold": 500,
+      "experiencePoints": 400,
+      "gold": 400,
       "healthPoints": 4000.0,
       "speed": 0.699999988079071,
       "texture": 14
@@ -14252,8 +14252,8 @@
           }
         ]
       ],
-      "experiencePoints": 30,
-      "gold": 45,
+      "experiencePoints": 35,
+      "gold": 35,
       "healthPoints": 350.0,
       "speed": 0.6000000238418579,
       "texture": 14
@@ -14713,7 +14713,7 @@
         ]
       ],
       "experiencePoints": 200,
-      "gold": 300,
+      "gold": 200,
       "healthPoints": 2000.0,
       "speed": 0.5,
       "texture": 14
@@ -15172,8 +15172,8 @@
           }
         ]
       ],
-      "experiencePoints": 8,
-      "gold": 13,
+      "experiencePoints": 10,
+      "gold": 10,
       "healthPoints": 100.0,
       "speed": 0.4000000059604645,
       "texture": 14
@@ -15632,8 +15632,8 @@
           }
         ]
       ],
-      "experiencePoints": 5,
-      "gold": 9,
+      "experiencePoints": 6,
+      "gold": 6,
       "healthPoints": 60.0,
       "speed": 0.4000000059604645,
       "texture": 14
@@ -16092,8 +16092,8 @@
           }
         ]
       ],
-      "experiencePoints": 5,
-      "gold": 8,
+      "experiencePoints": 6,
+      "gold": 6,
       "healthPoints": 60.0,
       "speed": 0.6000000238418579,
       "texture": 14
@@ -16552,8 +16552,8 @@
           }
         ]
       ],
-      "experiencePoints": 19,
-      "gold": 30,
+      "experiencePoints": 24,
+      "gold": 24,
       "healthPoints": 240.0,
       "speed": 0.800000011920929,
       "texture": 14
@@ -17012,8 +17012,8 @@
           }
         ]
       ],
-      "experiencePoints": 15,
-      "gold": 25,
+      "experiencePoints": 20,
+      "gold": 20,
       "healthPoints": 200.0,
       "speed": 0.4000000059604645,
       "texture": 15
@@ -17472,8 +17472,8 @@
           }
         ]
       ],
-      "experiencePoints": 30,
-      "gold": 50,
+      "experiencePoints": 40,
+      "gold": 40,
       "healthPoints": 400.0,
       "speed": 0.5,
       "texture": 15
@@ -17932,8 +17932,8 @@
           }
         ]
       ],
-      "experiencePoints": 30,
-      "gold": 50,
+      "experiencePoints": 40,
+      "gold": 40,
       "healthPoints": 400.0,
       "speed": 0.800000011920929,
       "texture": 15
@@ -18392,8 +18392,8 @@
           }
         ]
       ],
-      "experiencePoints": 80,
-      "gold": 120,
+      "experiencePoints": 100,
+      "gold": 100,
       "healthPoints": 1000.0,
       "speed": 0.800000011920929,
       "texture": 15
@@ -18852,8 +18852,8 @@
           }
         ]
       ],
-      "experiencePoints": 30,
-      "gold": 50,
+      "experiencePoints": 40,
+      "gold": 40,
       "healthPoints": 400.0,
       "speed": 0.699999988079071,
       "texture": 15
@@ -19312,8 +19312,8 @@
           }
         ]
       ],
-      "experiencePoints": 20,
-      "gold": 30,
+      "experiencePoints": 25,
+      "gold": 25,
       "healthPoints": 250.0,
       "speed": 0.4000000059604645,
       "texture": 15
@@ -19772,8 +19772,8 @@
           }
         ]
       ],
-      "experiencePoints": 16,
-      "gold": 26,
+      "experiencePoints": 22,
+      "gold": 22,
       "healthPoints": 220.0,
       "speed": 0.5,
       "texture": 15
@@ -20232,8 +20232,8 @@
           }
         ]
       ],
-      "experiencePoints": 10,
-      "gold": 20,
+      "experiencePoints": 15,
+      "gold": 15,
       "healthPoints": 150.0,
       "speed": 0.5,
       "texture": 15
@@ -20692,8 +20692,8 @@
           }
         ]
       ],
-      "experiencePoints": 20,
-      "gold": 40,
+      "experiencePoints": 30,
+      "gold": 30,
       "healthPoints": 300.0,
       "speed": 0.699999988079071,
       "texture": 15
@@ -21152,8 +21152,8 @@
           }
         ]
       ],
-      "experiencePoints": 4,
-      "gold": 7,
+      "experiencePoints": 5,
+      "gold": 5,
       "healthPoints": 45.0,
       "speed": 0.5,
       "texture": 15
@@ -21612,8 +21612,8 @@
           }
         ]
       ],
-      "experiencePoints": 8,
-      "gold": 12,
+      "experiencePoints": 10,
+      "gold": 10,
       "healthPoints": 100.0,
       "speed": 0.6000000238418579,
       "texture": 15
@@ -22072,8 +22072,8 @@
           }
         ]
       ],
-      "experiencePoints": 500,
-      "gold": 800,
+      "experiencePoints": 600,
+      "gold": 600,
       "healthPoints": 6000.0,
       "speed": 1.0,
       "texture": 15
@@ -22532,8 +22532,8 @@
           }
         ]
       ],
-      "experiencePoints": 50,
-      "gold": 70,
+      "experiencePoints": 60,
+      "gold": 60,
       "healthPoints": 600.0,
       "speed": 0.800000011920929,
       "texture": 15
@@ -22992,8 +22992,8 @@
           }
         ]
       ],
-      "experiencePoints": 5,
-      "gold": 8,
+      "experiencePoints": 6,
+      "gold": 6,
       "healthPoints": 60.0,
       "speed": 0.4000000059604645,
       "texture": 15
@@ -23453,7 +23453,7 @@
         ]
       ],
       "experiencePoints": 30,
-      "gold": 35,
+      "gold": 30,
       "healthPoints": 300.0,
       "speed": 0.699999988079071,
       "texture": 15
@@ -23913,7 +23913,7 @@
         ]
       ],
       "experiencePoints": 4,
-      "gold": 6,
+      "gold": 4,
       "healthPoints": 35.0,
       "speed": 0.6000000238418579,
       "texture": 15

@@ -187,29 +187,59 @@ std::map<LevelType, LevelData> initializeLevelData()
 	}
 
 	data[LevelType::Forest].waves.push_back(WaveData());
-	data[LevelType::Forest].waves.at(0).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Forest].waves.at(0).enemyCount = 5;
-	data[LevelType::Forest].waves.at(0).spawnRate = 0.5f;
+	data[LevelType::Forest].waves.at(0).enemyData = enemyData.at(EnemyType::TimberWolf);
+	data[LevelType::Forest].waves.at(0).enemyCount = 10;
+	data[LevelType::Forest].waves.at(0).spawnRate = 2.0f;
 
 	data[LevelType::Forest].waves.push_back(WaveData());
-	data[LevelType::Forest].waves.at(1).enemyData = enemyData.at(EnemyType::Lich);
+	data[LevelType::Forest].waves.at(1).enemyData = enemyData.at(EnemyType::OrcLumberjack);
 	data[LevelType::Forest].waves.at(1).enemyCount = 10;
-	data[LevelType::Forest].waves.at(1).spawnRate = 1.5f;
+	data[LevelType::Forest].waves.at(1).spawnRate = 2.0f;
 
 	data[LevelType::Forest].waves.push_back(WaveData());
-	data[LevelType::Forest].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Forest].waves.at(2).enemyCount = 3;
-	data[LevelType::Forest].waves.at(2).spawnRate = 0.2f;
+	data[LevelType::Forest].waves.at(2).enemyData = enemyData.at(EnemyType::GreyWolf);
+	data[LevelType::Forest].waves.at(2).enemyCount = 10;
+	data[LevelType::Forest].waves.at(2).spawnRate = 2.0f;
 
 	data[LevelType::Forest].waves.push_back(WaveData());
-	data[LevelType::Forest].waves.at(3).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Forest].waves.at(3).enemyCount = 7;
-	data[LevelType::Forest].waves.at(3).spawnRate = 0.6f;
+	data[LevelType::Forest].waves.at(3).enemyData = enemyData.at(EnemyType::ForestScorpion);
+	data[LevelType::Forest].waves.at(3).enemyCount = 10;
+	data[LevelType::Forest].waves.at(3).spawnRate = 2.0f;
 
 	data[LevelType::Forest].waves.push_back(WaveData());
-	data[LevelType::Forest].waves.at(4).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Forest].waves.at(4).enemyCount = 8;
-	data[LevelType::Forest].waves.at(4).spawnRate = 0.4f;
+	data[LevelType::Forest].waves.at(4).enemyData = enemyData.at(EnemyType::OrcScout);
+	data[LevelType::Forest].waves.at(4).enemyCount = 10;
+	data[LevelType::Forest].waves.at(4).spawnRate = 2.0f;
+
+	data[LevelType::Forest].waves.push_back(WaveData());
+	data[LevelType::Forest].waves.at(5).enemyData = enemyData.at(EnemyType::DireWolf);
+	data[LevelType::Forest].waves.at(5).enemyCount = 10;
+	data[LevelType::Forest].waves.at(5).spawnRate = 2.0f;
+
+	data[LevelType::Forest].waves.push_back(WaveData());
+	data[LevelType::Forest].waves.at(6).enemyData = enemyData.at(EnemyType::GiantScorpion);
+	data[LevelType::Forest].waves.at(6).enemyCount = 10;
+	data[LevelType::Forest].waves.at(6).spawnRate = 2.0f;
+
+	data[LevelType::Forest].waves.push_back(WaveData());
+	data[LevelType::Forest].waves.at(7).enemyData = enemyData.at(EnemyType::OrcSoldier);
+	data[LevelType::Forest].waves.at(7).enemyCount = 14;
+	data[LevelType::Forest].waves.at(7).spawnRate = 2.0f;
+
+	data[LevelType::Forest].waves.push_back(WaveData());
+	data[LevelType::Forest].waves.at(8).enemyData = enemyData.at(EnemyType::Ogre);
+	data[LevelType::Forest].waves.at(8).enemyCount = 5;
+	data[LevelType::Forest].waves.at(8).spawnRate = 2.0f;
+
+	data[LevelType::Forest].waves.push_back(WaveData());
+	data[LevelType::Forest].waves.at(9).enemyData = enemyData.at(EnemyType::OrcWarrior);
+	data[LevelType::Forest].waves.at(9).enemyCount = 10;
+	data[LevelType::Forest].waves.at(9).spawnRate = 2.0f;
+
+	data[LevelType::Forest].waves.push_back(WaveData());
+	data[LevelType::Forest].waves.at(10).enemyData = enemyData.at(EnemyType::OrcBoss);
+	data[LevelType::Forest].waves.at(10).enemyCount = 1;
+	data[LevelType::Forest].waves.at(10).spawnRate = 2.0f;
 
 
 	data[LevelType::Cemetery].backgroundTexture = TextureID::CemeteryBoard;
@@ -288,29 +318,60 @@ std::map<LevelType, LevelData> initializeLevelData()
 	}
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(0).enemyData = enemyData.at(EnemyType::Skeleton);
-	data[LevelType::Cemetery].waves.at(0).enemyCount = 60;
-	data[LevelType::Cemetery].waves.at(0).spawnRate = 0.5f;
+	data[LevelType::Cemetery].waves.at(0).enemyData = enemyData.at(EnemyType::ZombieDog);
+	data[LevelType::Cemetery].waves.at(0).enemyCount = 10;
+	data[LevelType::Cemetery].waves.at(0).spawnRate = 2.0f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
 	data[LevelType::Cemetery].waves.at(1).enemyData = enemyData.at(EnemyType::Zombie);
-	data[LevelType::Cemetery].waves.at(1).enemyCount = 10;
-	data[LevelType::Cemetery].waves.at(1).spawnRate = 0.3f;
+	data[LevelType::Cemetery].waves.at(1).enemyCount = 14;
+	data[LevelType::Cemetery].waves.at(1).spawnRate = 1.8f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Cemetery].waves.at(2).enemyCount = 9;
-	data[LevelType::Cemetery].waves.at(2).spawnRate = 0.2f;
+	data[LevelType::Cemetery].waves.at(2).enemyData = enemyData.at(EnemyType::GhostDog);
+	data[LevelType::Cemetery].waves.at(2).enemyCount = 10;
+	data[LevelType::Cemetery].waves.at(2).spawnRate = 2.0f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(3).enemyData = enemyData.at(EnemyType::AncientZombie);
-	data[LevelType::Cemetery].waves.at(3).enemyCount = 7;
-	data[LevelType::Cemetery].waves.at(3).spawnRate = 0.6f;
+	data[LevelType::Cemetery].waves.at(3).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Cemetery].waves.at(3).enemyCount = 20;
+	data[LevelType::Cemetery].waves.at(3).spawnRate = 1.8f;
 
 	data[LevelType::Cemetery].waves.push_back(WaveData());
-	data[LevelType::Cemetery].waves.at(4).enemyData = enemyData.at(EnemyType::Skeleton);
+	data[LevelType::Cemetery].waves.at(4).enemyData = enemyData.at(EnemyType::Lich);
 	data[LevelType::Cemetery].waves.at(4).enemyCount = 8;
-	data[LevelType::Cemetery].waves.at(4).spawnRate = 0.4f;
+	data[LevelType::Cemetery].waves.at(4).spawnRate = 2.0f;
+
+	data[LevelType::Cemetery].waves.push_back(WaveData());
+	data[LevelType::Cemetery].waves.at(5).enemyData = enemyData.at(EnemyType::GhostWolf);
+	data[LevelType::Cemetery].waves.at(5).enemyCount = 10;
+	data[LevelType::Cemetery].waves.at(5).spawnRate = 2.0f;
+
+	data[LevelType::Cemetery].waves.push_back(WaveData());
+	data[LevelType::Cemetery].waves.at(6).enemyData = enemyData.at(EnemyType::DireZombieDog);
+	data[LevelType::Cemetery].waves.at(6).enemyCount = 10;
+	data[LevelType::Cemetery].waves.at(6).spawnRate = 2.0f;
+
+	data[LevelType::Cemetery].waves.push_back(WaveData());
+	data[LevelType::Cemetery].waves.at(7).enemyData = enemyData.at(EnemyType::LichLord);
+	data[LevelType::Cemetery].waves.at(7).enemyCount = 5;
+	data[LevelType::Cemetery].waves.at(7).spawnRate = 2.0f;
+
+	data[LevelType::Cemetery].waves.push_back(WaveData());
+	data[LevelType::Cemetery].waves.at(8).enemyData = enemyData.at(EnemyType::AncientZombie);
+	data[LevelType::Cemetery].waves.at(8).enemyCount = 14;
+	data[LevelType::Cemetery].waves.at(8).spawnRate = 1.8f;
+
+	data[LevelType::Cemetery].waves.push_back(WaveData());
+	data[LevelType::Cemetery].waves.at(9).enemyData = enemyData.at(EnemyType::DireGhostWolf);
+	data[LevelType::Cemetery].waves.at(9).enemyCount = 10;
+	data[LevelType::Cemetery].waves.at(9).spawnRate = 2.0f;
+
+	data[LevelType::Cemetery].waves.push_back(WaveData());
+	data[LevelType::Cemetery].waves.at(10).enemyData = enemyData.at(EnemyType::LichKing);
+	data[LevelType::Cemetery].waves.at(10).enemyCount = 1;
+	data[LevelType::Cemetery].waves.at(10).spawnRate = 2.0f;
+
 
 	data[LevelType::Beach].backgroundTexture = TextureID::BeachBoard;
 	data[LevelType::Beach].backgroundTexturePath = "../Media/Textures/BeachBoard.png";
@@ -396,29 +457,74 @@ std::map<LevelType, LevelData> initializeLevelData()
 	}
 
 	data[LevelType::Beach].waves.push_back(WaveData());
-	data[LevelType::Beach].waves.at(0).enemyData = enemyData.at(EnemyType::Skeleton);
-	data[LevelType::Beach].waves.at(0).enemyCount = 60;
-	data[LevelType::Beach].waves.at(0).spawnRate = 0.5f;
+	data[LevelType::Beach].waves.at(0).enemyData = enemyData.at(EnemyType::Fishman);
+	data[LevelType::Beach].waves.at(0).enemyCount = 14;
+	data[LevelType::Beach].waves.at(0).spawnRate = 1.8f;
 
 	data[LevelType::Beach].waves.push_back(WaveData());
-	data[LevelType::Beach].waves.at(1).enemyData = enemyData.at(EnemyType::Zombie);
+	data[LevelType::Beach].waves.at(1).enemyData = enemyData.at(EnemyType::SeaScorpion);
 	data[LevelType::Beach].waves.at(1).enemyCount = 10;
-	data[LevelType::Beach].waves.at(1).spawnRate = 0.3f;
+	data[LevelType::Beach].waves.at(1).spawnRate = 2.0f;
 
 	data[LevelType::Beach].waves.push_back(WaveData());
-	data[LevelType::Beach].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Beach].waves.at(2).enemyCount = 9;
-	data[LevelType::Beach].waves.at(2).spawnRate = 0.2f;
+	data[LevelType::Beach].waves.at(2).enemyData = enemyData.at(EnemyType::SeaDog);
+	data[LevelType::Beach].waves.at(2).enemyCount = 10;
+	data[LevelType::Beach].waves.at(2).spawnRate = 2.0f;
 
 	data[LevelType::Beach].waves.push_back(WaveData());
-	data[LevelType::Beach].waves.at(3).enemyData = enemyData.at(EnemyType::AncientZombie);
-	data[LevelType::Beach].waves.at(3).enemyCount = 7;
-	data[LevelType::Beach].waves.at(3).spawnRate = 0.6f;
+	data[LevelType::Beach].waves.at(3).enemyData = enemyData.at(EnemyType::OrcPirate);
+	data[LevelType::Beach].waves.at(3).enemyCount = 10;
+	data[LevelType::Beach].waves.at(3).spawnRate = 2.0f;
 
 	data[LevelType::Beach].waves.push_back(WaveData());
-	data[LevelType::Beach].waves.at(4).enemyData = enemyData.at(EnemyType::Skeleton);
-	data[LevelType::Beach].waves.at(4).enemyCount = 8;
-	data[LevelType::Beach].waves.at(4).spawnRate = 0.4f;
+	data[LevelType::Beach].waves.at(4).enemyData = enemyData.at(EnemyType::FishmanElite);
+	data[LevelType::Beach].waves.at(4).enemyCount = 12;
+	data[LevelType::Beach].waves.at(4).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(5).enemyData = enemyData.at(EnemyType::OrcPirateCaptain);
+	data[LevelType::Beach].waves.at(5).enemyCount = 1;
+	data[LevelType::Beach].waves.at(5).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(6).enemyData = enemyData.at(EnemyType::Drowned);
+	data[LevelType::Beach].waves.at(6).enemyCount = 12;
+	data[LevelType::Beach].waves.at(6).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(7).enemyData = enemyData.at(EnemyType::ZombiePirate);
+	data[LevelType::Beach].waves.at(7).enemyCount = 10;
+	data[LevelType::Beach].waves.at(7).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(8).enemyData = enemyData.at(EnemyType::DrownedBones);
+	data[LevelType::Beach].waves.at(8).enemyCount = 14;
+	data[LevelType::Beach].waves.at(8).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(9).enemyData = enemyData.at(EnemyType::DeepSeaScorpion);
+	data[LevelType::Beach].waves.at(9).enemyCount = 10;
+	data[LevelType::Beach].waves.at(9).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(10).enemyData = enemyData.at(EnemyType::GhostPirate);
+	data[LevelType::Beach].waves.at(10).enemyCount = 1;
+	data[LevelType::Beach].waves.at(10).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(11).enemyData = enemyData.at(EnemyType::AncientDrowned);
+	data[LevelType::Beach].waves.at(11).enemyCount = 12;
+	data[LevelType::Beach].waves.at(11).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(12).enemyData = enemyData.at(EnemyType::DrownedLich);
+	data[LevelType::Beach].waves.at(12).enemyCount = 8;
+	data[LevelType::Beach].waves.at(12).spawnRate = 2.0f;
+
+	data[LevelType::Beach].waves.push_back(WaveData());
+	data[LevelType::Beach].waves.at(13).enemyData = enemyData.at(EnemyType::GhostPirateCaptain);
+	data[LevelType::Beach].waves.at(13).enemyCount = 1;
+	data[LevelType::Beach].waves.at(13).spawnRate = 2.0f;
 
 
 	data[LevelType::Mountain].backgroundTexture = TextureID::MountainBoard;
@@ -609,29 +715,85 @@ std::map<LevelType, LevelData> initializeLevelData()
 	}
 
 	data[LevelType::Mountain].waves.push_back(WaveData());
-	data[LevelType::Mountain].waves.at(0).enemyData = enemyData.at(EnemyType::Skeleton);
-	data[LevelType::Mountain].waves.at(0).enemyCount = 60;
-	data[LevelType::Mountain].waves.at(0).spawnRate = 0.5f;
+	data[LevelType::Mountain].waves.at(0).enemyData = enemyData.at(EnemyType::RockScorpion);
+	data[LevelType::Mountain].waves.at(0).enemyCount = 16;
+	data[LevelType::Mountain].waves.at(0).spawnRate = 2.0f;
 
 	data[LevelType::Mountain].waves.push_back(WaveData());
-	data[LevelType::Mountain].waves.at(1).enemyData = enemyData.at(EnemyType::Zombie);
+	data[LevelType::Mountain].waves.at(1).enemyData = enemyData.at(EnemyType::HobgoblinScout);
 	data[LevelType::Mountain].waves.at(1).enemyCount = 10;
-	data[LevelType::Mountain].waves.at(1).spawnRate = 0.3f;
+	data[LevelType::Mountain].waves.at(1).spawnRate = 2.0f;
 
 	data[LevelType::Mountain].waves.push_back(WaveData());
-	data[LevelType::Mountain].waves.at(2).enemyData = enemyData.at(EnemyType::Lich);
-	data[LevelType::Mountain].waves.at(2).enemyCount = 9;
-	data[LevelType::Mountain].waves.at(2).spawnRate = 0.2f;
+	data[LevelType::Mountain].waves.at(2).enemyData = enemyData.at(EnemyType::Medusa);
+	data[LevelType::Mountain].waves.at(2).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(2).spawnRate = 2.0f;
 
 	data[LevelType::Mountain].waves.push_back(WaveData());
-	data[LevelType::Mountain].waves.at(3).enemyData = enemyData.at(EnemyType::AncientZombie);
-	data[LevelType::Mountain].waves.at(3).enemyCount = 7;
-	data[LevelType::Mountain].waves.at(3).spawnRate = 0.6f;
+	data[LevelType::Mountain].waves.at(3).enemyData = enemyData.at(EnemyType::HobgoblinWarrior);
+	data[LevelType::Mountain].waves.at(3).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(3).spawnRate = 2.0f;
 
 	data[LevelType::Mountain].waves.push_back(WaveData());
-	data[LevelType::Mountain].waves.at(4).enemyData = enemyData.at(EnemyType::Skeleton);
-	data[LevelType::Mountain].waves.at(4).enemyCount = 8;
-	data[LevelType::Mountain].waves.at(4).spawnRate = 0.4f;
+	data[LevelType::Mountain].waves.at(4).enemyData = enemyData.at(EnemyType::MountainGiant);
+	data[LevelType::Mountain].waves.at(4).enemyCount = 5;
+	data[LevelType::Mountain].waves.at(4).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(5).enemyData = enemyData.at(EnemyType::HellHound);
+	data[LevelType::Mountain].waves.at(5).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(5).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(6).enemyData = enemyData.at(EnemyType::HobgoblinHeavyInfantry);
+	data[LevelType::Mountain].waves.at(6).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(6).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(7).enemyData = enemyData.at(EnemyType::AncientMedusa);
+	data[LevelType::Mountain].waves.at(7).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(7).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(8).enemyData = enemyData.at(EnemyType::FireScorpion);
+	data[LevelType::Mountain].waves.at(8).enemyCount = 12;
+	data[LevelType::Mountain].waves.at(8).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(9).enemyData = enemyData.at(EnemyType::FireMedusa);
+	data[LevelType::Mountain].waves.at(9).enemyCount = 10;
+	data[LevelType::Mountain].waves.at(9).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(10).enemyData = enemyData.at(EnemyType::FireLich);
+	data[LevelType::Mountain].waves.at(10).enemyCount = 8;
+	data[LevelType::Mountain].waves.at(10).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(11).enemyData = enemyData.at(EnemyType::FireGiant);
+	data[LevelType::Mountain].waves.at(11).enemyCount = 5;
+	data[LevelType::Mountain].waves.at(11).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(12).enemyData = enemyData.at(EnemyType::Charred);
+	data[LevelType::Mountain].waves.at(12).enemyCount = 20;
+	data[LevelType::Mountain].waves.at(12).spawnRate = 1.8f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(13).enemyData = enemyData.at(EnemyType::CharredBones);
+	data[LevelType::Mountain].waves.at(13).enemyCount = 30;
+	data[LevelType::Mountain].waves.at(13).spawnRate = 1.4f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(14).enemyData = enemyData.at(EnemyType::MagmaScorpion);
+	data[LevelType::Mountain].waves.at(14).enemyCount = 12;
+	data[LevelType::Mountain].waves.at(14).spawnRate = 2.0f;
+
+	data[LevelType::Mountain].waves.push_back(WaveData());
+	data[LevelType::Mountain].waves.at(15).enemyData = enemyData.at(EnemyType::MagmaKing);
+	data[LevelType::Mountain].waves.at(15).enemyCount = 1;
+	data[LevelType::Mountain].waves.at(15).spawnRate = 2.0f;
+
 
 	return data;
 }
@@ -655,9 +817,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::DireWolf].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("DireWolfWalkDownLeft"));
 		data[EnemyType::DireWolf].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DireWolfWalkUpLeft"));
 		data[EnemyType::DireWolf].speed = 0.3f;
-		data[EnemyType::DireWolf].healthPoints = 120;
-		data[EnemyType::DireWolf].gold = 12;
-		data[EnemyType::DireWolf].experiencePoints = 12;
+		data[EnemyType::DireWolf].healthPoints = 130;
+		data[EnemyType::DireWolf].gold = 14;
+		data[EnemyType::DireWolf].experiencePoints = 10;
 
 		data[EnemyType::ForestScorpion].texture = TextureID::ForestLevel;
 		data[EnemyType::ForestScorpion].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("ForestScorpionWalkUpRight"));
@@ -665,9 +827,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::ForestScorpion].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("ForestScorpionWalkDownLeft"));
 		data[EnemyType::ForestScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("ForestScorpionWalkUpLeft"));
 		data[EnemyType::ForestScorpion].speed = 0.7f;
-		data[EnemyType::ForestScorpion].healthPoints = 80;
-		data[EnemyType::ForestScorpion].gold = 8;
-		data[EnemyType::ForestScorpion].experiencePoints = 8;
+		data[EnemyType::ForestScorpion].healthPoints = 90;
+		data[EnemyType::ForestScorpion].gold = 12;
+		data[EnemyType::ForestScorpion].experiencePoints = 6;
 
 		data[EnemyType::GiantScorpion].texture = TextureID::ForestLevel;
 		data[EnemyType::GiantScorpion].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("GiantScorpionWalkUpRight"));
@@ -675,9 +837,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::GiantScorpion].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("GiantScorpionWalkDownLeft"));
 		data[EnemyType::GiantScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("GiantScorpionWalkUpLeft"));
 		data[EnemyType::GiantScorpion].speed = 0.7f;
-		data[EnemyType::GiantScorpion].healthPoints = 140;
-		data[EnemyType::GiantScorpion].gold = 14;
-		data[EnemyType::GiantScorpion].experiencePoints = 14;
+		data[EnemyType::GiantScorpion].healthPoints = 150;
+		data[EnemyType::GiantScorpion].gold = 20;
+		data[EnemyType::GiantScorpion].experiencePoints = 10;
 
 		data[EnemyType::GreyWolf].texture = TextureID::ForestLevel;
 		data[EnemyType::GreyWolf].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("GreyWolfWalkUpRight"));
@@ -685,9 +847,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::GreyWolf].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("GreyWolfWalkDownLeft"));
 		data[EnemyType::GreyWolf].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("GreyWolfWalkUpLeft"));
 		data[EnemyType::GreyWolf].speed = 0.4f;
-		data[EnemyType::GreyWolf].healthPoints = 60;
-		data[EnemyType::GreyWolf].gold = 6;
-		data[EnemyType::GreyWolf].experiencePoints = 6;
+		data[EnemyType::GreyWolf].healthPoints = 65;
+		data[EnemyType::GreyWolf].gold = 9;
+		data[EnemyType::GreyWolf].experiencePoints = 4;
 
 		data[EnemyType::Ogre].texture = TextureID::ForestLevel;
 		data[EnemyType::Ogre].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OgreWalkUpRight"));
@@ -696,8 +858,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Ogre].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OgreWalkUpLeft"));
 		data[EnemyType::Ogre].speed = 0.8f;
 		data[EnemyType::Ogre].healthPoints = 500;
-		data[EnemyType::Ogre].gold = 50;
-		data[EnemyType::Ogre].experiencePoints = 50;
+		data[EnemyType::Ogre].gold = 70;
+		data[EnemyType::Ogre].experiencePoints = 40;
 
 		data[EnemyType::OrcBoss].texture = TextureID::ForestLevel;
 		data[EnemyType::OrcBoss].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OrcBossWalkUpRight"));
@@ -706,8 +868,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcBoss].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcBossWalkUpLeft"));
 		data[EnemyType::OrcBoss].speed = 0.8f;
 		data[EnemyType::OrcBoss].healthPoints = 2000;
-		data[EnemyType::OrcBoss].gold = 200;
-		data[EnemyType::OrcBoss].experiencePoints = 200;
+		data[EnemyType::OrcBoss].gold = 300;
+		data[EnemyType::OrcBoss].experiencePoints = 150;
 
 		data[EnemyType::OrcLumberjack].texture = TextureID::ForestLevel;
 		data[EnemyType::OrcLumberjack].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OrcLumberjackWalkUpRight"));
@@ -715,9 +877,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcLumberjack].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("OrcLumberjackWalkDownLeft"));
 		data[EnemyType::OrcLumberjack].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcLumberjackWalkUpLeft"));
 		data[EnemyType::OrcLumberjack].speed = 0.5f;
-		data[EnemyType::OrcLumberjack].healthPoints = 40;
-		data[EnemyType::OrcLumberjack].gold = 4;
-		data[EnemyType::OrcLumberjack].experiencePoints = 4;
+		data[EnemyType::OrcLumberjack].healthPoints = 45;
+		data[EnemyType::OrcLumberjack].gold = 6;
+		data[EnemyType::OrcLumberjack].experiencePoints = 3;
 
 		data[EnemyType::OrcScout].texture = TextureID::ForestLevel;
 		data[EnemyType::OrcScout].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OrcScoutWalkUpRight"));
@@ -725,9 +887,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcScout].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("OrcScoutWalkDownLeft"));
 		data[EnemyType::OrcScout].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcScoutWalkUpLeft"));
 		data[EnemyType::OrcScout].speed = 0.4f;
-		data[EnemyType::OrcScout].healthPoints = 80;
-		data[EnemyType::OrcScout].gold = 8;
-		data[EnemyType::OrcScout].experiencePoints = 8;
+		data[EnemyType::OrcScout].healthPoints = 90;
+		data[EnemyType::OrcScout].gold = 12;
+		data[EnemyType::OrcScout].experiencePoints = 6;
 
 		data[EnemyType::OrcSoldier].texture = TextureID::ForestLevel;
 		data[EnemyType::OrcSoldier].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OrcSoldierWalkUpRight"));
@@ -735,9 +897,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcSoldier].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("OrcSoldierWalkDownLeft"));
 		data[EnemyType::OrcSoldier].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcSoldierWalkUpLeft"));
 		data[EnemyType::OrcSoldier].speed = 0.5f;
-		data[EnemyType::OrcSoldier].healthPoints = 200;
-		data[EnemyType::OrcSoldier].gold = 20;
-		data[EnemyType::OrcSoldier].experiencePoints = 20;
+		data[EnemyType::OrcSoldier].healthPoints = 220;
+		data[EnemyType::OrcSoldier].gold = 24;
+		data[EnemyType::OrcSoldier].experiencePoints = 16;
 
 		data[EnemyType::OrcWarrior].texture = TextureID::ForestLevel;
 		data[EnemyType::OrcWarrior].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OrcWarriorWalkUpRight"));
@@ -745,9 +907,9 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcWarrior].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("OrcWarriorWalkDownLeft"));
 		data[EnemyType::OrcWarrior].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcWarriorWalkUpLeft"));
 		data[EnemyType::OrcWarrior].speed = 0.6f;
-		data[EnemyType::OrcWarrior].healthPoints = 400;
-		data[EnemyType::OrcWarrior].gold = 40;
-		data[EnemyType::OrcWarrior].experiencePoints = 40;
+		data[EnemyType::OrcWarrior].healthPoints = 430;
+		data[EnemyType::OrcWarrior].gold = 60;
+		data[EnemyType::OrcWarrior].experiencePoints = 30;
 
 		data[EnemyType::TimberWolf].texture = TextureID::ForestLevel;
 		data[EnemyType::TimberWolf].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("TimberWolfWalkUpRight"));
@@ -755,8 +917,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::TimberWolf].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("TimberWolfWalkDownLeft"));
 		data[EnemyType::TimberWolf].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("TimberWolfWalkUpLeft"));
 		data[EnemyType::TimberWolf].speed = 0.4f;
-		data[EnemyType::TimberWolf].healthPoints = 30;
-		data[EnemyType::TimberWolf].gold = 3;
+		data[EnemyType::TimberWolf].healthPoints = 35;
+		data[EnemyType::TimberWolf].gold = 5;
 		data[EnemyType::TimberWolf].experiencePoints = 3;
 
 		frames = JsonFrameParser("../Media/Textures/CemeteryLeveLFlipped.json");
@@ -768,8 +930,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::AncientZombie].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AncientZombieWalkUpLeft"));
 		data[EnemyType::AncientZombie].speed = 0.9f;
 		data[EnemyType::AncientZombie].healthPoints = 300;
-		data[EnemyType::AncientZombie].gold = 30;
-		data[EnemyType::AncientZombie].experiencePoints = 30;
+		data[EnemyType::AncientZombie].gold = 40;
+		data[EnemyType::AncientZombie].experiencePoints = 25;
 
 		data[EnemyType::DireGhostWolf].texture = TextureID::CemeteryLevel;
 		data[EnemyType::DireGhostWolf].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("DireGhostWolfWalkUpRight"));
@@ -778,8 +940,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::DireGhostWolf].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DireGhostWolfWalkUpLeft"));
 		data[EnemyType::DireGhostWolf].speed = 0.3f;
 		data[EnemyType::DireGhostWolf].healthPoints = 300;
-		data[EnemyType::DireGhostWolf].gold = 30;
-		data[EnemyType::DireGhostWolf].experiencePoints = 30;
+		data[EnemyType::DireGhostWolf].gold = 40;
+		data[EnemyType::DireGhostWolf].experiencePoints = 25;
 
 		data[EnemyType::DireZombieDog].texture = TextureID::CemeteryLevel;
 		data[EnemyType::DireZombieDog].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("DireZombieDogWalkUpRight"));
@@ -788,8 +950,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::DireZombieDog].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DireZombieDogWalkUpLeft"));
 		data[EnemyType::DireZombieDog].speed = 0.4f;
 		data[EnemyType::DireZombieDog].healthPoints = 180;
-		data[EnemyType::DireZombieDog].gold = 18;
-		data[EnemyType::DireZombieDog].experiencePoints = 18;
+		data[EnemyType::DireZombieDog].gold = 22;
+		data[EnemyType::DireZombieDog].experiencePoints = 15;
 
 		data[EnemyType::GhostDog].texture = TextureID::CemeteryLevel;
 		data[EnemyType::GhostDog].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("GhostDogWalkUpRight"));
@@ -798,8 +960,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::GhostDog].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("GhostDogWalkUpLeft"));
 		data[EnemyType::GhostDog].speed = 0.4f;
 		data[EnemyType::GhostDog].healthPoints = 60;
-		data[EnemyType::GhostDog].gold = 6;
-		data[EnemyType::GhostDog].experiencePoints = 6;
+		data[EnemyType::GhostDog].gold = 10;
+		data[EnemyType::GhostDog].experiencePoints = 4;
 
 		data[EnemyType::GhostWolf].texture = TextureID::CemeteryLevel;
 		data[EnemyType::GhostWolf].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("GhostWolfWalkUpRight"));
@@ -808,8 +970,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::GhostWolf].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("GhostWolfWalkUpLeft"));
 		data[EnemyType::GhostWolf].speed = 0.3f;
 		data[EnemyType::GhostWolf].healthPoints = 140;
-		data[EnemyType::GhostWolf].gold = 14;
-		data[EnemyType::GhostWolf].experiencePoints = 14;
+		data[EnemyType::GhostWolf].gold = 18;
+		data[EnemyType::GhostWolf].experiencePoints = 10;
 
 		data[EnemyType::LichKing].texture = TextureID::CemeteryLevel;
 		data[EnemyType::LichKing].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("LichKingWalkUpRight"));
@@ -819,7 +981,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::LichKing].speed = 0.6f;
 		data[EnemyType::LichKing].healthPoints = 3000;
 		data[EnemyType::LichKing].gold = 300;
-		data[EnemyType::LichKing].experiencePoints = 300;
+		data[EnemyType::LichKing].experiencePoints = 200;
 
 		data[EnemyType::LichLord].texture = TextureID::CemeteryLevel;
 		data[EnemyType::LichLord].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("LichLordWalkUpRight"));
@@ -828,8 +990,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::LichLord].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("LichLordWalkUpLeft"));
 		data[EnemyType::LichLord].speed = 0.7f;
 		data[EnemyType::LichLord].healthPoints = 300;
-		data[EnemyType::LichLord].gold = 30;
-		data[EnemyType::LichLord].experiencePoints = 30;
+		data[EnemyType::LichLord].gold = 50;
+		data[EnemyType::LichLord].experiencePoints = 25;
 
 		data[EnemyType::Lich].texture = TextureID::CemeteryLevel;
 		data[EnemyType::Lich].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("LichWalkUpRight"));
@@ -838,8 +1000,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Lich].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("LichWalkUpLeft"));
 		data[EnemyType::Lich].speed = 0.7f;
 		data[EnemyType::Lich].healthPoints = 100;
-		data[EnemyType::Lich].gold = 10;
-		data[EnemyType::Lich].experiencePoints = 10;
+		data[EnemyType::Lich].gold = 16;
+		data[EnemyType::Lich].experiencePoints = 8;
 
 		data[EnemyType::Skeleton].texture = TextureID::CemeteryLevel;
 		data[EnemyType::Skeleton].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("SkeletonWalkUpRight"));
@@ -848,8 +1010,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Skeleton].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("SkeletonWalkUpLeft"));
 		data[EnemyType::Skeleton].speed = 0.5f;
 		data[EnemyType::Skeleton].healthPoints = 80;
-		data[EnemyType::Skeleton].gold = 8;
-		data[EnemyType::Skeleton].experiencePoints = 8;
+		data[EnemyType::Skeleton].gold = 10;
+		data[EnemyType::Skeleton].experiencePoints = 7;
 
 		data[EnemyType::ZombieDog].texture = TextureID::CemeteryLevel;
 		data[EnemyType::ZombieDog].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("ZombieDogWalkUpRight"));
@@ -858,7 +1020,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::ZombieDog].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("ZombieDogWalkUpLeft"));
 		data[EnemyType::ZombieDog].speed = 0.6f;
 		data[EnemyType::ZombieDog].healthPoints = 25;
-		data[EnemyType::ZombieDog].gold = 3;
+		data[EnemyType::ZombieDog].gold = 5;
 		data[EnemyType::ZombieDog].experiencePoints = 3;
 
 		data[EnemyType::Zombie].texture = TextureID::CemeteryLevel;
@@ -868,7 +1030,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Zombie].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("ZombieWalkUpLeft"));
 		data[EnemyType::Zombie].speed = 0.8f;
 		data[EnemyType::Zombie].healthPoints = 40;
-		data[EnemyType::Zombie].gold = 4;
+		data[EnemyType::Zombie].gold = 7;
 		data[EnemyType::Zombie].experiencePoints = 4;
 
 		frames = JsonFrameParser("../Media/Textures/BeachLeveLFlipped.json");
@@ -880,8 +1042,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::AncientDrowned].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AncientDrownedWalkUpLeft"));
 		data[EnemyType::AncientDrowned].speed = 0.9f;
 		data[EnemyType::AncientDrowned].healthPoints = 400;
-		data[EnemyType::AncientDrowned].gold = 40;
-		data[EnemyType::AncientDrowned].experiencePoints = 40;
+		data[EnemyType::AncientDrowned].gold = 50;
+		data[EnemyType::AncientDrowned].experiencePoints = 35;
 
 		data[EnemyType::DeepSeaScorpion].texture = TextureID::BeachLevel;
 		data[EnemyType::DeepSeaScorpion].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("DeepSeaScorpionWalkUpRight"));
@@ -890,8 +1052,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::DeepSeaScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DeepSeaScorpionWalkUpLeft"));
 		data[EnemyType::DeepSeaScorpion].speed = 0.7f;
 		data[EnemyType::DeepSeaScorpion].healthPoints = 300;
-		data[EnemyType::DeepSeaScorpion].gold = 30;
-		data[EnemyType::DeepSeaScorpion].experiencePoints = 30;
+		data[EnemyType::DeepSeaScorpion].gold = 35;
+		data[EnemyType::DeepSeaScorpion].experiencePoints = 25;
 
 		data[EnemyType::DrownedBones].texture = TextureID::BeachLevel;
 		data[EnemyType::DrownedBones].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("DrownedBonesWalkUpRight"));
@@ -900,8 +1062,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::DrownedBones].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DrownedBonesWalkUpLeft"));
 		data[EnemyType::DrownedBones].speed = 0.6f;
 		data[EnemyType::DrownedBones].healthPoints = 250;
-		data[EnemyType::DrownedBones].gold = 25;
-		data[EnemyType::DrownedBones].experiencePoints = 25;
+		data[EnemyType::DrownedBones].gold = 30;
+		data[EnemyType::DrownedBones].experiencePoints = 20;
 
 		data[EnemyType::DrownedLich].texture = TextureID::BeachLevel;
 		data[EnemyType::DrownedLich].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("DrownedLichWalkUpRight"));
@@ -910,8 +1072,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::DrownedLich].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DrownedLichWalkUpLeft"));
 		data[EnemyType::DrownedLich].speed = 0.8f;
 		data[EnemyType::DrownedLich].healthPoints = 1000;
-		data[EnemyType::DrownedLich].gold = 100;
-		data[EnemyType::DrownedLich].experiencePoints = 100;
+		data[EnemyType::DrownedLich].gold = 120;
+		data[EnemyType::DrownedLich].experiencePoints = 80;
 
 		data[EnemyType::Drowned].texture = TextureID::BeachLevel;
 		data[EnemyType::Drowned].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("DrownedWalkUpRight"));
@@ -920,8 +1082,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Drowned].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("DrownedWalkUpLeft"));
 		data[EnemyType::Drowned].speed = 0.9f;
 		data[EnemyType::Drowned].healthPoints = 200;
-		data[EnemyType::Drowned].gold = 20;
-		data[EnemyType::Drowned].experiencePoints = 20;
+		data[EnemyType::Drowned].gold = 25;
+		data[EnemyType::Drowned].experiencePoints = 15;
 
 		data[EnemyType::FishmanElite].texture = TextureID::BeachLevel;
 		data[EnemyType::FishmanElite].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("FishmanEliteWalkUpRight"));
@@ -930,8 +1092,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::FishmanElite].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FishmanEliteWalkUpLeft"));
 		data[EnemyType::FishmanElite].speed = 0.4f;
 		data[EnemyType::FishmanElite].healthPoints = 140;
-		data[EnemyType::FishmanElite].gold = 14;
-		data[EnemyType::FishmanElite].experiencePoints = 14;
+		data[EnemyType::FishmanElite].gold = 18;
+		data[EnemyType::FishmanElite].experiencePoints = 10;
 
 		data[EnemyType::Fishman].texture = TextureID::BeachLevel;
 		data[EnemyType::Fishman].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("FishmanWalkUpRight"));
@@ -940,7 +1102,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Fishman].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FishmanWalkUpLeft"));
 		data[EnemyType::Fishman].speed = 0.5f;
 		data[EnemyType::Fishman].healthPoints = 40;
-		data[EnemyType::Fishman].gold = 4;
+		data[EnemyType::Fishman].gold = 6;
 		data[EnemyType::Fishman].experiencePoints = 4;
 
 		data[EnemyType::GhostPirateCaptain].texture = TextureID::BeachLevel;
@@ -950,8 +1112,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::GhostPirateCaptain].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("GhostPirateCaptainWalkUpLeft"));
 		data[EnemyType::GhostPirateCaptain].speed = 0.7f;
 		data[EnemyType::GhostPirateCaptain].healthPoints = 4000;
-		data[EnemyType::GhostPirateCaptain].gold = 400;
-		data[EnemyType::GhostPirateCaptain].experiencePoints = 400;
+		data[EnemyType::GhostPirateCaptain].gold = 500;
+		data[EnemyType::GhostPirateCaptain].experiencePoints = 300;
 
 		data[EnemyType::GhostPirate].texture = TextureID::BeachLevel;
 		data[EnemyType::GhostPirate].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("GhostPirateWalkUpRight"));
@@ -960,8 +1122,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::GhostPirate].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("GhostPirateWalkUpLeft"));
 		data[EnemyType::GhostPirate].speed = 0.6f;
 		data[EnemyType::GhostPirate].healthPoints = 350;
-		data[EnemyType::GhostPirate].gold = 35;
-		data[EnemyType::GhostPirate].experiencePoints = 35;
+		data[EnemyType::GhostPirate].gold = 45;
+		data[EnemyType::GhostPirate].experiencePoints = 30;
 
 		data[EnemyType::OrcPirateCaptain].texture = TextureID::BeachLevel;
 		data[EnemyType::OrcPirateCaptain].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("OrcPirateCaptainWalkUpRight"));
@@ -970,7 +1132,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcPirateCaptain].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcPirateCaptainWalkUpLeft"));
 		data[EnemyType::OrcPirateCaptain].speed = 0.5f;
 		data[EnemyType::OrcPirateCaptain].healthPoints = 2000;
-		data[EnemyType::OrcPirateCaptain].gold = 200;
+		data[EnemyType::OrcPirateCaptain].gold = 300;
 		data[EnemyType::OrcPirateCaptain].experiencePoints = 200;
 
 		data[EnemyType::OrcPirate].texture = TextureID::BeachLevel;
@@ -980,8 +1142,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::OrcPirate].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("OrcPirateWalkUpLeft"));
 		data[EnemyType::OrcPirate].speed = 0.4f;
 		data[EnemyType::OrcPirate].healthPoints = 100;
-		data[EnemyType::OrcPirate].gold = 10;
-		data[EnemyType::OrcPirate].experiencePoints = 10;
+		data[EnemyType::OrcPirate].gold = 13;
+		data[EnemyType::OrcPirate].experiencePoints = 8;
 
 		data[EnemyType::SeaDog].texture = TextureID::BeachLevel;
 		data[EnemyType::SeaDog].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("SeaDogWalkUpRight"));
@@ -990,8 +1152,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::SeaDog].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("SeaDogWalkUpLeft"));
 		data[EnemyType::SeaDog].speed = 0.4f;
 		data[EnemyType::SeaDog].healthPoints = 60;
-		data[EnemyType::SeaDog].gold = 6;
-		data[EnemyType::SeaDog].experiencePoints = 6;
+		data[EnemyType::SeaDog].gold = 9;
+		data[EnemyType::SeaDog].experiencePoints = 5;
 
 		data[EnemyType::SeaScorpion].texture = TextureID::BeachLevel;
 		data[EnemyType::SeaScorpion].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("SeaScorpionWalkUpRight"));
@@ -1000,8 +1162,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::SeaScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("SeaScorpionWalkUpLeft"));
 		data[EnemyType::SeaScorpion].speed = 0.6f;
 		data[EnemyType::SeaScorpion].healthPoints = 60;
-		data[EnemyType::SeaScorpion].gold = 6;
-		data[EnemyType::SeaScorpion].experiencePoints = 6;
+		data[EnemyType::SeaScorpion].gold = 8;
+		data[EnemyType::SeaScorpion].experiencePoints = 5;
 
 		data[EnemyType::ZombiePirate].texture = TextureID::BeachLevel;
 		data[EnemyType::ZombiePirate].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("ZombiePirateWalkUpRight"));
@@ -1010,8 +1172,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::ZombiePirate].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("ZombiePirateWalkUpLeft"));
 		data[EnemyType::ZombiePirate].speed = 0.8f;
 		data[EnemyType::ZombiePirate].healthPoints = 240;
-		data[EnemyType::ZombiePirate].gold = 24;
-		data[EnemyType::ZombiePirate].experiencePoints = 24;
+		data[EnemyType::ZombiePirate].gold = 30;
+		data[EnemyType::ZombiePirate].experiencePoints = 19;
 
 		frames = JsonFrameParser("../Media/Textures/MountainLeveLFlipped.json");
 
@@ -1022,8 +1184,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::AncientMedusa].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("AncientMedusaWalkUpLeft"));
 		data[EnemyType::AncientMedusa].speed = 0.4f;
 		data[EnemyType::AncientMedusa].healthPoints = 200;
-		data[EnemyType::AncientMedusa].gold = 20;
-		data[EnemyType::AncientMedusa].experiencePoints = 20;
+		data[EnemyType::AncientMedusa].gold = 25;
+		data[EnemyType::AncientMedusa].experiencePoints = 15;
 
 		data[EnemyType::CharredBones].texture = TextureID::MountainLevel;
 		data[EnemyType::CharredBones].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("CharredBonesWalkUpRight"));
@@ -1032,8 +1194,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::CharredBones].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("CharredBonesWalkUpLeft"));
 		data[EnemyType::CharredBones].speed = 0.5f;
 		data[EnemyType::CharredBones].healthPoints = 400;
-		data[EnemyType::CharredBones].gold = 40;
-		data[EnemyType::CharredBones].experiencePoints = 40;
+		data[EnemyType::CharredBones].gold = 50;
+		data[EnemyType::CharredBones].experiencePoints = 30;
 
 		data[EnemyType::Charred].texture = TextureID::MountainLevel;
 		data[EnemyType::Charred].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("CharredWalkUpRight"));
@@ -1042,8 +1204,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Charred].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("CharredWalkUpLeft"));
 		data[EnemyType::Charred].speed = 0.8f;
 		data[EnemyType::Charred].healthPoints = 400;
-		data[EnemyType::Charred].gold = 40;
-		data[EnemyType::Charred].experiencePoints = 40;
+		data[EnemyType::Charred].gold = 50;
+		data[EnemyType::Charred].experiencePoints = 30;
 
 		data[EnemyType::FireGiant].texture = TextureID::MountainLevel;
 		data[EnemyType::FireGiant].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("FireGiantWalkUpRight"));
@@ -1052,8 +1214,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::FireGiant].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FireGiantWalkUpLeft"));
 		data[EnemyType::FireGiant].speed = 0.8f;
 		data[EnemyType::FireGiant].healthPoints = 1000;
-		data[EnemyType::FireGiant].gold = 100;
-		data[EnemyType::FireGiant].experiencePoints = 100;
+		data[EnemyType::FireGiant].gold = 120;
+		data[EnemyType::FireGiant].experiencePoints = 80;
 
 		data[EnemyType::FireLich].texture = TextureID::MountainLevel;
 		data[EnemyType::FireLich].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("FireLichWalkUpRight"));
@@ -1062,8 +1224,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::FireLich].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FireLichWalkUpLeft"));
 		data[EnemyType::FireLich].speed = 0.7f;
 		data[EnemyType::FireLich].healthPoints = 400;
-		data[EnemyType::FireLich].gold = 40;
-		data[EnemyType::FireLich].experiencePoints = 40;
+		data[EnemyType::FireLich].gold = 50;
+		data[EnemyType::FireLich].experiencePoints = 30;
 
 		data[EnemyType::FireMedusa].texture = TextureID::MountainLevel;
 		data[EnemyType::FireMedusa].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("FireMedusaWalkUpRight"));
@@ -1072,8 +1234,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::FireMedusa].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FireMedusaWalkUpLeft"));
 		data[EnemyType::FireMedusa].speed = 0.4f;
 		data[EnemyType::FireMedusa].healthPoints = 250;
-		data[EnemyType::FireMedusa].gold = 25;
-		data[EnemyType::FireMedusa].experiencePoints = 25;
+		data[EnemyType::FireMedusa].gold = 30;
+		data[EnemyType::FireMedusa].experiencePoints = 20;
 
 		data[EnemyType::FireScorpion].texture = TextureID::MountainLevel;
 		data[EnemyType::FireScorpion].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("FireScorpionWalkUpRight"));
@@ -1082,8 +1244,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::FireScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("FireScorpionWalkUpLeft"));
 		data[EnemyType::FireScorpion].speed = 0.5f;
 		data[EnemyType::FireScorpion].healthPoints = 220;
-		data[EnemyType::FireScorpion].gold = 22;
-		data[EnemyType::FireScorpion].experiencePoints = 22;
+		data[EnemyType::FireScorpion].gold = 26;
+		data[EnemyType::FireScorpion].experiencePoints = 16;
 
 		data[EnemyType::HellHound].texture = TextureID::MountainLevel;
 		data[EnemyType::HellHound].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("HellHoundWalkUpRight"));
@@ -1092,8 +1254,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::HellHound].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("HellHoundWalkUpLeft"));
 		data[EnemyType::HellHound].speed = 0.5f;
 		data[EnemyType::HellHound].healthPoints = 150;
-		data[EnemyType::HellHound].gold = 15;
-		data[EnemyType::HellHound].experiencePoints = 15;
+		data[EnemyType::HellHound].gold = 20;
+		data[EnemyType::HellHound].experiencePoints = 10;
 
 		data[EnemyType::HobgoblinHeavyInfantry].texture = TextureID::MountainLevel;
 		data[EnemyType::HobgoblinHeavyInfantry].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("HobgoblinHeavyInfantryWalkUpRight"));
@@ -1102,8 +1264,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::HobgoblinHeavyInfantry].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("HobgoblinHeavyInfantryWalkUpLeft"));
 		data[EnemyType::HobgoblinHeavyInfantry].speed = 0.7f;
 		data[EnemyType::HobgoblinHeavyInfantry].healthPoints = 300;
-		data[EnemyType::HobgoblinHeavyInfantry].gold = 30;
-		data[EnemyType::HobgoblinHeavyInfantry].experiencePoints = 30;
+		data[EnemyType::HobgoblinHeavyInfantry].gold = 40;
+		data[EnemyType::HobgoblinHeavyInfantry].experiencePoints = 20;
 
 		data[EnemyType::HobgoblinScout].texture = TextureID::MountainLevel;
 		data[EnemyType::HobgoblinScout].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("HobgoblinScoutWalkUpRight"));
@@ -1112,8 +1274,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::HobgoblinScout].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("HobgoblinScoutWalkUpLeft"));
 		data[EnemyType::HobgoblinScout].speed = 0.5f;
 		data[EnemyType::HobgoblinScout].healthPoints = 45;
-		data[EnemyType::HobgoblinScout].gold = 5;
-		data[EnemyType::HobgoblinScout].experiencePoints = 5;
+		data[EnemyType::HobgoblinScout].gold = 7;
+		data[EnemyType::HobgoblinScout].experiencePoints = 4;
 
 		data[EnemyType::HobgoblinWarrior].texture = TextureID::MountainLevel;
 		data[EnemyType::HobgoblinWarrior].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("HobgoblinWarriorWalkUpRight"));
@@ -1122,8 +1284,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::HobgoblinWarrior].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("HobgoblinWarriorWalkUpLeft"));
 		data[EnemyType::HobgoblinWarrior].speed = 0.6f;
 		data[EnemyType::HobgoblinWarrior].healthPoints = 100;
-		data[EnemyType::HobgoblinWarrior].gold = 10;
-		data[EnemyType::HobgoblinWarrior].experiencePoints = 10;
+		data[EnemyType::HobgoblinWarrior].gold = 12;
+		data[EnemyType::HobgoblinWarrior].experiencePoints = 8;
 
 		data[EnemyType::MagmaKing].texture = TextureID::MountainLevel;
 		data[EnemyType::MagmaKing].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("MagmaKingWalkUpRight"));
@@ -1132,8 +1294,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::MagmaKing].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MagmaKingWalkUpLeft"));
 		data[EnemyType::MagmaKing].speed = 1.0;
 		data[EnemyType::MagmaKing].healthPoints = 6000;
-		data[EnemyType::MagmaKing].gold = 600;
-		data[EnemyType::MagmaKing].experiencePoints = 600;
+		data[EnemyType::MagmaKing].gold = 800;
+		data[EnemyType::MagmaKing].experiencePoints = 500;
 
 		data[EnemyType::MagmaScorpion].texture = TextureID::MountainLevel;
 		data[EnemyType::MagmaScorpion].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("MagmaScorpionWalkUpRight"));
@@ -1142,8 +1304,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::MagmaScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MagmaScorpionWalkUpLeft"));
 		data[EnemyType::MagmaScorpion].speed = 0.8f;
 		data[EnemyType::MagmaScorpion].healthPoints = 600;
-		data[EnemyType::MagmaScorpion].gold = 60;
-		data[EnemyType::MagmaScorpion].experiencePoints = 60;
+		data[EnemyType::MagmaScorpion].gold = 70;
+		data[EnemyType::MagmaScorpion].experiencePoints = 50;
 
 		data[EnemyType::Medusa].texture = TextureID::MountainLevel;
 		data[EnemyType::Medusa].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("MedusaWalkUpRight"));
@@ -1152,8 +1314,8 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::Medusa].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MedusaWalkUpLeft"));
 		data[EnemyType::Medusa].speed = 0.4f;
 		data[EnemyType::Medusa].healthPoints = 60;
-		data[EnemyType::Medusa].gold = 6;
-		data[EnemyType::Medusa].experiencePoints = 6;
+		data[EnemyType::Medusa].gold = 8;
+		data[EnemyType::Medusa].experiencePoints = 5;
 
 		data[EnemyType::MountainGiant].texture = TextureID::MountainLevel;
 		data[EnemyType::MountainGiant].animations[Direction::UpRight].addFrameSet(frames.getFramesFor("MountainGiantWalkUpRight"));
@@ -1162,7 +1324,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::MountainGiant].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("MountainGiantWalkUpLeft"));
 		data[EnemyType::MountainGiant].speed = 0.7f;
 		data[EnemyType::MountainGiant].healthPoints = 300;
-		data[EnemyType::MountainGiant].gold = 30;
+		data[EnemyType::MountainGiant].gold = 35;
 		data[EnemyType::MountainGiant].experiencePoints = 30;
 
 		data[EnemyType::RockScorpion].texture = TextureID::MountainLevel;
@@ -1172,7 +1334,7 @@ std::map<EnemyType, EnemyData> initializeEnemyData()
 		data[EnemyType::RockScorpion].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("RockScorpionWalkUpLeft"));
 		data[EnemyType::RockScorpion].speed = 0.6f;
 		data[EnemyType::RockScorpion].healthPoints = 35;
-		data[EnemyType::RockScorpion].gold = 4;
+		data[EnemyType::RockScorpion].gold = 6;
 		data[EnemyType::RockScorpion].experiencePoints = 4;
 
 		json j(data);
