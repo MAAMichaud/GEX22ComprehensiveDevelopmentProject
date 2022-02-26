@@ -29,7 +29,7 @@
 class Animation2
 {
 public:
-	explicit 					Animation2(bool repeat = true);
+	explicit 					Animation2(bool repeat = true, sf::Time duration = sf::seconds(1.0f));
 
 	void						addFrame(Frame frame);
 	void						addFrameSet(std::vector<Frame> frames);

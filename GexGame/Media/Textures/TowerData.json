@@ -901,9 +901,12 @@
         ]
       ],
       "attackEffect": 0,
+      "cooldown": 1.0,
+      "damage": 15.0,
       "experienceToNextLevel": 10,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -1808,9 +1811,12 @@
         ]
       ],
       "attackEffect": 0,
+      "cooldown": 0.30000001192092896,
+      "damage": 30.0,
       "experienceToNextLevel": 20,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -2715,9 +2721,12 @@
         ]
       ],
       "attackEffect": 0,
+      "cooldown": 0.30000001192092896,
+      "damage": 60.0,
       "experienceToNextLevel": 40,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -3517,9 +3526,12 @@
         ]
       ],
       "attackEffect": 0,
-      "experienceToNextLevel": 80,
+      "cooldown": 0.30000001192092896,
+      "damage": 100.0,
+      "experienceToNextLevel": 0,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -4424,9 +4436,12 @@
         ]
       ],
       "attackEffect": 3,
+      "cooldown": 1.0,
+      "damage": 30.0,
       "experienceToNextLevel": 20,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -5331,9 +5346,12 @@
         ]
       ],
       "attackEffect": 3,
+      "cooldown": 1.0,
+      "damage": 60.0,
       "experienceToNextLevel": 40,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -6237,10 +6255,13 @@
           }
         ]
       ],
-      "attackEffect": 3,
-      "experienceToNextLevel": 80,
+      "attackEffect": 4,
+      "cooldown": 1.0,
+      "damage": 100.0,
+      "experienceToNextLevel": 0,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -7145,9 +7166,12 @@
         ]
       ],
       "attackEffect": 5,
+      "cooldown": 1.0,
+      "damage": 45.0,
       "experienceToNextLevel": 20,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -8052,9 +8076,12 @@
         ]
       ],
       "attackEffect": 5,
+      "cooldown": 1.0,
+      "damage": 90.0,
       "experienceToNextLevel": 40,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -8959,9 +8986,12 @@
         ]
       ],
       "attackEffect": 5,
-      "experienceToNextLevel": 80,
+      "cooldown": 1.0,
+      "damage": 180.0,
+      "experienceToNextLevel": 0,
       "projectileType": 0,
-      "range": 1
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -9865,10 +9895,13 @@
           }
         ]
       ],
-      "attackEffect": 6,
+      "attackEffect": 0,
+      "cooldown": 2.0,
+      "damage": 10.0,
       "experienceToNextLevel": 10,
       "projectileType": 1,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -10773,9 +10806,12 @@
         ]
       ],
       "attackEffect": 1,
+      "cooldown": 2.0,
+      "damage": 20.0,
       "experienceToNextLevel": 20,
       "projectileType": 2,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -11680,9 +11716,12 @@
         ]
       ],
       "attackEffect": 1,
+      "cooldown": 2.0,
+      "damage": 40.0,
       "experienceToNextLevel": 40,
       "projectileType": 2,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -12587,9 +12626,12 @@
         ]
       ],
       "attackEffect": 2,
-      "experienceToNextLevel": 80,
+      "cooldown": 2.0,
+      "damage": 80.0,
+      "experienceToNextLevel": 0,
       "projectileType": 2,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -13494,9 +13536,12 @@
         ]
       ],
       "attackEffect": 3,
+      "cooldown": 2.0,
+      "damage": 20.0,
       "experienceToNextLevel": 20,
       "projectileType": 3,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -14401,9 +14446,12 @@
         ]
       ],
       "attackEffect": 3,
+      "cooldown": 2.0,
+      "damage": 40.0,
       "experienceToNextLevel": 40,
       "projectileType": 3,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -15308,9 +15356,12 @@
         ]
       ],
       "attackEffect": 4,
-      "experienceToNextLevel": 80,
+      "cooldown": 2.0,
+      "damage": 80.0,
+      "experienceToNextLevel": 0,
       "projectileType": 3,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -16215,9 +16266,12 @@
         ]
       ],
       "attackEffect": 0,
+      "cooldown": 2.0,
+      "damage": 20.0,
       "experienceToNextLevel": 20,
       "projectileType": 4,
-      "range": 3
+      "range": 3,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -17122,9 +17176,12 @@
         ]
       ],
       "attackEffect": 0,
+      "cooldown": 2.0,
+      "damage": 40.0,
       "experienceToNextLevel": 40,
       "projectileType": 4,
-      "range": 3
+      "range": 3,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -18029,9 +18086,12 @@
         ]
       ],
       "attackEffect": 5,
-      "experienceToNextLevel": 80,
+      "cooldown": 2.0,
+      "damage": 80.0,
+      "experienceToNextLevel": 0,
       "projectileType": 4,
-      "range": 3
+      "range": 3,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -18936,9 +18996,12 @@
         ]
       ],
       "attackEffect": 6,
+      "cooldown": 2.0,
+      "damage": 20.0,
       "experienceToNextLevel": 20,
       "projectileType": 5,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -19843,9 +19906,12 @@
         ]
       ],
       "attackEffect": 7,
+      "cooldown": 2.0,
+      "damage": 40.0,
       "experienceToNextLevel": 40,
       "projectileType": 5,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -20750,9 +20816,12 @@
         ]
       ],
       "attackEffect": 8,
-      "experienceToNextLevel": 80,
+      "cooldown": 2.0,
+      "damage": 80.0,
+      "experienceToNextLevel": 0,
       "projectileType": 5,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -21657,9 +21726,12 @@
         ]
       ],
       "attackEffect": 1,
+      "cooldown": 0.30000001192092896,
+      "damage": 80.0,
       "experienceToNextLevel": 60,
       "projectileType": 2,
-      "range": 2
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -22564,9 +22636,12 @@
         ]
       ],
       "attackEffect": 1,
-      "experienceToNextLevel": 100,
-      "projectileType": 0,
-      "range": 1
+      "cooldown": 0.30000001192092896,
+      "damage": 140.0,
+      "experienceToNextLevel": 0,
+      "projectileType": 2,
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -23471,9 +23546,12 @@
         ]
       ],
       "attackEffect": 4,
+      "cooldown": 1.0,
+      "damage": 80.0,
       "experienceToNextLevel": 60,
       "projectileType": 3,
-      "range": 2
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -24378,9 +24456,12 @@
         ]
       ],
       "attackEffect": 4,
-      "experienceToNextLevel": 100,
-      "projectileType": 0,
-      "range": 1
+      "cooldown": 1.0,
+      "damage": 140.0,
+      "experienceToNextLevel": 0,
+      "projectileType": 3,
+      "range": 1,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -25285,9 +25366,12 @@
         ]
       ],
       "attackEffect": 5,
+      "cooldown": 1.0,
+      "damage": 100.0,
       "experienceToNextLevel": 60,
       "projectileType": 4,
-      "range": 3
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ],
   [
@@ -26192,9 +26276,12 @@
         ]
       ],
       "attackEffect": 5,
-      "experienceToNextLevel": 100,
+      "cooldown": 1.0,
+      "damage": 160.0,
+      "experienceToNextLevel": 0,
       "projectileType": 4,
-      "range": 2
+      "range": 2,
+      "swingSpeed": 1.0
     }
   ]
 ]

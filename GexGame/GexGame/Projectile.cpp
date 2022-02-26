@@ -45,7 +45,7 @@ Projectile::Projectile(const TextureHolder_t& textures, ProjectileType projectil
 		break;
 
 	default:
-		sprite.setTextureRect(sf::IntRect(22 * 0, 0, 22, 30));
+		sprite.setTextureRect(sf::IntRect(0, 0, 0, 0));
 		break;
 
 	}

@@ -28,16 +28,15 @@ Tower::Tower(const TextureHolder_t& textures, TowerType _towerType, TowerData to
 	, towerType(_towerType)
 	, animations()
 	, direction(Direction::Down)
-	, timeRemaining(sf::seconds(1.0f))
-	, cooldownDuration(sf::seconds(2.5f))
+	, swingSpeed(sf::seconds(towerData.swingSpeed))
+	, cooldownDuration(sf::seconds(towerData.swingSpeed + towerData.cooldown))
 	, cooldownRemaining(sf::Time::Zero)
 	, experiencePoints(0)
 	, range(towerData.range)
-	, rangeSprite()
 	, levelupSprite(textures.get(TextureID::OnebyOne))
 	, tile(_tile)
 	, projectileType(towerData.projectileType)
-	, damage(4)
+	, damage(towerData.damage)
 	, attackEffect(towerData.attackEffect)
 	, experienceToNextLevel(towerData.experienceToNextLevel)
 {
@@ -94,7 +93,7 @@ void Tower::attack(Enemy* target)
 
 		faceEnemy(target);
 
-		target->registerAttack(sf::seconds(0.8f), this);
+		target->registerAttack(getProjectileSpeed(), this);
 
 		fireProjectile(target);
 	}
@@ -137,7 +136,7 @@ double Tower::getAttackDamage() const
 
 sf::Time Tower::getProjectileSpeed() const
 {
-	return sf::seconds(0.8f);
+	return sf::seconds(swingSpeed.asSeconds() * 0.8f);
 }
 
 
@@ -152,7 +151,7 @@ void Tower::gainExperience(std::size_t amount)
 
 bool Tower::isLevelingUp() const
 {
-	return experiencePoints >= experienceToNextLevel;
+	return experienceToNextLevel && experiencePoints >= experienceToNextLevel;
 }
 
 
@@ -166,6 +165,9 @@ void Tower::levelUp(TowerType _towerType, TowerData towerData)
 	experienceToNextLevel = towerData.experienceToNextLevel;
 	projectileType = towerData.projectileType;
 	attackEffect = towerData.attackEffect;
+	swingSpeed = sf::seconds(towerData.swingSpeed);
+	cooldownDuration = sf::seconds(towerData.swingSpeed + towerData.cooldown);
+	damage = towerData.damage;
 
 	for (auto a : towerData.animations)
 	{
@@ -215,11 +217,11 @@ void Tower::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
-	if (cooldownRemaining > cooldownDuration - sf::seconds(1.0f))
+	if (cooldownRemaining > cooldownDuration - swingSpeed)
 	{
 		auto frame{ animations.at(direction).update(dt) };
 
-		if (cooldownRemaining - dt <= cooldownDuration - sf::seconds(1.0f))
+		if (cooldownRemaining - dt <= cooldownDuration - swingSpeed)
 		{
 			for (auto& animation : animations)
 			{

@@ -16,11 +16,11 @@
 
 
 
-Animation2::Animation2(bool repeat)
+Animation2::Animation2(bool _repeat, sf::Time _duration)
 	: currentFrame(0)
-	, duration(sf::seconds(1.0f))
+	, duration(_duration)
 	, elapsedTime(sf::Time::Zero)
-	, repeat(repeat)
+	, repeat(_repeat)
 {
 }
 

@@ -57,12 +57,11 @@ private:
 	TowerType						towerType;
 	std::map<Direction, Animation2>	animations;
 	Direction						direction;
-	sf::Time						timeRemaining;
+	sf::Time						swingSpeed;
 	sf::Time						cooldownDuration;
 	sf::Time						cooldownRemaining;
 	std::size_t						experiencePoints;
 	std::size_t						range;
-	sf::Sprite						rangeSprite;
 	sf::Sprite						levelupSprite;
 	std::pair<int, int>				tile;
 	ProjectileType					projectileType;

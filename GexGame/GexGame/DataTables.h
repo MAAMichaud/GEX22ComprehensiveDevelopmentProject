@@ -65,11 +65,58 @@ enum class AttackEffect
 
 enum class EnemyType
 {
-	AxeGrandmaster,
-	Lich,
-	Zombie,
-	Skeleton,
+	DireWolf,
+	ForestScorpion,
+	GiantScorpion,
+	GreyWolf,
+	Ogre,
+	OrcBoss,
+	OrcLumberjack,
+	OrcScout,
+	OrcSoldier,
+	OrcWarrior,
+	TimberWolf,
 	AncientZombie,
+	DireGhostWolf,
+	DireZombieDog,
+	GhostDog,
+	GhostWolf,
+	LichKing,
+	LichLord,
+	Lich,
+	Skeleton,
+	ZombieDog,
+	Zombie,
+	AncientDrowned,
+	DeepSeaScorpion,
+	DrownedBones,
+	DrownedLich,
+	Drowned,
+	FishmanElite,
+	Fishman,
+	GhostPirateCaptain,
+	GhostPirate,
+	OrcPirateCaptain,
+	OrcPirate,
+	SeaDog,
+	SeaScorpion,
+	ZombiePirate,
+	AncientMedusa,
+	CharredBones,
+	Charred,
+	FireGiant,
+	FireLich,
+	FireMedusa,
+	FireScorpion,
+	HellHound,
+	HobgoblinHeavyInfantry,
+	HobgoblinScout,
+	HobgoblinWarrior,
+	MagmaKing,
+	MagmaScorpion,
+	Medusa,
+	MountainGiant,
+	RockScorpion,
 };
 
 
@@ -126,9 +173,17 @@ enum class Direction
 
 struct EnemyData
 {
+	EnemyData(float speed = 0.5f,
+		double healthPoints = 1.0,
+		std::size_t gold = 1,
+		std::size_t experiencePoints = 1);
+
 	TextureID										texture;
 	std::map<Direction, Animation2>					animations;
-	sf::Time										speed;
+	float											speed;
+	double											healthPoints;
+	std::size_t										gold;
+	std::size_t										experiencePoints;
 
 };
 
@@ -136,18 +191,25 @@ struct EnemyData
 
 struct TowerData
 {
-	TowerData(std::size_t range = 1, 
+	TowerData(std::size_t range = 1,
+		float swingSpeed = 1.0f,
+		float cooldown = 1.5f,
 		ProjectileType projectileType = ProjectileType::None, 
+		double damage = 1,
 		AttackEffect attackEffect = AttackEffect::None, 
 		std::size_t experienceToNextLevel = 10);
 
 	std::map<Direction, Animation2>					animations;
+	float											swingSpeed;
+	float											cooldown;
 	std::size_t										range;
 	ProjectileType									projectileType;
+	double											damage;
 	AttackEffect									attackEffect;
 	std::size_t										experienceToNextLevel;
 
 };
+
 
 
 struct WaveData
