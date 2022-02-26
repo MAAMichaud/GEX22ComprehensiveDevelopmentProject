@@ -20,6 +20,7 @@
 #include "SoundPlayer.h"
 #include "SpriteNode.h"
 #include "Tower.h"
+#include "UpgradeController.h"
 #include "utility.h"
 #include "World.h"
 
@@ -67,6 +68,8 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, fiveByfive()
 	, sevenByseven()
 	, rangeSprite(nullptr)
+	, upgradeController(nullptr)
+	, upgradingTower(nullptr)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -137,6 +140,7 @@ void World::draw()
 			sceneTexture.draw(*rangeSprite);
 		}
 		sceneTexture.draw(*sceneLayers[LowerAir]);
+		sceneTexture.draw(*sceneLayers[UpperAir]);
 		sceneTexture.draw(towerIcon);
 		sceneTexture.display();
 		bloomEffect.apply(sceneTexture, target);
@@ -151,6 +155,7 @@ void World::draw()
 			target.draw(*rangeSprite);
 		}
 		target.draw(*sceneLayers[LowerAir]);
+		sceneTexture.draw(*sceneLayers[UpperAir]);
 		target.draw(towerIcon);
 	}
 }
@@ -180,13 +185,30 @@ void World::boardClicked()
 {
 	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
 
+	if (state == State::UpgradeTower)
+	{
+		const auto upgradeType{ upgradeController->processClick(pixelX, pixelY) };
+		if (upgradingTower && upgradeType != TowerType::None)
+		{
+			upgradingTower->levelUp(upgradeType, TOWER_DATA.at(upgradeType));
+			upgradingTower = nullptr;
+			state = State::Idle;
+			upgradeController->hide();
+		}
+		return;
+	}
+
 	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
 
 	Tower* clickedTower{ getCursorTower(std::pair<int, int>(tileX, tileY)) };
 	if (clickedTower && clickedTower->isLevelingUp())
 	{
-		auto type{ LEVEL_UP_DATA.at(clickedTower->getType()) };
-		clickedTower->levelUp(type, TOWER_DATA.at(type));
+		state = State::UpgradeTower;
+		upgradeController->show(clickedTower->getType());
+		upgradingTower = clickedTower;
+		return;
+		//auto type{ LEVEL_UP_DATA.at(clickedTower->getType()) };
+		//clickedTower->levelUp(type, TOWER_DATA.at(type));
 	}
 
 	if (state == State::Idle)
@@ -244,6 +266,7 @@ void World::selectTower(State newState)
 void World::cancel()
 {
 	towerIcon.setTextureRect(sf::IntRect());
+	upgradeController->hide();
 	state = State::Idle;
 }
 
@@ -317,6 +340,11 @@ void World::buildScene()
 	bankNode->setPosition(100, 570);
 	bank = bankNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(bankNode));
+
+	auto upgradeNode{ std::make_unique<UpgradeController>(textures, bank) };
+	upgradeNode->setPosition(400, 200);
+	upgradeController = upgradeNode.get();
+	sceneLayers[UpperAir]->attachChild(std::move(upgradeNode));
 }
 
 
@@ -418,7 +446,7 @@ void World::handleMouseOverlay()
 
 				placeSpriteAtTile(*tileOverlay, tileX, tileY);
 			}
-			else
+			else if (state != World::State::UpgradeTower)
 			{
 				towerIcon.setColor(sf::Color(255, 255, 255, 200));
 

@@ -123,6 +123,9 @@
     <ClCompile Include="Bank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UpgradeController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility.h">
@@ -246,6 +249,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Bank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpgradeController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

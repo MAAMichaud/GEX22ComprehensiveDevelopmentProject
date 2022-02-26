@@ -41,6 +41,7 @@ class SoundPlayer;
 class Tower;
 class Projectile;
 class Bank;
+class UpgradeController;
 
 
 
@@ -55,6 +56,7 @@ public:
 		BuildFire,
 		BuildEnergy,
 		Idle,
+		UpgradeTower,
 	};
 
 public:
@@ -109,7 +111,6 @@ private:
 	CommandQueue						commands;
 
 	sf::FloatRect						worldBounds;
-
 	sf::Vector2f						spawnPosition;
 
 	BloomEffect							bloomEffect;
@@ -130,5 +131,7 @@ private:
 	sf::Sprite							fiveByfive;
 	sf::Sprite							sevenByseven;
 	sf::Sprite*							rangeSprite;
+	UpgradeController*					upgradeController;
+	Tower*								upgradingTower;
 
 };

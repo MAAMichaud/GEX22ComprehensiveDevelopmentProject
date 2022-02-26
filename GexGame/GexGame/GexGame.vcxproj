@@ -183,6 +183,7 @@
     <ClCompile Include="TextNode.cpp" />
     <ClCompile Include="TitleState.cpp" />
     <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="UpgradeController.cpp" />
     <ClCompile Include="utility.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
@@ -226,6 +227,7 @@
     <ClInclude Include="TextNode.h" />
     <ClInclude Include="TitleState.h" />
     <ClInclude Include="Tower.h" />
+    <ClInclude Include="UpgradeController.h" />
     <ClInclude Include="utility.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
