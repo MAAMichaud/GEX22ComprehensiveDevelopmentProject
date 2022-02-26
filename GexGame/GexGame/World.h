@@ -42,6 +42,7 @@ class Tower;
 class Projectile;
 class Bank;
 class UpgradeController;
+class LifeCounter;
 
 
 
@@ -73,6 +74,7 @@ public:
 	void								selectTower(State newState);
 	void								cancel();
 	void								addGold(std::size_t amount);
+	void								loseLife();
 
 private:
 	void								loadTextures();
@@ -133,5 +135,6 @@ private:
 	sf::Sprite*							rangeSprite;
 	UpgradeController*					upgradeController;
 	Tower*								upgradingTower;
+	LifeCounter*						lifeCounter;
 
 };

@@ -141,6 +141,13 @@ void LaneController::addGold(std::size_t amount)
 
 
 
+void LaneController::loseLife()
+{
+	world.loseLife();
+}
+
+
+
 void LaneController::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
 	if (enemyCount > 0)

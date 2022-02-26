@@ -14,6 +14,7 @@
 #include "Command.h"
 #include "Enemy.h"
 #include "LaneController.h"
+#include "LifeCounter.h"
 #include "particleNode.h"
 #include "Projectile.h"
 #include "SoundNode.h"
@@ -70,6 +71,7 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, rangeSprite(nullptr)
 	, upgradeController(nullptr)
 	, upgradingTower(nullptr)
+	, lifeCounter(nullptr)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -279,6 +281,13 @@ void World::addGold(std::size_t amount)
 
 
 
+void World::loseLife()
+{
+	lifeCounter->loseLife();
+}
+
+
+
 void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
@@ -345,6 +354,11 @@ void World::buildScene()
 	upgradeNode->setPosition(400, 200);
 	upgradeController = upgradeNode.get();
 	sceneLayers[UpperAir]->attachChild(std::move(upgradeNode));
+
+	auto lifeNode{ std::make_unique<LifeCounter>(fonts) };
+	lifeNode->setPosition(100, 660);
+	lifeCounter = lifeNode.get();
+	sceneLayers[LowerAir]->attachChild(std::move(lifeNode));
 }
 
 

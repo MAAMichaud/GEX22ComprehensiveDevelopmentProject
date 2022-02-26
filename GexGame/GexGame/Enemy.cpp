@@ -50,6 +50,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, lastAttacker(nullptr)
 	, gold(10)
 	, experiencePoints(20)
+	, reachedEnd(false)
 {
 	for (auto a : enemyData.animations)
 	{
@@ -250,6 +251,11 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 		turn(route.at(routeIndex % route.size()));
 		routeIndex += 1;
 
+		if (!reachedEnd && routeIndex >= route.size())
+		{
+			reachedEnd = true;
+			controller.loseLife();
+		}
 	}
 
 	timeRemaining -= dt;

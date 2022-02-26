@@ -22,17 +22,16 @@ class TextNode;
 
 
 
-class Bank : public SceneNode
+class LifeCounter : public SceneNode
 {
 public:
-								Bank(const FontHolder_t& fonts, std::size_t balance = 50);
+								LifeCounter(const FontHolder_t& fonts, int initialLives = 60);
 
-	std::size_t					withdraw(std::size_t amount);
-	void						deposit(std::size_t amount);
-	std::size_t					getBalance();
+	void						loseLife();
+	bool						hasLivesRemaining();
 
 private:
-	TextNode*					goldDisplay;
-	std::size_t					balance;
+	TextNode*					lifeDisplay;
+	int							lifeCount;
 
 };

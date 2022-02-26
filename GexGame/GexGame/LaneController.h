@@ -38,6 +38,7 @@ public:
 	Enemy*					getFurthestEnemy(const std::pair<int, int> tile, const std::size_t range) const;
 	void					areaAttack(Enemy* enemy, Tower* tower, float range);
 	void					addGold(std::size_t amount);
+	void					loseLife();
 
 private:
 	void					spawnEnemy();
