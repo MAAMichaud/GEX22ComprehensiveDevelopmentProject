@@ -25,7 +25,7 @@ class TextNode;
 class Bank : public SceneNode
 {
 public:
-								Bank(const FontHolder_t& fonts, std::size_t balance = 50);
+								Bank(const FontHolder_t& fonts, std::size_t balance = 80);
 
 	std::size_t					withdraw(std::size_t amount);
 	void						deposit(std::size_t amount);

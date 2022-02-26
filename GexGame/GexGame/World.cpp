@@ -15,6 +15,7 @@
 #include "Enemy.h"
 #include "LaneController.h"
 #include "LifeCounter.h"
+#include "NextWaveIcon.h"
 #include "particleNode.h"
 #include "Projectile.h"
 #include "SoundNode.h"
@@ -72,11 +73,14 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, upgradeController(nullptr)
 	, upgradingTower(nullptr)
 	, lifeCounter(nullptr)
+	, nextWaveIcon(nullptr)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
 	loadTextures();
 	buildScene();
+
+	nextWaveIcon->show(LEVEL_DATA.at(levelType).waves.at(waveIndex).enemyData);
 
 	worldView.setCenter(spawnPosition);
 
@@ -117,6 +121,11 @@ void World::update(sf::Time dt)
 
 	handleMouseOverlay();
 	updateSounds();
+
+	if (nextWaveIcon->isHidden() && laneController->wavePending() && waveIndex < LEVEL_DATA.at(levelType).waves.size())
+	{
+		nextWaveIcon->show(LEVEL_DATA.at(levelType).waves.at(waveIndex).enemyData);
+	}
 }
 
 
@@ -175,6 +184,8 @@ void World::startWave()
 {
 	if (laneController->wavePending() && waveIndex < LEVEL_DATA.at(levelType).waves.size())
 	{
+		nextWaveIcon->hide();
+
 		laneController->loadWave(LEVEL_DATA.at(levelType).waves.at(waveIndex));
 
 		waveIndex += 1;
@@ -359,6 +370,11 @@ void World::buildScene()
 	lifeNode->setPosition(100, 660);
 	lifeCounter = lifeNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(lifeNode));
+
+	auto nextNode{ std::make_unique<NextWaveIcon>(textures) };
+	nextNode->setPosition(100, 750);
+	nextWaveIcon = nextNode.get();
+	sceneLayers[LowerAir]->attachChild(std::move(nextNode));
 }
 
 
@@ -611,4 +627,10 @@ Tower* World::getCursorTower(std::pair<int, int> tile)
 	}
 
 	return cursorTower;
+}
+
+
+
+void World::processWaveIcon()
+{
 }

@@ -43,6 +43,7 @@ class Projectile;
 class Bank;
 class UpgradeController;
 class LifeCounter;
+class NextWaveIcon;
 
 
 
@@ -90,6 +91,7 @@ private:
 
 	void                                placeTower();
 	Tower*                              getCursorTower(std::pair<int, int> tile);
+	void								processWaveIcon();
 
 private:
 	enum Layer
@@ -136,5 +138,6 @@ private:
 	UpgradeController*					upgradeController;
 	Tower*								upgradingTower;
 	LifeCounter*						lifeCounter;
+	NextWaveIcon*						nextWaveIcon;
 
 };

@@ -25,7 +25,7 @@ class TextNode;
 class LifeCounter : public SceneNode
 {
 public:
-								LifeCounter(const FontHolder_t& fonts, int initialLives = 60);
+								LifeCounter(const FontHolder_t& fonts, int initialLives = 50);
 
 	void						loseLife();
 	bool						hasLivesRemaining();
