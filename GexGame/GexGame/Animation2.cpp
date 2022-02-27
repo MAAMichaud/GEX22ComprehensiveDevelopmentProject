@@ -91,6 +91,11 @@ Frame Animation2::getCurrentFrame() const
 
 Frame Animation2::update(sf::Time dt)
 {
+	if (frames.size() <= 0)
+	{
+		return Frame();
+	}
+
 	sf::Time timePerFrame = duration / static_cast<float>(frames.size());
 	elapsedTime += dt;
 

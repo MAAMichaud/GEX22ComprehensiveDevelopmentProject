@@ -154,7 +154,7 @@ void Enemy::damage(double damage)
 
 void Enemy::damage(double damage, Tower* tower)
 {
-	lastAttacker = tower;
+	lastAttacker = tower->canUseExperience() ? tower : lastAttacker;
 	this->damage(damage);
 }
 
@@ -326,7 +326,7 @@ sf::Time Enemy::processAilments(sf::Time dt)
 
 	if (deepFreezeTime > sf::Time::Zero)
 	{
-		dt = sf::seconds(dt.asSeconds() / 4);
+		dt = sf::seconds(dt.asSeconds() / 3);
 		auto color = sprite.getColor();
 		color.r -= 100;
 		color.g -= 100;

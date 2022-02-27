@@ -42,6 +42,7 @@ public:
 	sf::Time						getProjectileSpeed() const;
 	void							gainExperience(std::size_t amount);
 	bool							isLevelingUp() const;
+	bool							canUseExperience() const;
 	void							levelUp(TowerType towerType, TowerData towerData);
 	TowerType						getType() const;
 

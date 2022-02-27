@@ -156,6 +156,13 @@ bool Tower::isLevelingUp() const
 
 
 
+bool Tower::canUseExperience() const
+{
+	return experienceToNextLevel;
+}
+
+
+
 void Tower::levelUp(TowerType _towerType, TowerData towerData)
 {
 	std::cout << "level up!!" << std::endl;
@@ -168,6 +175,7 @@ void Tower::levelUp(TowerType _towerType, TowerData towerData)
 	swingSpeed = sf::seconds(towerData.swingSpeed);
 	cooldownDuration = sf::seconds(towerData.swingSpeed + towerData.cooldown);
 	damage = towerData.damage;
+	range = towerData.range;
 
 	for (auto a : towerData.animations)
 	{
