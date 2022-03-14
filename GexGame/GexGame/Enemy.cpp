@@ -40,6 +40,7 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 	, attackTimings()
 	, textures(_textures)
 	, projectileHolder(nullptr)
+	, healthBar(nullptr)
 	, freezeTime(sf::Time::Zero)
 	, deepFreezeTime(sf::Time::Zero)
 	, stunTime(sf::Time::Zero)
@@ -73,7 +74,7 @@ sf::Vector2i Enemy::getTile() const
 	}
 	const auto [pixelX,  pixelY] { getWorldPosition() };
 
-	const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
+	const auto [thisTileX, thisTileY] { pixelXYToTileXY(static_cast<int>(pixelX) + 36, static_cast<int>(pixelY) + 72) };
 
 	return sf::Vector2i(thisTileX, thisTileY);
 }
@@ -252,7 +253,7 @@ void Enemy::updateCurrent(sf::Time dt, CommandQueue& commands)
 	{
 		sprite.setRotation(frame.isRotated ? 90.f : 0.f);
 	}
-	sprite.setPosition(frame.offset.first, frame.offset.second);
+	sprite.setPosition(static_cast<float>(frame.offset.first), static_cast<float>(frame.offset.second));
 
 
 	while (dt > timeRemaining)
@@ -313,7 +314,7 @@ sf::Time Enemy::processAilments(sf::Time dt)
 		color.r -= 100;
 		color.b -= 100;
 		sprite.setColor(color);
-		damage(4.f * dt.asSeconds());
+		damage(static_cast<double>(4.f) * dt.asSeconds());
 	}
 	else if (greatPoisonTime > sf::Time::Zero)
 	{
@@ -321,7 +322,7 @@ sf::Time Enemy::processAilments(sf::Time dt)
 		color.r -= 75;
 		color.b -= 75;
 		sprite.setColor(color);
-		damage(2.f * dt.asSeconds());
+		damage(static_cast<double>(2.f) * dt.asSeconds());
 	}
 	else if (poisonTime > sf::Time::Zero)
 	{

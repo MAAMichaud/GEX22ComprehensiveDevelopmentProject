@@ -54,9 +54,9 @@ int calculateXTile(const sf::Vector2i v)
 	static const int tileHeight{ 48 };
 	static const int xTriangleTotalHeight{ 888 };
 	static const int xTriangleExcess{ 504 - 158 };
-	const double xTriangleHeight{ xTriangleTangent * (v.x + xTriangleExcess) };
+	const double xTriangleHeight{ xTriangleTangent * (static_cast<double>(v.x) + xTriangleExcess) };
 
-	return (v.y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight;
+	return static_cast<int>((v.y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight);
 }
 
 
@@ -75,9 +75,9 @@ int calculateYTile(const sf::Vector2i v)
 	static const int tileWidth{ 72 };
 	static const int yTriangleOffset{ 72 };
 	static const int yTriangleExcess{ 408 + 106 };
-	const double yTriangleWidth{ yTriangleTangent * (v.y + yTriangleExcess) };
+	const double yTriangleWidth{ yTriangleTangent * (static_cast<double>(v.y) + yTriangleExcess) };
 
-	return (yTriangleWidth + yTriangleOffset - v.x) / tileWidth;
+	return static_cast<int>((yTriangleWidth + yTriangleOffset - v.x) / tileWidth);
 }
 
 
