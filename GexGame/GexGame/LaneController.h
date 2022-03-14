@@ -29,20 +29,22 @@ class World;
 class LaneController : public SceneNode
 {
 public:
-	explicit				LaneController(const TextureHolder_t& textures, std::vector<LaneData> data, World& world);
+	explicit									LaneController(const TextureHolder_t& textures, std::vector<LaneData> data, World& world);
 
-	bool					wavePending() const;
-	void					loadWave(WaveData waveData);
-	std::vector<Enemy*>		getEnemiesAt(const int tileX, const int tileY) const;
-	std::vector<Enemy*>		getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const;
-	Enemy*					getFurthestEnemy(const std::pair<int, int> tile, const std::size_t range) const;
-	void					areaAttack(Enemy* enemy, Tower* tower, float range);
-	void					addGold(std::size_t amount);
-	void					loseLife();
+	bool										wavePending() const;
+	void										loadWave(WaveData waveData);
+	std::vector<Enemy*>							getEnemiesAt(const sf::Vector2i tile) const;
+	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY) const;
+	std::vector<Enemy*>							getEnemiesAt(const sf::Vector2i tile, const std::size_t range) const;
+	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY, const std::size_t range) const;
+	Enemy*										getFurthestEnemy(const sf::Vector2i tile, const std::size_t range) const;
+	void										areaAttack(Enemy* enemy, Tower* tower, float range);
+	void										addGold(std::size_t amount);
+	void										loseLife();
 
 private:
-	void					spawnEnemy();
-	virtual void			updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	void										spawnEnemy();
+	virtual void								updateCurrent(sf::Time dt, CommandQueue& commands) override;
 
 private:
 	std::size_t									enemyCount;

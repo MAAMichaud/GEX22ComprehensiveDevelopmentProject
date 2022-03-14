@@ -28,7 +28,7 @@ Bank::Bank(const FontHolder_t& fonts, std::size_t _balance)
 
 
 
-std::size_t Bank::withdraw(std::size_t amount)
+std::size_t Bank::withdraw(const std::size_t amount)
 {
 	if (amount <= balance)
 	{
@@ -44,7 +44,7 @@ std::size_t Bank::withdraw(std::size_t amount)
 
 
 
-void Bank::deposit(std::size_t amount)
+void Bank::deposit(const std::size_t amount)
 {
 	balance += amount;
 	goldDisplay->setString(std::to_string(balance));
@@ -52,7 +52,7 @@ void Bank::deposit(std::size_t amount)
 
 
 
-std::size_t Bank::getBalance()
+std::size_t Bank::getBalance() const
 {
 	return balance;
 }

@@ -25,11 +25,11 @@ class TextNode;
 class Bank : public SceneNode
 {
 public:
-								Bank(const FontHolder_t& fonts, std::size_t balance = 80);
+								Bank(const FontHolder_t& fonts, const std::size_t balance = 80);
 
-	std::size_t					withdraw(std::size_t amount);
-	void						deposit(std::size_t amount);
-	std::size_t					getBalance();
+	std::size_t					withdraw(const std::size_t amount);
+	void						deposit(const std::size_t amount);
+	std::size_t					getBalance() const;
 
 private:
 	TextNode*					goldDisplay;

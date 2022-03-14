@@ -39,7 +39,7 @@ UpgradeController::UpgradeController(const TextureHolder_t& textures, Bank* _ban
 
 
 
-void UpgradeController::show(TowerType newType)
+void UpgradeController::show(const TowerType newType)
 {
 	currentType = newType;
 	sprite.setTextureRect(textureRects.at(newType));
@@ -56,7 +56,7 @@ void UpgradeController::hide()
 
 
 
-TowerType UpgradeController::processClick(int x, int y) const
+TowerType UpgradeController::processClick(const sf::Vector2i coordinates) const
 {
 	if (bank->getBalance() < upgradePrices.at(currentType))
 	{
@@ -65,14 +65,12 @@ TowerType UpgradeController::processClick(int x, int y) const
 
 	if (currentType == TowerType::Novice)
 	{
-		return processNovice(x, y);
+		return processNovice(coordinates);
 	}
 	else if (currentType == TowerType::ClubWarrior)
 	{
-		return processClub(x, y);
+		return processClub(coordinates);
 	}
-
-	std::cout << "\n--Upgrade Controller--" << std::endl;
 
 	static const float UPGRADE_BUTTON_LEFT{ -40 };
 	static const float UPGRADE_BUTTON_TOP{ 45 };
@@ -80,15 +78,13 @@ TowerType UpgradeController::processClick(int x, int y) const
 	static const float UPGRADE_BUTTON_BOTTOM{ 65 };
 
 	const auto [cX,  cY] { getWorldPosition() };
-
-	std::cout << cX << ", " << cY << ", " << x << ", " << y << std::endl;
+	const auto [x,  y] { coordinates };
 
 	if (x < cX + UPGRADE_BUTTON_RIGHT
 		&& x > cX + UPGRADE_BUTTON_LEFT
 		&& y < cY + UPGRADE_BUTTON_BOTTOM
 		&& y > cY + UPGRADE_BUTTON_TOP)
 	{
-		std::cout << "UPGRADE button pressed" << std::endl;
 		bank->withdraw(upgradePrices.at(currentType));
 		return upgradeTypes.at(currentType);
 	}
@@ -98,7 +94,14 @@ TowerType UpgradeController::processClick(int x, int y) const
 
 
 
-TowerType UpgradeController::processNovice(int x, int y) const
+TowerType UpgradeController::processClick(const int x,const int y) const
+{
+	return processClick( sf::Vector2i(x, y));
+}
+
+
+
+TowerType UpgradeController::processNovice(const sf::Vector2i coordinates) const
 {
 	static const float ICE_BUTTON_LEFT{ -105 };
 	static const float ICE_BUTTON_TOP{ 45 };
@@ -121,7 +124,7 @@ TowerType UpgradeController::processNovice(int x, int y) const
 	static const float POISON_BUTTON_BOTTOM{ 70 };
 
 	const auto [cX,  cY] { getWorldPosition() };
-
+	const auto [x,  y] { coordinates };
 
 	if (x < cX + ICE_BUTTON_RIGHT
 		&& x > cX + ICE_BUTTON_LEFT
@@ -161,7 +164,7 @@ TowerType UpgradeController::processNovice(int x, int y) const
 
 
 
-TowerType UpgradeController::processClub(int x, int y) const
+TowerType UpgradeController::processClub(const sf::Vector2i coordinates) const
 {
 	static const float SWORD_BUTTON_LEFT{ -80 };
 	static const float SWORD_BUTTON_TOP{ 45 };
@@ -178,11 +181,8 @@ TowerType UpgradeController::processClub(int x, int y) const
 	static const float MACE_BUTTON_RIGHT{ 93 };
 	static const float MACE_BUTTON_BOTTOM{ 70 };
 
-	//textureRects[TowerType::ClubWarrior] = sf::IntRect(0, 144 * 1, 195, 143);
-	// 97, 71
-
 	const auto [cX,  cY] { getWorldPosition() };
-
+	const auto [x,  y] { coordinates };
 
 	if (x < cX + SWORD_BUTTON_RIGHT
 		&& x > cX + SWORD_BUTTON_LEFT

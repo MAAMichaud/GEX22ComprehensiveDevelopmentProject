@@ -44,52 +44,54 @@ struct compareAttackTimings{
 class Enemy: public SceneNode
 {
 public:
-									Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route, LaneController& _controller);
-	std::pair<int, int>				getTile() const;
-	bool							isAtTile(const int tileX, const int tileY) const;
-	bool							isAtTiles(const std::pair<int, int> tile, const std::size_t range) const; 
-	double							getProgress() const;
-	void							destroy();
-	void							damage(double damage);
-	void							damage(double damage, Tower* tower);
-	void							registerAttack(sf::Time attackTime, Tower* tower);
-	void							attachProjectile(Tower* tower);
+										Enemy(const TextureHolder_t& textures, EnemyData enemyData, std::vector<Direction>& route, LaneController& _controller);
+	sf::Vector2i						getTile() const;
+	bool								isAtTile(const sf::Vector2i tile) const;
+	bool								isAtTile(const int tileX, const int tileY) const;
+	bool								isAtTiles(const sf::Vector2i tile, const std::size_t range) const; 
+	bool								isAtTiles(const int tileX, const int tileY, const std::size_t range) const; 
+	double								getProgress() const;
+	void								destroy();
+	void								damage(double damage);
+	void								damage(double damage, Tower* tower);
+	void								registerAttack(sf::Time attackTime, Tower* tower);
+	void								attachProjectile(Tower* tower);
 
 private:
-	void							turn(Direction direction);
-	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
-	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
-	virtual bool					isDestroyed() const override;
-	sf::Time						processAilments(sf::Time dt);
-	void							processAttacks();
+	void								turn(Direction direction);
+	virtual void						drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
+	virtual void						updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	virtual bool						isDestroyed() const override;
+	sf::Time							processAilments(sf::Time dt);
+	void								processAttacks();
 
 private:
-	sf::Sprite						sprite;
-	sf::Vector2f					velocity;
-	sf::Vector2f					bearing;
-	std::map<Direction, Animation2>	animations;
-	Direction						direction;
-	const sf::Time					movementSpeed;
-	sf::Time						timeRemaining;
-	std::vector<Direction>&			route;
-	std::size_t						routeIndex;
-	double							healthPoints;
-	double							progress;
-	sf::Clock						clock;
+	sf::Sprite							sprite;
+	sf::Vector2f						velocity;
+	sf::Vector2f						bearing;
+	std::map<Direction, Animation2>		animations;
+	Direction							direction;
+	const sf::Time						movementSpeed;
+	sf::Time							timeRemaining;
+	std::vector<Direction>&				route;
+	std::size_t							routeIndex;
+	double								healthPoints;
+	double								progress;
+	sf::Clock							clock;
 	std::priority_queue<std::pair<sf::Time, Tower*>, std::vector<std::pair<sf::Time, Tower*>>, compareAttackTimings> attackTimings;
-	const TextureHolder_t&			textures;
-	SceneNode*						projectileHolder;
-	HealthBar*						healthBar;
-	sf::Time						freezeTime;
-	sf::Time						deepFreezeTime;
-	sf::Time						stunTime;
-	sf::Time						poisonTime;
-	sf::Time						greatPoisonTime;
-	sf::Time						greaterPoisonTime;
-	LaneController&					controller;
-	Tower*							lastAttacker;
-	std::size_t						gold;
-	std::size_t						experiencePoints;
-	bool							reachedEnd;
+	const TextureHolder_t&				textures;
+	SceneNode*							projectileHolder;
+	HealthBar*							healthBar;
+	sf::Time							freezeTime;
+	sf::Time							deepFreezeTime;
+	sf::Time							stunTime;
+	sf::Time							poisonTime;
+	sf::Time							greatPoisonTime;
+	sf::Time							greaterPoisonTime;
+	LaneController&						controller;
+	Tower*								lastAttacker;
+	std::size_t							gold;
+	std::size_t							experiencePoints;
+	bool								reachedEnd;
 
 };

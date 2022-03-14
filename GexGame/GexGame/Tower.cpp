@@ -23,7 +23,7 @@
 
 
 
-Tower::Tower(const TextureHolder_t& textures, TowerType _towerType, TowerData towerData, std::pair<int, int> _tile)
+Tower::Tower(const TextureHolder_t& textures, TowerType _towerType, TowerData towerData, const sf::Vector2i _tile)
 	: sprite(textures.get(TextureID::Towers))
 	, towerType(_towerType)
 	, animations()
@@ -71,7 +71,7 @@ bool Tower::isAttackPending() const
 
 
 
-std::pair<int, int> Tower::getTile() const
+sf::Vector2i Tower::getTile() const
 {
 	return tile;
 }

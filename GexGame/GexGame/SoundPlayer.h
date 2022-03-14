@@ -28,20 +28,20 @@
 class SoundPlayer
 {
 public:
-					SoundPlayer();
-					~SoundPlayer() = default;
-					SoundPlayer(const SoundPlayer&) = delete;
-					SoundPlayer& operator=(const SoundPlayer&) = delete;
+																SoundPlayer();
+																~SoundPlayer() = default;
+																SoundPlayer(const SoundPlayer&) = delete;
+																SoundPlayer& operator=(const SoundPlayer&) = delete;
 
-	void			play(SoundEffectID effect);
-	void			play(SoundEffectID effect, sf::Vector2f position);
+	void														play(SoundEffectID effect);
+	void														play(SoundEffectID effect, sf::Vector2f position);
 
-	void			removeStoppedSounds();
-	void			setListenerPosition(sf::Vector2f position);
-	sf::Vector2f	getListenerPosition() const;
+	void														removeStoppedSounds();
+	void														setListenerPosition(const sf::Vector2f position);
+	sf::Vector2f												getListenerPosition() const;
 
 private:
-	void			loadBuffer(SoundEffectID id, const std::string path);
+	void														loadBuffer(SoundEffectID id, const std::string path);
 
 private:
 	std::map<SoundEffectID, std::unique_ptr<sf::SoundBuffer>>	soundBuffers;

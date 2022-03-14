@@ -36,49 +36,49 @@ public:
 	using Pair = std::pair<SceneNode*, SceneNode*>;
 
 public:
-							SceneNode(const SceneNode&) = delete; // non-copyable
-							SceneNode(unsigned int _category = Category::None);
+									SceneNode(const SceneNode&) = delete; // non-copyable
+									SceneNode(unsigned int _category = Category::None);
 
-	void					attachChild(Ptr child);
-	Ptr						detatchChild(const SceneNode& node);
+	void							attachChild(Ptr child);
+	Ptr								detatchChild(const SceneNode& node);
 
-	void					update(sf::Time dt, CommandQueue& commands);
+	void							update(sf::Time dt, CommandQueue& commands);
 
-	sf::Vector2f			getWorldPosition() const;
-	sf::Transform			getWorldTransform() const;
+	sf::Vector2f					getWorldPosition() const;
+	sf::Transform					getWorldTransform() const;
 
-	virtual unsigned int	getCategory() const;
-	void					onCommand(const Command& command, sf::Time dt);
+	virtual unsigned int			getCategory() const;
+	void							onCommand(const Command& command, sf::Time dt);
 
-	virtual sf::FloatRect	getBoundingRect() const;
-	void					drawBoundingBox(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual sf::FloatRect			getBoundingRect() const;
+	void							drawBoundingBox(sf::RenderTarget& target, sf::RenderStates states) const;
 
-	void					checkSceneCollision(SceneNode& rootNode, std::set<Pair>& collisionPair);
-	void					checkNodeCollision(SceneNode& root, std::set<Pair>& collisionPair);
+	void							checkSceneCollision(SceneNode& rootNode, std::set<Pair>& collisionPair);
+	void							checkNodeCollision(SceneNode& root, std::set<Pair>& collisionPair);
 
-	virtual bool			isDestroyed() const;
-	virtual bool			isMarkedForRemoval() const;
-	void					removeWrecks();
+	virtual bool					isDestroyed() const;
+	virtual bool					isMarkedForRemoval() const;
+	void							removeWrecks();
 
 private:
 
-	virtual void			updateCurrent(sf::Time dt, CommandQueue& commands);
-	void					updateChildren(sf::Time dt, CommandQueue& commands);
+	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands);
+	void							updateChildren(sf::Time dt, CommandQueue& commands);
 
-	virtual void			draw(sf::RenderTarget& target, sf::RenderStates states) const;
-	virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
-	void					drawChildren(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual void					draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
+	void							drawChildren(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
-	std::vector<Ptr>		children;
+	std::vector<Ptr>				children;
 
 private:
-	SceneNode*				parent;
-	unsigned int			category;
+	SceneNode*						parent;
+	unsigned int					category;
 
 };
 
 
 
-bool		collision(const SceneNode& lhs, const SceneNode& rhs);
-float		distance(const SceneNode& lhs, const SceneNode& rhs);
+bool								collision(const SceneNode& lhs, const SceneNode& rhs);
+float								distance(const SceneNode& lhs, const SceneNode& rhs);

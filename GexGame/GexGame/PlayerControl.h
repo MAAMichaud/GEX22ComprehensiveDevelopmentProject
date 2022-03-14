@@ -48,21 +48,21 @@ public:
 
 public:
 
-									PlayerControl();
+												PlayerControl();
 
-	void							handleEvent(const sf::Event& event, CommandQueue& queue);
-	void							handleRealTimeInput(CommandQueue& queue);
+	void										handleEvent(const sf::Event& event, CommandQueue& queue);
+	void										handleRealTimeInput(CommandQueue& queue);
 
-	void							assignKey(Action action, sf::Keyboard::Key key);
-	sf::Keyboard::Key				getAssignedKey(Action action) const;
+	void										assignKey(Action action, sf::Keyboard::Key key);
+	sf::Keyboard::Key							getAssignedKey(Action action) const;
 
-	void							setMissionStatus(MissionStatus status);
-	MissionStatus					getMissionStatus() const;
+	void										setMissionStatus(MissionStatus status);
+	MissionStatus								getMissionStatus() const;
 
 private:
-	void							initializeKeys();
-	void							initializeActions();
-	static bool						isRealTimeAction(Action action);
+	void										initializeKeys();
+	void										initializeActions();
+	static bool									isRealTimeAction(Action action);
 
 private:
 	std::map<sf::Keyboard::Key, Action>			keyBindings;

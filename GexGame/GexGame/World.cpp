@@ -196,11 +196,11 @@ void World::startWave()
 
 void World::boardClicked()
 {
-	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
+	const auto mousePosition { sf::Mouse::getPosition(window) };
 
 	if (state == State::UpgradeTower)
 	{
-		const auto upgradeType{ upgradeController->processClick(pixelX, pixelY) };
+		const auto upgradeType{ upgradeController->processClick(mousePosition) };
 		if (upgradingTower && upgradeType != TowerType::None)
 		{
 			upgradingTower->levelUp(upgradeType, TOWER_DATA.at(upgradeType));
@@ -211,22 +211,20 @@ void World::boardClicked()
 		return;
 	}
 
-	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
+	const auto clickedTile { pixelXYToTileXY(mousePosition) };
 
-	Tower* clickedTower{ getCursorTower(std::pair<int, int>(tileX, tileY)) };
+	Tower* clickedTower{ getCursorTower(clickedTile) };
 	if (clickedTower && clickedTower->isLevelingUp())
 	{
 		state = State::UpgradeTower;
 		upgradeController->show(clickedTower->getType());
 		upgradingTower = clickedTower;
 		return;
-		//auto type{ LEVEL_UP_DATA.at(clickedTower->getType()) };
-		//clickedTower->levelUp(type, TOWER_DATA.at(type));
 	}
 
 	if (state == State::Idle)
 	{
-		auto enemy{ laneController->getFurthestEnemy(std::pair<int, int>{ tileX, tileY }, 1) };
+		auto enemy{ laneController->getFurthestEnemy(clickedTile, 1) };
 
 		if (enemy)
 		{
@@ -235,20 +233,11 @@ void World::boardClicked()
 	}
 	else
 	{
-		if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
+		if (clickedTile.x >= 0 && clickedTile.x < 16 && clickedTile.y >= 0 && clickedTile.y < 19)
 		{
 			placeTower();
 		}
 	}
-
-	std::cout << std::endl;
-
-	/*
-	auto projectileNode{ std::make_unique<Projectile>(textures, ProjectileType::Poison) };
-	const auto [cX,  cY] { centerNode->getPosition() };
-	projectileNode->setPosition(pixelX - cX, pixelY - cY);
-	centerNode->attachChild(std::move(projectileNode));
-	*/
 }
 
 
@@ -424,20 +413,16 @@ bool matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Categor
 
 void World::handleMouseOverlay()
 {	
-	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
-
-	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
+	const auto clickedTile { pixelXYToTileXY(sf::Mouse::getPosition(window)) };
 
 	tileOverlay->setRGBA(sf::Color(255, 255, 255, 0));
 	towerIcon.setColor(sf::Color(255, 255, 255, 0));
 	rangeSprite = nullptr;
 
-	Tower* highlightedTower{ getCursorTower(std::pair<int, int>(tileX, tileY)) };
+	Tower* highlightedTower{ getCursorTower(clickedTile) };
 
 	if (highlightedTower)
 	{
-		std::cout << " tower highlighted! ";
-
 		switch (highlightedTower->getRange())
 		{
 		case 1:
@@ -463,26 +448,26 @@ void World::handleMouseOverlay()
 		static const float INCREMENT_X{ 36.f };
 		static const float INCREMENT_Y{ 24.f };
 
-		float newX{ BASE_X + (INCREMENT_X * tileX) - (INCREMENT_X * tileY) };
-		float newY{ BASE_Y + INCREMENT_Y * tileX + INCREMENT_Y * tileY };
+		float newX{ BASE_X + (INCREMENT_X * clickedTile.x) - (INCREMENT_X * clickedTile.y) };
+		float newY{ BASE_Y + INCREMENT_Y * clickedTile.x + INCREMENT_Y * clickedTile.y };
 
 		rangeSprite->setPosition(sf::Vector2f(newX + INCREMENT_X, newY - INCREMENT_Y));
 	}
 	else
 	{
-		if (tileX >= 0 && tileX < 16 && tileY >= 0 && tileY < 19)
+		if (clickedTile.x >= 0 && clickedTile.x < 16 && clickedTile.y >= 0 && clickedTile.y < 19)
 		{
 			if (state == World::State::Idle)
 			{
 				tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
 
-				placeSpriteAtTile(*tileOverlay, tileX, tileY);
+				placeSpriteAtTile(*tileOverlay, clickedTile);
 			}
 			else if (state != World::State::UpgradeTower)
 			{
 				towerIcon.setColor(sf::Color(255, 255, 255, 200));
 
-				placeSpriteAtTile(towerIcon, tileX, tileY);
+				placeSpriteAtTile(towerIcon, clickedTile);
 			}
 		}
 	}
@@ -508,55 +493,49 @@ void World::handleTowers()
 
 
 
-void World::placeSpriteAtTile(SpriteNode& sprite, float x, float y)
+void World::placeSpriteAtTile(SpriteNode& sprite, const sf::Vector2i tile)
 {
     static const float BASE_X{ 880.f };
     static const float BASE_Y{ 96.f };
     static const float INCREMENT_X{ 36.f };
     static const float INCREMENT_Y{ 24.f };
 
-    float newX{ BASE_X + (INCREMENT_X * x) - (INCREMENT_X * y) };
-    float newY{ BASE_Y + INCREMENT_Y * x + INCREMENT_Y * y };
+    float newX{ BASE_X + (INCREMENT_X * tile.x) - (INCREMENT_X * tile.y) };
+    float newY{ BASE_Y + INCREMENT_Y * tile.x + INCREMENT_Y * tile.y };
 
     sprite.setPosition(sf::Vector2f(newX, newY));
 }
 
 
 
-void World::placeSpriteAtTile(Tower* sprite, float x, float y)
+void World::placeSpriteAtTile(Tower* sprite, const sf::Vector2i tile)
 {
     static const float BASE_X{ 880.f };
     static const float BASE_Y{ 96.f };
     static const float INCREMENT_X{ 36.f };
     static const float INCREMENT_Y{ 24.f };
 
-    float newX{ BASE_X + (INCREMENT_X * x) - (INCREMENT_X * y) };
-    float newY{ BASE_Y + INCREMENT_Y * x + INCREMENT_Y * y };
+    float newX{ BASE_X + (INCREMENT_X * tile.x) - (INCREMENT_X * tile.y) };
+    float newY{ BASE_Y + INCREMENT_Y * tile.x + INCREMENT_Y * tile.y };
 
     sprite->setPosition(sf::Vector2f(newX, newY - 96));
 }
 
 
 
-void World::placeSpriteAtTile(sf::Sprite& sprite, float x, float y)
+void World::placeSpriteAtTile(sf::Sprite& sprite, const sf::Vector2i tile)
 {
     static const float BASE_X{ 880.f };
     static const float BASE_Y{ 96.f };
     static const float INCREMENT_X{ 36.f };
     static const float INCREMENT_Y{ 24.f };
 
-    float newX{ BASE_X + (INCREMENT_X * x) - (INCREMENT_X * y) };
-    float newY{ BASE_Y + INCREMENT_Y * x + INCREMENT_Y * y };
+    float newX{ BASE_X + (INCREMENT_X * tile.x) - (INCREMENT_X * tile.y) };
+    float newY{ BASE_Y + INCREMENT_Y * tile.x + INCREMENT_Y * tile.y };
 
 
 	const auto& frame{ iconFrames.at(state) };
 
-	/*
-	towerIcon.setTextureRect(frame.intRect);
-	towerIcon.setRotation(frame.isRotated ? -90.f : 0.f);
-	towerIcon.setPosition(frame.offset.first, frame.offset.second);
-	*/
-			//const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
     sprite.setPosition(sf::Vector2f(newX + frame.offset.first, newY - 96 + frame.offset.second));
 }
 
@@ -564,9 +543,7 @@ void World::placeSpriteAtTile(sf::Sprite& sprite, float x, float y)
 
 void World::placeTower()
 {
-	const auto [pixelX,  pixelY] { sf::Mouse::getPosition(window) };
-
-	const auto [tileX, tileY] { pixelXYToTileXY(pixelX, pixelY) };
+	const auto clickedTile { pixelXYToTileXY(sf::Mouse::getPosition(window)) };
 
 	TowerType towerType;
 
@@ -604,9 +581,8 @@ void World::placeTower()
 
 	}
 
-	auto towerNode{ std::make_unique<Tower>(textures, towerType, TOWER_DATA.at(towerType), std::pair<int, int>{tileX, tileY}) };
-	//towerNode->setPosition(pixelX - 18.f, pixelY - 72.f);
-	placeSpriteAtTile(towerNode.get(), tileX, tileY);
+	auto towerNode{ std::make_unique<Tower>(textures, towerType, TOWER_DATA.at(towerType), clickedTile) };
+	placeSpriteAtTile(towerNode.get(), clickedTile);
 	towers.push_back(towerNode.get());
 	sceneLayers[LowerAir]->attachChild(std::move(towerNode));
 
@@ -615,14 +591,14 @@ void World::placeTower()
 
 
 
-Tower* World::getCursorTower(std::pair<int, int> tile)
+Tower* World::getCursorTower(sf::Vector2i tile)
 {
 	Tower* cursorTower{ nullptr };
 
 	for (auto tower : towers)
 	{
 		auto [tX, tY] { tower->getTile() };
-		if (tile.first == tX && tile.second == tY)
+		if (tile.x == tX && tile.y == tY)
 		{
 			cursorTower = tower;
 		}

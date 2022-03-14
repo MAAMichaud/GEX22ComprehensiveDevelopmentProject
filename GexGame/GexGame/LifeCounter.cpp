@@ -34,7 +34,7 @@ void LifeCounter::loseLife()
 
 
 
-bool LifeCounter::hasLivesRemaining()
+bool LifeCounter::hasLivesRemaining() const
 {
 	return lifeCount > 0;
 }

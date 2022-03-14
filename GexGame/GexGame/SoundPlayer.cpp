@@ -87,7 +87,7 @@ void SoundPlayer::removeStoppedSounds()
 
 
 
-void SoundPlayer::setListenerPosition(sf::Vector2f position)
+void SoundPlayer::setListenerPosition(const sf::Vector2f position)
 {
 	sf::Listener::setPosition(position.x, -position.y, ListenerZ);
 }

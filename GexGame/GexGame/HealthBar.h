@@ -19,15 +19,15 @@
 class HealthBar : public SceneNode
 {
 public:
-								HealthBar(double maxHealth);
+								HealthBar(const double maxHealth);
 
-	void						setHealth(double newHealth);
+	void						setHealth(const double newHealth);
 
 private:
 	void						drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 private:
-	double						maxHealth;
+	const double				maxHealth;
 	double						currentHealth;
 
 };

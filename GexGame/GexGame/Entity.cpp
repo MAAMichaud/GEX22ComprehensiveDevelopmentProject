@@ -17,7 +17,7 @@
 
 
 
-Entity::Entity(int _hitPoints)
+Entity::Entity(const int _hitPoints)
 	: velocity()
 	, hitPoints(_hitPoints)
 {
@@ -25,14 +25,14 @@ Entity::Entity(int _hitPoints)
 
 
 
-void Entity::setVelocity(sf::Vector2f v)
+void Entity::setVelocity(const sf::Vector2f v)
 {
 	velocity = v;
 }
 
 
 
-void Entity::setVelocity(float vx, float vy)
+void Entity::setVelocity(const float vx, const float vy)
 {
 	velocity.x = vx;
 	velocity.y = vy;
@@ -40,14 +40,14 @@ void Entity::setVelocity(float vx, float vy)
 
 
 
-void Entity::accelerate(sf::Vector2f v)
+void Entity::accelerate(const sf::Vector2f v)
 {
 	velocity += v;
 }
 
 
 
-void Entity::accelerate(float vx, float vy)
+void Entity::accelerate(const float vx, const float vy)
 {
 	accelerate(sf::Vector2f(vx, vy));
 }
@@ -68,7 +68,7 @@ int Entity::getHitPoints() const
 
 
 
-void Entity::damage(int points)
+void Entity::damage(const int points)
 {
 	assert(points > 0);
 	hitPoints -= points;
@@ -76,7 +76,7 @@ void Entity::damage(int points)
 
 
 
-void Entity::repair(int points)
+void Entity::repair(const int points)
 {
 	assert(points > 0);
 	hitPoints += points;

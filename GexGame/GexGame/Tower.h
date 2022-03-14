@@ -30,9 +30,9 @@ class Enemy;
 class Tower: public SceneNode
 {
 public:
-									Tower(const TextureHolder_t& textures, TowerType towerType, TowerData towerData, std::pair<int, int> tile);
+									Tower(const TextureHolder_t& textures, TowerType towerType, TowerData towerData, const sf::Vector2i tile);
 	bool							isAttackPending() const;
-	std::pair<int, int>				getTile() const;
+	sf::Vector2i					getTile() const;
 	std::size_t						getRange() const;
 	void							attack(Enemy* target);
 	void							applyDamage(Enemy* target);
@@ -64,7 +64,7 @@ private:
 	std::size_t						experiencePoints;
 	std::size_t						range;
 	sf::Sprite						levelupSprite;
-	std::pair<int, int>				tile;
+	sf::Vector2i					tile;
 	ProjectileType					projectileType;
 	double							damage;
 	AttackEffect					attackEffect;

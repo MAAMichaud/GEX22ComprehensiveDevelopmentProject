@@ -28,8 +28,10 @@ public:
 	explicit									Lane(const TextureHolder_t& textures, LaneData data, LaneController& controller);
 	void										spawnEnemy();
 	void										loadEnemy(EnemyData enemyData);
+	std::vector<Enemy*>							getEnemiesAt(const sf::Vector2i tile) const;
 	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY) const;
-	std::vector<Enemy*>							getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const;
+	std::vector<Enemy*>							getEnemiesAt(const sf::Vector2i tile, const std::size_t range) const;
+	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY, const std::size_t range) const;
 	std::vector<Enemy*>							getArea(const sf::Vector2f epicenter, float range) const;
 
 private:

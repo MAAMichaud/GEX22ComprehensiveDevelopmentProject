@@ -46,31 +46,31 @@ public:
 			MusicPlayer& music,
 			SoundPlayer& sound);
 
-		sf::RenderWindow*		window;
-		TextureHolder_t*		textures;
-		FontHolder_t*			fonts;
-		PlayerControl*			player;
-		MusicPlayer*			music;
-		SoundPlayer*			sound;
+		sf::RenderWindow*			window;
+		TextureHolder_t*			textures;
+		FontHolder_t*				fonts;
+		PlayerControl*				player;
+		MusicPlayer*				music;
+		SoundPlayer*				sound;
 	};
 
 public:
-								State(StateStack& stack, Context context);
-	virtual						~State();
+									State(StateStack& stack, Context context);
+	virtual							~State();
 
-	virtual void				draw() = 0;
-	virtual bool				update(sf::Time dt) = 0;
-	virtual bool				handleEvent(const sf::Event& event) = 0;
+	virtual void					draw() = 0;
+	virtual bool					update(sf::Time dt) = 0;
+	virtual bool					handleEvent(const sf::Event& event) = 0;
 
 protected:
-	void						requestStackPush(StateID stateID);
-	void						requestStackPop();
-	void						requestStackClear();
+	void							requestStackPush(StateID stateID);
+	void							requestStackPop();
+	void							requestStackClear();
 
-	Context						getContext() const;
+	Context							getContext() const;
 
 private:
-	StateStack*					stack;
-	Context						context;
+	StateStack*						stack;
+	Context							context;
 
 };

@@ -28,7 +28,7 @@ public:
 								LifeCounter(const FontHolder_t& fonts, int initialLives = 50);
 
 	void						loseLife();
-	bool						hasLivesRemaining();
+	bool						hasLivesRemaining() const;
 
 private:
 	TextNode*					lifeDisplay;

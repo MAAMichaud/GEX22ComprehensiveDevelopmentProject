@@ -33,37 +33,58 @@ namespace
 
 
 
-sf::Vector2i pixelXYToTileXY(int x, int y)
+sf::Vector2i pixelXYToTileXY(const sf::Vector2i v)
 {
-    return sf::Vector2i(calculateXTile(x, y), calculateYTile(x, y));
+    return sf::Vector2i(calculateXTile(v), calculateYTile(v));
 }
 
 
 
-int calculateXTile(int x, int y)
+sf::Vector2i pixelXYToTileXY(int x, int y)
+{
+	return pixelXYToTileXY(sf::Vector2i(x, y));
+}
+
+
+
+int calculateXTile(const sf::Vector2i v)
 {
 	static const double xTriangleTangent{ 2.0 / 3 };
 
 	static const int tileHeight{ 48 };
 	static const int xTriangleTotalHeight{ 888 };
 	static const int xTriangleExcess{ 504 - 158 };
-	const double xTriangleHeight{ xTriangleTangent * (x + xTriangleExcess) };
+	const double xTriangleHeight{ xTriangleTangent * (v.x + xTriangleExcess) };
 
-	return (y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight;
+	return (v.y - (xTriangleTotalHeight - xTriangleHeight)) / tileHeight;
 }
 
 
 
-int calculateYTile(int x, int y)
+int calculateXTile(int x, int y)
+{
+	return calculateXTile(sf::Vector2i(x, y));
+}
+
+
+
+int calculateYTile(const sf::Vector2i v)
 {
 	static const double yTriangleTangent{ 1.5 };
 
 	static const int tileWidth{ 72 };
 	static const int yTriangleOffset{ 72 };
 	static const int yTriangleExcess{ 408 + 106 };
-	const double yTriangleWidth{ yTriangleTangent * (y + yTriangleExcess) };
+	const double yTriangleWidth{ yTriangleTangent * (v.y + yTriangleExcess) };
 
-	return (yTriangleWidth + yTriangleOffset - x) / tileWidth;
+	return (yTriangleWidth + yTriangleOffset - v.x) / tileWidth;
+}
+
+
+
+int calculateYTile(int x, int y)
+{
+	return calculateYTile(sf::Vector2i(x, y));
 }
 
 

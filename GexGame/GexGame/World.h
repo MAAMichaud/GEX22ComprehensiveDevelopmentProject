@@ -85,12 +85,12 @@ private:
 
 	void								handleMouseOverlay();
 	void								handleTowers();
-	void								placeSpriteAtTile(SpriteNode& sprite, float x, float y);
-	void								placeSpriteAtTile(Tower* sprite, float x, float y);
-	void								placeSpriteAtTile(sf::Sprite& sprite, float x, float y);
+	void								placeSpriteAtTile(SpriteNode& sprite, const sf::Vector2i tile);
+	void								placeSpriteAtTile(Tower* sprite, const sf::Vector2i tile);
+	void								placeSpriteAtTile(sf::Sprite& sprite, const sf::Vector2i tile);
 
 	void                                placeTower();
-	Tower*                              getCursorTower(std::pair<int, int> tile);
+	Tower*                              getCursorTower(sf::Vector2i tile);
 	void								processWaveIcon();
 
 private:

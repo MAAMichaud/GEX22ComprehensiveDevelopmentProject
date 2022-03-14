@@ -244,15 +244,15 @@ struct LevelData
 
 struct ParticleData
 {
-	sf::Color			color;
-	sf::Time			lifetime;
+	sf::Color										color;
+	sf::Time										lifetime;
 
 };
 
 
 
-std::map<LevelType, LevelData> initializeLevelData();
-std::map<TowerType, TowerData> initializeTowerData();
-std::map<EnemyType, EnemyData> initializeEnemyData();
-std::map<TowerType, TowerType> initializeLevelUpData();
-std::map<Particle::Type, ParticleData> initializeParticleData();
+std::map<LevelType, LevelData>						initializeLevelData();
+std::map<TowerType, TowerData>						initializeTowerData();
+std::map<EnemyType, EnemyData>						initializeEnemyData();
+std::map<TowerType, TowerType>						initializeLevelUpData();
+std::map<Particle::Type, ParticleData>				initializeParticleData();

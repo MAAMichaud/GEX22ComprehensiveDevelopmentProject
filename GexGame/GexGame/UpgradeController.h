@@ -30,13 +30,14 @@ class UpgradeController : public SceneNode
 public:
 										UpgradeController(const TextureHolder_t& textures, Bank* bank);
 
-	TowerType							processClick(int x, int y) const;
-	TowerType							processNovice(int x, int y) const;
-	TowerType							processClub(int x, int y) const;
-	void								show(TowerType newType);
+	TowerType							processClick(const sf::Vector2i) const;
+	TowerType							processClick(const int x, const int y) const;
+	void								show(const TowerType newType);
 	void								hide();
 
 private:
+	TowerType							processNovice(const sf::Vector2i) const;
+	TowerType							processClub(const sf::Vector2i) const;
 	void								initializeData();
 	virtual void						drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 

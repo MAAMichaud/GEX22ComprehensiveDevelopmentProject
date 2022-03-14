@@ -69,13 +69,13 @@ void LaneController::loadWave(WaveData waveData)
 
 
 
-std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tileY) const
+std::vector<Enemy*> LaneController::getEnemiesAt(const sf::Vector2i tile) const
 {
 	auto enemies{ std::vector<Enemy*>() };
 
 	for (auto& lane : lanes)
 	{
-		auto laneEnemies{ lane->getEnemiesAt(tileX, tileY) };
+		auto laneEnemies{ lane->getEnemiesAt(tile) };
 		enemies.insert(enemies.cend(), laneEnemies.cbegin(), laneEnemies.cend());
 	}
 
@@ -84,7 +84,14 @@ std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tile
 
 
 
-std::vector<Enemy*> LaneController::getEnemiesAt(const std::pair<int, int> tile, const std::size_t range) const
+std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tileY) const
+{
+	return getEnemiesAt(sf::Vector2i(tileX, tileY));
+}
+
+
+
+std::vector<Enemy*> LaneController::getEnemiesAt(const sf::Vector2i tile, const std::size_t range) const
 {
 	auto enemies{ std::vector<Enemy*>() };
 
@@ -99,7 +106,14 @@ std::vector<Enemy*> LaneController::getEnemiesAt(const std::pair<int, int> tile,
 
 
 
-Enemy* LaneController::getFurthestEnemy(const std::pair<int, int> tile, const std::size_t range) const
+std::vector<Enemy*> LaneController::getEnemiesAt(const int tileX, const int tileY, const std::size_t range) const
+{
+	return getEnemiesAt(sf::Vector2i(tileX, tileY), range);
+}
+
+
+
+Enemy* LaneController::getFurthestEnemy(const sf::Vector2i tile, const std::size_t range) const
 {
 	auto enemies{ getEnemiesAt(tile, range) };
 

@@ -17,7 +17,7 @@
 
 
 
-HealthBar::HealthBar(double _maxHealth)
+HealthBar::HealthBar(const double _maxHealth)
 	: maxHealth(_maxHealth)
 	, currentHealth(_maxHealth)
 {
@@ -25,7 +25,7 @@ HealthBar::HealthBar(double _maxHealth)
 
 
 
-void HealthBar::setHealth(double newHealth)
+void HealthBar::setHealth(const double newHealth)
 {
 	currentHealth = newHealth;
 }

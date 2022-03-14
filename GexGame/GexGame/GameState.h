@@ -28,19 +28,19 @@ class PlayerControl;
 class GameState : public State
 {
 public:
-						GameState(StateStack& stack, Context context, StateID stateId);
+							GameState(StateStack& stack, Context context, StateID stateId);
 
-	virtual void		draw() override;
-	virtual bool		update(sf::Time dt) override;
-	virtual bool		handleEvent(const sf::Event& event) override;
-
-private:
-	void				processInput();
-	LevelType			getWorldType(StateID stateId);
+	virtual void			draw() override;
+	virtual bool			update(sf::Time dt) override;
+	virtual bool			handleEvent(const sf::Event& event) override;
 
 private:
-	World				world;
-	PlayerControl&		player;
+	void					processInput();
+	LevelType				getWorldType(StateID stateId);
+
+private:
+	World					world;
+	PlayerControl&			player;
 	static const sf::Time	TIME_PER_FRAME;
 
 };

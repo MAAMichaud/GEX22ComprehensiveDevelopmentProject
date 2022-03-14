@@ -27,9 +27,15 @@ class Animation;
 
 
 
+sf::Vector2i pixelXYToTileXY(const sf::Vector2i);
+
 sf::Vector2i pixelXYToTileXY(int x, int y);
 
+int calculateXTile(const sf::Vector2i);
+
 int calculateXTile(int x, int y);
+
+int calculateYTile(const sf::Vector2i);
 
 int calculateYTile(int x, int y);
 

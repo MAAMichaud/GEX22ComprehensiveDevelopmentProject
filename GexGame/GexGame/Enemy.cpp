@@ -65,23 +65,22 @@ Enemy::Enemy(const TextureHolder_t& _textures, EnemyData enemyData, std::vector<
 
 
 
-std::pair<int, int> Enemy::getTile() const
+sf::Vector2i Enemy::getTile() const
 {
 	if (isDestroyed())
 	{
-		return std::pair<int, int>{ -100, -100 };
+		return sf::Vector2i{ -100, -100 };
 	}
-
 	const auto [pixelX,  pixelY] { getWorldPosition() };
 
 	const auto [thisTileX, thisTileY] { pixelXYToTileXY(pixelX + 36, pixelY + 72) };
 
-	return std::pair<int, int>(thisTileX, thisTileY);
+	return sf::Vector2i(thisTileX, thisTileY);
 }
 
 
 
-bool Enemy::isAtTile(const int tileX, const int tileY) const
+bool Enemy::isAtTile(const sf::Vector2i tile) const
 {
 	if (isDestroyed())
 	{
@@ -90,12 +89,19 @@ bool Enemy::isAtTile(const int tileX, const int tileY) const
 
 	const auto [thisTileX, thisTileY] { getTile() };
 
-	return thisTileX == tileX && thisTileY == tileY;
+	return thisTileX == tile.x && thisTileY == tile.y;
 }
 
 
 
-bool Enemy::isAtTiles(const std::pair<int, int> tile, const std::size_t range) const
+bool Enemy::isAtTile(const int x, const int y) const
+{
+	return isAtTile(sf::Vector2i(x, y));
+}
+
+
+
+bool Enemy::isAtTiles(const sf::Vector2i tile, const std::size_t range) const
 {
 	if (isDestroyed())
 	{
@@ -104,10 +110,17 @@ bool Enemy::isAtTiles(const std::pair<int, int> tile, const std::size_t range) c
 
 	const auto [thisTileX, thisTileY] { getTile() };
 
-	return thisTileX <= tile.first + range
-		&& thisTileX >= tile.first - (int) range
-		&& thisTileY <= tile.second + range
-		&& thisTileY >= tile.second - (int) range;
+	return thisTileX <= tile.x + range
+		&& thisTileX >= tile.x - (int) range
+		&& thisTileY <= tile.y + range
+		&& thisTileY >= tile.y - (int) range;
+}
+
+
+
+bool Enemy::isAtTiles(const int tileX, const int tileY, const std::size_t range) const
+{
+	return isAtTiles(sf::Vector2i(tileX, tileY), range);
 }
 
 
