@@ -72,14 +72,20 @@ TowerType UpgradeController::processClick(const sf::Vector2i coordinates) const
 		return processClub(coordinates);
 	}
 
-	static const float UPGRADE_BUTTON_LEFT{ -40 };
 	static const float UPGRADE_BUTTON_TOP{ 45 };
 	static const float UPGRADE_BUTTON_RIGHT{ 40 };
 	static const float UPGRADE_BUTTON_BOTTOM{ 65 };
+	static const sf::IntRect UPGRADE_BUTTON_RECT{ -40, 45, 80, 20 };
 
 	const auto [cX,  cY] { getWorldPosition() };
 	const auto [x,  y] { coordinates };
 
+	if (isMouseOverRect(coordinates, getWorldPosition(), UPGRADE_BUTTON_RECT))
+	{
+		bank->withdraw(upgradePrices.at(currentType));
+		return upgradeTypes.at(currentType);
+	}
+	/*
 	if (x < cX + UPGRADE_BUTTON_RIGHT
 		&& x > cX + UPGRADE_BUTTON_LEFT
 		&& y < cY + UPGRADE_BUTTON_BOTTOM
@@ -88,6 +94,7 @@ TowerType UpgradeController::processClick(const sf::Vector2i coordinates) const
 		bank->withdraw(upgradePrices.at(currentType));
 		return upgradeTypes.at(currentType);
 	}
+	*/
 
 	return TowerType::None;
 }

@@ -27,6 +27,10 @@ class Animation;
 
 
 
+bool isMouseOverRect(const sf::Vector2i mousePosition, const sf::Vector2f offset, const sf::IntRect rect);
+
+bool isMouseOverRect(const sf::Vector2i mousePosition, const sf::IntRect rect);
+
 sf::Vector2i pixelXYToTileXY(const sf::Vector2i);
 
 sf::Vector2i pixelXYToTileXY(int x, int y);

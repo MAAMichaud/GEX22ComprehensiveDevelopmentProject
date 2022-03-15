@@ -33,6 +33,26 @@ namespace
 
 
 
+bool isMouseOverRect(const sf::Vector2i mousePosition, const sf::Vector2f offset, const sf::IntRect rect)
+{
+	return mousePosition.x > offset.x + rect.left
+		&& mousePosition.x < offset.x + rect.left + rect.width
+		&& mousePosition.y > offset.y + rect.top
+		&& mousePosition.y < offset.y + rect.top + rect.height;
+}
+
+
+
+bool isMouseOverRect(const sf::Vector2i mousePosition, const sf::IntRect rect)
+{
+	return mousePosition.x > rect.left
+		&& mousePosition.x < rect.left + rect.width
+		&& mousePosition.y > rect.top
+		&& mousePosition.y < rect.top + rect.height;
+}
+
+
+
 sf::Vector2i pixelXYToTileXY(const sf::Vector2i v)
 {
     return sf::Vector2i(calculateXTile(v), calculateYTile(v));

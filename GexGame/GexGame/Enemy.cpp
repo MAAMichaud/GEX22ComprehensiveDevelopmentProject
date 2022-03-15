@@ -112,9 +112,9 @@ bool Enemy::isAtTiles(const sf::Vector2i tile, const std::size_t range) const
 	const auto [thisTileX, thisTileY] { getTile() };
 
 	return thisTileX <= tile.x + range
-		&& thisTileX >= tile.x - (int) range
+		&& thisTileX >= tile.x - static_cast<int>(range)
 		&& thisTileY <= tile.y + range
-		&& thisTileY >= tile.y - (int) range;
+		&& thisTileY >= tile.y - static_cast<int>(range);
 }
 
 

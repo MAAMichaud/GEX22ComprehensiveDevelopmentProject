@@ -13,6 +13,7 @@
 #include "GameState.h"
 #include "MusicPlayer.h"
 #include "PlayerControl.h"
+#include "utility.h"
 
 #include <iostream>
 
@@ -62,156 +63,82 @@ bool GameState::update(sf::Time dt)
 
 bool GameState::handleEvent(const sf::Event& event)
 {
-	static const float SOUND_DOWN_BUTTON_LEFT{ 14 };
-	static const float SOUND_DOWN_BUTTON_TOP{ 114 };
-	static const float SOUND_DOWN_BUTTON_RIGHT{ 14 + 20 };
-	static const float SOUND_DOWN_BUTTON_BOTTOM{ 114 + 41 };
-
-	static const float SOUND_UP_BUTTON_LEFT{ 21 };
-	static const float SOUND_UP_BUTTON_TOP{ 114 };
-	static const float SOUND_UP_BUTTON_RIGHT{ 61 + 26 };
-	static const float SOUND_UP_BUTTON_BOTTOM{ 114 + 41 };
-
-	static const float MUSIC_DOWN_BUTTON_LEFT{ 97 };
-	static const float MUSIC_DOWN_BUTTON_TOP{ 114 };
-	static const float MUSIC_DOWN_BUTTON_RIGHT{ 97 + 23 };
-	static const float MUSIC_DOWN_BUTTON_BOTTOM{ 114 + 41 };
-
-	static const float MUSIC_UP_BUTTON_LEFT{ 159 };
-	static const float MUSIC_UP_BUTTON_TOP{ 114 };
-	static const float MUSIC_UP_BUTTON_RIGHT{ 159 + 25 };
-	static const float MUSIC_UP_BUTTON_BOTTOM{ 114 + 41 };
-
-	static const float NOVICE_WIZARD_BUTTON_LEFT{ 51 };
-	static const float NOVICE_WIZARD_BUTTON_TOP{ 254 };
-	static const float NOVICE_WIZARD_BUTTON_RIGHT{ 51 + 31 };
-	static const float NOVICE_WIZARD_BUTTON_BOTTOM{ 254 + 56 };
-
-	static const float NOVICE_WARRIOR_BUTTON_LEFT{ 114 };
-	static const float NOVICE_WARRIOR_BUTTON_TOP{ 254 };
-	static const float NOVICE_WARRIOR_BUTTON_RIGHT{ 114 + 31 };
-	static const float NOVICE_WARRIOR_BUTTON_BOTTOM{ 254 + 56 };
-
-	static const float PRESTIGE_ICE_BUTTON_LEFT{ 38 };
-	static const float PRESTIGE_ICE_BUTTON_TOP{ 418 };
-	static const float PRESTIGE_ICE_BUTTON_RIGHT{ 38 + 31 };
-	static const float PRESTIGE_ICE_BUTTON_BOTTOM{ 418 + 56 };
-
-	static const float PRESTIGE_FIRE_BUTTON_LEFT{ 81 };
-	static const float PRESTIGE_FIRE_BUTTON_TOP{ 418 };
-	static const float PRESTIGE_FIRE_BUTTON_RIGHT{ 81 + 31 };
-	static const float PRESTIGE_FIRE_BUTTON_BOTTOM{ 418 + 56 };
-
-	static const float PRESTIGE_ENERGY_BUTTON_LEFT{ 129 };
-	static const float PRESTIGE_ENERGY_BUTTON_TOP{ 418 };
-	static const float PRESTIGE_ENERGY_BUTTON_RIGHT{ 129 + 31 };
-	static const float PRESTIGE_ENERGY_BUTTON_BOTTOM{ 418 + 56 };
-
-	static const float START_WAVE_BUTTON_LEFT{ 7 };
-	static const float START_WAVE_BUTTON_TOP{ 793 };
-	static const float START_WAVE_BUTTON_RIGHT{ 7 + 180 };
-	static const float START_WAVE_BUTTON_BOTTOM{ 793 + 52 };
-
-	static const float PAUSE_BUTTON_LEFT{ 26 };
-	static const float PAUSE_BUTTON_TOP{ 851 };
-	static const float PAUSE_BUTTON_RIGHT{ 26 + 118 };
-	static const float PAUSE_BUTTON_BOTTOM{ 851 + 48 };
+	static const sf::IntRect SOUND_DOWN_RECT{ 14, 114, 20, 41 };
+	static const sf::IntRect SOUND_UP_RECT{ 61, 114, 25, 41 };
+	static const sf::IntRect MUSIC_DOWN_RECT{ 97, 114, 23, 41 };
+	static const sf::IntRect MUSIC_UP_RECT{ 159, 114, 25, 41 };
+	static const sf::IntRect NOVICE_WIZARD_RECT{ 51, 254, 31, 56 };
+	static const sf::IntRect CLUB_WARRIOR_RECT{ 114, 254, 31, 56 };
+	static const sf::IntRect PRESTIGE_ICE_RECT{ 38, 418, 31, 56 };
+	static const sf::IntRect PRESTIGE_FIRE_RECT{ 81, 418, 31, 56 };
+	static const sf::IntRect PRESTIGE_ENERGY_RECT{ 129, 418, 31, 56 };
+	static const sf::IntRect START_WAVE_RECT{ 7, 793, 180, 52 };
+	static const sf::IntRect PAUSE_BUTTON_RECT{ 26, 851, 118, 48 };
 
 
 	if (event.type == sf::Event::MouseButtonPressed)
 	{
 		if (event.mouseButton.button == sf::Mouse::Left)
 		{
-			if (event.mouseButton.x < SOUND_DOWN_BUTTON_RIGHT 
-				&& event.mouseButton.x > SOUND_DOWN_BUTTON_LEFT
-				&& event.mouseButton.y < SOUND_DOWN_BUTTON_BOTTOM
-				&& event.mouseButton.y > SOUND_DOWN_BUTTON_TOP)
+			const auto mousePosition{ sf::Vector2i(event.mouseButton.x, event.mouseButton.y) };
+
+			if (isMouseOverRect(mousePosition, SOUND_DOWN_RECT))
 			{
 				std::cout << "SOUND_DOWN Button Pressed." << std::endl;
 			}
 
-			else if (event.mouseButton.x < SOUND_UP_BUTTON_RIGHT 
-				&& event.mouseButton.x > SOUND_UP_BUTTON_LEFT
-				&& event.mouseButton.y < SOUND_UP_BUTTON_BOTTOM
-				&& event.mouseButton.y > SOUND_UP_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, SOUND_UP_RECT))
 			{
 				std::cout << "SOUND_UP Button Pressed." << std::endl;
 			}
 
-			else if (event.mouseButton.x < MUSIC_DOWN_BUTTON_RIGHT 
-				&& event.mouseButton.x > MUSIC_DOWN_BUTTON_LEFT
-				&& event.mouseButton.y < MUSIC_DOWN_BUTTON_BOTTOM
-				&& event.mouseButton.y > MUSIC_DOWN_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, MUSIC_DOWN_RECT))
 			{
 				std::cout << "MUSIC_DOWN Button Pressed." << std::endl;
 			}
 
-			else if (event.mouseButton.x < MUSIC_UP_BUTTON_RIGHT 
-				&& event.mouseButton.x > MUSIC_UP_BUTTON_LEFT
-				&& event.mouseButton.y < MUSIC_UP_BUTTON_BOTTOM
-				&& event.mouseButton.y > MUSIC_UP_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, MUSIC_UP_RECT))
 			{
 				std::cout << "MUSIC_UP Button Pressed." << std::endl;
 			}
 
-			else if (event.mouseButton.x < NOVICE_WIZARD_BUTTON_RIGHT 
-				&& event.mouseButton.x > NOVICE_WIZARD_BUTTON_LEFT
-				&& event.mouseButton.y < NOVICE_WIZARD_BUTTON_BOTTOM
-				&& event.mouseButton.y > NOVICE_WIZARD_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, NOVICE_WIZARD_RECT))
 			{
 				std::cout << "NOVICE_WIZARD Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildWizard);
 			}
 
-			else if (event.mouseButton.x < NOVICE_WARRIOR_BUTTON_RIGHT 
-				&& event.mouseButton.x > NOVICE_WARRIOR_BUTTON_LEFT
-				&& event.mouseButton.y < NOVICE_WARRIOR_BUTTON_BOTTOM
-				&& event.mouseButton.y > NOVICE_WARRIOR_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, CLUB_WARRIOR_RECT))
 			{
-				std::cout << "NOVICE_WARRIOR Button Pressed." << std::endl;
+				std::cout << "CLUB_WARRIOR Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildWarrior);
 			}
 
-			else if (event.mouseButton.x < PRESTIGE_ICE_BUTTON_RIGHT 
-				&& event.mouseButton.x > PRESTIGE_ICE_BUTTON_LEFT
-				&& event.mouseButton.y < PRESTIGE_ICE_BUTTON_BOTTOM
-				&& event.mouseButton.y > PRESTIGE_ICE_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, PRESTIGE_ICE_RECT))
 			{
 				std::cout << "PRESTIGE_ICE Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildIce);
 			}
 
-			else if (event.mouseButton.x < PRESTIGE_FIRE_BUTTON_RIGHT 
-				&& event.mouseButton.x > PRESTIGE_FIRE_BUTTON_LEFT
-				&& event.mouseButton.y < PRESTIGE_FIRE_BUTTON_BOTTOM
-				&& event.mouseButton.y > PRESTIGE_FIRE_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, PRESTIGE_FIRE_RECT))
 			{
 				std::cout << "PRESTIGE_FIRE Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildFire);
 			}
 
-			else if (event.mouseButton.x < PRESTIGE_ENERGY_BUTTON_RIGHT 
-				&& event.mouseButton.x > PRESTIGE_ENERGY_BUTTON_LEFT
-				&& event.mouseButton.y < PRESTIGE_ENERGY_BUTTON_BOTTOM
-				&& event.mouseButton.y > PRESTIGE_ENERGY_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, PRESTIGE_ENERGY_RECT))
 			{
 				std::cout << "PRESTIGE_ENERGY Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildEnergy);
 			}
 
-			else if (event.mouseButton.x < START_WAVE_BUTTON_RIGHT 
-				&& event.mouseButton.x > START_WAVE_BUTTON_LEFT
-				&& event.mouseButton.y < START_WAVE_BUTTON_BOTTOM
-				&& event.mouseButton.y > START_WAVE_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, START_WAVE_RECT))
 			{
 				std::cout << "START_WAVE Button Pressed." << std::endl;
 				world.startWave();
 			}
 
-			else if (event.mouseButton.x < PAUSE_BUTTON_RIGHT 
-				&& event.mouseButton.x > PAUSE_BUTTON_LEFT
-				&& event.mouseButton.y < PAUSE_BUTTON_BOTTOM
-				&& event.mouseButton.y > PAUSE_BUTTON_TOP)
+			else if (isMouseOverRect(mousePosition, PAUSE_BUTTON_RECT))
 			{
 				std::cout << "PAUSE Button Pressed." << std::endl;
 				requestStackPush(StateID::Pause);
