@@ -72,9 +72,6 @@ TowerType UpgradeController::processClick(const sf::Vector2i coordinates) const
 		return processClub(coordinates);
 	}
 
-	static const float UPGRADE_BUTTON_TOP{ 45 };
-	static const float UPGRADE_BUTTON_RIGHT{ 40 };
-	static const float UPGRADE_BUTTON_BOTTOM{ 65 };
 	static const sf::IntRect UPGRADE_BUTTON_RECT{ -40, 45, 80, 20 };
 
 	const auto [cX,  cY] { getWorldPosition() };
@@ -85,16 +82,6 @@ TowerType UpgradeController::processClick(const sf::Vector2i coordinates) const
 		bank->withdraw(upgradePrices.at(currentType));
 		return upgradeTypes.at(currentType);
 	}
-	/*
-	if (x < cX + UPGRADE_BUTTON_RIGHT
-		&& x > cX + UPGRADE_BUTTON_LEFT
-		&& y < cY + UPGRADE_BUTTON_BOTTOM
-		&& y > cY + UPGRADE_BUTTON_TOP)
-	{
-		bank->withdraw(upgradePrices.at(currentType));
-		return upgradeTypes.at(currentType);
-	}
-	*/
 
 	return TowerType::None;
 }
@@ -110,57 +97,30 @@ TowerType UpgradeController::processClick(const int x,const int y) const
 
 TowerType UpgradeController::processNovice(const sf::Vector2i coordinates) const
 {
-	static const float ICE_BUTTON_LEFT{ -105 };
-	static const float ICE_BUTTON_TOP{ 45 };
-	static const float ICE_BUTTON_RIGHT{ -60 };
-	static const float ICE_BUTTON_BOTTOM{ 70 };
-
-	static const float FIRE_BUTTON_LEFT{ -45 };
-	static const float FIRE_BUTTON_TOP{ 45 };
-	static const float FIRE_BUTTON_RIGHT{ 0 };
-	static const float FIRE_BUTTON_BOTTOM{ 70 };
-
-	static const float ENERGY_BUTTON_LEFT{ 15 };
-	static const float ENERGY_BUTTON_TOP{ 45 };
-	static const float ENERGY_BUTTON_RIGHT{ 60 };
-	static const float ENERGY_BUTTON_BOTTOM{ 70 };
-
-	static const float POISON_BUTTON_LEFT{ 75 };
-	static const float POISON_BUTTON_TOP{ 45 };
-	static const float POISON_BUTTON_RIGHT{ 120 };
-	static const float POISON_BUTTON_BOTTOM{ 70 };
+	static const sf::IntRect ICE_BUTTON_RECT{ -105, 45, 45, 25 };
+	static const sf::IntRect FIRE_BUTTON_RECT{ -45, 45, 45, 25 };
+	static const sf::IntRect ENERGY_BUTTON_RECT{ 15, 45, 45, 25 };
+	static const sf::IntRect POISON_BUTTON_RECT{ 75, 45, 45, 25 };
 
 	const auto [cX,  cY] { getWorldPosition() };
 	const auto [x,  y] { coordinates };
 
-	if (x < cX + ICE_BUTTON_RIGHT
-		&& x > cX + ICE_BUTTON_LEFT
-		&& y < cY + ICE_BUTTON_BOTTOM
-		&& y > cY + ICE_BUTTON_TOP)
+	if (isMouseOverRect(coordinates, getWorldPosition(), ICE_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::IceApprentice;
 	}
-	else if (x < cX + FIRE_BUTTON_RIGHT
-		&& x > cX + FIRE_BUTTON_LEFT
-		&& y < cY + FIRE_BUTTON_BOTTOM
-		&& y > cY + FIRE_BUTTON_TOP)
+	else if (isMouseOverRect(coordinates, getWorldPosition(), FIRE_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::FireApprentice;
 	}
-	else if (x < cX + ENERGY_BUTTON_RIGHT
-		&& x > cX + ENERGY_BUTTON_LEFT
-		&& y < cY + ENERGY_BUTTON_BOTTOM
-		&& y > cY + ENERGY_BUTTON_TOP)
+	else if (isMouseOverRect(coordinates, getWorldPosition(), ENERGY_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::EnergyApprentice;
 	}
-	else if (x < cX + POISON_BUTTON_RIGHT
-		&& x > cX + POISON_BUTTON_LEFT
-		&& y < cY + POISON_BUTTON_BOTTOM
-		&& y > cY + POISON_BUTTON_TOP)
+	else if (isMouseOverRect(coordinates, getWorldPosition(), POISON_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::PoisonApprentice;
@@ -173,44 +133,24 @@ TowerType UpgradeController::processNovice(const sf::Vector2i coordinates) const
 
 TowerType UpgradeController::processClub(const sf::Vector2i coordinates) const
 {
-	static const float SWORD_BUTTON_LEFT{ -80 };
-	static const float SWORD_BUTTON_TOP{ 45 };
-	static const float SWORD_BUTTON_RIGHT{ -27 };
-	static const float SWORD_BUTTON_BOTTOM{ 70 };
-
-	static const float AXE_BUTTON_LEFT{ -20 };
-	static const float AXE_BUTTON_TOP{ 45 };
-	static const float AXE_BUTTON_RIGHT{ 33 };
-	static const float AXE_BUTTON_BOTTOM{ 70 };
-
-	static const float MACE_BUTTON_LEFT{ 40 };
-	static const float MACE_BUTTON_TOP{ 45 };
-	static const float MACE_BUTTON_RIGHT{ 93 };
-	static const float MACE_BUTTON_BOTTOM{ 70 };
+	static const sf::IntRect SWORD_BUTTON_RECT{ -80, 45, 53, 25 };
+	static const sf::IntRect AXE_BUTTON_RECT{ -20, 45, 53, 25 };
+	static const sf::IntRect MACE_BUTTON_RECT{ 40, 45, 53, 25 };
 
 	const auto [cX,  cY] { getWorldPosition() };
 	const auto [x,  y] { coordinates };
 
-	if (x < cX + SWORD_BUTTON_RIGHT
-		&& x > cX + SWORD_BUTTON_LEFT
-		&& y < cY + SWORD_BUTTON_BOTTOM
-		&& y > cY + SWORD_BUTTON_TOP)
+	if (isMouseOverRect(coordinates, getWorldPosition(), SWORD_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::SwordWarrior;
 	}
-	else if (x < cX + AXE_BUTTON_RIGHT
-		&& x > cX + AXE_BUTTON_LEFT
-		&& y < cY + AXE_BUTTON_BOTTOM
-		&& y > cY + AXE_BUTTON_TOP)
+	else if (isMouseOverRect(coordinates, getWorldPosition(), AXE_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::AxeWarrior;
 	}
-	else if (x < cX + MACE_BUTTON_RIGHT
-		&& x > cX + MACE_BUTTON_LEFT
-		&& y < cY + MACE_BUTTON_BOTTOM
-		&& y > cY + MACE_BUTTON_TOP)
+	else if (isMouseOverRect(coordinates, getWorldPosition(), MACE_BUTTON_RECT))
 	{
 		bank->withdraw(upgradePrices.at(currentType));
 		return TowerType::MaceWarrior;
