@@ -1875,6 +1875,43 @@ std::map<TowerType, TowerType> initializeLevelUpData()
 
 
 
+std::map<LevelType, std::vector<sf::Vector2i>> initializeTowerTileData()
+{
+	std::map<LevelType, std::vector<sf::Vector2i>> data;
+
+	data[LevelType::Forest] = std::vector<sf::Vector2i>{
+		sf::Vector2i{ 1, 1 },
+		sf::Vector2i{ 2, 2 },
+		sf::Vector2i{ 3, 3 },
+		sf::Vector2i{ 1, 3 },
+	};
+
+	data[LevelType::Cemetery] = std::vector<sf::Vector2i>{
+		sf::Vector2i{ 1, 1 },
+		sf::Vector2i{ 2, 2 },
+		sf::Vector2i{ 3, 3 },
+		sf::Vector2i{ 1, 3 },
+	};
+
+	data[LevelType::Beach] = std::vector<sf::Vector2i>{
+		sf::Vector2i{ 1, 1 },
+		sf::Vector2i{ 2, 2 },
+		sf::Vector2i{ 3, 3 },
+		sf::Vector2i{ 1, 3 },
+	};
+
+	data[LevelType::Mountain] = std::vector<sf::Vector2i>{
+		sf::Vector2i{ 1, 1 },
+		sf::Vector2i{ 2, 2 },
+		sf::Vector2i{ 3, 3 },
+		sf::Vector2i{ 1, 3 },
+	};
+
+	return data;
+}
+
+
+
 std::map<Particle::Type, ParticleData> initializeParticleData()
 {
 	std::map<Particle::Type, ParticleData> data;

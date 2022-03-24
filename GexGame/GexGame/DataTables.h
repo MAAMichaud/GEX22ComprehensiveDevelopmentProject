@@ -255,4 +255,5 @@ std::map<LevelType, LevelData>						initializeLevelData();
 std::map<TowerType, TowerData>						initializeTowerData();
 std::map<EnemyType, EnemyData>						initializeEnemyData();
 std::map<TowerType, TowerType>						initializeLevelUpData();
+std::map<LevelType, std::vector<sf::Vector2i>>		initializeTowerTileData();
 std::map<Particle::Type, ParticleData>				initializeParticleData();

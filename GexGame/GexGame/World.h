@@ -44,6 +44,7 @@ class Bank;
 class UpgradeController;
 class LifeCounter;
 class NextWaveIcon;
+class TowerController;
 
 
 
@@ -86,7 +87,6 @@ private:
 	void								handleMouseOverlay();
 	void								handleTowers();
 	void								placeSpriteAtTile(SpriteNode& sprite, const sf::Vector2i tile);
-	void								placeSpriteAtTile(Tower* sprite, const sf::Vector2i tile);
 	void								placeSpriteAtTile(sf::Sprite& sprite, const sf::Vector2i tile);
 
 	void                                placeTower();
@@ -139,5 +139,6 @@ private:
 	Tower*								upgradingTower;
 	LifeCounter*						lifeCounter;
 	NextWaveIcon*						nextWaveIcon;
+	TowerController*					towerController;
 
 };

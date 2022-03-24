@@ -22,6 +22,7 @@
 #include "SoundPlayer.h"
 #include "SpriteNode.h"
 #include "Tower.h"
+#include "TowerController.h"
 #include "UpgradeController.h"
 #include "utility.h"
 #include "World.h"
@@ -59,13 +60,16 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, bloomEffect()
 	, levelType(_levelType)
 	, window(_window)
-	, tileOverlay()
-	, laneController()
+	, tileOverlay(nullptr)
+	, laneController(nullptr)
 	, waveIndex(0)
 	, state(State::Idle)
 	, iconFrames()
 	, towerIcon()
 	, towers()
+	, centerNode(nullptr)
+	, projectileTest(nullptr)
+	, bank(nullptr)
 	, threeBythree()
 	, fiveByfive()
 	, sevenByseven()
@@ -74,6 +78,7 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, upgradingTower(nullptr)
 	, lifeCounter(nullptr)
 	, nextWaveIcon(nullptr)
+	, towerController(nullptr)
 {
 	sceneTexture.create(target.getSize().x, target.getSize().y);
 
@@ -342,6 +347,10 @@ void World::buildScene()
 	laneController = laneControllerNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(laneControllerNode));
 
+	auto towerControllerNode{ std::make_unique<TowerController>(textures, levelType, *this) };
+	towerController = towerControllerNode.get();
+	sceneLayers[LowerAir]->attachChild(std::move(towerControllerNode));
+
 	auto cNode{ std::make_unique<SceneNode>() };
 	cNode->setPosition(800, 450);
 	centerNode = cNode.get();
@@ -508,21 +517,6 @@ void World::placeSpriteAtTile(SpriteNode& sprite, const sf::Vector2i tile)
 
 
 
-void World::placeSpriteAtTile(Tower* sprite, const sf::Vector2i tile)
-{
-    static const float BASE_X{ 880.f };
-    static const float BASE_Y{ 96.f };
-    static const float INCREMENT_X{ 36.f };
-    static const float INCREMENT_Y{ 24.f };
-
-    float newX{ BASE_X + (INCREMENT_X * tile.x) - (INCREMENT_X * tile.y) };
-    float newY{ BASE_Y + INCREMENT_Y * tile.x + INCREMENT_Y * tile.y };
-
-    sprite->setPosition(sf::Vector2f(newX, newY - 96));
-}
-
-
-
 void World::placeSpriteAtTile(sf::Sprite& sprite, const sf::Vector2i tile)
 {
     static const float BASE_X{ 880.f };
@@ -545,66 +539,55 @@ void World::placeTower()
 {
 	const auto clickedTile { pixelXYToTileXY(sf::Mouse::getPosition(window)) };
 
-	TowerType towerType;
-
-	switch (state)
+	if (towerController->isTileAvailable(clickedTile))
 	{
-	case World::State::BuildWizard:
-		towerType = TowerType::Novice;
-		bank->withdraw(20);
-		break;
+		TowerType towerType;
 
-	case World::State::BuildWarrior:
-		towerType = TowerType::ClubWarrior;
-		bank->withdraw(20);
-		break;
+		switch (state)
+		{
+		case World::State::BuildWizard:
+			towerType = TowerType::Novice;
+			bank->withdraw(20);
+			break;
 
-	case World::State::BuildIce:
-		towerType = TowerType::IceSword;
-		bank->withdraw(180);
-		break;
+		case World::State::BuildWarrior:
+			towerType = TowerType::ClubWarrior;
+			bank->withdraw(20);
+			break;
 
-	case World::State::BuildFire:
-		towerType = TowerType::FireAxe;
-		bank->withdraw(180);
-		break;
+		case World::State::BuildIce:
+			towerType = TowerType::IceSword;
+			bank->withdraw(180);
+			break;
 
-	case World::State::BuildEnergy:
-		towerType = TowerType::EnergyMace;
-		bank->withdraw(180);
-		break;
+		case World::State::BuildFire:
+			towerType = TowerType::FireAxe;
+			bank->withdraw(180);
+			break;
 
-	default:
-		towerType = TowerType::Novice;
-		bank->withdraw(20);
-		break;
+		case World::State::BuildEnergy:
+			towerType = TowerType::EnergyMace;
+			bank->withdraw(180);
+			break;
 
+		default:
+			towerType = TowerType::Novice;
+			bank->withdraw(20);
+			break;
+
+		}
+
+		towerController->placeTower(towerType, clickedTile);
+
+		state = World::State::Idle;
 	}
-
-	auto towerNode{ std::make_unique<Tower>(textures, towerType, TOWER_DATA.at(towerType), clickedTile) };
-	placeSpriteAtTile(towerNode.get(), clickedTile);
-	towers.push_back(towerNode.get());
-	sceneLayers[LowerAir]->attachChild(std::move(towerNode));
-
-	state = World::State::Idle;
 }
 
 
 
 Tower* World::getCursorTower(sf::Vector2i tile)
 {
-	Tower* cursorTower{ nullptr };
-
-	for (auto tower : towers)
-	{
-		auto [tX, tY] { tower->getTile() };
-		if (tile.x == tX && tile.y == tY)
-		{
-			cursorTower = tower;
-		}
-	}
-
-	return cursorTower;
+	return towerController->getCursorTower(tile);
 }
 
 
