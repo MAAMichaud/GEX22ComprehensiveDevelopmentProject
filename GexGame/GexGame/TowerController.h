@@ -29,6 +29,7 @@ public:
 	bool                                isTileAvailable(const sf::Vector2i tile) const;
 	void                                placeTower(const TowerType, sf::Vector2i tile);
 	Tower*                              getCursorTower(const sf::Vector2i tile) const;
+	std::vector<Tower*>                 getAttackingTowers() const;
 
 private:
 	void								placeTowerAtTile(Tower* tower, const sf::Vector2i tile);

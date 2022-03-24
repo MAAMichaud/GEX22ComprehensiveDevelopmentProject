@@ -127,7 +127,6 @@ private:
 	State								state;
 	std::map<State, Frame>				iconFrames;
 	sf::Sprite							towerIcon;
-	std::vector<Tower*>					towers;
 	SceneNode*							centerNode;
 	Projectile*							projectileTest;
 	Bank*								bank;

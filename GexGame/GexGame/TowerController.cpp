@@ -73,6 +73,20 @@ Tower* TowerController::getCursorTower(const sf::Vector2i tile) const
 
 
 
+std::vector<Tower*> TowerController::getAttackingTowers() const
+{
+	std::vector<Tower*> attackingTowers;
+
+	std::copy_if(towers.begin(), towers.end(),
+		std::back_inserter(attackingTowers),
+		[](Tower* t) { return t->isAttackPending(); 
+	});
+
+	return attackingTowers;
+}
+
+
+
 void TowerController::placeTowerAtTile(Tower* tower, const sf::Vector2i tile)
 {
     static const float BASE_X{ 880.f };

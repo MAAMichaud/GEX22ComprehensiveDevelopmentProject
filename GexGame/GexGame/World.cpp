@@ -66,7 +66,6 @@ World::World(sf::RenderTarget& _target, FontHolder_t& _fonts, SoundPlayer& _soun
 	, state(State::Idle)
 	, iconFrames()
 	, towerIcon()
-	, towers()
 	, centerNode(nullptr)
 	, projectileTest(nullptr)
 	, bank(nullptr)
@@ -486,16 +485,13 @@ void World::handleMouseOverlay()
 
 void World::handleTowers()
 {
-	for (auto& tower : towers)
+	for (auto& tower : towerController->getAttackingTowers())
 	{
-		if (tower->isAttackPending())
-		{
-			auto enemy{ laneController->getFurthestEnemy(tower->getTile(), tower->getRange()) };
+		auto enemy{ laneController->getFurthestEnemy(tower->getTile(), tower->getRange()) };
 
-			if (enemy)
-			{
-				tower->attack(enemy);
-			}
+		if (enemy)
+		{
+			tower->attack(enemy);
 		}
 	}
 }
