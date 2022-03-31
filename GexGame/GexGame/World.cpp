@@ -421,15 +421,23 @@ bool matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Categor
 
 void World::handleMouseOverlay()
 {	
-	const auto clickedTile { pixelXYToTileXY(sf::Mouse::getPosition(window)) };
+	const auto highlightedTile { pixelXYToTileXY(sf::Mouse::getPosition(window)) };
 
 	tileOverlay->setRGBA(sf::Color(255, 255, 255, 0));
 	towerIcon.setColor(sf::Color(255, 255, 255, 0));
 	rangeSprite = nullptr;
 
-	Tower* highlightedTower{ getCursorTower(clickedTile) };
+	Tower* highlightedTower{ getCursorTower(highlightedTile) };
 
-	if (highlightedTower)
+	static const float BASE_X{ 880.f };
+	static const float BASE_Y{ 96.f };
+	static const float INCREMENT_X{ 36.f };
+	static const float INCREMENT_Y{ 24.f };
+
+	float newX{ BASE_X + (INCREMENT_X * highlightedTile.x) - (INCREMENT_X * highlightedTile.y) };
+	float newY{ BASE_Y + INCREMENT_Y * highlightedTile.x + INCREMENT_Y * highlightedTile.y };
+
+	if (highlightedTower && state == World::State::Idle)
 	{
 		switch (highlightedTower->getRange())
 		{
@@ -450,32 +458,61 @@ void World::handleMouseOverlay()
 			break;
 
 		}
-
-		static const float BASE_X{ 880.f };
-		static const float BASE_Y{ 96.f };
-		static const float INCREMENT_X{ 36.f };
-		static const float INCREMENT_Y{ 24.f };
-
-		float newX{ BASE_X + (INCREMENT_X * clickedTile.x) - (INCREMENT_X * clickedTile.y) };
-		float newY{ BASE_Y + INCREMENT_Y * clickedTile.x + INCREMENT_Y * clickedTile.y };
+		rangeSprite->setColor(sf::Color(155, 255, 155, 130));
 
 		rangeSprite->setPosition(sf::Vector2f(newX + INCREMENT_X, newY - INCREMENT_Y));
 	}
 	else
 	{
-		if (clickedTile.x >= 0 && clickedTile.x < 16 && clickedTile.y >= 0 && clickedTile.y < 19)
+		if (highlightedTile.x >= 0 && highlightedTile.x < 16 && highlightedTile.y >= 0 && highlightedTile.y < 19)
 		{
 			if (state == World::State::Idle)
 			{
 				tileOverlay->setRGBA(sf::Color(255, 255, 255, 130));
 
-				placeSpriteAtTile(*tileOverlay, clickedTile);
+				placeSpriteAtTile(*tileOverlay, highlightedTile);
 			}
 			else if (state != World::State::UpgradeTower)
 			{
-				towerIcon.setColor(sf::Color(255, 255, 255, 200));
+				towerIcon.setColor(sf::Color(244, 244, 244, 188));
 
-				placeSpriteAtTile(towerIcon, clickedTile);
+				if (towerController->isTileAvailable(highlightedTile))
+				{
+					towerIcon.setColor(sf::Color(255, 255, 255, 200));
+
+					switch (state)
+					{
+					case World::State::BuildWizard:
+						rangeSprite = &fiveByfive;
+						break;
+
+					case World::State::BuildWarrior:
+						rangeSprite = &threeBythree;
+						break;
+
+					case World::State::BuildIce:
+						rangeSprite = &threeBythree;
+						break;
+
+					case World::State::BuildFire:
+						rangeSprite = &threeBythree;
+						break;
+
+					case World::State::BuildEnergy:
+						rangeSprite = &fiveByfive;
+						break;
+
+					default:
+						rangeSprite = &fiveByfive;
+						break;
+
+					}
+					rangeSprite->setColor(sf::Color(222, 222, 155, 145));
+
+					rangeSprite->setPosition(sf::Vector2f(newX + INCREMENT_X, newY - INCREMENT_Y));
+				}
+
+				placeSpriteAtTile(towerIcon, highlightedTile);
 			}
 		}
 	}
