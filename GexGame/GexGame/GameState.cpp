@@ -25,7 +25,9 @@ GameState::GameState(StateStack& stack, Context context, StateID stateId)
     : State(stack, context)
 	, world(*context.window, *context.fonts, *context.sound, getWorldType(stateId), *context.window)
 	, player(*context.player)
+	, musicPlayer(*context.music)
 {
+	context.music->play(MusicID::LevelMusic);
 }
 
 
@@ -95,13 +97,13 @@ bool GameState::handleEvent(const sf::Event& event)
 			else if (isMouseOverRect(mousePosition, MUSIC_DOWN_RECT))
 			{
 				std::cout << "MUSIC_DOWN Button Pressed." << std::endl;
-				world.musicDown();
+				musicPlayer.volumeDown();
 			}
 
 			else if (isMouseOverRect(mousePosition, MUSIC_UP_RECT))
 			{
 				std::cout << "MUSIC_UP Button Pressed." << std::endl;
-				world.musicUp();
+				musicPlayer.volumeUp();
 			}
 
 			else if (isMouseOverRect(mousePosition, NOVICE_WIZARD_RECT))

@@ -12,15 +12,25 @@
 */
 #include "MusicPlayer.h"
 
+#include <cmath>
 #include <stdexcept>
+
+
+
+namespace
+{
+	static const float MAX_VOLUME{ 25.f };
+}
 
 
 
 MusicPlayer::MusicPlayer()
 	: music()
 	, filenames()
-	, volume(1)
+	, volume(MAX_VOLUME)
 {
+	filenames[MusicID::LevelMusic] = "../Media/Music/Frogger.flac";
+	filenames[MusicID::MenuMusic] = "../Media/Music/FroggerTweener.flac";
 }
 
 
@@ -34,7 +44,7 @@ void MusicPlayer::play(MusicID theme)
 
 	music.setVolume(volume);
 	music.setLoop(true);
-	//music.play();
+	music.play();
 }
 
 
@@ -63,5 +73,23 @@ void MusicPlayer::setPaused(bool paused)
 void MusicPlayer::setVolume(float volume)
 {
 	volume = volume;
+	music.setVolume(volume);
+}
+
+
+
+void MusicPlayer::volumeUp()
+{
+	const auto newVolume{ volume + MAX_VOLUME / 10.f };
+	volume = std::min(MAX_VOLUME, newVolume);
+	music.setVolume(volume);
+}
+
+
+
+void MusicPlayer::volumeDown()
+{
+	const auto newVolume{ volume - MAX_VOLUME / 10.f };
+	volume = std::max(0.f, newVolume);
 	music.setVolume(volume);
 }

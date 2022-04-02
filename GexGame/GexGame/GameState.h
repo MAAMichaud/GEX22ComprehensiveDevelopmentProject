@@ -42,5 +42,6 @@ private:
 	World					world;
 	PlayerControl&			player;
 	static const sf::Time	TIME_PER_FRAME;
+	MusicPlayer&			musicPlayer;
 
 };

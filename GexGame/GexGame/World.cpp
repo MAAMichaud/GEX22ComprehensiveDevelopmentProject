@@ -322,18 +322,6 @@ void World::soundDown()
 
 
 
-void World::musicUp()
-{
-}
-
-
-
-void World::musicDown()
-{
-}
-
-
-
 void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);

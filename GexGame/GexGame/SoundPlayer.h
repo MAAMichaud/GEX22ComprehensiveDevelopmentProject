@@ -48,6 +48,6 @@ private:
 private:
 	std::map<SoundEffectID, std::unique_ptr<sf::SoundBuffer>>	soundBuffers;
 	std::list<sf::Sound>										sounds;
-	int															volume;
+	float														volume;
 
 };

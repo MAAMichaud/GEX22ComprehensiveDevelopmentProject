@@ -29,6 +29,7 @@ namespace
 	const float Attenuation = 8.f;
 	const float MinDistance2D = 200.f;
 	const float MinDistance3D = std::sqrt(MinDistance2D * MinDistance2D + ListenerZ * ListenerZ);
+	const float MAX_VOLUME{ 100.f };
 }
 
 
@@ -36,7 +37,7 @@ namespace
 SoundPlayer::SoundPlayer()
 	: soundBuffers()
 	, sounds()
-	, volume(100)
+	, volume(MAX_VOLUME)
 {
 	loadBuffer(SoundEffectID::SpellSound, "../Media/Sound/LaunchMissile.wav");
 	loadBuffer(SoundEffectID::SwingSound, "../Media/Sound/EnemyGunfire.wav");
@@ -97,16 +98,16 @@ sf::Vector2f SoundPlayer::getListenerPosition() const
 
 void SoundPlayer::volumeUp()
 {
-	const auto newVolume{ volume + 10 };
-	volume = std::min(100, newVolume);
+	const auto newVolume{ volume + MAX_VOLUME / 10.f };
+	volume = std::min(MAX_VOLUME, newVolume);
 }
 
 
 
 void SoundPlayer::volumeDown()
 {
-	const auto newVolume{ volume - 10 };
-	volume = std::max(0, newVolume);
+	const auto newVolume{ volume - MAX_VOLUME / 10.f };
+	volume = std::max(0.f, newVolume);
 }
 
 

@@ -29,6 +29,8 @@ MenuState::MenuState(StateStack& stack, Context context)
 	sf::Texture& texture = context.textures->get(TextureID::MainMenu);
 
 	backgroundSprite.setTexture(texture);
+
+	context.music->play(MusicID::MenuMusic);
 }
 
 

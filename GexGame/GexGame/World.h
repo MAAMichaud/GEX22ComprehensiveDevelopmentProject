@@ -81,8 +81,6 @@ public:
 	bool								gameLost() const;
 	void								soundUp();
 	void								soundDown();
-	void								musicUp();
-	void								musicDown();
 
 private:
 	void								loadTextures();

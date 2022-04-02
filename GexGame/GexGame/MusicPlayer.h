@@ -33,6 +33,8 @@ public:
 	void							stop();
 	void							setPaused(bool paused);
 	void							setVolume(float volume);
+	void							volumeUp();
+	void							volumeDown();
 
 
 private:
