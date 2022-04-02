@@ -26,6 +26,8 @@ FloatingTextNode::FloatingTextNode(const FontHolder_t& fonts, const std::string&
 	: TextNode(fonts, _text)
 {
 	text.setFillColor(color);
+	text.setCharacterSize(18);
+
 
 	static const auto xOffset{ 36.f };
 
