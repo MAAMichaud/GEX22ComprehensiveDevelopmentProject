@@ -36,16 +36,10 @@ namespace
 SoundPlayer::SoundPlayer()
 	: soundBuffers()
 	, sounds()
+	, volume(100)
 {
-	/*
-	loadBuffer(SoundEffectID::AlliedGunfire, "../Media/Sound/AlliedGunfire.wav");
-	loadBuffer(SoundEffectID::EnemyGunfire, "../Media/Sound/EnemyGunfire.wav");
-	loadBuffer(SoundEffectID::Explosion1, "../Media/Sound/Explosion1.wav");
-	loadBuffer(SoundEffectID::Explosion2, "../Media/Sound/Explosion2.wav");
-	loadBuffer(SoundEffectID::LaunchMissile, "../Media/Sound/LaunchMissile.wav");
-	loadBuffer(SoundEffectID::CollectPickup, "../Media/Sound/CollectPickup.wav");
-	loadBuffer(SoundEffectID::Button, "../Media/Sound/Button.wav");
-	*/
+	loadBuffer(SoundEffectID::SpellSound, "../Media/Sound/LaunchMissile.wav");
+	loadBuffer(SoundEffectID::SwingSound, "../Media/Sound/EnemyGunfire.wav");
 
 	// Listener points towards the screen (default in SFML)
 	sf::Listener::setDirection(0.f, 0.f, -1.f);
@@ -55,14 +49,13 @@ SoundPlayer::SoundPlayer()
 
 void SoundPlayer::play(SoundEffectID effect)
 {
-	//	play(effect, getListenerPosition());
+	play(effect, getListenerPosition());
 }
 
 
 
 void SoundPlayer::play(SoundEffectID effect, sf::Vector2f position)
 {
-	/*
 	sounds.push_back(sf::Sound());
 	sf::Sound& sound = sounds.back();
 
@@ -70,9 +63,9 @@ void SoundPlayer::play(SoundEffectID effect, sf::Vector2f position)
 	sound.setPosition(position.x, -position.y, 0.f);
 	sound.setAttenuation(Attenuation);
 	sound.setMinDistance(MinDistance3D);
+	sound.setVolume(volume);
 
 	sound.play();
-	*/
 }
 
 
@@ -98,6 +91,22 @@ sf::Vector2f SoundPlayer::getListenerPosition() const
 {
 	sf::Vector3f pos = sf::Listener::getPosition();
 	return sf::Vector2f(pos.x, -pos.y);
+}
+
+
+
+void SoundPlayer::volumeUp()
+{
+	const auto newVolume{ volume + 10 };
+	volume = std::min(100, newVolume);
+}
+
+
+
+void SoundPlayer::volumeDown()
+{
+	const auto newVolume{ volume - 10 };
+	volume = std::max(0, newVolume);
 }
 
 

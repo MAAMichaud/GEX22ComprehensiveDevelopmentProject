@@ -11,13 +11,15 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "Enemy.h"
+#include "FloatingTextNode.h"
 #include "LaneController.h"
 #include "Tower.h"
 #include "Utility.h"
 #include "World.h"
 
 #include <algorithm>
-#include "FloatingTextNode.h"
+
+#include "iostream"
 
 
 
@@ -51,6 +53,20 @@ void LaneController::spawnEnemy()
 bool LaneController::wavePending() const
 {
 	return enemyCount <= 0;
+}
+
+
+
+bool LaneController::waveEnded() const
+{
+	auto count{ 0 };
+
+	for (auto lane : lanes)
+	{
+		count += lane->children.size();
+	}
+
+	return wavePending() && count < 1;
 }
 
 

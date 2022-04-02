@@ -136,7 +136,7 @@ void World::update(sf::Time dt)
 
 void World::updateSounds()
 {
-	//sounds.setListenerPosition(hero->getWorldPosition());
+	sounds.setListenerPosition(centerNode->getWorldPosition());
 	sounds.removeStoppedSounds();
 }
 
@@ -294,6 +294,46 @@ void World::loseLife()
 
 
 
+bool World::gameWon() const
+{
+	return laneController->waveEnded() && waveIndex >= LEVEL_DATA.at(levelType).waves.size();
+}
+
+
+
+bool World::gameLost() const
+{
+	return !lifeCounter->hasLivesRemaining();
+}
+
+
+
+void World::soundUp()
+{
+	sounds.volumeUp();
+}
+
+
+
+void World::soundDown()
+{
+	sounds.volumeDown();
+}
+
+
+
+void World::musicUp()
+{
+}
+
+
+
+void World::musicDown()
+{
+}
+
+
+
 void World::loadTextures()
 {
 	textures.load(LEVEL_DATA.at(levelType).backgroundTexture, LEVEL_DATA.at(levelType).backgroundTexturePath);
@@ -323,6 +363,9 @@ void World::buildScene()
 		sceneLayers[i] = layer.get();
 		sceneGraph.attachChild(std::move(layer));
 	}
+
+	std::unique_ptr<SoundNode> sNode(new SoundNode(sounds));
+	sceneGraph.attachChild(std::move(sNode));
 
 
 	sf::Texture& backgroundTexture{ textures.get(LEVEL_DATA.at(levelType).backgroundTexture) };

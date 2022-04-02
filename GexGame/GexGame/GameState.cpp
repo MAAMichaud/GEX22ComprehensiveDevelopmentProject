@@ -41,18 +41,16 @@ bool GameState::update(sf::Time dt)
 {
     world.update(dt);
 
-	/*
-	if (!world.hasAlivePlayer())
-	{
-		player.setMissionStatus(PlayerControl::MissionStatus::MissionFailure);
-		requestStackPush(StateID::GameOver);
-	}
-	else if (world.hasPlayerReachedTheEnd())
+	if (world.gameWon())
 	{
 		player.setMissionStatus(PlayerControl::MissionStatus::MissionSuccess);
 		requestStackPush(StateID::GameOver);
 	}
-	*/
+	else if (world.gameLost())
+	{
+		player.setMissionStatus(PlayerControl::MissionStatus::MissionFailure);
+		requestStackPush(StateID::GameOver);
+	}
 
 	processInput();
 
@@ -85,21 +83,25 @@ bool GameState::handleEvent(const sf::Event& event)
 			if (isMouseOverRect(mousePosition, SOUND_DOWN_RECT))
 			{
 				std::cout << "SOUND_DOWN Button Pressed." << std::endl;
+				world.soundDown();
 			}
 
 			else if (isMouseOverRect(mousePosition, SOUND_UP_RECT))
 			{
 				std::cout << "SOUND_UP Button Pressed." << std::endl;
+				world.soundUp();
 			}
 
 			else if (isMouseOverRect(mousePosition, MUSIC_DOWN_RECT))
 			{
 				std::cout << "MUSIC_DOWN Button Pressed." << std::endl;
+				world.musicDown();
 			}
 
 			else if (isMouseOverRect(mousePosition, MUSIC_UP_RECT))
 			{
 				std::cout << "MUSIC_UP Button Pressed." << std::endl;
+				world.musicUp();
 			}
 
 			else if (isMouseOverRect(mousePosition, NOVICE_WIZARD_RECT))

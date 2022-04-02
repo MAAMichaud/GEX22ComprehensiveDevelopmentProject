@@ -18,6 +18,8 @@ namespace
 {
 	static const auto FLOAT_SPEED{ 8.f };
 	static const auto FADE_SPEED{ 0.005f };
+	static const auto xOffset{ 36.f };
+	static const auto characterSize{ 18 };
 }
 
 
@@ -26,10 +28,7 @@ FloatingTextNode::FloatingTextNode(const FontHolder_t& fonts, const std::string&
 	: TextNode(fonts, _text)
 {
 	text.setFillColor(color);
-	text.setCharacterSize(18);
-
-
-	static const auto xOffset{ 36.f };
+	text.setCharacterSize(characterSize);
 
 	auto initialPosition{ getPosition() };
 	initialPosition.x += xOffset;
@@ -56,7 +55,6 @@ bool FloatingTextNode::isDestroyed() const
 void FloatingTextNode::driftUp(sf::Time dt)
 {
 	auto floatPosition{ getPosition() };
-	//floatPosition.y -= dt.asSeconds() * FLOAT_SPEED;
 	floatPosition.y -= dt.asSeconds() * FLOAT_SPEED;
 	setPosition(floatPosition);
 }

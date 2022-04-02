@@ -34,14 +34,16 @@ GameOverState::GameOverState(StateStack& stack, Context context)
 
 	if (context.player->getMissionStatus() == PlayerControl::MissionStatus::MissionFailure)
 	{
-		gameOverText.setString("Mission Failure");
+		gameOverText.setString("Game Over");
+		gameOverText.setFillColor(sf::Color(150, 0, 0, 255));
 	}
 	else
 	{
-		gameOverText.setString("Mission Success");
+		gameOverText.setString("Level Complete");
+		gameOverText.setFillColor(sf::Color(100, 255, 100, 255));
 	}
 
-	gameOverText.setCharacterSize(70);
+	gameOverText.setCharacterSize(80);
 	centerOrigin(gameOverText);
 	gameOverText.setPosition(0.5f * windowSize.x, 0.4f * windowSize.y);
 
@@ -55,7 +57,7 @@ void GameOverState::draw()
 	window.setView(window.getDefaultView());
 
 	sf::RectangleShape backgroundShape;
-	backgroundShape.setFillColor(sf::Color(50, 50, 50, 15));
+	backgroundShape.setFillColor(sf::Color(50, 50, 50, 105));
 	backgroundShape.setSize(window.getView().getSize());
 
 	window.draw(backgroundShape);
@@ -67,7 +69,7 @@ void GameOverState::draw()
 bool GameOverState::update(sf::Time dt)
 {
 	elapsedTime += dt;
-	if (elapsedTime > sf::seconds(3))
+	if (elapsedTime > sf::seconds(5))
 	{
 		requestStackClear();
 		requestStackPush(StateID::Menu);

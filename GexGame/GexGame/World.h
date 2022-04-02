@@ -77,6 +77,12 @@ public:
 	void								cancel();
 	void								addGold(std::size_t amount);
 	void								loseLife();
+	bool								gameWon() const;
+	bool								gameLost() const;
+	void								soundUp();
+	void								soundDown();
+	void								musicUp();
+	void								musicDown();
 
 private:
 	void								loadTextures();

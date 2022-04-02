@@ -11,8 +11,11 @@
 *  NBCC Academic Integrity Policy (policy 1111)
 */
 #include "Animation2.h"
+#include "Command.h"
+#include "CommandQueue.h"
 #include "Enemy.h"
 #include "FloatingTextNode.h"
+#include "SoundNode.h"
 #include "Tower.h"
 #include "utility.h"
 
@@ -41,6 +44,8 @@ Tower::Tower(const TextureHolder_t& textures, const FontHolder_t& _fonts, TowerT
 	, attackEffect(towerData.attackEffect)
 	, experienceToNextLevel(towerData.experienceToNextLevel)
 	, fonts(_fonts)
+	, playSpellSound(false)
+	, playSwingSound(false)
 {
 	for (auto a : towerData.animations)
 	{
@@ -98,6 +103,31 @@ void Tower::attack(Enemy* target)
 		target->registerAttack(getProjectileSpeed(), this);
 
 		fireProjectile(target);
+
+		if (towerType == TowerType::AxeGrandmaster
+		|| towerType == TowerType::AxeMaster
+		|| towerType == TowerType::AxeWarrior
+		|| towerType == TowerType::SwordGrandmaster
+		|| towerType == TowerType::SwordMaster
+		|| towerType == TowerType::SwordWarrior
+		|| towerType == TowerType::MaceGrandmaster
+		|| towerType == TowerType::MaceWarrior
+		|| towerType == TowerType::MaceMaster
+		|| towerType == TowerType::ClubWarrior
+		|| towerType == TowerType::IceSword
+		|| towerType == TowerType::IceSword2
+		|| towerType == TowerType::FireAxe
+		|| towerType == TowerType::FireAxe2
+		|| towerType == TowerType::EnergyMace
+		|| towerType == TowerType::EnergyMace2
+			)
+		{
+			playSwingSound = true;
+		}
+		else
+		{
+			playSpellSound = true;
+		}
 	}
 }
 
@@ -210,6 +240,21 @@ TowerType Tower::getType() const
 
 
 
+void Tower::playLocalSound(CommandQueue& commands, SoundEffectID effect)
+{
+	Command playSoundCommand;
+	auto pos = getWorldPosition();
+	playSoundCommand.category = Category::SoundEffect;
+	playSoundCommand.action = derivedAction<SoundNode>([pos, effect](SoundNode& node, sf::Time)
+		{
+			node.playSound(effect, pos);
+		});
+
+	commands.push(playSoundCommand);
+}
+
+
+
 void Tower::turn(Direction _direction)
 {
 	direction = _direction;
@@ -230,6 +275,8 @@ void Tower::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
+	updateSounds(dt, commands);
+
 	if (cooldownRemaining > cooldownDuration - swingSpeed)
 	{
 		auto frame{ animations.at(direction).update(dt) };
@@ -259,6 +306,24 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 
 
 	cooldownRemaining -= dt;
+}
+
+
+
+void Tower::updateSounds(sf::Time dt, CommandQueue& commands)
+{
+	if (playSpellSound)
+	{
+		playLocalSound(commands, SoundEffectID::SpellSound);
+
+		playSpellSound = false;
+	} 
+	else if (playSwingSound)
+	{
+		playLocalSound(commands, SoundEffectID::SwingSound);
+
+		playSwingSound = false;
+	}
 }
 
 

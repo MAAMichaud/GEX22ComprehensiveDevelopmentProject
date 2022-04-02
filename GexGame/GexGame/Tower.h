@@ -45,11 +45,13 @@ public:
 	bool							canUseExperience() const;
 	void							levelUp(TowerType towerType, TowerData towerData);
 	TowerType						getType() const;
+	void							playLocalSound(CommandQueue& commands, SoundEffectID effect);
 
 private:
 	void							turn(Direction direction);
 	virtual void					drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
 	virtual void					updateCurrent(sf::Time dt, CommandQueue& commands) override;
+	void							updateSounds(sf::Time dt, CommandQueue& commands);
 	void							faceEnemy(Enemy* target);
 	void							fireProjectile(Enemy* target);
 
@@ -70,5 +72,7 @@ private:
 	AttackEffect					attackEffect;
 	std::size_t						experienceToNextLevel;
 	const FontHolder_t&				fonts;
+	bool							playSpellSound;
+	bool							playSwingSound;
 
 };

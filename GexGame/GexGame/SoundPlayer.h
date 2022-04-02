@@ -39,6 +39,8 @@ public:
 	void														removeStoppedSounds();
 	void														setListenerPosition(const sf::Vector2f position);
 	sf::Vector2f												getListenerPosition() const;
+	void														volumeUp();
+	void														volumeDown();
 
 private:
 	void														loadBuffer(SoundEffectID id, const std::string path);
@@ -46,5 +48,6 @@ private:
 private:
 	std::map<SoundEffectID, std::unique_ptr<sf::SoundBuffer>>	soundBuffers;
 	std::list<sf::Sound>										sounds;
+	int															volume;
 
 };

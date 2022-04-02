@@ -55,12 +55,16 @@ enum class FontID
 
 enum class SoundEffectID
 {
+    SpellSound,
+    SwingSound,
 };
 
 
 
 enum class MusicID
 {
+    MenuMusic,
+    LevelMusic,
 };
 
 

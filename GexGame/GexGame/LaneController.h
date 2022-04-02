@@ -32,6 +32,7 @@ public:
 	explicit									LaneController(const TextureHolder_t& textures, const FontHolder_t& fonts, std::vector<LaneData> data, World& world);
 
 	bool										wavePending() const;
+	bool										waveEnded() const;
 	void										loadWave(WaveData waveData);
 	std::vector<Enemy*>							getEnemiesAt(const sf::Vector2i tile) const;
 	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY) const;
