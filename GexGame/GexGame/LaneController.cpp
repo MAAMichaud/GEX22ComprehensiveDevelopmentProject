@@ -17,15 +17,18 @@
 #include "World.h"
 
 #include <algorithm>
+#include "FloatingTextNode.h"
 
 
 
-LaneController::LaneController(const TextureHolder_t& textures, std::vector<LaneData> data, World& _world)
+LaneController::LaneController(const TextureHolder_t& textures, const FontHolder_t& _fonts, std::vector<LaneData> data, World& _world)
 	: enemyCount(0)
 	, spawnRate(1.0f)
 	, timeRemaining(sf::Time::Zero)
 	, lanes()
 	, world(_world)
+	, fonts(_fonts)
+	, pendingGold()
 {
 	for (auto& laneData : data)
 	{
@@ -148,9 +151,11 @@ void LaneController::areaAttack(Enemy* enemy, Tower* tower, float range)
 
 
 
-void LaneController::addGold(std::size_t amount)
+void LaneController::addGold(std::size_t amount, sf::Vector2f position)
 {
 	world.addGold(amount);
+
+	pendingGold.push_back(std::pair<int, sf::Vector2f>(amount, position));
 }
 
 
@@ -176,5 +181,16 @@ void LaneController::updateCurrent(sf::Time dt, CommandQueue& commands)
 		}
 
 		timeRemaining -= dt;
+	}
+
+	if (pendingGold.size() > 0)
+	{
+		auto gold{ pendingGold.back() };
+		pendingGold.pop_back();
+
+		auto floatNode{ std::make_unique<FloatingTextNode>(fonts, std::to_string(gold.first) + "Gold", sf::Color(255, 255, 100, 255))};
+		const sf::Vector2f OFFSET_POSITION{gold.second.x + 36.f, gold.second.y + 26.f};
+		floatNode->setPosition(OFFSET_POSITION);
+		attachChild(std::move(floatNode));
 	}
 }

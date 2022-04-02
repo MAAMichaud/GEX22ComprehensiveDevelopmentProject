@@ -29,7 +29,7 @@ class World;
 class LaneController : public SceneNode
 {
 public:
-	explicit									LaneController(const TextureHolder_t& textures, std::vector<LaneData> data, World& world);
+	explicit									LaneController(const TextureHolder_t& textures, const FontHolder_t& fonts, std::vector<LaneData> data, World& world);
 
 	bool										wavePending() const;
 	void										loadWave(WaveData waveData);
@@ -39,7 +39,7 @@ public:
 	std::vector<Enemy*>							getEnemiesAt(const int tileX, const int tileY, const std::size_t range) const;
 	Enemy*										getFurthestEnemy(const sf::Vector2i tile, const std::size_t range) const;
 	void										areaAttack(Enemy* enemy, Tower* tower, float range);
-	void										addGold(std::size_t amount);
+	void										addGold(std::size_t amount, sf::Vector2f position);
 	void										loseLife();
 
 private:
@@ -52,5 +52,7 @@ private:
 	sf::Time									timeRemaining;
 	std::vector<Lane*>							lanes;
 	World&										world;
+	const FontHolder_t&							fonts;
+	std::vector<std::pair<int, sf::Vector2f>>	pendingGold;
 
 };

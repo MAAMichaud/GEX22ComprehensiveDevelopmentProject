@@ -12,6 +12,7 @@
 */
 #include "Animation2.h"
 #include "Enemy.h"
+#include "FloatingTextNode.h"
 #include "Tower.h"
 #include "utility.h"
 
@@ -23,7 +24,7 @@
 
 
 
-Tower::Tower(const TextureHolder_t& textures, TowerType _towerType, TowerData towerData, const sf::Vector2i _tile)
+Tower::Tower(const TextureHolder_t& textures, const FontHolder_t& _fonts, TowerType _towerType, TowerData towerData, const sf::Vector2i _tile)
 	: sprite(textures.get(TextureID::Towers))
 	, towerType(_towerType)
 	, animations()
@@ -39,6 +40,7 @@ Tower::Tower(const TextureHolder_t& textures, TowerType _towerType, TowerData to
 	, damage(towerData.damage)
 	, attackEffect(towerData.attackEffect)
 	, experienceToNextLevel(towerData.experienceToNextLevel)
+	, fonts(_fonts)
 {
 	for (auto a : towerData.animations)
 	{
@@ -145,6 +147,9 @@ void Tower::gainExperience(std::size_t amount)
 {
 	experiencePoints += amount;
 	std::cout << "Experience points " << experiencePoints << std::endl;
+
+	auto floatNode{ std::make_unique<FloatingTextNode>(fonts, std::to_string(amount) + "Exp", sf::Color(100, 255, 100, 255))};
+	attachChild(std::move(floatNode));
 }
 
 

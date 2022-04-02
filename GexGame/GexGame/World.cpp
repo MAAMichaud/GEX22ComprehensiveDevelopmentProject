@@ -117,9 +117,9 @@ void World::update(sf::Time dt)
 		sceneGraph.onCommand(commands.pop(), dt);
 	}
 
-	sceneGraph.removeWrecks();
-
 	sceneGraph.update(dt, commands);
+
+	sceneGraph.removeWrecks();
 
 	handleTowers();
 
@@ -342,11 +342,11 @@ void World::buildScene()
 	overlaySprite->setPosition(worldBounds.left, worldBounds.top);
 	sceneLayers[LowerAir]->attachChild(std::move(overlaySprite));
 
-	auto laneControllerNode{ std::make_unique<LaneController>(textures, LEVEL_DATA.at(levelType).lanes, *this) };
+	auto laneControllerNode{ std::make_unique<LaneController>(textures, fonts, LEVEL_DATA.at(levelType).lanes, *this) };
 	laneController = laneControllerNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(laneControllerNode));
 
-	auto towerControllerNode{ std::make_unique<TowerController>(textures, levelType, *this) };
+	auto towerControllerNode{ std::make_unique<TowerController>(textures, fonts, levelType, *this) };
 	towerController = towerControllerNode.get();
 	sceneLayers[LowerAir]->attachChild(std::move(towerControllerNode));
 

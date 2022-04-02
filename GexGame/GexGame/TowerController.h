@@ -24,7 +24,7 @@ class TowerController : public SceneNode
 {
 
 public:
-										TowerController(const TextureHolder_t& textures, const LevelType levelType, World& world);
+										TowerController(const TextureHolder_t& textures, const FontHolder_t& fonts, const LevelType levelType, World& world);
 
 	bool                                isTileAvailable(const sf::Vector2i tile) const;
 	void                                placeTower(const TowerType, sf::Vector2i tile);
@@ -39,6 +39,7 @@ private:
 	std::vector<sf::Vector2i>			availableTiles;
 	World&								world;
 	const TextureHolder_t&				textures;
+	const FontHolder_t&					fonts;
 
 };
 

@@ -26,11 +26,12 @@ namespace
 
 
 
-TowerController::TowerController(const TextureHolder_t& _textures, const LevelType levelType, World& _world)
+TowerController::TowerController(const TextureHolder_t& _textures, const FontHolder_t& _fonts, const LevelType levelType, World& _world)
 	: towers()
 	, availableTiles(TOWER_TILES.at(levelType))
 	, world(_world)
 	, textures(_textures)
+	, fonts(_fonts)
 {
 }
 
@@ -45,7 +46,7 @@ bool TowerController::isTileAvailable(const sf::Vector2i tile) const
 
 void TowerController::placeTower(const TowerType towerType, sf::Vector2i tile)
 {
-	auto towerNode{ std::make_unique<Tower>(textures, towerType, TOWER_DATA.at(towerType), tile) };
+	auto towerNode{ std::make_unique<Tower>(textures, fonts, towerType, TOWER_DATA.at(towerType), tile) };
 	placeTowerAtTile(towerNode.get(), tile);
 	towers.push_back(towerNode.get());
 	this->attachChild(std::move(towerNode));

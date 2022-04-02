@@ -159,7 +159,7 @@ void Enemy::damage(double damage)
 			{
 				lastAttacker->gainExperience(experiencePoints);
 			}
-			controller.addGold(gold);
+			controller.addGold(gold, getWorldPosition());
 		}
 	}
 }

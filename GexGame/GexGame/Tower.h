@@ -30,7 +30,7 @@ class Enemy;
 class Tower: public SceneNode
 {
 public:
-									Tower(const TextureHolder_t& textures, TowerType towerType, TowerData towerData, const sf::Vector2i tile);
+									Tower(const TextureHolder_t& textures, const FontHolder_t& fonts, TowerType towerType, TowerData towerData, const sf::Vector2i tile);
 	bool							isAttackPending() const;
 	sf::Vector2i					getTile() const;
 	std::size_t						getRange() const;
@@ -69,5 +69,6 @@ private:
 	double							damage;
 	AttackEffect					attackEffect;
 	std::size_t						experienceToNextLevel;
+	const FontHolder_t&				fonts;
 
 };
