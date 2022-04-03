@@ -55,8 +55,12 @@ enum class FontID
 
 enum class SoundEffectID
 {
-    SpellSound,
-    SwingSound,
+    Axe,
+    Energy,
+    Fire,
+    Mace,
+    Spell,
+    Sword,
 };
 
 

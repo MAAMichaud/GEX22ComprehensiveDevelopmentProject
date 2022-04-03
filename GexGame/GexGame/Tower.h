@@ -72,7 +72,6 @@ private:
 	AttackEffect					attackEffect;
 	std::size_t						experienceToNextLevel;
 	const FontHolder_t&				fonts;
-	bool							playSpellSound;
-	bool							playSwingSound;
+	bool							playAttackSound;
 
 };

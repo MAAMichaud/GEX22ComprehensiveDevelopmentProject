@@ -44,8 +44,7 @@ Tower::Tower(const TextureHolder_t& textures, const FontHolder_t& _fonts, TowerT
 	, attackEffect(towerData.attackEffect)
 	, experienceToNextLevel(towerData.experienceToNextLevel)
 	, fonts(_fonts)
-	, playSpellSound(false)
-	, playSwingSound(false)
+	, playAttackSound(false)
 {
 	for (auto a : towerData.animations)
 	{
@@ -104,30 +103,7 @@ void Tower::attack(Enemy* target)
 
 		fireProjectile(target);
 
-		if (towerType == TowerType::AxeGrandmaster
-		|| towerType == TowerType::AxeMaster
-		|| towerType == TowerType::AxeWarrior
-		|| towerType == TowerType::SwordGrandmaster
-		|| towerType == TowerType::SwordMaster
-		|| towerType == TowerType::SwordWarrior
-		|| towerType == TowerType::MaceGrandmaster
-		|| towerType == TowerType::MaceWarrior
-		|| towerType == TowerType::MaceMaster
-		|| towerType == TowerType::ClubWarrior
-		|| towerType == TowerType::IceSword
-		|| towerType == TowerType::IceSword2
-		|| towerType == TowerType::FireAxe
-		|| towerType == TowerType::FireAxe2
-		|| towerType == TowerType::EnergyMace
-		|| towerType == TowerType::EnergyMace2
-			)
-		{
-			playSwingSound = true;
-		}
-		else
-		{
-			playSpellSound = true;
-		}
+		playAttackSound = true;
 	}
 }
 
@@ -312,18 +288,64 @@ void Tower::updateCurrent(sf::Time dt, CommandQueue& commands)
 
 void Tower::updateSounds(sf::Time dt, CommandQueue& commands)
 {
-	if (playSpellSound)
+	if (playAttackSound)
 	{
-		playLocalSound(commands, SoundEffectID::SpellSound);
+		if (towerType == TowerType::FireApprentice
+		|| towerType == TowerType::FireMaster
+		|| towerType == TowerType::FireGrandmaster
+		)
+		{
+			playLocalSound(commands, SoundEffectID::Fire);
+		}
+		else if (towerType == TowerType::EnergyApprentice
+		|| towerType == TowerType::EnergyGrandmaster
+		|| towerType == TowerType::EnergyMaster
+		)
+		{
+			playLocalSound(commands, SoundEffectID::Energy);
+		}
+		else if (towerType == TowerType::AxeGrandmaster
+		|| towerType == TowerType::AxeMaster
+		|| towerType == TowerType::AxeWarrior
+		|| towerType == TowerType::FireAxe
+		|| towerType == TowerType::FireAxe2
+		)
+		{
+			playLocalSound(commands, SoundEffectID::Axe);
+		}
+		else if (towerType == TowerType::MaceGrandmaster
+		|| towerType == TowerType::MaceWarrior
+		|| towerType == TowerType::MaceMaster
+		|| towerType == TowerType::ClubWarrior
+		|| towerType == TowerType::EnergyMace
+		|| towerType == TowerType::EnergyMace2
+		)
+		{
+			playLocalSound(commands, SoundEffectID::Mace);
+		}
+		else if (towerType == TowerType::Novice
+		|| towerType == TowerType::IceApprentice
+		|| towerType == TowerType::IceGrandmaster
+		|| towerType == TowerType::IceMaster
+		|| towerType == TowerType::PoisonApprentice
+		|| towerType == TowerType::PoisonGrandmaster
+		|| towerType == TowerType::PoisonMaster
+		)
+		{
+			playLocalSound(commands, SoundEffectID::Spell);
+		}
+		else if (towerType == TowerType::SwordGrandmaster
+		|| towerType == TowerType::SwordMaster
+		|| towerType == TowerType::SwordWarrior
+		|| towerType == TowerType::IceSword
+		|| towerType == TowerType::IceSword2
+		)
+		{
+			playLocalSound(commands, SoundEffectID::Sword);
+		}
 
-		playSpellSound = false;
+		playAttackSound = false;
 	} 
-	else if (playSwingSound)
-	{
-		playLocalSound(commands, SoundEffectID::SwingSound);
-
-		playSwingSound = false;
-	}
 }
 
 

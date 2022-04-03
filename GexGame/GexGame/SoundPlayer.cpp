@@ -39,8 +39,12 @@ SoundPlayer::SoundPlayer()
 	, sounds()
 	, volume(MAX_VOLUME)
 {
-	loadBuffer(SoundEffectID::SpellSound, "../Media/Sound/LaunchMissile.wav");
-	loadBuffer(SoundEffectID::SwingSound, "../Media/Sound/EnemyGunfire.wav");
+	loadBuffer(SoundEffectID::Axe, "../Media/Sound/Axe.flac");
+	loadBuffer(SoundEffectID::Energy, "../Media/Sound/Energy.flac");
+	loadBuffer(SoundEffectID::Fire, "../Media/Sound/Fire.flac");
+	loadBuffer(SoundEffectID::Mace, "../Media/Sound/Mace.flac");
+	loadBuffer(SoundEffectID::Spell, "../Media/Sound/Spell.flac");
+	loadBuffer(SoundEffectID::Sword, "../Media/Sound/Sword.flac");
 
 	// Listener points towards the screen (default in SFML)
 	sf::Listener::setDirection(0.f, 0.f, -1.f);
