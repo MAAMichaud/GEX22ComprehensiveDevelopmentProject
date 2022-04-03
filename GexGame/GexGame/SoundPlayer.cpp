@@ -25,11 +25,11 @@ namespace
 {
 	// Sound coordinate system, point of view of a player in front of the screen:
 	// X = left; Y = up; Z = back (out of the screen)
-	const float ListenerZ = 300.f;
-	const float Attenuation = 8.f;
+	const float ListenerZ = 3300.f;
+	const float Attenuation = 0.f;
 	const float MinDistance2D = 200.f;
 	const float MinDistance3D = std::sqrt(MinDistance2D * MinDistance2D + ListenerZ * ListenerZ);
-	const float MAX_VOLUME{ 100.f };
+	const float MAX_VOLUME{ 25.f };
 }
 
 

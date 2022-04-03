@@ -64,7 +64,10 @@ enum class SoundEffectID
 enum class MusicID
 {
     MenuMusic,
-    LevelMusic,
+    ForestMusic,
+    CemeteryMusic,
+    BeachMusic,
+    MountainMusic,
 };
 
 

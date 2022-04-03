@@ -29,8 +29,11 @@ MusicPlayer::MusicPlayer()
 	, filenames()
 	, volume(MAX_VOLUME)
 {
-	filenames[MusicID::LevelMusic] = "../Media/Music/Frogger.flac";
-	filenames[MusicID::MenuMusic] = "../Media/Music/FroggerTweener.flac";
+	filenames[MusicID::ForestMusic] = "../Media/Music/Forest.ogg";
+	filenames[MusicID::CemeteryMusic] = "../Media/Music/Cemetery.ogg";
+	filenames[MusicID::BeachMusic] = "../Media/Music/Beach.ogg";
+	filenames[MusicID::MountainMusic] = "../Media/Music/Mountain.ogg";
+	filenames[MusicID::MenuMusic] = "../Media/Music/MainMenu.ogg";
 }
 
 

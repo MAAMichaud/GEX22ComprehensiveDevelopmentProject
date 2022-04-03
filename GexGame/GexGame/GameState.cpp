@@ -27,7 +27,29 @@ GameState::GameState(StateStack& stack, Context context, StateID stateId)
 	, player(*context.player)
 	, musicPlayer(*context.music)
 {
-	context.music->play(MusicID::LevelMusic);
+	switch (stateId)
+	{
+	case StateID::ForestLevel:
+		context.music->play(MusicID::ForestMusic);
+		break;
+
+	case StateID::CemeteryLevel:
+		context.music->play(MusicID::CemeteryMusic);
+		break;
+
+	case StateID::BeachLevel:
+		context.music->play(MusicID::BeachMusic);
+		break;
+
+	case StateID::MountainLevel:
+		context.music->play(MusicID::MountainMusic);
+		break;
+
+	default:
+		context.music->play(MusicID::ForestMusic);
+		break;
+
+	}
 }
 
 
