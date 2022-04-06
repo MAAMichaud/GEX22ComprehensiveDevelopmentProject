@@ -329,7 +329,6 @@ void World::loadTextures()
 	textures.load(TextureID::ThreebyThree, "../Media/Textures/3by3.png");
 	textures.load(TextureID::FivebyFive, "../Media/Textures/5by5.png");
 	textures.load(TextureID::SevenbySeven, "../Media/Textures/7by7.png");
-	textures.load(TextureID::Lich, "../Media/Textures/LichAtlas.png");
 	textures.load(TextureID::ForestLevel, "../Media/Textures/ForestLevel.png");
 	textures.load(TextureID::CemeteryLevel, "../Media/Textures/CemeteryLevel.png");
 	textures.load(TextureID::BeachLevel, "../Media/Textures/BeachLevel.png");
