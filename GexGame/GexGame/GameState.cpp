@@ -15,8 +15,6 @@
 #include "PlayerControl.h"
 #include "utility.h"
 
-#include <iostream>
-
 #include <SFML/Graphics/RenderWindow.hpp>
 
 
@@ -106,67 +104,56 @@ bool GameState::handleEvent(const sf::Event& event)
 
 			if (isMouseOverRect(mousePosition, SOUND_DOWN_RECT))
 			{
-				std::cout << "SOUND_DOWN Button Pressed." << std::endl;
 				world.soundDown();
 			}
 
 			else if (isMouseOverRect(mousePosition, SOUND_UP_RECT))
 			{
-				std::cout << "SOUND_UP Button Pressed." << std::endl;
 				world.soundUp();
 			}
 
 			else if (isMouseOverRect(mousePosition, MUSIC_DOWN_RECT))
 			{
-				std::cout << "MUSIC_DOWN Button Pressed." << std::endl;
 				musicPlayer.volumeDown();
 			}
 
 			else if (isMouseOverRect(mousePosition, MUSIC_UP_RECT))
 			{
-				std::cout << "MUSIC_UP Button Pressed." << std::endl;
 				musicPlayer.volumeUp();
 			}
 
 			else if (isMouseOverRect(mousePosition, NOVICE_WIZARD_RECT))
 			{
-				std::cout << "NOVICE_WIZARD Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildWizard);
 			}
 
 			else if (isMouseOverRect(mousePosition, CLUB_WARRIOR_RECT))
 			{
-				std::cout << "CLUB_WARRIOR Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildWarrior);
 			}
 
 			else if (isMouseOverRect(mousePosition, PRESTIGE_ICE_RECT))
 			{
-				std::cout << "PRESTIGE_ICE Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildIce);
 			}
 
 			else if (isMouseOverRect(mousePosition, PRESTIGE_FIRE_RECT))
 			{
-				std::cout << "PRESTIGE_FIRE Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildFire);
 			}
 
 			else if (isMouseOverRect(mousePosition, PRESTIGE_ENERGY_RECT))
 			{
-				std::cout << "PRESTIGE_ENERGY Button Pressed." << std::endl;
 				world.selectTower(World::State::BuildEnergy);
 			}
 
 			else if (isMouseOverRect(mousePosition, START_WAVE_RECT))
 			{
-				std::cout << "START_WAVE Button Pressed." << std::endl;
 				world.startWave();
 			}
 
 			else if (isMouseOverRect(mousePosition, PAUSE_BUTTON_RECT))
 			{
-				std::cout << "PAUSE Button Pressed." << std::endl;
 				requestStackPush(StateID::Pause);
 			}
 			else

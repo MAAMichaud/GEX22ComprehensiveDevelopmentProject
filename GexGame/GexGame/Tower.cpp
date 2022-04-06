@@ -23,8 +23,6 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Time.hpp>
 
-#include <iostream>
-
 
 
 Tower::Tower(const TextureHolder_t& textures, const FontHolder_t& _fonts, TowerType _towerType, TowerData towerData, const sf::Vector2i _tile)
@@ -152,7 +150,6 @@ sf::Time Tower::getProjectileSpeed() const
 void Tower::gainExperience(std::size_t amount)
 {
 	experiencePoints += amount;
-	std::cout << "Experience points " << experiencePoints << std::endl;
 
 	auto floatNode{ std::make_unique<FloatingTextNode>(fonts, std::to_string(amount) + "Exp", sf::Color(100, 255, 100, 255))};
 	attachChild(std::move(floatNode));
@@ -176,8 +173,6 @@ bool Tower::canUseExperience() const
 
 void Tower::levelUp(TowerType _towerType, TowerData towerData)
 {
-	std::cout << "level up!!" << std::endl;
-
 	towerType = _towerType;
 	experiencePoints -= experienceToNextLevel;
 	experienceToNextLevel = towerData.experienceToNextLevel;

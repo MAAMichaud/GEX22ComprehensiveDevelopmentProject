@@ -9,7 +9,6 @@
 #include "JsonFrameParser.h"
 
 #include <fstream>
-#include <iostream>
 
 
 
@@ -21,7 +20,6 @@ JsonFrameParser::JsonFrameParser(std::string path)
 {
 	std::ifstream ifs(path);
 	json_ = json::parse(ifs);
-	// std::cout << json_.dump(6);
 }
 
 
@@ -30,7 +28,6 @@ Frame  JsonFrameParser::getFrame(std::string animationName) const
 {
 	json k = json_["frames"];
 
-	// std::cout << k.dump(6);
 
 	for (auto i : k)
 	{
@@ -71,8 +68,6 @@ std::vector<Frame>  JsonFrameParser::getFramesFor(std::string animationName) con
 	std::vector<Frame> data; // frame textRecs for animaionName in atlas
 
 	json k = json_["frames"];
-
-	// std::cout << k.dump(6);
 
 	for (auto i : k)
 	{
