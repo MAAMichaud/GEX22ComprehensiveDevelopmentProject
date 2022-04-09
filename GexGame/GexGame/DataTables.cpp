@@ -1419,7 +1419,7 @@ std::map<TowerType, TowerData> initializeTowerData()
 		data[TowerType::SwordGrandmaster].animations[Direction::DownRight].addFrameSet(frames.getFramesFor("SwordGrandmasterAttackDownRight"));
 		data[TowerType::SwordGrandmaster].animations[Direction::Down].addFrameSet(frames.getFramesFor("SwordGrandmasterAttackDownDown"));
 		data[TowerType::SwordGrandmaster].animations[Direction::DownLeft].addFrameSet(frames.getFramesFor("SwordGrandmasterAttackDownLeft"));
-		data[TowerType::SwordGrandmaster].animations[Direction::Left].addFrameSet(frames.getFramesFor("SwordGrandmasterAttackLeftLeft"));
+		data[TowerType::SwordGrandmaster].animations[Direction::Left].addFrameSet(frames.getFramesFor("SwordGrandmasterAttackLeft"));
 		data[TowerType::SwordGrandmaster].animations[Direction::UpLeft].addFrameSet(frames.getFramesFor("SwordGrandmasterAttackUpLeft"));
 		data[TowerType::SwordGrandmaster].range = 1;
 		data[TowerType::SwordGrandmaster].swingSpeed = 1.0f;

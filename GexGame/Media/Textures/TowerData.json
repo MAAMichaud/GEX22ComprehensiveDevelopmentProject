@@ -3072,7 +3072,112 @@
         [
           3,
           {
-            "frames": [],
+            "frames": [
+              {
+                "intRect": [
+                  1774,
+                  629,
+                  -35,
+                  56
+                ],
+                "offset": [
+                  7,
+                  22
+                ],
+                "rotated": false
+              },
+              {
+                "intRect": [
+                  1517,
+                  590,
+                  -29,
+                  60
+                ],
+                "offset": [
+                  16,
+                  18
+                ],
+                "rotated": false
+              },
+              {
+                "intRect": [
+                  57,
+                  374,
+                  -29,
+                  71
+                ],
+                "offset": [
+                  24,
+                  7
+                ],
+                "rotated": false
+              },
+              {
+                "intRect": [
+                  118,
+                  1199,
+                  -48,
+                  65
+                ],
+                "offset": [
+                  24,
+                  13
+                ],
+                "rotated": false
+              },
+              {
+                "intRect": [
+                  60,
+                  155,
+                  -32,
+                  71
+                ],
+                "offset": [
+                  24,
+                  7
+                ],
+                "rotated": false
+              },
+              {
+                "intRect": [
+                  24,
+                  1141,
+                  -23,
+                  72
+                ],
+                "offset": [
+                  26,
+                  6
+                ],
+                "rotated": false
+              },
+              {
+                "intRect": [
+                  1652,
+                  1219,
+                  -54,
+                  45
+                ],
+                "offset": [
+                  47,
+                  23
+                ],
+                "rotated": true
+              },
+              {
+                "intRect": [
+                  1807,
+                  58,
+                  -41,
+                  55
+                ],
+                "offset": [
+                  4,
+                  23
+                ],
+                "rotated": false
+              }
+            ],
             "repeat": true
           }
         ],
