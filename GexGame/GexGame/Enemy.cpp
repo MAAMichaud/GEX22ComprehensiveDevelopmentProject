@@ -314,7 +314,7 @@ sf::Time Enemy::processAilments(sf::Time dt)
 		color.r -= 100;
 		color.b -= 100;
 		sprite.setColor(color);
-		damage(static_cast<double>(4.f) * dt.asSeconds());
+		damage(40.0 * dt.asSeconds());
 	}
 	else if (greatPoisonTime > sf::Time::Zero)
 	{
@@ -322,7 +322,7 @@ sf::Time Enemy::processAilments(sf::Time dt)
 		color.r -= 75;
 		color.b -= 75;
 		sprite.setColor(color);
-		damage(static_cast<double>(2.f) * dt.asSeconds());
+		damage(20.0 * dt.asSeconds());
 	}
 	else if (poisonTime > sf::Time::Zero)
 	{
@@ -330,7 +330,7 @@ sf::Time Enemy::processAilments(sf::Time dt)
 		color.r -= 50;
 		color.b -= 50;
 		sprite.setColor(color);
-		damage(dt.asSeconds());
+		damage(10.0 * dt.asSeconds());
 	}
 
 	if (stunTime > sf::Time::Zero)

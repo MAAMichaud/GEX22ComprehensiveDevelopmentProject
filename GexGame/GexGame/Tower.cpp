@@ -159,8 +159,8 @@ void Tower::gainExperience(std::size_t amount)
 
 bool Tower::isLevelingUp() const
 {
-	return true;
-	//return experienceToNextLevel && experiencePoints >= experienceToNextLevel;
+	//return true;
+	return experienceToNextLevel && experiencePoints >= experienceToNextLevel;
 }
 
 
@@ -238,7 +238,7 @@ void Tower::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	if (isLevelingUp())
 	{
-		//target.draw(levelupSprite, states);
+		target.draw(levelupSprite, states);
 	}
 	target.draw(sprite, states);
 }
