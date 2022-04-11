@@ -159,7 +159,6 @@ void Tower::gainExperience(std::size_t amount)
 
 bool Tower::isLevelingUp() const
 {
-	//return true;
 	return experienceToNextLevel && experiencePoints >= experienceToNextLevel;
 }
 
